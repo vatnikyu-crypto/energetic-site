@@ -1,0 +1,61 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}404 — Страница не найдена - Энергетик{% endblock %}
+
+{% block content %}
+<div class="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-white">
+    <!-- Фоновые оранжевые свечения (стиль как на вашем сайте) -->
+    <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#FFB800] rounded-full blur-[150px]"></div>
+        <div class="absolute bottom-[-10%] right-[-20%] w-[40%] h-[40%] bg-[#F59E0B] rounded-full blur-[120px]"></div>
+    </div>
+
+    <div class="relative z-10 container mx-auto px-4 text-center">
+        <!-- Блок с большим номером 404 -->
+        <div class="flex flex-col items-center mb-8">
+            <h1 class="text-[10rem] md:text-[15rem] font-black leading-none text-transparent bg-clip-text bg-gradient-to-b from-[#FFB800] to-orange-100 select-none drop-shadow-sm">
+                404
+            </h1>
+        </div>
+
+        <div class="mt-[-2rem] md:mt-[-4rem]">
+            <h2 class="text-3xl md:text-5xl font-bold text-[#1e293b] mb-6 uppercase tracking-tight">
+                Страница потерялась
+            </h2>
+            
+            <!-- Оранжевая разделительная линия -->
+            <div class="w-24 h-1.5 bg-[#FFB800] mx-auto mb-8 rounded-full shadow-sm"></div>
+
+            <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                К сожалению, запрашиваемая вами страница не существует или была перемещена. 
+                Воспользуйтесь навигацией или вернитесь на главную.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12">
+    <!-- ГЛАВНАЯ КНОПКА: Оранжевая, логотип в белом круге -->
+    <a href="{% url 'index' %}" 
+       class="group inline-flex items-center justify-center px-8 py-4 font-bold text-[#1e293b] bg-[#FFB800] rounded-2xl hover:bg-[#E6A600] transition-all duration-300 shadow-xl shadow-orange-200 transform hover:-translate-y-1">
+        
+        <!-- Контейнер для логотипа, чтобы он не сливался -->
+        <div class="flex items-center justify-center w-10 h-10 bg-white rounded-full mr-3 shadow-inner transition-transform group-hover:rotate-12">
+            <img src="{% static 'main/img/logo.png' %}" alt="" class="h-6 w-auto object-contain">
+        </div>
+        
+        Вернуться на главную
+    </a>
+
+    <!-- ВТОРОСТЕПЕННАЯ КНОПКА: С выразительной рамкой -->
+    <a href="{% url 'contacts' %}" 
+       class="inline-flex items-center justify-center px-10 py-4 font-bold text-[#1e293b] bg-white border-2 border-[#e2e8f0] rounded-2xl hover:border-[#FFB800] hover:text-[#FFB800] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
+        <svg xmlns="http://www.w3.org" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        Связаться с нами
+    </a>
+</div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

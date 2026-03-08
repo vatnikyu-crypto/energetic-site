@@ -1,0 +1,459 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Обучение — Энергетик{% endblock %}
+
+{% block content %}
+<main class="min-h-screen bg-slate-50/50 pt-10 pb-0">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <!-- Заголовок страницы -->
+        <div class="mb-16">
+            <h1 class="text-4xl md:text-6xl font-black text-slate-900 uppercase tracking-tight mb-12">Обучение</h1>
+        </div>
+
+        <!-- 1. БЛОК: ПРОМЫШЛЕННАЯ БЕЗОПАСНОСТЬ -->
+        <section id="prom-bez" class="mb-24 scroll-mt-32">
+            <div class="flex items-center space-x-4 mb-8">
+                <div class="w-12 h-12 bg-amber-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-amber-500/20 shrink-0">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z""")/>></svg>
+                </div>
+                <h2 class="text-2xl md:text-4xl font-black text-slate-900 uppercase tracking-tighter">Промышленная безопасность</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <!-- Контент -->
+                <div class="lg:col-span-2 space-y-6">
+                    <p class="text-lg text-slate-600 leading-relaxed font-medium">
+                        Работники ОПО обязаны <span class="text-slate-900 font-bold">не реже 1 раза в 5 лет</span> получать дополнительное профессиональное образование и проходить аттестацию на портале ЕПТ.
+                    </p>
+                    
+                    <div class="bg-white rounded-[2rem] p-8 border border-slate-100 shadow-sm">
+                        <h4 class="text-xs font-black text-amber-500 uppercase tracking-[0.2em] mb-6">Кто подлежит аттестации:</h4>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <li class="flex items-start space-x-3 text-slate-700 text-sm font-bold">
+                                <svg class="w-5 h-5 text-amber-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd""")/>></svg>
+                                <span>Ответственные за производственный контроль</span>
+                            </li>
+                            <li class="flex items-start space-x-3 text-slate-700 text-sm font-bold">
+                                <svg class="w-5 h-5 text-amber-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd""")/>></svg>
+                                <span>Члены аттестационных комиссий</span>
+                            </li>
+                            <li class="flex items-start space-x-3 text-slate-700 text-sm font-bold">
+                                <svg class="w-5 h-5 text-amber-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd""")/>></svg>
+                                <span>Специалисты авторского надзора</span>
+                            </li>
+                            <li class="flex items-start space-x-3 text-slate-700 text-sm font-bold">
+                                <svg class="w-5 h-5 text-amber-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd""")/>></svg>
+                                <span>Специалисты строительного контроля</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Нормативка -->
+                    <details class="group bg-slate-100/50 rounded-2xl border border-slate-200/50 overflow-hidden">
+                        <summary class="p-5 cursor-pointer flex items-center justify-between list-none">
+                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Правовая база</span>
+                            <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7""")/>></svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-[11px] text-slate-500 space-y-2 leading-relaxed">
+                            <p>• Федеральный закон "О промышленной безопасности опасных производственных объектов" от 21.07.1997 N 116-ФЗ</p>
+                            <p>• Постановление Правительства РФ от 13.01.2023 N 13 "Об аттестации в области промышленной безопасности, по вопросам безопасности гидротехнических сооружений, безопасности в сфере электроэнергетики"</p>
+                            <p>• Приказ Ростехнадзора от 09.08.2023 N 285 "Об утверждении Перечня областей аттестации в области промышленной безопасности, по вопросам безопасности гидротехнических сооружений, безопасности в сфере электроэнергетики"</p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Карточка характеристик -->
+                <div class="space-y-4">
+                    <div class="bg-slate-900 rounded-[2.5rem] p-8 text-white relative overflow-hidden">
+                        <div class="relative z-10">
+                            <div class="mb-6">
+                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Объем программ</span>
+                                <div class="text-3xl font-black">от 72 часов</div>
+                            </div>
+                            <div class="mb-6">
+                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Формат</span>
+                                <div class="text-xl font-bold leading-tight">Дистанционный</div>
+                            </div>
+                            <div class="pt-6 border-t border-white/10">
+                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Итоговый документ</span>
+                                <div class="text-sm font-bold opacity-80 mt-1 uppercase tracking-tighter">Удостоверение о повышении квалификации</div>
+                            </div>
+                        </div>
+                        <!-- Иконка предупреждения на фоне (для блока Промбезопасность) -->
+                        <div class="absolute -right-4 -bottom-4 text-white/5 transform pointer-events-none">
+                            <svg xmlns="http://www.w3.org" width="140" height="140" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z""")/>>
+                                <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z""")/>>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. БЛОК: ЭНЕРГЕТИЧЕСКАЯ БЕЗОПАСНОСТЬ -->
+        <section id="energo-bez" class="mb-24 scroll-mt-32">
+            <div class="flex items-center space-x-4 mb-8">
+                <div class="w-12 h-12 bg-amber-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-amber-500/20 shrink-0">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z""")/>></svg>
+                </div>
+                <h2 class="text-2xl md:text-4xl font-black text-slate-900 uppercase tracking-tighter">Энергетическая безопасность</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <!-- Контент -->
+                <div class="lg:col-span-2 space-y-6">
+                    <p class="text-lg text-slate-600 leading-relaxed font-medium">
+                        Программа предназначена для подготовки руководителей и специалистов к экзаменам в Ростехнадзоре для безопасной эксплуатации электроустановок и тепловых сетей.
+                    </p>
+                    
+                    <!-- Периодичность аттестации (Акцент) -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-amber-50 p-6 rounded-[2rem] border border-amber-100">
+                            <div class="text-[10px] font-black text-amber-600 uppercase tracking-widest mb-2">Электротехнический персонал</div>
+                            <div class="text-slate-900 font-black text-xl">1 раз в год</div>
+                            <p class="text-[11px] text-amber-700/70 mt-2 leading-tight uppercase font-bold tracking-tighter">Для лиц, организующих и проводящих работы в электроустановках</p>
+                        </div>
+                        <div class="bg-slate-900 p-6 rounded-[2rem] text-white">
+                            <div class="text-[10px] font-black text-amber-400 uppercase tracking-widest mb-2">Админ-технический персонал</div>
+                            <div class="text-white font-black text-xl">1 раз в 3 года</div>
+                            <p class="text-[11px] text-slate-400 mt-2 leading-tight uppercase font-bold tracking-tighter">Для членов комиссий и специалистов по охране труда</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-[2rem] p-8 border border-slate-100 shadow-sm">
+                        <h4 class="text-xs font-black text-amber-500 uppercase tracking-[0.2em] mb-6">Требования к слушателям:</h4>
+                        <div class="flex items-center space-x-4 p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                            <svg class="w-8 h-8 text-slate-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4""")/>></svg>
+                            <p class="text-sm text-slate-700 font-bold leading-snug">Наличие высшего или среднего профессионального образования в любой области.</p>
+                        </div>
+                        <p class="mt-6 text-xs text-slate-400 leading-relaxed italic">
+                            Аттестация проводится на портале ЕПТ. Для подачи заявления в Ростехнадзор обязательно наличие удостоверения о повышении квалификации.
+                        </p>
+                    </div>
+
+                    <!-- Нормативка -->
+                    <details class="group bg-slate-100/50 rounded-2xl border border-slate-200/50 overflow-hidden">
+                        <summary class="p-5 cursor-pointer flex items-center justify-between list-none">
+                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Правовая база</span>
+                            <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7""")/>></svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-[11px] text-slate-500 space-y-2 leading-relaxed">
+                            <p>• Приказ Минэнерго России от 12.08.2022 N 811 "Об утверждении Правил технической эксплуатации электроустановок потребителей электрической энергии"</p>
+                            <p>• Приказ Минтруда России от 15.12.2020 N 903н "Об утверждении Правил по охране труда при эксплуатации электроустановок"</p>
+                            <p>• Приказ Минэнерго России от 14.05.2025 N 511 "Об утверждении Правил технической эксплуатации объектов теплоснабжения и теплопотребляющих установок"</p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Инфо-карточка -->
+                <div class="space-y-4">
+                    <div class="bg-slate-900 rounded-[2.5rem] p-8 text-white relative overflow-hidden">
+                        <div class="relative z-10">
+                            <div class="mb-6">
+                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Объем программ</span>
+                                <div class="text-3xl font-black">от 72 часов</div>
+                            </div>
+                            <div class="mb-6">
+                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Формат</span>
+                                <div class="text-xl font-bold leading-tight">Дистанционный</div>
+                            </div>
+                            <div class="pt-6 border-t border-white/10">
+                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Итоговый документ</span>
+                                <div class="text-sm font-bold opacity-80 mt-1 uppercase tracking-tighter">Удостоверение о повышении квалификации</div>
+                            </div>
+                        </div>
+                         <!-- Иконка молнии на фоне -->
+                        <svg class="absolute -right-4 -bottom-4 w-32 h-32 text-white/5 transform" fill="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z""")/>></svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. БЛОК: ОХРАНА ТРУДА -->
+        <section id="ohrana-truda" class="mb-24 scroll-mt-32">
+            <div class="flex items-center space-x-4 mb-8">
+                <div class="w-12 h-12 bg-amber-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-amber-500/20 shrink-0">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z""")/>></svg>
+                </div>
+                <h2 class="text-2xl md:text-4xl font-black text-slate-900 uppercase tracking-tighter">Охрана труда</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <!-- Контент -->
+                <div class="lg:col-span-2 space-y-8">
+                    
+                    <!-- КАРТОЧКА АККРЕДИТАЦИИ (Важный документ) -->
+                    <a href="{% static 'main/docs/Уведомление об аккредитации по ОТ по ПП 2334.pdf' %}" target="_blank" class="group flex items-center justify-between bg-white p-6 rounded-[2rem] border-2 border-amber-100 hover:border-amber-500 transition-all shadow-sm hover:shadow-xl">
+                        <div class="flex items-center space-x-5">
+                            <div class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center group-hover:bg-amber-500 transition-colors shrink-0">
+                                <svg class="w-7 h-7 text-amber-500 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z""")/>></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-slate-900 font-black text-base uppercase leading-tight tracking-tighter">Аккредитация по ОТ</h4>
+                                <p class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-1">Уведомление № 2334 • Проверить документ</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block pr-4">
+                            <svg class="w-6 h-6 text-slate-200 group-hover:text-amber-500 transition-colors transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3""")/>></svg>
+                        </div>
+                    </a>
+
+                    <div class="space-y-4">
+                        <p class="text-lg text-slate-600 leading-relaxed font-medium">Обучение проводится в соответствии с Постановлением Правительства РФ № 2464 по следующим программам:</p>
+                        
+                        <div class="grid grid-cols-1 gap-3">
+                            <div class="grid grid-cols-1 gap-3">
+                                <!-- Пункт 1 -->
+                                <div class="flex items-center space-x-4 p-4 bg-white rounded-2xl border border-slate-100 group hover:border-slate-300 transition-colors">
+                                    <span class="w-6 h-6 rounded-full bg-slate-900 text-white text-[10px] font-black flex items-center justify-center shrink-0 group-hover:bg-amber-500 transition-colors">1</span>
+                                    <span class="text-slate-700 font-bold text-sm leading-tight">Общие вопросы охраны труда и функционирования системы управления охраной труда</span>
+                                </div>
+                                <!-- Пункт 2 -->
+                                <div class="flex items-center space-x-4 p-4 bg-white rounded-2xl border border-slate-100 group hover:border-slate-300 transition-colors">
+                                    <span class="w-6 h-6 rounded-full bg-slate-900 text-white text-[10px] font-black flex items-center justify-center shrink-0 group-hover:bg-amber-500 transition-colors">2</span>
+                                    <span class="text-slate-700 font-bold text-sm leading-tight">Безопасные методы и приемы выполнения работ при воздействии вредных и (или) опасных производственных факторов, источников опасности, идентифицированных в рамках специальной оценки условий труда и оценки профессиональных рисков</span>
+                                </div>
+                                <!-- Пункт 3 -->
+                                <div class="flex items-center space-x-4 p-4 bg-white rounded-2xl border border-slate-100 group hover:border-slate-300 transition-colors">
+                                    <span class="w-6 h-6 rounded-full bg-slate-900 text-white text-[10px] font-black flex items-center justify-center shrink-0 group-hover:bg-amber-500 transition-colors">3</span>
+                                    <span class="text-slate-700 font-bold text-sm leading-tight">Безопасные методы и приемы выполнения работ повышенной опасности, к которым предъявляются дополнительные требования в соответствии с нормативными правовыми актами, содержащими государственные нормативные требования охраны труда</span>
+                                </div>
+                                <!-- Пункт 4 -->
+                                <div class="flex items-center space-x-4 p-4 bg-white rounded-2xl border border-slate-100 group hover:border-slate-300 transition-colors">
+                                    <span class="w-6 h-6 rounded-full bg-slate-900 text-white text-[10px] font-black flex items-center justify-center shrink-0 group-hover:bg-amber-500 transition-colors">4</span>
+                                    <span class="text-slate-700 font-bold text-sm leading-tight">Оказание первой помощи пострадавшим</span>
+                                </div>
+                                <!-- Пункт 5 -->
+                                <div class="flex items-center space-x-4 p-4 bg-white rounded-2xl border border-slate-100 group hover:border-slate-300 transition-colors">
+                                    <span class="w-6 h-6 rounded-full bg-slate-900 text-white text-[10px] font-black flex items-center justify-center shrink-0 group-hover:bg-amber-500 transition-colors">5</span>
+                                    <span class="text-slate-700 font-bold text-sm leading-tight">Использование (применение) средств индивидуальной защиты</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Правовая база Охраны труда -->
+                    <details class="group bg-slate-100/50 rounded-2xl border border-slate-200/50 overflow-hidden">
+                        <summary class="p-5 cursor-pointer flex items-center justify-between list-none">
+                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Правовая база</span>
+                            <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-[11px] text-slate-500 space-y-2 leading-relaxed">
+                            <p>• Постановление Правительства РФ от 24.12.2021 N 2464 "О порядке обучения по охране труда и проверки знания требований охраны труда"</p>
+                            <p>• "Трудовой кодекс Российской Федерации" от 30.12.2001 N 197-ФЗ (Раздел X. Охрана труда)</p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Инфо-карточка -->
+                <div class="space-y-4">
+                    <div class="bg-slate-900 rounded-[2.5rem] p-8 text-white relative overflow-hidden">
+                        <div class="relative z-10">
+                            <div class="mb-6">
+                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Объем программ</span>
+                                <div class="text-3xl font-black">от 16 часов</div>
+                            </div>
+                            <div class="mb-6">
+                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Формат</span>
+                                <div class="text-xl font-bold leading-tight">Дистанционная / Очная</div>
+                            </div>
+                            <div class="pt-6 border-t border-white/10">
+                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Итоговый документ</span>
+                                <div class="text-sm font-bold opacity-80 mt-1 uppercase tracking-tighter">Протокол проверки знаний требований охраны труда</div>
+                            </div>
+                        </div>
+                        <!-- Иконка щита с галочкой на фоне (для блока Охрана труда) -->
+                        <div class="absolute -right-4 -bottom-4 text-white/5 transform pointer-events-none">
+                            <svg xmlns="http://www.w3.org" width="140" height="140" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M2.098 8V4.202L8 1.579l5.902 2.623V8c0 4.02-2.181 6.551-5.902 7.747C4.18 14.55 2 12.02 2 8zm.892.17c.05 3.39 1.724 5.39 5.01 6.507 3.286-1.117 4.96-3.117 5.01-6.507V4.708L8 2.42 3.01 4.708v3.462z""")/>>
+                                <path d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z""")/>>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. БЛОК: ПОЖАРНАЯ БЕЗОПАСНОСТЬ -->
+        <section id="fire-safety" class="mb-24 scroll-mt-32">
+            <div class="flex items-center space-x-4 mb-8">
+                <!-- Контейнер иконки -->
+                <div class="w-12 h-12 bg-amber-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-amber-500/20 shrink-0">
+                    <!-- ТВОЙ ЗНАЧОК ПЛАМЕНИ (адаптированный под размер блока) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15""")/>>
+                    </svg>
+                </div>
+                <h2 class="text-2xl md:text-4xl font-black text-slate-900 uppercase tracking-tighter">Пожарная безопасность</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <!-- Контент -->
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="prose prose-slate max-w-none">
+                        <p class="text-lg text-slate-600 leading-relaxed font-medium">
+                            С 1 сентября 2025 года обучение мерам пожарной безопасности проводится по новым правилам <span class="text-slate-900 font-bold">(Приказ МЧС России № 1120)</span>. Мы проводим как повышение квалификации, так и профессиональную переподготовку.
+                        </p>
+                    </div>
+
+                    <!-- Сетка программ -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="text-[10px] font-black text-amber-500 uppercase tracking-widest mb-3">Одна программа профессиональной переподготовки</div>
+                            <h4 class="text-slate-900 font-bold text-sm leading-tight mb-2">Специалист по пожарной профилактике </h4>
+                            <p class="text-slate-400 text-[10px] uppercase font-bold tracking-tighter">Для лиц, не имеющих профильного образования по пожарной безопасности</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="text-[10px] font-black text-amber-500 uppercase tracking-widest mb-3">Три программы повышения квалификации</div>
+                            <h4 class="text-slate-900 font-bold text-sm leading-tight mb-2">Меры пожарной безопасности (повышение квалификации)</h4>
+                            <p class="text-slate-400 text-[10px] uppercase font-bold tracking-tighter">Для ответственных лиц, специалистов технического и производственного профиля, инструктирующих</p>
+                        </div>
+                    </div>
+
+                    <!-- Важное замечание -->
+                    <div class="bg-amber-50 p-8 rounded-[2.5rem] border border-amber-100 flex items-start space-x-5">
+                        <div class="bg-amber-500 text-white p-2 rounded-xl shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z""")/>></svg>
+                        </div>
+                        <p class="text-amber-900 text-sm font-bold leading-relaxed">
+                            Внимание: Понятие «Пожарно-технический минимум» (ПТМ) упразднено. Обучение теперь заканчивается получением удостоверения о повышении квалификации или диплома.
+                        </p>
+                    </div>
+                    
+                    <!-- Нормативка -->
+                    <details class="group bg-slate-100/50 rounded-2xl border border-slate-200/50 overflow-hidden">
+                        <summary class="p-5 cursor-pointer flex items-center justify-between list-none">
+                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Правовая база</span>
+                            <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7""")/>></svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-[11px] text-slate-500 space-y-2 leading-relaxed">
+                            <p>• Приказ МЧС России от 16.12.2024 N 1120 "Об определении порядка, видов, сроков обучения лиц, осуществляющих трудовую или служебную деятельность, по программам противопожарного инструктажа, требований к содержанию указанных программ, порядка их утверждения и согласования и категорий лиц, проходящих обучение по дополнительным профессиональным программам в области пожарной безопасности"</p>
+                            <p>• Приказ МЧС России от 05.09.2021 N 596 "Об утверждении типовых дополнительных профессиональных программ в области пожарной безопасности"</p>
+                            <p>• Федеральный закон "О пожарной безопасности" от 21.12.1994 N 69-ФЗ</p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Инфо-карточка -->
+                <div class="space-y-4">
+                    <div class="bg-slate-900 rounded-[2.5rem] p-8 text-white relative overflow-hidden">
+                        <div class="relative z-10">
+                            <div class="mb-6">
+                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Объем программ</span>
+                                <div class="text-3xl font-black">от 24 часов</div>
+                            </div>
+                            <div class="mb-6">
+                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Формат</span>
+                                <div class="text-xl font-bold leading-tight">Дистанционная / Очная</div>
+                            </div>
+                            <div class="pt-6 border-t border-white/10">
+                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Итоговый документ</span>
+                                <div class="text-sm font-bold opacity-80 mt-1 uppercase tracking-tighter">Удостоверение или Диплом</div>
+                            </div>
+                        </div>
+                        <!-- ТВОЙ ЗНАЧОК ПЛАМЕНИ НА ФОНЕ -->
+                        <div class="absolute -right-4 -bottom-4 text-white/5 transform pointer-events-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15""")/>>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. БЛОК: РАБОЧИЕ ПРОФЕССИИ -->
+        <section id="rab-prof" class="mb-24 scroll-mt-32">
+            <div class="flex items-center space-x-4 mb-8">
+                <!-- Контейнер иконки -->
+                <div class="w-12 h-12 bg-amber-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-amber-500/20 shrink-0">
+                    <!-- ТВОЙ МОЛОТОК (адаптированный под размер блока) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M9.972 2.508a.5.5 0 0 0-.16-.556l-.178-.129a5 5 0 0 0-2.076-.783C6.215.862 4.504 1.229 2.84 3.133H1.786a.5.5 0 0 0-.354.147L.146 4.567a.5.5 0 0 0 0 .706l2.571 2.579a.5.5 0 0 0 .708 0l1.286-1.29a.5.5 0 0 0 .146-.353V5.57l8.387 8.873A.5.5 0 0 0 14 14.5l1.5-1.5a.5.5 0 0 0 .017-.689l-9.129-8.63c.747-.456 1.772-.839 3.112-.839a.5.5 0 0 0 .472-.334""")/>>
+                    </svg>
+                </div>
+                <h2 class="text-2xl md:text-4xl font-black text-slate-900 uppercase tracking-tighter">Рабочие профессии</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <!-- Контент -->
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="prose prose-slate max-w-none">
+                        <p class="text-lg text-slate-600 leading-relaxed font-medium">
+                            Профессиональное обучение направлено на приобретение <span class="text-slate-900 font-bold">квалификационных разрядов и категорий</span> по самым актуальным профессиям. Программы разработаны согласно ЕТКС и профстандартам.
+                        </p>
+                    </div>
+
+                    <!-- Список направлений -->
+                    <div class="bg-white rounded-[2rem] p-8 border border-slate-100 shadow-sm">
+                        <h4 class="text-xs font-black text-amber-500 uppercase tracking-[0.2em] mb-6">Основные направления обучения:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex items-center space-x-3 p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                                <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
+                                <span class="text-slate-700 font-bold text-sm">Электроэнергетика</span>
+                            </div>
+                            <div class="flex items-center space-x-3 p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                                <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
+                                <span class="text-slate-700 font-bold text-sm">Теплоэнергетика</span>
+                            </div>
+                            <div class="flex items-center space-x-3 p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                                <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
+                                <span class="text-slate-700 font-bold text-sm">Подъемные механизмы</span>
+                            </div>
+                            <div class="flex items-center space-x-3 p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                                <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
+                                <span class="text-slate-700 font-bold text-sm">Общие отрасли</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Нормативка -->
+                    <details class="group bg-slate-100/50 rounded-2xl border border-slate-200/50 overflow-hidden">
+                        <summary class="p-5 cursor-pointer flex items-center justify-between list-none">
+                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Правовая база</span>
+                            <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-[11px] text-slate-500 space-y-2 leading-relaxed">
+                            <p>• Приказ Минпросвещения России от 14.07.2023 N 534 "Об утверждении Перечня профессий рабочих, должностей служащих, по которым осуществляется профессиональное обучение"</p>
+                            <p>• Приказ Минпросвещения России от 26.08.2020 N 438 "Об утверждении Порядка организации и осуществления образовательной деятельности по основным программам профессионального обучения"</p>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Инфо-карточка (Правая колонка) -->
+                <div class="space-y-4">
+                    <div class="bg-slate-900 rounded-[2.5rem] p-8 text-white relative overflow-hidden">
+                        <div class="relative z-10">
+                            <div class="mb-6">
+                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Объем программ</span>
+                                <div class="text-3xl font-black tabular-nums">от 240 часов</div>
+                            </div>
+                            <div class="mb-6">
+                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Формат</span>
+                                <div class="text-xl font-bold leading-tight">Дистанционная / Очная</div>
+                            </div>
+                            <div class="pt-6 border-t border-white/10">
+                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Итоговый документ</span>
+                                <div class="text-sm font-bold opacity-80 mt-1 uppercase tracking-tighter">Свидетельство о повышении квалификации</div>
+                            </div>
+                        </div>
+                        <!-- ТВОЙ МОЛОТОК НА ФОНЕ: увеличили до w-40, сделали прозрачным и повернули -->
+                        <div class="absolute -right-6 -bottom-6 text-white/5 transform -rotate-12 pointer-events-none">
+                            <svg xmlns="http://www.w3.org" width="160" height="160" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M9.972 2.508a.5.5 0 0 0-.16-.556l-.178-.129a5 5 0 0 0-2.076-.783C6.215.862 4.504 1.229 2.84 3.133H1.786a.5.5 0 0 0-.354.147L.146 4.567a.5.5 0 0 0 0 .706l2.571 2.579a.5.5 0 0 0 .708 0l1.286-1.29a.5.5 0 0 0 .146-.353V5.57l8.387 8.873A.5.5 0 0 0 14 14.5l1.5-1.5a.5.5 0 0 0 .017-.689l-9.129-8.63c.747-.456 1.772-.839 3.112-.839a.5.5 0 0 0 .472-.334""")/>>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</main>
+{% endblock %}

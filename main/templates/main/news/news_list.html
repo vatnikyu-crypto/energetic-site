@@ -1,0 +1,77 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Новости — Энергетик{% endblock %}
+
+{% block content %}
+<main class="min-h-screen bg-slate-50/50 pt-10 pb-20">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+        <section class="px-0 py-0">
+            <!-- ВЕРХНЯЯ ЧАСТЬ: Заголовок и Навигация -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <h1 class="text-4xl md:text-6xl font-black text-slate-900 uppercase tracking-tight">Новости</h1>
+
+                <!-- ПАГИНАЦИЯ (Теперь сверху) -->
+                {% if page_obj.paginator.num_pages > 1 %}
+                <div class="flex items-center space-x-3">
+                    
+                    {% if page_obj.has_previous %}
+                        <a href="?page={{ page_obj.previous_page_number }}" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white border-2 border-slate-100 text-slate-900 hover:border-[#FFB800] hover:text-[#FFB800] transition-all shadow-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7""")/>></svg>
+                        </a>
+                    {% else %}
+                        <!-- Неактивная кнопка назад -->
+                        <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-50 border-2 border-slate-100 text-slate-300 cursor-not-allowed">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7""")/>></svg>
+                        </div>
+                    {% endif %}
+
+                    <div class="px-5 py-2.5 bg-slate-900 rounded-xl text-white font-black text-[10px] uppercase tracking-widest shadow-lg">
+                        {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+                    </div>
+
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white border-2 border-slate-100 text-slate-900 hover:border-[#FFB800] hover:text-[#FFB800] transition-all shadow-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7""")/>></svg>
+                        </a>
+                    {% else %}
+                        <!-- Неактивная кнопка вперед -->
+                        <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-50 border-2 border-slate-100 text-slate-300 cursor-not-allowed">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7""")/>></svg>
+                        </div>
+                    {% endif %}
+                    
+                </div>
+                {% endif %}
+            </div>
+
+            <!-- Сетка новостей -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {% for item in page_obj %}
+                <a href="{% url 'news_detail' item.slug %}" class="group bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100 flex flex-col h-full">
+                    <div class="aspect-video overflow-hidden bg-slate-200">
+                        {% if item.image_path %}
+                            <img src="{% static item.image_path %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        {% else %}
+                            <img src="{% static 'main/img/news/default-news.png' %}" class="w-full h-full object-cover opacity-50">
+                        {% endif %}
+                    </div>
+                    <div class="p-8 flex-grow">
+                        <!-- Цвет даты теперь оранжевый #FFB800 -->
+                        <span class="text-[10px] font-black text-[#FFB800] uppercase tracking-widest">{{ item.date }}</span>
+                        <h3 class="text-xl font-black text-slate-900 mt-3 leading-tight group-hover:text-[#FFB800] transition-colors uppercase">
+                            {{ item.title }}
+                        </h3>
+                    </div>
+                </a>
+                {% empty %}
+                <div class="col-span-full py-20 text-center">
+                    <p class="text-slate-400 font-bold uppercase tracking-widest text-xl">Новостей пока нет...</p>
+                </div>
+                {% endfor %}
+            </div>
+
+        </section>
+    </div>
+</main>
+{% endblock %}
