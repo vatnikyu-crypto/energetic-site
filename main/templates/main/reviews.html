@@ -4,48 +4,47 @@
 {% block title %}Официальные отзывы — АНО ДПО «Энергетик»{% endblock %}
 
 {% block content %}
+
 <main class="min-h-screen bg-slate-50/50 pt-10 pb-20">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
-        
-        <!-- Заголовок -->
         <div class="mb-16">
-            <h1 class="text-4xl md:text-6xl font-black text-slate-900 uppercase tracking-tight mb-4 text-center md:text-left">Отзывы о нашей работе</h1>
+            <h1
+                class="text-4xl md:text-6xl font-black text-slate-900 uppercase tracking-tight mb-4 text-center md:text-left">
+                Отзывы о нашей работе</h1>
             <div class="w-24 h-2 bg-[#FFB800] rounded-full mx-auto md:mx-0 shadow-sm"></div>
-            <p class="text-slate-500 font-bold uppercase tracking-widest text-xs mt-6 text-center md:text-left opacity-60">Официальные благодарственные письма</p>
+            <p
+                class="text-slate-500 font-bold uppercase tracking-widest text-xs mt-6 text-center md:text-left opacity-60">
+                Официальные благодарственные письма</p>
         </div>
-
-        <!-- Сетка сканов PDF -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {% for review in reviews %}
-            <div class="group relative flex flex-col bg-white rounded-[2rem] overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                
-                <!-- Превью скана (используем картинку-заглушку или первый лист PDF) -->
+            <div
+                class="group relative flex flex-col bg-white rounded-[2rem] overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                 <div class="aspect-[3/4] overflow-hidden bg-slate-100 relative">
-                    <!-- Ссылка на сам PDF файл -->
                     <a href="{{ review.pdf_url }}" target="_blank" class="block w-full h-full">
-                        <img src="{{ review.preview_url }}" 
-                             alt="Отзыв {{ review.company }}" 
-                             class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
-                        
-                        <!-- Оверлей при наведении -->
-                        <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
-                            <span class="px-6 py-3 bg-white text-slate-900 font-black text-xs uppercase tracking-widest rounded-xl shadow-2xl">
+                        <img src="{{ review.preview_url }}" alt="Отзыв {{ review.company }}"
+                            class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+                            <span
+                                class="px-6 py-3 bg-white text-slate-900 font-black text-xs uppercase tracking-widest rounded-xl shadow-2xl">
                                 Читать PDF
                             </span>
                         </div>
                     </a>
                 </div>
-
-                <!-- Информация под сканом -->
                 <div class="p-6 bg-white border-t border-slate-50">
-                    <h3 class="font-black text-slate-900 text-sm uppercase leading-tight group-hover:text-[#FFB800] transition-colors">
+                    <h3
+                        class="font-black text-slate-900 text-sm uppercase leading-tight group-hover:text-[#FFB800] transition-colors">
                         {{ review.company }}
                     </h3>
-                    <p class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-2">Дата: {{ review.date }}</p>
+                    <p class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-2">Дата: {{ review.date
+                        }}</p>
                 </div>
             </div>
             {% empty %}
-            <p class="col-span-full text-center text-slate-400 font-black uppercase tracking-widest py-20">Сканы пока не загружены...</p>
+            <p class="col-span-full text-center text-slate-400 font-black uppercase tracking-widest py-20">Сканы пока не
+                загружены...</p>
             {% endfor %}
         </div>
     </div>

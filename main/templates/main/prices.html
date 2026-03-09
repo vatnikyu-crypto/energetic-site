@@ -4,6 +4,7 @@
 {% block title %}Курсы и цены - Энергетик{% endblock %}
 
 {% block content %}
+
 <main class="min-h-screen bg-slate-50/50 pt-10 pb-0">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
         <section class="max-w-7xl mx-auto px-0 py-0">
@@ -25,7 +26,7 @@
                 </div>
             </div>
 
-            <!-- Селект для фильтрации (Исправлен на ID вместо slugify) -->
+            <!-- Фильтр -->
             <div class="mb-10 max-w-sm">
                 <label for="categoryFilter" class="block text-[10px] font-black text-slate-600 uppercase tracking-[0.2em] mb-3">
                     Фильтр по направлению:
@@ -38,7 +39,6 @@
                             <option value="cat-{{ forloop.counter }}">{{ category }}</option>
                         {% endfor %}
                     </select>
-                    <!-- Стрелочка для селекта -->
                     <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round""")/>></svg>
                     </div>
@@ -53,9 +53,7 @@
                             <th class="px-10 py-8 text-amber-400 font-black uppercase text-[10px] tracking-[0.2em] hidden md:table-cell">Срок (час)</th>
                             <th class="px-10 py-8 text-amber-400 font-black uppercase text-[10px] tracking-[0.2em] text-right">
                                 <div class="flex items-center justify-end">
-                                    <span>Стоимость</span>
-                                    
-                                    <!-- ВОТ ОН, ТОТ САМЫЙ ЗНАЧОК (i) -->
+                                    <span>Стоимость</span>                                    
                                     <a href="#vat-info" class="ml-2 p-1 hover:text-white transition-colors group/info" title="Подробнее об НДС">
                                         <svg class="w-3.5 h-3.5 text-amber-500/80 group-hover/info:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
@@ -68,15 +66,12 @@
                     <tbody id="pricesTableBody">
                         {% for category, items in categories.items %}
                             {% with cat_id=forloop.counter %}
-                            <!-- Заголовок категории -->
                             <tr class="category-row bg-slate-50" data-category="cat-{{ cat_id }}">
                                 <td colspan="3" class="px-10 py-5 text-[10px] font-black text-slate-400 uppercase tracking-widest border-y border-slate-100">
                                     {{ category }}
                                 </td>
                             </tr>
-                            
                             {% for item in items %}
-                            <!-- Строка курса -->
                             <tr class="price-row group border-b border-slate-50 last:border-0 hover:bg-amber-50/30 transition-all flex flex-col md:table-row" 
                                 data-category="cat-{{ cat_id }}">
                                 
@@ -111,77 +106,68 @@
             </div>
         </section>
 
- <!-- Информационный блок про НДС и УСН -->
-    <div id="vat-info" class="mt-12 md:mt-16 bg-white rounded-[2.5rem] p-8 md:p-12 border border-slate-100 shadow-sm transition-all hover:shadow-md">
-        <div class="max-w-4xl">
-            <div class="flex items-start space-x-4 mb-8">
-                <div class="mt-1 flex-shrink-0">
-                    <svg class="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
-                    </svg>
-                </div>
-                <div class="space-y-4">
-                    <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
-                        АНО ДПО «Энергетик» в 2026 году является плательщиком УСН (информационное письмо Форма №26.2-7 от 09.11.2011 № 923) и <span class="font-bold text-slate-900 not-italic">освобождена от обязанности по исчислению и уплате НДС</span> на основании подпункта 14 пункта 2 статьи 149 НК РФ.
-                    </p>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4 border-t border-slate-100">
-                        <div>
-                            <span class="block text-[10px] font-black text-amber-500 uppercase tracking-widest mb-2">Форма обучения</span>
-                            <p class="text-slate-900 font-bold text-sm">Очная, дистанционная, очно-дистанционная с применением электронного обучения и дистанционных технологий.</p>
-                        </div>
-                        <div>
-                            <span class="block text-[10px] font-black text-amber-500 uppercase tracking-widest mb-2">Начало занятий</span>
-                            <p class="text-slate-900 font-bold text-sm">По согласованию с Заказчиком, с момента формирования учебной группы.</p>
+        <div id="vat-info" class="mt-12 md:mt-16 bg-white rounded-[2.5rem] p-8 md:p-12 border border-slate-100 shadow-sm transition-all hover:shadow-md">
+            <div class="max-w-4xl">
+                <div class="flex items-start space-x-4 mb-8">
+                    <div class="mt-1 flex-shrink-0">
+                        <svg class="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="space-y-4">
+                        <p class="text-slate-600 text-sm md:text-base leading-relaxed italic">
+                            АНО ДПО «Энергетик» в 2026 году является плательщиком УСН (информационное письмо Форма №26.2-7 от 09.11.2011 № 923) и <span class="font-bold text-slate-900 not-italic">освобождена от обязанности по исчислению и уплате НДС</span> на основании подпункта 14 пункта 2 статьи 149 НК РФ.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4 border-t border-slate-100">
+                            <div>
+                                <span class="block text-[10px] font-black text-amber-500 uppercase tracking-widest mb-2">Форма обучения</span>
+                                <p class="text-slate-900 font-bold text-sm">Очная, дистанционная, очно-дистанционная с применением электронного обучения и дистанционных технологий.</p>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] font-black text-amber-500 uppercase tracking-widest mb-2">Начало занятий</span>
+                                <p class="text-slate-900 font-bold text-sm">По согласованию с Заказчиком, с момента формирования учебной группы.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    </div>
 </main>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.getElementById('priceSearch');
-    const categoryFilter = document.getElementById('categoryFilter');
-    
-    function updateTable() {
-        const filterValue = searchInput.value.toLowerCase();
-        const selectedCatId = categoryFilter.value;
-        const categoryHeaders = document.querySelectorAll('.category-row');
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('priceSearch');
+        const categoryFilter = document.getElementById('categoryFilter');
+        
+        function updateTable() {
+            const filterValue = searchInput.value.toLowerCase();
+            const selectedCatId = categoryFilter.value;
+            const categoryHeaders = document.querySelectorAll('.category-row');
 
-        categoryHeaders.forEach(header => {
-            const catId = header.getAttribute('data-category');
-            const relatedRows = document.querySelectorAll(`.price-row[data-category="${catId}"]`);
-            let hasVisibleRows = false;
+            categoryHeaders.forEach(header => {
+                const catId = header.getAttribute('data-category');
+                const relatedRows = document.querySelectorAll(`.price-row[data-category="${catId}"]`);
+                let hasVisibleRows = false;
 
-            relatedRows.forEach(row => {
-                const text = row.querySelector('.item-name').textContent.toLowerCase();
-                
-                // Условие 1: Подходит ли под поиск?
-                const matchesSearch = text.includes(filterValue);
-                // Условие 2: Подходит ли под категорию?
-                const matchesCategory = (selectedCatId === 'all' || catId === selectedCatId);
+                relatedRows.forEach(row => {
+                    const text = row.querySelector('.item-name').textContent.toLowerCase();
+                    
+                    const matchesSearch = text.includes(filterValue);
+                    const matchesCategory = (selectedCatId === 'all' || catId === selectedCatId);
 
-                if (matchesSearch && matchesCategory) {
-                    row.style.display = "";
-                    hasVisibleRows = true;
-                } else {
-                    row.style.display = "none";
-                }
+                    if (matchesSearch && matchesCategory) {
+                        row.style.display = "";
+                        hasVisibleRows = true;
+                    } else {
+                        row.style.display = "none";
+                    }
+                });
+                header.style.display = hasVisibleRows ? "" : "none";
             });
-
-            // Показываем заголовок категории только если в ней есть видимые курсы
-            header.style.display = hasVisibleRows ? "" : "none";
-        });
-    }
-
-    // Слушаем оба поля сразу
-    searchInput.addEventListener('input', updateTable);
-    categoryFilter.addEventListener('change', updateTable);
-});
+        }
+        searchInput.addEventListener('input', updateTable);
+        categoryFilter.addEventListener('change', updateTable);
+    });
 </script>
 {% endblock %}
