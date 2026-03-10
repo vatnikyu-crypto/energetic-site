@@ -15,12 +15,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, re_path # Добавили re_path
+from django.urls import path, re_path
 from django.urls import path
-from django.conf import settings # Добавили импорт настроек
+from django.conf import settings
 from main.views import index
 from django.views.generic import TemplateView
-from django.views.static import serve # Добавили serve для раздачи файлов
+from django.views.static import serve
 from main import views
 from django.conf.urls import handler404
 
