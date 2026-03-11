@@ -74,6 +74,9 @@ def news_list(request):
     news_dir = os.path.join(settings.BASE_DIR, 'main', 'templates', 'main', 'news', 'items')
     img_dir = os.path.join(settings.BASE_DIR, 'main', 'static', 'main', 'img', 'news')
     
+    # 1. Получаем поисковый запрос
+    query = request.GET.get('q', '').strip()
+    
     all_news_items = []
     
     if os.path.exists(news_dir):
@@ -81,6 +84,7 @@ def news_list(request):
         files.sort(key=lambda x: os.path.getmtime(os.path.join(news_dir, x)), reverse=True)
 
         for filename in files:
+            # --- ВОЗВРАЩАЕМ ОПРЕДЕЛЕНИЕ ПЕРЕМЕННЫХ ---
             slug = filename.replace('.html', '')
             file_path = os.path.join(news_dir, filename)
             
@@ -99,18 +103,24 @@ def news_list(request):
                     found_img = f"main/img/news/{slug}{ext}"
                     break
             
-            all_news_items.append({
-                'slug': slug,
-                'title': title,
-                'date': date,
-                'image_path': found_img
-            })
+            # --- ТЕПЕРЬ ФИЛЬТРАЦИЯ БУДЕТ ВИДЕТЬ ПЕРЕМЕННЫЕ ---
+            if not query or query.lower() in title.lower():
+                all_news_items.append({
+                    'slug': slug,
+                    'title': title,
+                    'date': date,
+                    'image_path': found_img
+                })
 
+    # 3. Пагинация по отфильтрованному списку
     paginator = Paginator(all_news_items, 9)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
-    return render(request, 'main/news/news_list.html', {'page_obj': page_obj})
+    return render(request, 'main/news/news_list.html', {
+        'page_obj': page_obj,
+        'query': query
+    })
 
 def news_detail(request, slug):
     return render(request, f'main/news/items/{slug}.html')

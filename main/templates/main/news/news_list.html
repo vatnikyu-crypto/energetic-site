@@ -12,10 +12,10 @@
                 <h1 class="text-4xl md:text-6xl font-black text-slate-900 uppercase tracking-tight">Новости</h1>
                 
                 {% if page_obj.paginator.num_pages > 1 %}
-                <div class="flex items-center space-x-3">
+                <div class="flex items-center justify-center md:justify-end w-full space-x-3 mt-6 md:mt-0">
                     
                     {% if page_obj.has_previous %}
-                        <a href="?page={{ page_obj.previous_page_number }}" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white border-2 border-slate-100 text-slate-900 hover:border-[#FFB800] hover:text-[#FFB800] transition-all shadow-sm">
+                        <a href="?page={{ page_obj.previous_page_number }}{% if query %}&q={{ query }}{% endif %}" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white border-2 border-slate-100 text-slate-900 hover:border-[#FFB800] hover:text-[#FFB800] transition-all shadow-sm">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7""")/>></svg>
                         </a>
                     {% else %}
@@ -29,7 +29,7 @@
                     </div>
 
                     {% if page_obj.has_next %}
-                        <a href="?page={{ page_obj.next_page_number }}" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white border-2 border-slate-100 text-slate-900 hover:border-[#FFB800] hover:text-[#FFB800] transition-all shadow-sm">
+                        <a href="?page={{ page_obj.next_page_number }}{% if query %}&q={{ query }}{% endif %}" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white border-2 border-slate-100 text-slate-900 hover:border-[#FFB800] hover:text-[#FFB800] transition-all shadow-sm">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7""")/>></svg>
                         </a>
                     {% else %}
@@ -39,6 +39,24 @@
                     {% endif %}
                 </div>
                 {% endif %}
+            </div>
+            
+            <div class="mb-12 relative group">
+                <form id="searchForm" method="GET" action="{% url 'news_list' %}">
+                    <input type="text" 
+                        id="searchInput" 
+                        name="q" 
+                        value="{{ query }}" 
+                        placeholder="Поиск по названию новости..." 
+                        autocomplete="off"
+                        class="w-full bg-white border-2 border-slate-100 rounded-[2rem] pl-8 pr-16 py-5 md:py-6 text-slate-900 font-bold focus:border-amber-400 focus:outline-none transition-all shadow-xl text-base md:text-lg appearance-none">
+                    
+                    <div class="absolute right-6 top-1/2 -translate-y-1/2 text-amber-500 pointer-events-none transition-transform group-focus-within:scale-110">
+                        <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
+                </form>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -64,7 +82,60 @@
                 </div>
                 {% endfor %}
             </div>
+
+            {% if page_obj.paginator.num_pages > 1 %}
+                <div class="flex items-center justify-center md:justify-end w-full space-x-3 mt-16 pb-10">
+                    
+                    {% if page_obj.has_previous %}
+                        <a href="?page={{ page_obj.previous_page_number }}{% if query %}&q={{ query }}{% endif %}" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white border-2 border-slate-100 text-slate-900 hover:border-[#FFB800] hover:text-[#FFB800] transition-all shadow-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7""")/>></svg>
+                        </a>
+                    {% else %}
+                        <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-50 border-2 border-slate-100 text-slate-300 cursor-not-allowed">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7""")/>></svg>
+                        </div>
+                    {% endif %}
+
+                    <div class="px-5 py-2.5 bg-slate-900 rounded-xl text-white font-black text-[10px] uppercase tracking-widest shadow-lg">
+                        {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+                    </div>
+
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}{% if query %}&q={{ query }}{% endif %}" class="w-10 h-10 flex items-center justify-center rounded-xl bg-white border-2 border-slate-100 text-slate-900 hover:border-[#FFB800] hover:text-[#FFB800] transition-all shadow-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7""")/>></svg>
+                        </a>
+                    {% else %}
+                        <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-50 border-2 border-slate-100 text-slate-300 cursor-not-allowed">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7""")/>></svg>
+                        </div>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
         </section>
     </div>
 </main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('searchInput');
+        const searchForm = document.getElementById('searchForm');
+        let timeout = null;
+
+        // Возвращаем фокус и курсор в конец строки после перезагрузки
+        if (searchInput.value) {
+            searchInput.focus();
+            const val = searchInput.value;
+            searchInput.value = '';
+            searchInput.value = val;
+        }
+
+        searchInput.addEventListener('input', function() {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                searchForm.submit();
+            }, 500); 
+        });
+    });
+</script>
 {% endblock %}
