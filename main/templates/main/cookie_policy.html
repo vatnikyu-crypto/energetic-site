@@ -1,0 +1,100 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Политика использования Cookie — Энергетик{% endblock %}
+
+{% block content %}
+
+<main class="min-h-screen bg-slate-50/50 pt-10 pb-0">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+        
+        <!-- Шапка страницы -->
+        <div class="mb-20">
+            <h1 class="text-2xl sm:text-3xl md:text-6xl font-black text-slate-900 uppercase tracking-tight mb-12 text-center md:text-left">
+                Политика использования файлов cookie
+            </h1>
+        </div>
+
+        <!-- Основной контент -->
+        <div class="space-y-16">
+            
+            <!-- Секция 1: Определение -->
+            <section>
+                <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight mb-6">
+                    1. Что такое файлы cookie?
+                </h2>
+                <p class="text-lg text-slate-600 leading-relaxed font-medium">
+                    Cookie — это небольшие текстовые данные, которые отправляются веб-сервером и сохраняются на устройстве пользователя. Они позволяют сайту «запоминать» важные технические параметры для обеспечения безопасности и стабильности работы.
+                </p>
+            </section>
+
+            <!-- Секция 2: Используемые файлы (Техническая часть) -->
+            <section>
+                <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight mb-6">
+                    2. Используемые файлы и цели
+                </h2>
+                <p class="text-lg text-slate-600 leading-relaxed mb-8 font-medium">
+                    На нашем сайте используются исключительно <strong class="text-slate-900">строго необходимые (технические)</strong> файлы. Мы не используем маркетинговые или рекламные cookie.
+                </p>
+                
+                <!-- Таблица/Карточка конкретного куки -->
+                <div class="bg-slate-50 p-6 rounded-[2.5rem] border border-slate-200">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <span class="block text-[10px] font-black text-amber-500 uppercase tracking-widest mb-1">Идентификатор</span>
+                            <code class="text-slate-900 font-bold text-xl">csrftoken</code>
+                        </div>
+                        <div>
+                            <span class="block text-[10px] font-black text-amber-500 uppercase tracking-widest mb-1">Срок хранения</span>
+                            <span class="text-slate-900 font-bold">12 месяцев</span>
+                        </div>
+                        <div class="md:col-span-2">
+                            <span class="block text-[10px] font-black text-amber-500 uppercase tracking-widest mb-1">Назначение</span>
+                            <p class="text-slate-600 text-sm font-bold leading-relaxed">
+                                Обеспечивает защиту от подделки межсайтовых запросов (CSRF) при заполнении формы «Заказать звонок». Без этого файла безопасная отправка данных невозможна.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Секция 3: Управление -->
+            <section>
+                <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight mb-6">
+                    3. Управление файлами
+                </h2>
+                <p class="text-lg text-slate-600 leading-relaxed font-medium">
+                    Вы можете в любой момент изменить настройки своего браузера, чтобы блокировать или удалять файлы cookie. Обращаем ваше внимание, что ограничение использования технических файлов может привести к некорректной работе интерактивных элементов сайта (кнопки отправки заявок).
+                </p>
+            </section>
+
+            <!-- Секция 4: Юридические реквизиты (Оператор) -->
+            <section class="pt-16 border-t border-slate-100">
+                <h2 class="text-xl font-black text-slate-900 uppercase tracking-tight mb-8">
+                    Сведения об организации
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm font-bold tracking-wider text-slate-500">
+                    <div class="space-y-1">
+                        <span class="block text-[12px] text-slate-400 uppercase">Наименование</span>
+                        <span class="text-slate-900">АНО ДПО «ЭНЕРГЕТИК»</span>
+                    </div>
+                    <div class="space-y-1">
+                        <span class="block text-[12px] text-slate-400 uppercase">ИНН / ОГРН</span>
+                        <span class="text-slate-900">7017999506 / 1117000001425</span>
+                    </div>
+                    <div class="space-y-1">
+                        <span class="block text-[12px] text-slate-400 uppercase">Адрес</span>
+                        <span class="text-slate-900">г. Томск, ул. Энергетическая 2</span>
+                    </div>
+                    <div class="space-y-1">
+                        <span class="block text-[12px] text-slate-400 uppercase">Email</span>
+                        <a href="mailto:fot@dpo-energo.ru" class="text-amber-500 hover:underline">fot@dpo-energo.ru</a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}

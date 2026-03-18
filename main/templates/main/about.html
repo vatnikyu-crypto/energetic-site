@@ -9,7 +9,7 @@
     <div class="max-w-7xl mx-auto px-6">
         <section class="pt-0 pb-12">
             <h1
-                class="text-2xl md:text-5xl lg:text-6xl font-black text-slate-900 uppercase tracking-tight leading-[0.9] mb-8">
+                class="text-2xl md:text-5xl lg:text-6xl font-black text-slate-900 uppercase tracking-tight leading-tight mb-8 text-center md:text-left">
                 Сведения об <br class="hidden sm:block">
                 образовательной <br class="hidden sm:block">
                 организации
@@ -22,12 +22,14 @@
 
                 <!-- 1. Основные сведения -->
                 <div
-                    class="group border border-slate-100 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
+                    class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
                         class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
-                        <span class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg">Основные
-                            сведения</span>
-                        <span class="transform transition-transform duration-300 text-amber-500 shrink-0">
+                        <span class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg">
+                            Основные сведения
+                        </span>
+                        <span
+                            class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
                             <svg xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
@@ -38,26 +40,26 @@
                     <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/50">
                         <div class="px-8 pb-8 pt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                             <a href="{% static 'main/docs/osnovnii_svedenia.pdf' %}" target="_blank"
-                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-100 hover:border-amber-400 transition">
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
                                 <div
                                     class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
                                     PDF</div>
-                                <span class="text-slate-900 font-bold text-[10px] uppercase">Основные сведения</span>
+                                <span class="text-slate-900 text-[14px]">Основные сведения</span>
                             </a>
                             <a href="{% static 'main/docs/accreditacia.pdf' %}" target="_blank"
-                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-100 hover:border-amber-400 transition">
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
                                 <div
                                     class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
                                     PDF</div>
-                                <span class="text-slate-900 font-bold text-[10px] uppercase">Уведомление об аккредитации
-                                    10.01.2023</span>
+                                <span class="text-slate-900 text-[14px]">Уведомление об аккредитации
+                                    10.01.2023 г.</span>
                             </a>
                             <a href="{% static 'main/docs/licenzia.pdf' %}" target="_blank"
-                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-100 hover:border-amber-400 transition">
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
                                 <div
                                     class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
                                     PDF</div>
-                                <span class="text-slate-900 font-bold text-[10px] uppercase">Лицензия</span>
+                                <span class="text-slate-900 text-[14px]">Лицензия</span>
                             </a>
                         </div>
                     </div>
@@ -65,12 +67,13 @@
 
                 <!-- 2. Структура и органы управления -->
                 <div
-                    class="group border border-slate-100 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
+                    class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
                         class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg">Структура
                             и органы управления образовательной организацией</span>
-                        <span class="transform transition-transform duration-300 text-amber-500 shrink-0">
+                        <span
+                            class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
                             <svg xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
@@ -81,14 +84,14 @@
                     <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/50">
                         <div class="px-8 pb-8 pt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                             <a href="{% static 'main/docs/Органы управления.pdf' %}" target="_blank"
-                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-100 hover:border-amber-400 transition">
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
                                 <div
                                     class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
                                     PDF</div>
                                 <span class="text-slate-900 font-bold text-[10px] uppercase">Органы управления</span>
                             </a>
                             <a href="{% static 'main/docs/Структура АНО ДПО Энергетик.pdf' %}" target="_blank"
-                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-100 hover:border-amber-400 transition">
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
                                 <div
                                     class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
                                     PDF</div>
@@ -96,7 +99,7 @@
                             </a>
                             <a href="{% static 'main/docs/Положение о ЛПФО АНО ДПО Энергетик 2022.pdf' %}"
                                 target="_blank"
-                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-100 hover:border-amber-400 transition">
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
                                 <div
                                     class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
                                     PDF</div>
@@ -104,7 +107,7 @@
                                     психофизиологического обеспечения</span>
                             </a>
                             <a href="{% static 'main/docs/Положение об ОПиОУП.pdf' %}" target="_blank"
-                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-100 hover:border-amber-400 transition">
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
                                 <div
                                     class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
                                     PDF</div>
@@ -112,7 +115,7 @@
                                     планирования и организации учебного процесса</span>
                             </a>
                             <a href="{% static 'main/docs/Положение об Управлении.pdf' %}" target="_blank"
-                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-100 hover:border-amber-400 transition">
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
                                 <div
                                     class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
                                     PDF</div>
@@ -125,17 +128,19 @@
 
                 <!-- 3. Документы -->
                 <div
-                    class="group border border-slate-100 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
+                    class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
                         class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span
                             class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg">Документы</span>
-                        <span class="transform transition-transform duration-300 text-amber-500 shrink-0"><svg
-                                xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        <span
+                            class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
+                            <svg xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M19 9l-7 7-7-7" />
-                            </svg></span>
+                            </svg>
+                        </span>
                     </button>
                     <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/50">
                         <div class="px-8 pb-8 pt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -147,8 +152,8 @@
                                         class="text-slate-700 font-bold uppercase tracking-widest text-xs group-hover/sub:text-amber-500 transition">ЛНА
                                         по вопросам осуществления образовательной деятельности</span>
                                     <span
-                                        class="transform transition-transform duration-300 text-slate-300 group-hover/sub:text-amber-500">
-                                        <svg xmlns="http://www.w3.org" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                                        class="accordion-chevron transform transition-transform duration-300 text-slate-300">
+                                        <svg xmlns="http://www.w3.org" class="h-3 w-3" fill="none" viewBox="0 0 24 24"
                                             stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M19 9l-7 7-7-7" />
@@ -157,9 +162,8 @@
                                 </button>
                                 <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
                                     <div class="py-4 grid grid-cols-1 md:grid-cols-2 gap-3">
-                                        <!-- Твои файлы PDF -->
                                         <a href="{% static 'main/docs/policy.pdf' %}" target="_blank"
-                                            class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-100 hover:border-amber-400 transition">
+                                            class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 hover:border-amber-400 transition">
                                             <div
                                                 class="w-8 h-8 bg-red-50 text-red-500 rounded-lg flex items-center justify-center font-black text-[8px] shrink-0">
                                                 PDF</div>
@@ -168,7 +172,7 @@
                                         </a>
                                         <a href="{% static 'main/docs/Порядок оформления договорных отношений.pdf' %}"
                                             target="_blank"
-                                            class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-100 hover:border-amber-400 transition">
+                                            class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 hover:border-amber-400 transition">
                                             <div
                                                 class="w-8 h-8 bg-red-50 text-red-500 rounded-lg flex items-center justify-center font-black text-[8px] shrink-0">
                                                 PDF</div>
@@ -177,7 +181,7 @@
                                         </a>
                                         <a href="{% static 'main/docs/Порядок перевода, отчисления, восстановления обучающихся.pdf' %}"
                                             target="_blank"
-                                            class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-100 hover:border-amber-400 transition">
+                                            class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 hover:border-amber-400 transition">
                                             <div
                                                 class="w-8 h-8 bg-red-50 text-red-500 rounded-lg flex items-center justify-center font-black text-[8px] shrink-0">
                                                 PDF</div>
@@ -186,7 +190,7 @@
                                         </a>
                                         <a href="{% static 'main/docs/Порядок перевода, отчисления, восстановления обучающихся.pdf' %}"
                                             target="_blank"
-                                            class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-100 hover:border-amber-400 transition">
+                                            class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 hover:border-amber-400 transition">
                                             <div
                                                 class="w-8 h-8 bg-red-50 text-red-500 rounded-lg flex items-center justify-center font-black text-[8px] shrink-0">
                                                 PDF</div>
@@ -195,7 +199,7 @@
                                         </a>
                                         <a href="{% static 'main/docs/Правила приема обучающихся.pdf' %}"
                                             target="_blank"
-                                            class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-100 hover:border-amber-400 transition">
+                                            class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 hover:border-amber-400 transition">
                                             <div
                                                 class="w-8 h-8 bg-red-50 text-red-500 rounded-lg flex items-center justify-center font-black text-[8px] shrink-0">
                                                 PDF</div>
@@ -203,7 +207,7 @@
                                                 обучающихся</span>
                                         </a>
                                         <a href="{% static 'main/docs/Режим занятий обучающихся.pdf' %}" target="_blank"
-                                            class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-100 hover:border-amber-400 transition">
+                                            class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 hover:border-amber-400 transition">
                                             <div
                                                 class="w-8 h-8 bg-red-50 text-red-500 rounded-lg flex items-center justify-center font-black text-[8px] shrink-0">
                                                 PDF</div>
@@ -215,7 +219,7 @@
                             </div>
                             <a href="{% static 'main/docs/Отчет о проведении самообследования за 2024 год.pdf' %}"
                                 target="_blank"
-                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-100 hover:border-amber-400 transition">
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
                                 <div
                                     class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
                                     PDF</div>
@@ -223,7 +227,7 @@
                                     самообследования за 2024 год</span>
                             </a>
                             <a href="{% static 'main/docs/ПВР обучающихся.pdf' %}" target="_blank"
-                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-100 hover:border-amber-400 transition">
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
                                 <div
                                     class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
                                     PDF</div>
@@ -231,12 +235,19 @@
                                     распорядка обучающихся</span>
                             </a>
                             <a href="{% static 'main/docs/ПВТР.pdf' %}" target="_blank"
-                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-100 hover:border-amber-400 transition">
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
                                 <div
                                     class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
                                     PDF</div>
                                 <span class="text-slate-900 font-bold text-[10px] uppercase">Правила внутреннего
                                     трудового распорядка</span>
+                            </a>
+                            <a href="{% static 'main/docs/Устав.pdf' %}" target="_blank"
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
+                                <div
+                                    class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                    PDF</div>
+                                <span class="text-slate-900 font-bold text-[10px] uppercase">Устав</span>
                             </a>
                         </div>
                     </div>
@@ -244,136 +255,1320 @@
 
                 <!-- 4. Образование -->
                 <div
-                    class="group border border-slate-100 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
+                    class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
                         class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span
                             class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg">Образование</span>
-                        <span class="transform transition-transform duration-300 text-amber-500 shrink-0"><svg
-                                xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        <span
+                            class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
+                            <svg xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M19 9l-7 7-7-7" />
-                            </svg></span>
+                            </svg>
+                        </span>
                     </button>
                     <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/50">
-                        <div class="px-8 pb-8 pt-2 text-slate-600 text-sm italic">Данные об образовательных программах.
+                        <div class="px-8 pb-8 pt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <!-- Внутренний аккордеон 1 -->
+                            <div class="col-span-full border-b border-slate-200 last:border-0">
+                                <button onclick="toggleAccordion(this)"
+                                    class="w-full py-4 flex justify-between items-center text-left group/sub">
+                                    <span
+                                        class="text-slate-700 font-bold uppercase tracking-widest text-xs group-hover/sub:text-amber-500 transition">А)
+                                        О реализуемых образовательных программах</span>
+                                    <span
+                                        class="accordion-chevron transform transition-transform duration-300 text-slate-300">
+                                        <svg xmlns="http://www.w3.org" class="h-3 w-3" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                    <div class="py-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+                                        <!-- Твои файлы PDF -->
+                                        <a href="{% static 'main/docs/Информация о реализуемых уровнях образования.pdf' %}"
+                                            target="_blank"
+                                            class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 hover:border-amber-400 transition">
+                                            <div
+                                                class="w-8 h-8 bg-red-50 text-red-500 rounded-lg flex items-center justify-center font-black text-[8px] shrink-0">
+                                                PDF</div>
+                                            <span class="text-slate-900 font-bold text-[10px] uppercase">Информация о
+                                                реализуемых уровнях образования</span>
+                                        </a>
+                                        <a href="{% static 'main/docs/Информация о формах и нормативных сроках обучения.pdf' %}"
+                                            target="_blank"
+                                            class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 hover:border-amber-400 transition">
+                                            <div
+                                                class="w-8 h-8 bg-red-50 text-red-500 rounded-lg flex items-center justify-center font-black text-[8px] shrink-0">
+                                                PDF</div>
+                                            <span class="text-slate-900 font-bold text-[10px] uppercase">Информация о
+                                                формах и нормативных сроках обучения</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Внутренний аккордеон 2 -->
+                            <div class="col-span-full border-b border-slate-200 last:border-0">
+                                <button onclick="toggleAccordion(this)"
+                                    class="w-full py-4 flex justify-between items-center text-left group/sub">
+                                    <span
+                                        class="text-slate-700 font-bold uppercase tracking-widest text-xs group-hover/sub:text-amber-500 transition">Б),
+                                        В), Г) О численности обучающихся по реализуемым образовательным
+                                        программам</span>
+                                    <span
+                                        class="accordion-chevron transform transition-transform duration-300 text-slate-300">
+                                        <svg xmlns="http://www.w3.org" class="h-3 w-3" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                    <div class="py-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+                                        <!-- Твои файлы PDF -->
+                                        <a href="{% static 'main/docs/О численности обучающихся по реализуемым ОП.pdf' %}"
+                                            target="_blank"
+                                            class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 hover:border-amber-400 transition">
+                                            <div
+                                                class="w-8 h-8 bg-red-50 text-red-500 rounded-lg flex items-center justify-center font-black text-[8px] shrink-0">
+                                                PDF</div>
+                                            <span class="text-slate-900 font-bold text-[10px] uppercase">О численности
+                                                обучающихся по реализуемым образовательным программам</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Внутренний аккордеон 3 -->
+                            <div class="col-span-full border-b border-slate-200 last:border-0">
+                                <button onclick="toggleAccordion(this)"
+                                    class="w-full py-4 flex justify-between items-center text-left group/sub">
+                                    <span
+                                        class="text-slate-700 font-bold uppercase tracking-widest text-xs group-hover/sub:text-amber-500 transition">Основные
+                                        реализуемые образовательные программы</span>
+                                    <span
+                                        class="accordion-chevron transform transition-transform duration-300 text-slate-300">
+                                        <svg xmlns="http://www.w3.org" class="h-3 w-3" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                    <div class="py-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+                                        <!-- Электротеплоэнергетика (Уровень 2) -->
+                                        <div class="col-span-full border-b border-slate-100 last:border-0">
+                                            <button onclick="toggleAccordion(this)"
+                                                class="w-full py-3 flex justify-between items-center text-left group/inner">
+                                                <div class="flex items-center">
+                                                    <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
+                                                        viewBox="0 0 20 20">
+                                                        <path
+                                                            d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z">
+                                                        </path>
+                                                    </svg>
+                                                    <span
+                                                        class="text-sm font-medium text-slate-600 group-hover/inner:text-amber-600 transition">Электротеплоэнергетика</span>
+                                                </div>
+                                                <span
+                                                    class="accordion-chevron transform transition-transform duration-300 text-slate-300 group-hover/inner:text-amber-500">
+                                                    <svg xmlns="http://www.w3.org" class="h-4 w-4" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                    </svg>
+                                                </span>
+                                            </button>
+
+                                            <div
+                                                class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/50 rounded-lg">
+                                                <!-- Контент внутри Электротеплоэнергетики (Уровень 3) -->
+                                                <div class="p-2 ml-4 space-y-1">
+
+                                                    <!-- Папка 1: Электроэнергетика -->
+                                                    <div class="border-l-2 border-slate-200">
+                                                        <button onclick="toggleAccordion(this)"
+                                                            class="w-full py-2 px-3 flex justify-between items-center text-left group/sub-inner">
+                                                            <div class="flex items-center">
+                                                                <svg class="w-4 h-4 mr-2 text-amber-400"
+                                                                    fill="currentColor" viewBox="0 0 20 20">
+                                                                    <path
+                                                                        d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z">
+                                                                    </path>
+                                                                </svg>
+                                                                <span
+                                                                    class="text-xs font-medium text-slate-500 group-hover/sub-inner:text-amber-600 transition">Электроэнергетика</span>
+                                                            </div>
+                                                            <span
+                                                                class="accordion-chevron transform transition-transform duration-300 text-slate-300">
+                                                                <svg xmlns="http://www.w3.org" class="h-3 w-3"
+                                                                    fill="none" viewBox="0 0 24 24"
+                                                                    stroke="currentColor">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                        <div
+                                                            class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                                            <div class="pl-9 py-2 text-[11px] text-slate-400 space-y-2">
+                                                                <a href="{% static 'main/docs/allprograms/Электромонтер оперативно-выездной бригады.pdf' %}"
+                                                                    target="_blank"
+                                                                    class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                    <div
+                                                                        class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                        PDF</div>
+
+                                                                    <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                        <span
+                                                                            class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                            Электромонтер оперативно-выездной бригады
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="{% static 'main/docs/allprograms/Электромонтер по испытаниям и измерениям.pdf' %}"
+                                                                    target="_blank"
+                                                                    class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                    <div
+                                                                        class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                        PDF</div>
+
+                                                                    <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                        <span
+                                                                            class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                            Электромонтер по испытаниям и измерениям
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="{% static 'main/docs/allprograms/Электромонтер по обслуживанию подстанций.pdf' %}"
+                                                                    target="_blank"
+                                                                    class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                    <div
+                                                                        class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                        PDF</div>
+
+                                                                    <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                        <span
+                                                                            class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                            Электромонтер по обслуживанию подстанций
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="{% static 'main/docs/allprograms/Электромонтер по ремонту аппаратуры релейной защиты и автоматики.pdf' %}"
+                                                                    target="_blank"
+                                                                    class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                    <div
+                                                                        class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                        PDF</div>
+
+                                                                    <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                        <span
+                                                                            class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                            Электромонтер по ремонту аппаратуры релейной
+                                                                            защиты и автоматики
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="{% static 'main/docs/allprograms/Электромонтер по ремонту воздушных линий электропередачи.pdf' %}"
+                                                                    target="_blank"
+                                                                    class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                    <div
+                                                                        class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                        PDF</div>
+
+                                                                    <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                        <span
+                                                                            class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                            Электромонтер по ремонту воздушных линий
+                                                                            электропередачи
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="{% static 'main/docs/allprograms/Электромонтер по ремонту и монтажу кабельных линий.pdf' %}"
+                                                                    target="_blank"
+                                                                    class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                    <div
+                                                                        class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                        PDF</div>
+
+                                                                    <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                        <span
+                                                                            class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                            Электромонтер по ремонту и монтажу кабельных
+                                                                            линий
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="{% static 'main/docs/allprograms/Электромонтер по эксплуатации распределительных сетей.pdf' %}"
+                                                                    target="_blank"
+                                                                    class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                    <div
+                                                                        class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                        PDF</div>
+
+                                                                    <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                        <span
+                                                                            class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                            Электромонтер по эксплуатации
+                                                                            распределительных сетей
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="{% static 'main/docs/allprograms/Электромонтер по эксплуатации электросчетчиков.pdf' %}"
+                                                                    target="_blank"
+                                                                    class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                    <div
+                                                                        class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                        PDF</div>
+
+                                                                    <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                        <span
+                                                                            class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                            Электромонтер по эксплуатации
+                                                                            электросчетчиков
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="{% static 'main/docs/allprograms/Электрослесарь по ремонту оборудования распределительных устройств.pdf' %}"
+                                                                    target="_blank"
+                                                                    class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                    <div
+                                                                        class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                        PDF</div>
+
+                                                                    <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                        <span
+                                                                            class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                            Электрослесарь по ремонту оборудования
+                                                                            распределительных устройств
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Папка 2: Теплоэнергетика -->
+                                                    <div class="border-l-2 border-slate-200">
+                                                        <button onclick="toggleAccordion(this)"
+                                                            class="w-full py-2 px-3 flex justify-between items-center text-left group/sub-inner">
+                                                            <div class="flex items-center">
+                                                                <svg class="w-4 h-4 mr-2 text-amber-400"
+                                                                    fill="currentColor" viewBox="0 0 20 20">
+                                                                    <path
+                                                                        d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z">
+                                                                    </path>
+                                                                </svg>
+                                                                <span
+                                                                    class="text-xs font-medium text-slate-500 group-hover/sub-inner:text-amber-600 transition">Теплоэнергетика</span>
+                                                            </div>
+                                                            <span
+                                                                class="accordion-chevron transform transition-transform duration-300 text-slate-300">
+                                                                <svg xmlns="http://www.w3.org" class="h-3 w-3"
+                                                                    fill="none" viewBox="0 0 24 24"
+                                                                    stroke="currentColor">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                        <div
+                                                            class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                                            <div class="pl-9 py-2 text-[11px] text-slate-400 space-y-2">
+                                                                <a href="{% static 'main/docs/allprograms/Аппаратчик химводоочистки.pdf' %}"
+                                                                    target="_blank"
+                                                                    class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                    <div
+                                                                        class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                        PDF</div>
+
+                                                                    <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                        <span
+                                                                            class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                            Аппаратчик химводоочистки
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="{% static 'main/docs/allprograms/Лаборант химического анализа.pdf' %}"
+                                                                    target="_blank"
+                                                                    class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                    <div
+                                                                        class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                        PDF</div>
+
+                                                                    <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                        <span
+                                                                            class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                            Лаборант химического анализа
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="{% static 'main/docs/allprograms/Машинист компрессорных установок.pdf' %}"
+                                                                    target="_blank"
+                                                                    class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                    <div
+                                                                        class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                        PDF</div>
+
+                                                                    <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                        <span
+                                                                            class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                            Машинист компрессорных установок
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="{% static 'main/docs/allprograms/Машинист котлов.pdf' %}"
+                                                                    target="_blank"
+                                                                    class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                    <div
+                                                                        class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                        PDF</div>
+
+                                                                    <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                        <span
+                                                                            class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                            Машинист котлов
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="{% static 'main/docs/allprograms/Оператор котельной.pdf' %}"
+                                                                    target="_blank"
+                                                                    class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                    <div
+                                                                        class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                        PDF</div>
+
+                                                                    <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                        <span
+                                                                            class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                            Оператор котельной
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="{% static 'main/docs/allprograms/Слесарь по ремонту оборудования тепловых сетей.pdf' %}"
+                                                                    target="_blank"
+                                                                    class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                    <div
+                                                                        class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                        PDF</div>
+
+                                                                    <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                        <span
+                                                                            class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                            Слесарь по ремонту оборудования тепловых
+                                                                            сетей
+                                                                        </span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Охрана труда -->
+                                        <div class="col-span-full border-b border-slate-100 last:border-0">
+                                            <button onclick="toggleAccordion(this)"
+                                                class="w-full py-3 flex justify-between items-center text-left group/inner">
+                                                <div class="flex items-center">
+                                                    <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
+                                                        viewBox="0 0 20 20">
+                                                        <path
+                                                            d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z">
+                                                        </path>
+                                                    </svg>
+                                                    <span
+                                                        class="text-sm font-medium text-slate-600 group-hover/inner:text-amber-600 transition">Охрана
+                                                        труда</span>
+                                                </div>
+                                                <span
+                                                    class="accordion-chevron transform transition-transform duration-300 text-slate-300 group-hover/inner:text-amber-500">
+                                                    <svg xmlns="http://www.w3.org" class="h-4 w-4" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <div
+                                                class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/50 rounded-lg">
+                                                <div class="col-span-full border-b border-slate-100 last:border-0">
+                                                    <button onclick="toggleAccordion(this)"
+                                                        class="w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
+                                                        <div class="flex items-center">
+                                                            <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
+                                                                viewBox="0 0 20 20">
+                                                                <path
+                                                                    d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z">
+                                                                </path>
+                                                            </svg>
+                                                            <span
+                                                                class="text-sm font-medium text-slate-600 group-hover/inner:text-amber-600 transition">01
+                                                                (А)</span>
+                                                        </div>
+                                                        <span
+                                                            class="accordion-chevron transform transition-transform duration-300 text-slate-300 group-hover/inner:text-amber-500">
+                                                            <svg xmlns="http://www.w3.org" class="h-4 w-4" fill="none"
+                                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                    stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                    <div
+                                                        class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                                        <div
+                                                            class="p-4 pl-16 text-xs text-slate-400 border-t border-slate-100/50">
+                                                            <a href="{% static 'main/docs/allprograms/01 Обучение по ОВОТ и ФСУОТ.pdf' %}"
+                                                                target="_blank"
+                                                                class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                <div
+                                                                    class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                    PDF</div>
+
+                                                                <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                    <span
+                                                                        class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                        Обучение по общим вопросам ОТ и функционирования
+                                                                        СУОТ
+                                                                    </span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-span-full border-b border-slate-100 last:border-0">
+                                                    <button onclick="toggleAccordion(this)"
+                                                        class="w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
+                                                        <div class="flex items-center">
+                                                            <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
+                                                                viewBox="0 0 20 20">
+                                                                <path
+                                                                    d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z">
+                                                                </path>
+                                                            </svg>
+                                                            <span
+                                                                class="text-sm font-medium text-slate-600 group-hover/inner:text-amber-600 transition">02
+                                                                (Б)</span>
+                                                        </div>
+                                                        <span
+                                                            class="accordion-chevron transform transition-transform duration-300 text-slate-300 group-hover/inner:text-amber-500">
+                                                            <svg xmlns="http://www.w3.org" class="h-4 w-4" fill="none"
+                                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                    stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                    <div
+                                                        class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                                        <div
+                                                            class="p-4 pl-16 text-xs text-slate-400 border-t border-slate-100/50">
+                                                            <a href="{% static 'main/docs/allprograms/02 Обучение БМиПВР при ВОПФ.pdf' %}"
+                                                                target="_blank"
+                                                                class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                <div
+                                                                    class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                    PDF</div>
+
+                                                                <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                    <span
+                                                                        class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                        Обучение безопасным методам и приемам выполнения
+                                                                        работ при воздействии ВОПФ, источников
+                                                                        опасности, идентифицированных в рамках СОУТ и
+                                                                        ОПР
+                                                                    </span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-span-full border-b border-slate-100 last:border-0">
+                                                    <button onclick="toggleAccordion(this)"
+                                                        class="w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
+                                                        <div class="flex items-center">
+                                                            <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
+                                                                viewBox="0 0 20 20">
+                                                                <path
+                                                                    d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z">
+                                                                </path>
+                                                            </svg>
+                                                            <span
+                                                                class="text-sm font-medium text-slate-600 group-hover/inner:text-amber-600 transition">03
+                                                                (В)</span>
+                                                        </div>
+                                                        <span
+                                                            class="accordion-chevron transform transition-transform duration-300 text-slate-300 group-hover/inner:text-amber-500">
+                                                            <svg xmlns="http://www.w3.org" class="h-4 w-4" fill="none"
+                                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                    stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                    <div
+                                                        class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                                        <div
+                                                            class="p-4 pl-16 text-xs text-slate-400 border-t border-slate-100/50">
+                                                            <a href="{% static 'main/docs/allprograms/03 Обучение РПО.pdf' %}"
+                                                                target="_blank"
+                                                                class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                <div
+                                                                    class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                    PDF</div>
+
+                                                                <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                    <span
+                                                                        class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                        Обучение безопасным методам и приемам выполнения
+                                                                        РПО, к которым предъявляются дополнительные
+                                                                        требования в соответствии с НПА, содержащими
+                                                                        государственные нормативные требования ОТ
+                                                                    </span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-span-full border-b border-slate-100 last:border-0">
+                                                    <button onclick="toggleAccordion(this)"
+                                                        class="w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
+                                                        <div class="flex items-center">
+                                                            <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
+                                                                viewBox="0 0 20 20">
+                                                                <path
+                                                                    d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z">
+                                                                </path>
+                                                            </svg>
+                                                            <span
+                                                                class="text-sm font-medium text-slate-600 group-hover/inner:text-amber-600 transition">04
+                                                                (СИЗ)</span>
+                                                        </div>
+                                                        <span
+                                                            class="accordion-chevron transform transition-transform duration-300 text-slate-300 group-hover/inner:text-amber-500">
+                                                            <svg xmlns="http://www.w3.org" class="h-4 w-4" fill="none"
+                                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                    stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                    <div
+                                                        class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                                        <div
+                                                            class="p-4 pl-16 text-xs text-slate-400 border-t border-slate-100/50">
+                                                            <a href="{% static 'main/docs/allprograms/04 Обучение СИЗ.pdf' %}"
+                                                                target="_blank"
+                                                                class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                <div
+                                                                    class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                    PDF</div>
+
+                                                                <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                    <span
+                                                                        class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                        Обучение по использованию (применению) средств
+                                                                        индивидуальной защиты
+                                                                    </span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-span-full border-b border-slate-100 last:border-0">
+                                                    <button onclick="toggleAccordion(this)"
+                                                        class="w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
+                                                        <div class="flex items-center">
+                                                            <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
+                                                                viewBox="0 0 20 20">
+                                                                <path
+                                                                    d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z">
+                                                                </path>
+                                                            </svg>
+                                                            <span
+                                                                class="text-sm font-medium text-slate-600 group-hover/inner:text-amber-600 transition">05
+                                                                (Первая помощь)</span>
+                                                        </div>
+                                                        <span
+                                                            class="accordion-chevron transform transition-transform duration-300 text-slate-300 group-hover/inner:text-amber-500">
+                                                            <svg xmlns="http://www.w3.org" class="h-4 w-4" fill="none"
+                                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                    stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                    <div
+                                                        class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                                        <div
+                                                            class="p-4 pl-16 text-xs text-slate-400 border-t border-slate-100/50">
+                                                            <a href="{% static 'main/docs/allprograms/05 Обучение ПП.pdf' %}"
+                                                                target="_blank"
+                                                                class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                <div
+                                                                    class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                    PDF</div>
+
+                                                                <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                    <span
+                                                                        class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                        Оказание первой помощи пострадавшим
+                                                                    </span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-span-full border-b border-slate-100 last:border-0">
+                                                    <button onclick="toggleAccordion(this)"
+                                                        class="w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
+                                                        <div class="flex items-center">
+                                                            <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
+                                                                viewBox="0 0 20 20">
+                                                                <path
+                                                                    d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z">
+                                                                </path>
+                                                            </svg>
+                                                            <span
+                                                                class="text-sm font-medium text-slate-600 group-hover/inner:text-amber-600 transition">06
+                                                                (Высота)</span>
+                                                        </div>
+                                                        <span
+                                                            class="accordion-chevron transform transition-transform duration-300 text-slate-300 group-hover/inner:text-amber-500">
+                                                            <svg xmlns="http://www.w3.org" class="h-4 w-4" fill="none"
+                                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                    stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                    <div
+                                                        class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                                        <div
+                                                            class="p-4 pl-16 text-xs text-slate-400 border-t border-slate-100/50">
+                                                            <a href="{% static 'main/docs/allprograms/06  Работы на высоте.pdf' %}"
+                                                                target="_blank"
+                                                                class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                <div
+                                                                    class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                    PDF</div>
+
+                                                                <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                    <span
+                                                                        class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                        Безопасные методы и приемы выполнения работ на
+                                                                        высоте
+                                                                    </span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-span-full border-b border-slate-100 last:border-0">
+                                                    <button onclick="toggleAccordion(this)"
+                                                        class="w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
+                                                        <div class="flex items-center">
+                                                            <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
+                                                                viewBox="0 0 20 20">
+                                                                <path
+                                                                    d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z">
+                                                                </path>
+                                                            </svg>
+                                                            <span
+                                                                class="text-sm font-medium text-slate-600 group-hover/inner:text-amber-600 transition">07
+                                                                (ОЗП)</span>
+                                                        </div>
+                                                        <span
+                                                            class="accordion-chevron transform transition-transform duration-300 text-slate-300 group-hover/inner:text-amber-500">
+                                                            <svg xmlns="http://www.w3.org" class="h-4 w-4" fill="none"
+                                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                    stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                    <div
+                                                        class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                                        <div
+                                                            class="p-4 pl-16 text-xs text-slate-400 border-t border-slate-100/50">
+                                                            <a href="{% static 'main/docs/allprograms/07  Работы  в ОЗП.pdf' %}"
+                                                                target="_blank"
+                                                                class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+
+                                                                <div
+                                                                    class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                                    PDF</div>
+
+                                                                <div class="flex flex-col flex-1 min-w-0 pr-2">
+                                                                    <span
+                                                                        class="text-slate-700 font-medium text-[13px] leading-[1.2] break-words group-hover/file:text-slate-900 transition-colors">
+                                                                        Безопасные методы и приемы выполнения работ в
+                                                                        ограниченных и замкнутых пространствах
+                                                                    </span>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Пожарная безопасность -->
+                                        <div class="col-span-full border-b border-slate-100 last:border-0">
+                                            <button onclick="toggleAccordion(this)"
+                                                class="w-full py-3 flex justify-between items-center text-left group/inner">
+                                                <div class="flex items-center">
+                                                    <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
+                                                        viewBox="0 0 20 20">
+                                                        <path
+                                                            d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z">
+                                                        </path>
+                                                    </svg>
+                                                    <span
+                                                        class="text-sm font-medium text-slate-600 group-hover/inner:text-amber-600 transition">Пожарная
+                                                        безопасность</span>
+                                                </div>
+                                                <span
+                                                    class="accordion-chevron transform transition-transform duration-300 text-slate-300 group-hover/inner:text-amber-500">
+                                                    <svg xmlns="http://www.w3.org" class="h-4 w-4" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                    </svg>
+                                                </span>
+                                            </button>
+
+                                            <div
+                                                class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/30">
+                                                <div class="p-4 space-y-3 border-t border-slate-100/50">
+
+                                                    <!-- Карточка 1 -->
+                                                    <a href="{% static 'main/docs/allprograms/Программа ПК для лиц ответственных за обеспечение ПБ (программа 1).pdf' %}"
+                                                        target="_blank"
+                                                        class="flex items-center space-x-4 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+                                                        <div
+                                                            class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                            PDF</div>
+                                                        <div class="flex flex-col flex-1 min-w-0">
+                                                            <span
+                                                                class="text-slate-700 font-medium text-[13px] leading-tight group-hover/file:text-slate-900 transition-colors">
+                                                                Программа ПК для лиц ответственных за обеспечение ПБ
+                                                                (программа 1)
+                                                            </span>
+                                                        </div>
+                                                    </a>
+
+                                                    <!-- Карточка 2 -->
+                                                    <a href="{% static 'main/docs/allprograms/Программа ПК по проведению противопожарного инструктажа (программа 4).pdf' %}"
+                                                        target="_blank"
+                                                        class="flex items-center space-x-4 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+                                                        <div
+                                                            class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                            PDF</div>
+                                                        <div class="flex flex-col flex-1 min-w-0">
+                                                            <span
+                                                                class="text-slate-700 font-medium text-[13px] leading-tight group-hover/file:text-slate-900 transition-colors">
+                                                                Программа ПК по проведению противопожарного инструктажа
+                                                                (программа 4)
+                                                            </span>
+                                                        </div>
+                                                    </a>
+
+                                                    <!-- Карточка 3 -->
+                                                    <a href="{% static 'main/docs/allprograms/Программа профессиональной переподготовки специалист по пожарной профилактике (программа 5).pdf' %}"
+                                                        target="_blank"
+                                                        class="flex items-center space-x-4 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+                                                        <div
+                                                            class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                            PDF</div>
+                                                        <div class="flex flex-col flex-1 min-w-0">
+                                                            <span
+                                                                class="text-slate-700 font-medium text-[13px] leading-tight group-hover/file:text-slate-900 transition-colors">
+                                                                Программа профессиональной переподготовки специалист по
+                                                                пожарной профилактике (программа 5)
+                                                            </span>
+                                                        </div>
+                                                    </a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Промышленная и энергетическая безопасность -->
+                                        <div class="col-span-full border-b border-slate-100 last:border-0">
+                                            <button onclick="toggleAccordion(this)"
+                                                class="w-full py-3 flex justify-between items-center text-left group/inner">
+                                                <div class="flex items-center">
+                                                    <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
+                                                        viewBox="0 0 20 20">
+                                                        <path
+                                                            d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z">
+                                                        </path>
+                                                    </svg>
+                                                    <span
+                                                        class="text-sm font-medium text-slate-600 group-hover/inner:text-amber-600 transition text-balance">Промышленная
+                                                        и энергетическая безопасность</span>
+                                                </div>
+                                                <span
+                                                    class="accordion-chevron transform transition-transform duration-300 text-slate-300 group-hover/inner:text-amber-500">
+                                                    <svg xmlns="http://www.w3.org" class="h-4 w-4" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <div
+                                                class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/30">
+                                                <div class="p-4 space-y-3 border-t border-slate-100/50">
+
+                                                    <!-- Карточка 1 -->
+                                                    <a href="{% static 'main/docs/allprograms/ПК руководителей и специалистов ОПО по ПБ.pdf' %}"
+                                                        target="_blank"
+                                                        class="flex items-center space-x-4 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+                                                        <div
+                                                            class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                            PDF</div>
+                                                        <div class="flex flex-col flex-1 min-w-0">
+                                                            <span
+                                                                class="text-slate-700 font-medium text-[13px] leading-tight group-hover/file:text-slate-900 transition-colors">
+                                                                ПК руководителей и специалистов ОПО по ПБ
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                    <!-- Карточка 2 -->
+                                                    <a href="{% static 'main/docs/allprograms/ПК электротехнического персонала.pdf' %}"
+                                                        target="_blank"
+                                                        class="flex items-center space-x-4 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+                                                        <div
+                                                            class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                            PDF</div>
+                                                        <div class="flex flex-col flex-1 min-w-0">
+                                                            <span
+                                                                class="text-slate-700 font-medium text-[13px] leading-tight group-hover/file:text-slate-900 transition-colors">
+                                                                ПК электротехнического персонала
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                    <!-- Карточка 3 -->
+                                                    <a href="{% static 'main/docs/allprograms/Подготовка на группу допуска по электробезопасности.pdf' %}"
+                                                        target="_blank"
+                                                        class="flex items-center space-x-4 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+                                                        <div
+                                                            class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                            PDF</div>
+                                                        <div class="flex flex-col flex-1 min-w-0">
+                                                            <span
+                                                                class="text-slate-700 font-medium text-[13px] leading-tight group-hover/file:text-slate-900 transition-colors">
+                                                                Подготовка работников, занятых выполнением работ в
+                                                                электроустановках на группу допуска по
+                                                                электробезопасности
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Другие -->
+                                        <div class="col-span-full border-b border-slate-100 last:border-0">
+                                            <button onclick="toggleAccordion(this)"
+                                                class="w-full py-3 flex justify-between items-center text-left group/inner">
+                                                <div class="flex items-center">
+                                                    <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
+                                                        viewBox="0 0 20 20">
+                                                        <path
+                                                            d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z">
+                                                        </path>
+                                                    </svg>
+                                                    <span
+                                                        class="text-sm font-medium text-slate-600 group-hover/inner:text-amber-600 transition text-balance">Другие</span>
+                                                </div>
+                                                <span
+                                                    class="accordion-chevron transform transition-transform duration-300 text-slate-300 group-hover/inner:text-amber-500">
+                                                    <svg xmlns="http://www.w3.org" class="h-4 w-4" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <div
+                                                class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/30">
+                                                <div class="p-4 space-y-3 border-t border-slate-100/50">
+
+                                                    <!-- Карточка 1 -->
+                                                    <a href="{% static 'main/docs/allprograms/Машинист автовышки и автогидроподъемника.pdf' %}"
+                                                        target="_blank"
+                                                        class="flex items-center space-x-4 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+                                                        <div
+                                                            class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                            PDF</div>
+                                                        <div class="flex flex-col flex-1 min-w-0">
+                                                            <span
+                                                                class="text-slate-700 font-medium text-[13px] leading-tight group-hover/file:text-slate-900 transition-colors">
+                                                                Машинист автовышки и автогидроподъемника
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                    <!-- Карточка 2 -->
+                                                    <a href="{% static 'main/docs/allprograms/Машинист бурильно-крановой самоходной машины.pdf' %}"
+                                                        target="_blank"
+                                                        class="flex items-center space-x-4 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+                                                        <div
+                                                            class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                            PDF</div>
+                                                        <div class="flex flex-col flex-1 min-w-0">
+                                                            <span
+                                                                class="text-slate-700 font-medium text-[13px] leading-tight group-hover/file:text-slate-900 transition-colors">
+                                                                Машинист бурильно-крановой самоходной машины
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                    <!-- Карточка 3 -->
+                                                    <a href="{% static 'main/docs/allprograms/ПК для рабочих люльки, находящихся на подъемнике (вышке).pdf' %}"
+                                                        target="_blank"
+                                                        class="flex items-center space-x-4 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+                                                        <div
+                                                            class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                            PDF</div>
+                                                        <div class="flex flex-col flex-1 min-w-0">
+                                                            <span
+                                                                class="text-slate-700 font-medium text-[13px] leading-tight group-hover/file:text-slate-900 transition-colors">
+                                                                ПК для рабочих люльки, находящихся на подъемнике (вышке)
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                    <!-- Карточка 4 -->
+                                                    <a href="{% static 'main/docs/allprograms/ПК по профилю деятельности (диспетчеров ОДС ПО ЦУС РЭС).pdf' %}"
+                                                        target="_blank"
+                                                        class="flex items-center space-x-4 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+                                                        <div
+                                                            class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                            PDF</div>
+                                                        <div class="flex flex-col flex-1 min-w-0">
+                                                            <span
+                                                                class="text-slate-700 font-medium text-[13px] leading-tight group-hover/file:text-slate-900 transition-colors">
+                                                                ПК по профилю деятельности (диспетчеров ОДС ПО ЦУС РЭС)
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                    <!-- Карточка 5 -->
+                                                    <a href="{% static 'main/docs/allprograms/ПК по профилю деятельности (инженеров и инспекторов групп транспорта электроэнергии).pdf' %}"
+                                                        target="_blank"
+                                                        class="flex items-center space-x-4 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+                                                        <div
+                                                            class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                            PDF</div>
+                                                        <div class="flex flex-col flex-1 min-w-0">
+                                                            <span
+                                                                class="text-slate-700 font-medium text-[13px] leading-tight group-hover/file:text-slate-900 transition-colors">
+                                                                ПК по профилю деятельности (инженеров и инспекторов
+                                                                групп транспорта электроэнергии)
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                    <!-- Карточка 6 -->
+                                                    <a href="{% static 'main/docs/allprograms/ПК электротехнического персонала (обслуживание аккумуляторной батареи).pdf' %}"
+                                                        target="_blank"
+                                                        class="flex items-center space-x-4 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+                                                        <div
+                                                            class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                            PDF</div>
+                                                        <div class="flex flex-col flex-1 min-w-0">
+                                                            <span
+                                                                class="text-slate-700 font-medium text-[13px] leading-tight group-hover/file:text-slate-900 transition-colors">
+                                                                ПК электротехнического персонала (обслуживание
+                                                                аккумуляторной батареи)
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                    <!-- Карточка 7 -->
+                                                    <a href="{% static 'main/docs/allprograms/ПК электротехнического персонала (обслуживание дизельных агрегатов).pdf' %}"
+                                                        target="_blank"
+                                                        class="flex items-center space-x-4 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+                                                        <div
+                                                            class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                            PDF</div>
+                                                        <div class="flex flex-col flex-1 min-w-0">
+                                                            <span
+                                                                class="text-slate-700 font-medium text-[13px] leading-tight group-hover/file:text-slate-900 transition-colors">
+                                                                ПК электротехнического персонала (обслуживание дизельных
+                                                                агрегатов)
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                    <!-- Карточка 8 -->
+                                                    <a href="{% static 'main/docs/allprograms/Подготовка преподавателей по обучению приемам оказания первой помощи.pdf' %}"
+                                                        target="_blank"
+                                                        class="flex items-center space-x-4 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+                                                        <div
+                                                            class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                            PDF</div>
+                                                        <div class="flex flex-col flex-1 min-w-0">
+                                                            <span
+                                                                class="text-slate-700 font-medium text-[13px] leading-tight group-hover/file:text-slate-900 transition-colors">
+                                                                Подготовка преподавателей по обучению приемам оказания
+                                                                первой помощи
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                    <!-- Карточка 9 -->
+                                                    <a href="{% static 'main/docs/allprograms/Слесарь по эксплуатации и ремонту газового оборудования.pdf' %}"
+                                                        target="_blank"
+                                                        class="flex items-center space-x-4 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+                                                        <div
+                                                            class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                            PDF</div>
+                                                        <div class="flex flex-col flex-1 min-w-0">
+                                                            <span
+                                                                class="text-slate-700 font-medium text-[13px] leading-tight group-hover/file:text-slate-900 transition-colors">
+                                                                Слесарь по эксплуатации и ремонту газового оборудования
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                    <!-- Карточка 10 -->
+                                                    <a href="{% static 'main/docs/allprograms/Стропальщик.pdf' %}"
+                                                        target="_blank"
+                                                        class="flex items-center space-x-4 p-3 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-amber-200 transition-all duration-300 group/file">
+                                                        <div
+                                                            class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                                            PDF</div>
+                                                        <div class="flex flex-col flex-1 min-w-0">
+                                                            <span
+                                                                class="text-slate-700 font-medium text-[13px] leading-tight group-hover/file:text-slate-900 transition-colors">
+                                                                Стропальщик
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 5. Руководство -->
                 <div
-                    class="group border border-slate-100 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
+                    class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
                         class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span
                             class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg">Руководство</span>
-                        <span class="transform transition-transform duration-300 text-amber-500 shrink-0"><svg
-                                xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        <span
+                            class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
+                            <svg xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M19 9l-7 7-7-7" />
-                            </svg></span>
+                            </svg>
+                        </span>
                     </button>
                     <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/50">
-                        <div class="px-8 pb-8 pt-2 text-slate-600 text-sm italic">Информация о руководителе и
-                            педагогическом составе.</div>
+                        <div class="px-8 pb-8 pt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <a href="{% static 'main/docs/Руководство.pdf' %}" target="_blank"
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
+                                <div
+                                    class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                    PDF</div>
+                                <span class="text-slate-900 text-[13px]">Руководство</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- 6. Педагогический состав -->
                 <div
-                    class="group border border-slate-100 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
+                    class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
                         class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span
                             class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg">Педагогический
                             состав</span>
-                        <span class="transform transition-transform duration-300 text-amber-500 shrink-0"><svg
-                                xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        <span
+                            class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
+                            <svg xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M19 9l-7 7-7-7" />
-                            </svg></span>
+                            </svg>
+                        </span>
                     </button>
                     <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/50">
-                        <div class="px-8 pb-8 pt-2 text-slate-600 text-sm italic">Информация о руководителе и
-                            педагогическом составе.</div>
+                        <div class="px-8 pb-8 pt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <a href="{% static 'main/docs/Педагогический состав.pdf' %}" target="_blank"
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
+                                <div
+                                    class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                    PDF</div>
+                                <span class="text-slate-900 text-[13px]">Педагогический состав</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- 7. Материально-техническое обеспечение и оснащенность образовательного процесса. Доступная среда -->
                 <div
-                    class="group border border-slate-100 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
+                    class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
                         class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span
                             class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg leading-tight">Материально-техническое
                             обеспечение и оснащенность образовательного процесса. Доступная среда</span>
-                        <span class="transform transition-transform duration-300 text-amber-500 shrink-0"><svg
-                                xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        <span
+                            class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
+                            <svg xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M19 9l-7 7-7-7" />
-                            </svg></span>
+                            </svg>
+                        </span>
                     </button>
                     <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/50">
-                        <div class="px-8 pb-8 pt-2 text-slate-600 text-sm italic">Сведения об учебных кабинетах и
-                            оборудовании.</div>
+                        <div class="px-8 pb-8 pt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <a href="{% static 'main/docs/Материально-техническое обеспечение и оснащенность образовательного процесса. Доступная среда.pdf' %}"
+                                target="_blank"
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
+                                <div
+                                    class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                    PDF</div>
+                                <span class="text-slate-900 text-[13px]">Материально-техническое обеспечение и
+                                    оснащенность образовательного процесса. Доступная среда</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- 8. Платные образовательные услуги -->
                 <div
-                    class="group border border-slate-100 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
+                    class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
                         class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg">Платные
                             образовательные услуги</span>
-                        <span class="transform transition-transform duration-300 text-amber-500 shrink-0"><svg
-                                xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        <span
+                            class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
+                            <svg xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M19 9l-7 7-7-7" />
-                            </svg></span>
+                            </svg>
+                        </span>
                     </button>
                     <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/50">
-                        <div class="px-8 pb-8 pt-2 text-slate-600 text-sm italic">Порядок оказания платных услуг и
-                            образцы договоров.</div>
+                        <div class="px-8 pb-8 pt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <a href="{% static 'main/docs/Положение о ПОУ.pdf' %}" target="_blank"
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
+                                <div
+                                    class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                    PDF</div>
+                                <span class="text-slate-900 text-[13px]">Положение об оказании платных образовательных
+                                    услуг</span>
+                            </a>
+                            <a href="{% static 'main/docs/Образец договора.docx' %}" target="_blank"
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
+                                <div
+                                    class="w-10 h-10 bg-blue-50 text-blue-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                    DOCX</div>
+                                <span class="text-slate-900 text-[13px]">Образец договора возмездного оказания
+                                    образовательных услуг</span>
+                            </a>
+                            <a href="{% static 'main/docs/Стоимость образовательных услуг на 2026 год.pdf' %}"
+                                target="_blank"
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
+                                <div
+                                    class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                    PDF</div>
+                                <span class="text-slate-900 text-[13px]">Стоимость (прейскурант) образовательных услуг
+                                    на 2026 год</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- 9. Финансово-хозяйственная деятельность -->
                 <div
-                    class="group border border-slate-100 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
+                    class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
                         class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span
                             class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg">Финансово-хозяйственная
                             деятельность</span>
-                        <span class="transform transition-transform duration-300 text-amber-500 shrink-0"><svg
-                                xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        <span
+                            class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
+                            <svg xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M19 9l-7 7-7-7" />
-                            </svg></span>
+                            </svg>
+                        </span>
                     </button>
                     <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/50">
-                        <div class="px-8 pb-8 pt-2 text-slate-600 text-sm italic">План финансово-хозяйственной
-                            деятельности.</div>
+                        <div class="px-8 pb-8 pt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <a href="{% static 'main/docs/План финансово-хозяйственной деятельности.pdf' %}"
+                                target="_blank"
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
+                                <div
+                                    class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                    PDF</div>
+                                <span class="text-slate-900 text-[13px]">План финансово-хозяйственной деятельности на
+                                    2025 год</span>
+                            </a>
+                            <a href="{% static 'main/docs/Отчет в Минюст за 2024 год.pdf' %}" target="_blank"
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
+                                <div
+                                    class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                    PDF</div>
+                                <span class="text-slate-900 text-[13px]">Отчет в Минюст за 2024 год</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- 10. Вакантные места для приема (перевода) обучающихся -->
                 <div
-                    class="group border border-slate-100 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
+                    class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
                         class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span
                             class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg leading-tight">Вакантные
                             места для приема (перевода) обучающихся</span>
-                        <span class="transform transition-transform duration-300 text-amber-500 shrink-0">
+                        <span
+                            class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
                             <svg xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
@@ -405,64 +1600,94 @@
 
                 <!-- 11. Стипендии и меры поддержки обучающихся -->
                 <div
-                    class="group border border-slate-100 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
+                    class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
                         class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span
                             class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg leading-tight">Стипендии
                             и меры поддержки обучающихся</span>
-                        <span class="transform transition-transform duration-300 text-amber-500 shrink-0"><svg
-                                xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        <span
+                            class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
+                            <svg xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M19 9l-7 7-7-7" />
-                            </svg></span>
+                            </svg>
+                        </span>
                     </button>
                     <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/50">
-                        <div class="px-8 pb-8 pt-2 text-slate-600 text-sm italic">Информация о мерах социальной
-                            поддержки.</div>
+                        <div class="px-8 pb-8 pt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <a href="{% static 'main/docs/Стипендии и меры поддержки обучающихся.pdf' %}"
+                                target="_blank"
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
+                                <div
+                                    class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                    PDF</div>
+                                <span class="text-slate-900 text-[13px]">Стипендии и меры поддержки обучающихся</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- 12. Международное сотрудничество -->
                 <div
-                    class="group border border-slate-100 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
+                    class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
                         class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span
                             class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg leading-tight">Международное
                             сотрудничество</span>
-                        <span class="transform transition-transform duration-300 text-amber-500 shrink-0"><svg
-                                xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        <span
+                            class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
+                            <svg xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M19 9l-7 7-7-7" />
-                            </svg></span>
+                            </svg>
+                        </span>
                     </button>
                     <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/50">
-                        <div class="px-8 pb-8 pt-2 text-slate-600 text-sm italic">Информация о мерах социальной
-                            поддержки.</div>
+                        <div class="px-8 pb-8 pt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <a href="{% static 'main/docs/Международное сотрудничество.pdf' %}" target="_blank"
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
+                                <div
+                                    class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                    PDF</div>
+                                <span class="text-slate-900 text-[13px]">Международное сотрудничество</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- 13. Организация питания в образовательной организации -->
                 <div
-                    class="group border border-slate-100 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
+                    class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
                         class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span
                             class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg leading-tight">Организация
                             питания в образовательной организации</span>
-                        <span class="transform transition-transform duration-300 text-amber-500 shrink-0"><svg
-                                xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        <span
+                            class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
+                            <svg xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
                                     d="M19 9l-7 7-7-7" />
-                            </svg></span>
+                            </svg>
+                        </span>
                     </button>
                     <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/50">
-                        <div class="px-8 pb-8 pt-2 text-slate-600 text-sm italic">Информация о мерах социальной
-                            поддержки.</div>
+                        <div class="px-8 pb-8 pt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <a href="{% static 'main/docs/Организация питания в образовательной организации.pdf' %}"
+                                target="_blank"
+                                class="flex items-center space-x-3 p-4 bg-white rounded-2xl border border-slate-200 hover:border-amber-400 transition">
+                                <div
+                                    class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-black text-[10px] shrink-0">
+                                    PDF</div>
+                                <span class="text-slate-900 text-[13px]">Организация питания в образовательной
+                                    организации</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
         </section>
@@ -472,14 +1697,15 @@
 <script>
     function toggleAccordion(btn) {
         const content = btn.nextElementSibling;
-        const icon = btn.querySelector('span:last-child');
+        // Заменили поиск по тегу на поиск по классу .accordion-chevron
+        const icon = btn.querySelector('.accordion-chevron');
 
         if (content.style.maxHeight) {
             content.style.maxHeight = null;
-            icon.style.transform = "rotate(0deg)";
+            if (icon) icon.style.transform = "rotate(0deg)";
         } else {
             content.style.maxHeight = content.scrollHeight + "px";
-            icon.style.transform = "rotate(180deg)";
+            if (icon) icon.style.transform = "rotate(180deg)";
 
             let parent = content.parentElement.closest('.max-h-0');
             while (parent) {

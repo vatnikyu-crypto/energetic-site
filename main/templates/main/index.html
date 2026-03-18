@@ -1,7 +1,7 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
-{% block title %}АНО ДПО "Энергетик"{% endblock %}
+{% block title %}Главная - Энергетик{% endblock %}
 
 {% block content %}
 
@@ -50,7 +50,7 @@
                     </p>
                 </div>
             </div>
-            <div class="md:col-span-5 flex flex-col space-y-6">
+            <div class="md:col-span-5 flex flex-col space-y-6 px-4 md:px-0">
                 {% if latest_news %}
                 <div class="relative group">
                     <div
@@ -106,13 +106,13 @@
     <section id="schedule" class="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16 border-t border-slate-100">
         <div class="flex flex-col md:flex-row justify-between items-center mb-8 md:mb-10 gap-6">
             <div class="text-center md:text-left">
-                <h2 class="text-3xl md:text-4xl font-black text-slate-900 uppercase tracking-tighter">График обучения
+                <h2 class="text-3xl md:text-4xl font-black text-slate-900 uppercase tracking-tight">График обучения
                 </h2>
                 <p class="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mt-2">
                     Расписание занятий</p>
             </div>
             <div
-                class="flex items-center bg-white p-1.5 md:p-2 rounded-[2rem] shadow-xl shadow-slate-200/50 border border-slate-100">
+                class="flex items-center bg-white p-1.5 md:p-2 rounded-[2rem] shadow-xl shadow-slate-200/50 border border-slate-200">
                 <a href="?month={{ prev_month }}&year={{ prev_year }}#schedule"
                     class="w-10 h-10 md:w-12 md:h-12 rounded-2xl border border-slate-100 flex items-center justify-center text-slate-400 hover:text-amber-500 transition shadow-sm">
                     <svg xmlns="http://www.w3.org" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -134,7 +134,7 @@
                 </a>
             </div>
         </div>
-        <div class="relative p-1.5 md:p-2 bg-white rounded-[2.5rem] shadow-xl border border-slate-100">
+        <div class="relative p-1.5 md:p-2 bg-white rounded-[2.5rem] shadow-xl border border-slate-200">
             <div class="overflow-hidden rounded-[2rem]">
                 <table class="w-full text-left border-collapse bg-white">
                     <thead>
@@ -185,7 +185,7 @@
         {% if courses|length > 3 %}
         <div class="text-center mt-8">
             <button id="toggle-courses-btn" onclick="toggleCourses()"
-                class="inline-flex items-center space-x-2 bg-white border-2 border-slate-100 px-8 py-4 rounded-2xl text-slate-900 font-black uppercase text-[10px] tracking-widest hover:border-amber-400 hover:text-amber-500 transition-all shadow-sm active:scale-95 group">
+                class="inline-flex items-center space-x-2 bg-white border-2 border-slate-200 px-8 py-4 rounded-2xl text-slate-900 font-black uppercase text-[10px] tracking-widest hover:border-amber-400 hover:text-amber-500 transition-all shadow-sm active:scale-95 group">
                 <span id="btn-text">Показать полный список</span>
                 <svg id="btn-icon" xmlns="http://www.w3.org"
                     class="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" fill="none"
@@ -200,15 +200,17 @@
     <!-- Секция: Награды и достижения -->
     <section class="max-w-7xl mx-auto px-6 py-12 md:py-20 border-t border-slate-100">
         <div class="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-16 gap-4">
-            <div>
-                <h2 class="text-3xl md:text-4xl font-black text-slate-900 uppercase tracking-tighter">Наши награды</h2>
+            <div class="w-full">
+                <h2 class="text-3xl md:text-4xl font-black text-slate-900 uppercase tracking-tight text-center md:text-left">
+                    Наши награды
+                </h2>
             </div>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-10">
             <!-- Награда 1 -->
             <div class="group cursor-pointer" onclick="openModal(this)">
                 <div
-                    class="relative bg-white p-2 md:p-4 rounded-[1.5rem] md:rounded-[2.5rem] shadow-sm border border-slate-100 overflow-hidden transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2 h-full flex flex-col">
+                    class="relative bg-white p-2 md:p-4 rounded-[1.5rem] md:rounded-[2.5rem] shadow-sm border border-slate-200 overflow-hidden transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2 h-full flex flex-col">
                     <div
                         class="aspect-[3/4] rounded-[1.2rem] md:rounded-[2rem] overflow-hidden bg-slate-100 relative shrink-0">
                         <img src="{% static 'main/img/award_1.jpg' %}" alt="Награда 1"
@@ -231,7 +233,7 @@
             <!-- Награда 2 -->
             <div class="group cursor-pointer" onclick="openModal(this)">
                 <div
-                    class="relative bg-white p-2 md:p-4 rounded-[1.5rem] md:rounded-[2.5rem] shadow-sm border border-slate-100 overflow-hidden transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2 h-full flex flex-col">
+                    class="relative bg-white p-2 md:p-4 rounded-[1.5rem] md:rounded-[2.5rem] shadow-sm border border-slate-200 overflow-hidden transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2 h-full flex flex-col">
                     <div
                         class="aspect-[3/4] rounded-[1.2rem] md:rounded-[2rem] overflow-hidden bg-slate-100 relative shrink-0">
                         <img src="{% static 'main/img/award_2.jpg' %}" alt="Награда 2"
@@ -254,7 +256,7 @@
             <!-- Награда 3 -->
             <div class="group cursor-pointer" onclick="openModal(this)">
                 <div
-                    class="relative bg-white p-2 md:p-4 rounded-[1.5rem] md:rounded-[2.5rem] shadow-sm border border-slate-100 overflow-hidden transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2 h-full flex flex-col">
+                    class="relative bg-white p-2 md:p-4 rounded-[1.5rem] md:rounded-[2.5rem] shadow-sm border border-slate-200 overflow-hidden transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2 h-full flex flex-col">
                     <div
                         class="aspect-[3/4] rounded-[1.2rem] md:rounded-[2rem] overflow-hidden bg-slate-100 relative shrink-0">
                         <img src="{% static 'main/img/award_3.jpg' %}" alt="Награда 3"
@@ -300,7 +302,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             <!-- Карточка 1 -->
             <div
-                class="flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
+                class="flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
                 <div class="h-16 flex items-center justify-center">
                     <img src="{% static 'main/img/logo_rosseti.jpg' %}" alt="Россети"
                         class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform">
@@ -312,7 +314,7 @@
             </div>
             <!-- Карточка 2 -->
             <div
-                class="flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
+                class="flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
                 <div class="h-16 flex items-center justify-center">
                     <img src="{% static 'main/img/logo_gen.png' %}" alt="Томская Генерация"
                         class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform">
@@ -324,7 +326,7 @@
             </div>
             <!-- Карточка 3 -->
             <div
-                class="flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
+                class="flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
                 <div class="h-16 flex items-center justify-center">
                     <img src="{% static 'main/img/logo_gazprom.svg' %}" alt="Газпром"
                         class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform">
@@ -336,7 +338,7 @@
             </div>
             <!-- Карточка 4 -->
             <div
-                class="flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
+                class="flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
                 <div class="h-16 flex items-center justify-center">
                     <img src="{% static 'main/img/logo_gen.png' %}" alt="ТомскРТС"
                         class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform">

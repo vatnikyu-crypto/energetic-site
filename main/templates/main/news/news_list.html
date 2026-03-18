@@ -5,11 +5,11 @@
 
 {% block content %}
 
-<main class="min-h-screen bg-slate-50/50 pt-10 pb-20">
+<main class="min-h-screen bg-slate-50/50 pt-10">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
         <section class="px-0 py-0">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-                <h1 class="text-4xl md:text-6xl font-black text-slate-900 uppercase tracking-tight">Новости</h1>
+                <h1 class="text-4xl md:text-6xl font-black text-slate-900 uppercase tracking-tight text-center md:text-left">Новости</h1>
                 
                 {% if page_obj.paginator.num_pages > 1 %}
                 <div class="flex items-center justify-center md:justify-end w-full space-x-3 mt-6 md:mt-0">
@@ -61,7 +61,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {% for item in page_obj %}
-                <a href="{% url 'news_detail' item.slug %}" class="group bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-100 flex flex-col h-full">
+                <a href="{% url 'news_detail' item.slug %}" class="group bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all border border-slate-300 flex flex-col h-full">
                     <div class="aspect-video overflow-hidden bg-slate-200">
                         {% if item.image_path %}
                             <img src="{% static item.image_path %}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">

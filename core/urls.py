@@ -35,6 +35,8 @@ urlpatterns = [
     path('education/', views.education, name='education'),
     path('test404/', TemplateView.as_view(template_name='404.html')),
     path('reviews/', views.reviews_view, name='reviews'),
+    path('base-material/', views.base_material, name='base_material'),
+    path('cookie_policy/', views.cookie_policy, name='cookie_policy'),
 ]
 
 if not settings.DEBUG:

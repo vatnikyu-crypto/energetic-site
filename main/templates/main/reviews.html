@@ -1,7 +1,7 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
-{% block title %}Официальные отзывы — АНО ДПО «Энергетик»{% endblock %}
+{% block title %}Отзывы — Энергетик{% endblock %}
 
 {% block content %}
 
@@ -11,7 +11,6 @@
             <h1
                 class="text-4xl md:text-6xl font-black text-slate-900 uppercase tracking-tight mb-4 text-center md:text-left">
                 Отзывы о нашей работе</h1>
-            <div class="w-24 h-2 bg-[#FFB800] rounded-full mx-auto md:mx-0 shadow-sm"></div>
             <p
                 class="text-slate-500 font-bold uppercase tracking-widest text-xs mt-6 text-center md:text-left opacity-60">
                 Официальные благодарственные письма</p>
@@ -38,13 +37,11 @@
                         class="font-black text-slate-900 text-sm uppercase leading-tight group-hover:text-[#FFB800] transition-colors">
                         {{ review.company }}
                     </h3>
-                    <p class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-2">Дата: {{ review.date
-                        }}</p>
+                    <p class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mt-2">Дата: {{ review.date }}</p>
                 </div>
             </div>
             {% empty %}
-            <p class="col-span-full text-center text-slate-400 font-black uppercase tracking-widest py-20">Сканы пока не
-                загружены...</p>
+            <p class="col-span-full text-center text-slate-400 font-black uppercase tracking-widest py-20">Сканы пока не загружены...</p>
             {% endfor %}
         </div>
     </div>

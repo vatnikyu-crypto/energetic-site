@@ -1,0 +1,58 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- СКРЫТЫЕ ДАННЫЕ ДЛЯ СПИСКА -->
+<div id="news-meta" style="display: none;">
+    <h1 id="meta-title">Поздравление с международным женским днем!</h1>
+    <span id="meta-date">08 Марта 2026</span>
+</div>
+<article class="max-w-4xl mx-auto px-6 py-24">
+    <!-- Кнопка назад -->
+    <a href="{% url 'news_list' %}"
+        class="inline-flex items-center text-slate-400 hover:text-amber-500 font-bold text-xs uppercase tracking-widest mb-12 transition-colors group">
+        <svg class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7" />
+        </svg>
+        Назад к новостям
+    </a>
+
+    <header class="mb-12">
+        <span class="text-amber-500 font-black uppercase text-[10px] tracking-[0.3em]">Праздники</span>
+        <h1 class="text-3xl md:text-5xl font-black text-slate-900 uppercase leading-none tracking-tight mt-4">
+            АНО ДПО "Энергетик" поздравляет с 8 марта!
+        </h1>
+        <p class="text-slate-400 mt-6 font-medium">Дата публикации: 08 марта 2026</p>
+    </header>
+
+    <div class="prose prose-slate max-w-none">
+
+        <div class="mb-8 overflow-hidden rounded-xl shadow-lg">
+            <img src="{% static 'main/img/news/pozdravlenie-s-8-marta-2026.jpg' %}" alt="Поздравление с 8 марта"
+                class="w-full h-auto object-cover max-h-[400px]" />
+        </div>
+
+        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+            Дорогие женщины — коллеги, партнеры и слушательницы нашего учебного центра! Коллектив <strong>АНО ДПО
+                «Энергетик»</strong> от всей души поздравляет вас с праздником <strong>8 Марта</strong>!
+        </p>
+
+        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+            В энергетике, как и в жизни, вы являетесь тем самым источником <strong>света и тепла</strong>, который
+            вдохновляет на созидание. Мы восхищаемся вашим умением сочетать в себе высокий профессионализм,
+            ответственность и невероятное обаяние. Пусть ваша внутренняя энергия никогда не иссякает, а каждый новый
+            день будет наполнен яркими событиями.
+        </p>
+
+        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+            Желаем вам профессионального роста, успешного освоения новых горизонтов и гармонии. Пусть в ваших домах
+            всегда будет уютно, а на душе — светло!
+        </p>
+
+        <p class="text-lg font-semibold text-slate-700">
+            С праздником весны!
+        </p>
+    </div>
+</article>
+{% endblock %}

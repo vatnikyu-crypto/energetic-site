@@ -224,3 +224,9 @@ def index(request):
         'next_year': next_date.year,
         'latest_news': latest_news,
     })
+
+def base_material(request):
+    return render(request, 'main/base_material.html')
+
+def cookie_policy(request):
+    return render(request, 'main/cookie_policy.html')
