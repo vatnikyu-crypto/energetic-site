@@ -29,7 +29,7 @@
             </section>
 
             <!-- Секция 2: Используемые файлы (Техническая часть) -->
-            <section>
+            <section class="flex flex-col gap-4">
                 <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight mb-6">
                     2. Используемые файлы и цели
                 </h2>
@@ -52,6 +52,24 @@
                             <span class="block text-[10px] font-black text-amber-500 uppercase tracking-widest mb-1">Назначение</span>
                             <p class="text-slate-600 text-sm font-bold leading-relaxed">
                                 Обеспечивает защиту от подделки межсайтовых запросов (CSRF) при заполнении формы «Заказать звонок». Без этого файла безопасная отправка данных невозможна.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-[2.5rem] border border-slate-200">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <span class="block text-[10px] font-black text-amber-500 uppercase tracking-widest mb-1">Идентификатор</span>
+                            <code class="text-slate-900 font-bold text-xl">spid</code>
+                        </div>
+                        <div>
+                            <span class="block text-[10px] font-black text-amber-500 uppercase tracking-widest mb-1">Срок хранения</span>
+                            <span class="text-slate-900 font-bold">12 месяцев</span>
+                        </div>
+                        <div class="md:col-span-2">
+                            <span class="block text-[10px] font-black text-amber-500 uppercase tracking-widest mb-1">Назначение</span>
+                            <p class="text-slate-600 text-sm font-bold leading-relaxed">
+                                Обеспечивает корректную работу интерактивных карт и виджетов отзывов 2ГИС. Используется для анонимного анализа взаимодействия пользователя с элементами карты (клики, масштаб) и позволяет сохранять настройки отображения при повторном посещении страницы.
                             </p>
                         </div>
                     </div>
