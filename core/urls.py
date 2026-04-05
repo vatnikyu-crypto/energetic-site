@@ -37,6 +37,7 @@ urlpatterns = [
     path('reviews/', views.reviews_view, name='reviews'),
     path('base-material/', views.base_material, name='base_material'),
     path('cookie_policy/', views.cookie_policy, name='cookie_policy'),
+    path('training_schedule/', views.training_schedule, name='training_schedule'),
 ]
 
 if not settings.DEBUG:

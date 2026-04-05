@@ -126,32 +126,6 @@ def news_detail(request, slug):
     return render(request, f'main/news/items/{slug}.html')
 
 def index(request):
-    try:
-        req_month = int(request.GET.get('month', datetime.now().month))
-        req_year = int(request.GET.get('year', datetime.now().year))
-        target_date = date(req_year, req_month, 1)
-    except:
-        target_date = date.today().replace(day=1)
-
-    prev_date = target_date - relativedelta(months=1)
-    next_date = target_date + relativedelta(months=1)
-
-    excel_path = os.path.join(settings.BASE_DIR, 'main', 'data', 'schedule.xlsx')
-    months_ru = {
-        1: "Январь", 2: "Февраль", 3: "Март", 4: "Апрель", 5: "Май", 6: "Июнь",
-        7: "Июль", 8: "Август", 9: "Сентябрь", 10: "Октябрь", 11: "Ноябрь", 12: "Декабрь"
-    }
-    sheet_name = f"{months_ru[target_date.month]} {target_date.year}"
-
-    courses = []
-    try:
-        if os.path.exists(excel_path):
-            df = pd.read_excel(excel_path, sheet_name=sheet_name)
-            df = df.dropna(subset=['Название'])
-            courses = df.to_dict('records')
-    except Exception as e:
-        print(f"Лист {sheet_name} не найден")
-
     if request.method == 'POST':
         honeypot = request.POST.get('website_url')
         if honeypot:
@@ -173,7 +147,9 @@ def index(request):
         
     news_dir = os.path.join(settings.BASE_DIR, 'main', 'templates', 'main', 'news', 'items')
     img_dir = os.path.join(settings.BASE_DIR, 'main', 'static', 'main', 'img', 'news')
+    
     latest_news = None
+    latest_news_list = []
 
     if os.path.exists(news_dir):
         files = [f for f in os.listdir(news_dir) if f.endswith('.html')]
@@ -208,25 +184,59 @@ def index(request):
                     'title': title,
                     'date': raw_date,
                     'dt': dt,
-                    'image': found_img
+                    'image': found_img,
+                    'image_path': found_img
                 })
         
         if temp_news_list:
             temp_news_list.sort(key=lambda x: x['dt'], reverse=True)
             latest_news = temp_news_list[0]
+            latest_news_list = temp_news_list[:3]
 
-    return render(request, 'main/index.html', {
-        'courses': courses,
-        'current_month': sheet_name,
-        'prev_month': prev_date.month,
-        'prev_year': prev_date.year,
-        'next_month': next_date.month,
-        'next_year': next_date.year,
-        'latest_news': latest_news,
-    })
+        reviews_range = range(1, 13)
+
+    
+
+    return render(request, 'main/index.html', {'latest_news': latest_news,'latest_news_list': latest_news_list,'reviews_range': reviews_range,})
 
 def base_material(request):
     return render(request, 'main/base_material.html')
 
 def cookie_policy(request):
     return render(request, 'main/cookie_policy.html')
+
+def training_schedule(request):
+    try:
+        req_month = int(request.GET.get('month', datetime.now().month))
+        req_year = int(request.GET.get('year', datetime.now().year))
+        target_date = date(req_year, req_month, 1)
+    except:
+        target_date = date.today().replace(day=1)
+
+    prev_date = target_date - relativedelta(months=1)
+    next_date = target_date + relativedelta(months=1)
+
+    excel_path = os.path.join(settings.BASE_DIR, 'main', 'data', 'schedule.xlsx')
+    months_ru = {
+        1: "Январь", 2: "Февраль", 3: "Март", 4: "Апрель", 5: "Май", 6: "Июнь",
+        7: "Июль", 8: "Август", 9: "Сентябрь", 10: "Октябрь", 11: "Ноябрь", 12: "Декабрь"
+    }
+    sheet_name = f"{months_ru[target_date.month]} {target_date.year}"
+
+    courses = []
+    try:
+        if os.path.exists(excel_path):
+            df = pd.read_excel(excel_path, sheet_name=sheet_name)
+            df = df.dropna(subset=['Название'])
+            courses = df.to_dict('records')
+    except Exception as e:
+        print(f"Лист {sheet_name} не найден")
+        
+    return render(request, 'main/training_schedule.html', {
+        'courses': courses,
+        'current_month': sheet_name,
+        'prev_month': prev_date.month,
+        'prev_year': prev_date.year,
+        'next_month': next_date.month,
+        'next_year': next_date.year,
+    })

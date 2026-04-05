@@ -23,134 +23,195 @@
 
 <body class="bg-slate-50">
 
-    <!-- Top Bar -->
-    <div class="bg-[#0a0f1d] text-white py-2 border-b border-white/5">
-        <div class="max-w-[1440px] mx-auto px-4 md:px-10 flex justify-between items-center gap-4">
-            
-            <!-- Левая часть: Текст с картинки -->
-            <div class="flex items-center gap-3 text-[9px] md:text-[10px] font-bold tracking-wider uppercase">
-                <span class="h-2 w-2 rounded-full bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.6)] flex-shrink-0"></span>
-                
-                <div class="leading-tight opacity-90">
-                    <span class="text-amber-400">Обучение по всей территории РФ.</span>
-                    <span class="hidden lg:inline text-slate-400"> Лицензия № Л035-01263-70/00275750 от 23.11.2011 г. выдана Департаментом образования Томской области</span>
-                    <span class="lg:hidden text-slate-400"> Лицензия № Л035-01263-70...</span>
-                </div>
-            </div>
+<!-- Top Bar (Увеличенная высота, черный текст) -->
+<div class="bg-[#f8fafc] text-black py-3 border-b border-slate-200 font-sans">
+    <!-- max-w-6xl держит ширину по твоим красным линиям -->
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center text-[13px] font-bold">
+        
+        <!-- Лево: Доступность -->
+        <a href="#" class="flex items-center gap-2.5 hover:text-[#F59E0B] transition-colors group text-base">
+            <svg class="w-5 h-5 text-[#4F589D] transition-transform duration-300 group-hover:scale-110"" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            </svg>
+            <span class="font-normal group-hover:border-[#F8D245]">Версия для слабовидящих</span>
+        </a>
 
-            <!-- Правая часть: Соцсети и звонок -->
-                        <div class="flex items-center space-x-3 md:space-x-5">
-                <a href="https://vk.com/energo70" target="_blank"
-                    class="w-11 h-11 flex items-center justify-center bg-white text-[#0077FF] rounded-xl border border-slate-100 shadow-[0_10px_25px_rgba(0,119,255,0.15)] transition-all hover:shadow-[0_30px_30px_rgba(0,119,255,0.25)] hover:-translate-y-0.5 active:scale-95 group">
-                    <svg class="w-6 h-6 transition-transform group-hover:scale-110" viewBox="0 0 24 24"
-                        fill="currentColor" xmlns="http://www.w3.org">
-                        <path
-                            d="M13.162 18.994c-6.028 0-9.47-4.128-9.613-11.002h3.027c.1 5.042 2.327 7.178 4.086 7.614V7.992h2.846v4.346c1.743-.187 3.568-2.146 4.187-4.346h2.846a8.216 8.216 0 01-3.843 5.485 8.683 8.683 0 014.536 5.517h-3.125a5.114 5.114 0 00-4.047-3.69v3.69h-2.9z"""
-                            ) />>
-                    </svg>
-                </a>
-                <button onclick="toggleCallbackForm()"
-                    class="hidden 2xl:block bg-amber-400 text-slate-900 text-[10px] font-black uppercase tracking-[0.2em] px-6 py-3.5 rounded-xl shadow-lg border border-amber-500/20 active:scale-95 transition-all duration-300 hover:bg-slate-900 hover:text-amber-400 hover:shadow-xl">
-                    Заказать звонок
-                </button>
-                <button onclick="toggleMobileMenu()"
-                    class="xl:hidden w-11 h-11 flex items-center justify-center bg-slate-50 rounded-xl text-slate-900 border border-slate-100 active:scale-95 transition-all shadow-sm">
-                    <svg id="burger-icon" xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path id="burger-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-            </div>
+        <!-- Право: Контакты -->
+        <div class="flex items-center gap-8 text-base">
+            <!-- Добавил класс group -->
+            <button onclick="toggleCallbackForm()" class="group flex items-center gap-2 hover:text-[#F59E0B] transition-colors">
+                <!-- transition-transform и group-hover:scale-110 для увеличения -->
+                <svg class="w-4 h-4 text-[#4F589D] transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span class="font-normal">Заказать звонок</span>
+            </button>
+
+            <a href="#" class="group flex items-center gap-2 hover:text-[#F59E0B] transition-colors text-base">
+                <img src="{% static 'main/img/Логотип_MAX.png' %}" class="w-4 h-4 transition-transform duration-300 group-hover:scale-110" alt="WA">
+                <span class="font-normal">MAX</span>
+            </a>
+
+            <a href="https://vk.com/energo70" class="group flex items-center gap-2 hover:text-[#F59E0B] transition-colors text-base">
+                <img src="{% static 'main/img/VK_Compact_Logo.png' %}" class="w-4 h-4 transition-transform duration-300 group-hover:scale-110" alt="VK">
+                <span class="font-normal">ВКонтакте</span>
+            </a>
         </div>
     </div>
+</div>
 
-    <!-- НАВИГАЦИЯ (HEADER) -->
-    <nav class="sticky top-0 z-50 p-4 md:p-6 bg-slate-50/80 backdrop-blur-md">
-        <div
-            class="max-w-7xl mx-auto flex justify-between items-center bg-white p-4 md:p-5 rounded-3xl shadow-lg border-b-4 border-amber-400">
-            <a href="{% url 'index' %}" class="flex items-center space-x-3 group relative cursor-pointer py-2">
-                <img src="{% static 'main/img/logo.png' %}" alt="Лого"
-                    class="h-10 md:h-12 w-auto transition-transform duration-700 ease-in-out group-hover:rotate-[360deg]">
-                <div class="flex flex-col items-center font-black text-xl md:text-2xl text-slate-800 tracking-tight group-hover:text-amber-500 transition-colors leading-tight text-center">
-                    <div class="uppercase text-xs md:text-sm opacity-80">АНО ДПО</div>
-                    <div class="normal-case">"Энергетик"</div>
-                </div>
-                <div
-                    class="absolute top-full left-2 mt-1 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 pointer-events-none z-50">
-                    <div
-                        class="bg-slate-900 text-white text-[8px] font-black uppercase tracking-[0.2em] px-3 py-2 rounded-lg shadow-2xl whitespace-nowrap border-b-2 border-amber-400">
-                        На главную страницу
-                    </div>
-                    <div class="w-2 h-2 bg-slate-900 rotate-45 absolute -top-1 left-4"></div>
-                </div>
+<!-- Main Header (Уменьшенная высота) -->
+<header class="bg-white py-4 font-sans"> <!-- Изменил py-10 на py-4 -->
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center gap-4">
+        
+        <!-- 1. Логотип -->
+        <a href="{% url 'index' %}" class="flex items-center gap-5 group">
+            <!-- Уменьшил высоту логотипа до h-12 -->
+            <img src="{% static 'main/img/logo.png' %}" 
+                alt="Энергетик" 
+                class="h-12 w-auto transition-transform duration-700 ease-in-out group-hover:rotate-[360deg]">
+            
+            <div class="flex flex-col items-center text-center border-l-2 border-slate-200 pl-5">
+                <p class="text-[12px] text-[#4F589D] font-black uppercase tracking-wider mb-0.5">
+                    АНО ДПО
+                </p>
+                <!-- Уменьшил шрифт названия до text-2xl -->
+                <h1 class="text-[#4F589D] font-black text-2xl leading-none">
+                    "Энергетик"
+                </h1>
+            </div>
+        </a>
+
+        <!-- 2. Время работы -->
+        <div class="flex items-center gap-3">
+            <!-- Уменьшил кружок до w-10 h-10 -->
+            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center border-2 border-[#4F589D] shadow-sm flex-shrink-0">
+                <svg class="w-5 h-5 text-[#4F589D]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </div>
+            <div class="flex flex-col leading-tight text-[13px]">
+                <span class="text-black">
+                    <b class="font-bold">Пн-Пт:</b> 08:00 - 17:00
+                </span>
+                <span class="text-black">
+                    <b class="font-bold">Сб-Вс:</b> Выходной
+                </span>
+            </div>
+        </div>
+
+        <!-- 3. Почта -->
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center border-2 border-[#4F589D] shadow-sm flex-shrink-0">
+                <svg class="w-5 h-5 text-[#4F589D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+            </div>
+            <div class="flex flex-col leading-tight">
+                <span class="text-black text-[13px] font-bold mb-0.5">Напишите нам:</span>
+                <a href="mailto:fot@dpo-energo.ru" class="text-black text-[13px] hover:text-[#F59E0B] transition-colors underline decoration-1 underline-offset-2 decoration-[#4F589D]/40">fot@dpo-energo.ru</a>
+                <a href="mailto:ttv@dpo-energo.ru" class="text-black text-[13px] hover:text-[#F59E0B] transition-colors underline decoration-1 underline-offset-2 decoration-[#4F589D]/40">ttv@dpo-energo.ru</a>
+            </div>
+        </div>
+
+        <!-- 4. Телефоны -->
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center border-2 border-[#4F589D] shadow-sm flex-shrink-0">
+                <svg class="w-5 h-5 text-[#4F589D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+            </div>
+            <div class="flex flex-col leading-tight gap-0.5">
+                <a href="tel:+73822720036" class="text-[14px] font-black text-black tracking-tight hover:text-[#F59E0B] transition-colors uppercase">+7 (3822) 72-00-36</a>
+                <a href="tel:+73822611192" class="text-[14px] font-black text-black tracking-tight hover:text-[#F59E0B] transition-colors uppercase">+7 (3822) 61-11-92</a>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+
+
+<!-- Навигационная панель (Растянутая по краям с оранжевым ховером) -->
+<nav class="sticky top-0 z-50 bg-[#4F589D] text-white shadow-md font-sans border-b-4 border-[#F59E0B]">
+    <!-- max-w-6xl — ширина шапки, px-0 для прижатия к краям под логотипом и телефонами -->
+    <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="hidden xl:flex items-center justify-between uppercase tracking-widest text-[13px] font-medium">
+            
+            <!-- ГЛАВНАЯ -->
+            <a href="{% url 'index' %}" class="py-5 hover:text-[#F59E0B] transition-colors duration-300">
+                ГЛАВНАЯ
             </a>
-            <div class="hidden xl:flex items-center space-x-6 font-bold text-slate-600 text-sm">
-                <div class="relative group py-4">
-                    <button class="flex items-center space-x-1 hover:text-amber-500 transition">
-                        <span>О нас</span>
-                        <svg xmlns="http://www.w3.org" class="h-4 w-4 transition-transform group-hover:rotate-180"
-                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="absolute top-full left-1/2 -translate-x-1/2 w-56 pt-2 hidden group-hover:block z-50">
-                        <div class="bg-white rounded-2xl shadow-2xl border border-slate-100 p-2 overflow-hidden">
-                            <a href="{% url 'news_list' %}"
-                                class="block px-4 py-3 text-[11px] font-black uppercase tracking-widest text-slate-600 hover:bg-amber-50 hover:text-amber-600 rounded-xl transition">
-                                Новости
-                            </a>
-                            <a href="{% url 'education' %}"
-                                class="block px-4 py-3 text-[11px] font-black uppercase tracking-widest text-slate-600 hover:bg-amber-50 hover:text-amber-600 rounded-xl transition border-t border-slate-50">
-                                График обучения
-                            </a>
-                            <a href="{% url 'base_material' %}"
-                                class="block px-4 py-3 text-[11px] font-black uppercase tracking-widest text-slate-600 hover:bg-amber-50 hover:text-amber-600 rounded-xl transition border-t border-slate-50">
-                                Учебная база
-                            </a>
-                            <a href="{% url 'reviews' %}"
-                                class="block px-4 py-3 text-[11px] font-black uppercase tracking-widest text-slate-600 hover:bg-amber-50 hover:text-amber-600 rounded-xl transition border-t border-slate-50">
-                                Отзывы
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <a href="{% url 'about' %}"
-                    class="flex flex-col items-center justify-center hover:text-amber-500 transition leading-tight text-center">
-                    <span>Сведения об</span>
-                    <span class="whitespace-nowrap">образовательной организации</span>
-                </a>
-                <a href="{% url 'education' %}" class="hover:text-amber-500 transition">Обучение</a>
-                <a href="https://edu.dpo-energo.ru" target="_blank" class="hover:text-amber-500 transition">СДО
-                    "Платформа"</a>
-                <a href="{% url 'contacts' %}" class="hover:text-amber-500 transition">Контакты</a>
-            </div>
-            <div class="flex items-center space-x-3 md:space-x-5">
-                <a href="https://vk.com/energo70" target="_blank"
-                    class="w-11 h-11 flex items-center justify-center bg-white text-[#0077FF] rounded-xl border border-slate-100 shadow-[0_10px_25px_rgba(0,119,255,0.15)] transition-all hover:shadow-[0_30px_30px_rgba(0,119,255,0.25)] hover:-translate-y-0.5 active:scale-95 group">
-                    <svg class="w-6 h-6 transition-transform group-hover:scale-110" viewBox="0 0 24 24"
-                        fill="currentColor" xmlns="http://www.w3.org">
-                        <path
-                            d="M13.162 18.994c-6.028 0-9.47-4.128-9.613-11.002h3.027c.1 5.042 2.327 7.178 4.086 7.614V7.992h2.846v4.346c1.743-.187 3.568-2.146 4.187-4.346h2.846a8.216 8.216 0 01-3.843 5.485 8.683 8.683 0 014.536 5.517h-3.125a5.114 5.114 0 00-4.047-3.69v3.69h-2.9z"""
-                            ) />>
-                    </svg>
-                </a>
-                <button onclick="toggleCallbackForm()"
-                    class="hidden 2xl:block bg-amber-400 text-slate-900 text-[10px] font-black uppercase tracking-[0.2em] px-6 py-3.5 rounded-xl shadow-lg border border-amber-500/20 active:scale-95 transition-all duration-300 hover:bg-slate-900 hover:text-amber-400 hover:shadow-xl">
-                    Заказать звонок
-                </button>
-                <button onclick="toggleMobileMenu()"
-                    class="xl:hidden w-11 h-11 flex items-center justify-center bg-slate-50 rounded-xl text-slate-900 border border-slate-100 active:scale-95 transition-all shadow-sm">
-                    <svg id="burger-icon" xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path id="burger-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                            d="M4 6h16M4 12h16M4 18h16" />
+
+            <!-- О НАС (Выпадающее меню) -->
+            <div class="relative group">
+                <button class="flex items-center space-x-2 py-5 hover:text-[#F59E0B] transition-colors duration-300 uppercase font-medium">
+                    <span>О НАС</span>
+                    <svg xmlns="http://w3.org" class="h-3 w-3 opacity-70 transition-transform group-hover:rotate-180"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                     </svg>
                 </button>
+                
+                <!-- Выпадающий список с твоими правками -->
+<!-- Добавил normal-case, чтобы отменить заглавные буквы родителя -->
+<div class="absolute top-full left-0 w-64 pt-0 hidden group-hover:block z-50 shadow-2xl normal-case tracking-normal">
+    <div class="bg-white border border-slate-100 p-1 shadow-xl">
+        
+        <a href="{% url 'training_schedule' %}"
+            class="block px-5 py-3 text-[14px] font-normal text-black hover:text-[#F59E0B] hover:bg-slate-50 transition-colors duration-200 border-b border-slate-50">
+            График обучения
+        </a>
+        
+        <a href="{% url 'news_list' %}"
+            class="block px-5 py-3 text-[14px] font-normal text-black hover:text-[#F59E0B] hover:bg-slate-50 transition-colors duration-200 border-b border-slate-50">
+            Новости
+        </a>
+        
+        <a href="{% url 'reviews' %}"
+            class="block px-5 py-3 text-[14px] font-normal text-black hover:text-[#F59E0B] hover:bg-slate-50 transition-colors duration-200 border-b border-slate-50">
+            Благодарственные письма
+        </a>
+        
+        <a href="{% url 'base_material' %}"
+            class="block px-5 py-3 text-[14px] font-normal text-black hover:text-[#F59E0B] hover:bg-slate-50 transition-colors duration-200">
+            Учебная база
+        </a>
+
+    </div>
+</div>
+
+
             </div>
+
+            <!-- СВЕДЕНИЯ ОБ ОО -->
+            <a href="{% url 'about' %}" class="py-5 hover:text-[#F59E0B] transition-colors duration-300 whitespace-nowrap">
+                СВЕДЕНИЯ ОБ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ
+            </a>
+
+            <!-- ОБУЧЕНИЕ -->
+            <a href="{% url 'education' %}" class="py-5 hover:text-[#F59E0B] transition-colors duration-300">
+                ОБУЧЕНИЕ
+            </a>
+            
+            <!-- СДО ПЛАТФОРМА -->
+            <a href="https://edu.dpo-energo.ru/" target="_blank" class="py-5 hover:text-[#F59E0B] transition-colors duration-300">
+                СДО "ПЛАТФОРМА"
+            </a>
+            
+            <!-- КОНТАКТЫ -->
+            <a href="{% url 'contacts' %}" class="py-5 hover:text-[#F59E0B] transition-colors duration-300">
+                КОНТАКТЫ
+            </a>
+
         </div>
-        </div>
-    </nav>
+    </div>
+</nav>
+
+
+
+
+
 
     <!-- МОБИЛЬНОЕ МЕНЮ -->
     <div id="mobile-menu"
@@ -175,7 +236,7 @@
                         class="text-slate-300 text-sm font-bold uppercase tracking-widest hover:text-amber-400">Учебная
                         база</a>
                     <a href="{% url 'reviews' %}"
-                        class="text-slate-300 text-sm font-bold uppercase tracking-widest hover:text-amber-400">Отзывы</a>
+                        class="text-slate-300 text-sm font-bold uppercase tracking-widest hover:text-amber-400">Благодарственные письма</a>
                 </div>
             </div>
         </div>
@@ -203,172 +264,187 @@
     {% block content %}
     {% endblock %}
 
-    <!-- ПОДВАЛ (FOOTER) -->
-    <footer class="bg-slate-900 text-white pt-16 pb-32 md:pb-10 mt-20">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 mb-16">
-                <div class="flex flex-col items-center md:items-start space-y-6 text-center md:text-left">
-                    <div class="flex items-center space-x-3">
-                        <div class="bg-white rounded-full p-1.5 flex items-center justify-center">
-                            <img src="{% static 'main/img/logo.png' %}" alt="Лого" class="h-8 w-auto">
-                        </div>
-                        <div class="font-black text-xl tracking-tight">АНО ДПО "Энергетик"</div>
+<!-- ПОДВАЛ (FOOTER) в фирменном стиле #4F589D -->
+<footer class="bg-[#3b4382] text-white pt-20 pb-32 md:pb-12 mt-20 font-sans border-t-4 border-[#F59E0B]">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20 mb-20">
+            
+            <!-- 1. О компании -->
+            <div class="flex flex-col items-center md:items-start space-y-8 text-center md:text-left">
+                <div class="flex items-center space-x-4">
+                    <div class="bg-white rounded-2xl p-2 flex items-center justify-center shadow-lg">
+                        <img src="{% static 'main/img/logo.png' %}" alt="Лого" class="h-10 w-auto">
                     </div>
+                    <div class="flex flex-col leading-none">
+                        <span class="font-black text-1xl tracking-tight">АНО ДПО "Энергетик"</span>
+                    </div>
+                </div>
+                <p class="text-white text-sm font-medium leading-relaxed max-w-xs">
+                    Ваш надежный партнер в сфере дополнительного профессионального образования с 2011 года.
+                </p>
+            </div>
 
-                    <p class="text-slate-400 text-xs font-medium leading-relaxed max-w-xs">
-                        Ваш надежный партнер в сфере дополнительного профессионального образования с 2011 года.
-                    </p>
-                </div>
-                <div class="flex flex-col items-center md:items-start space-y-6">
-                    <h4 class="text-amber-400 font-black text-[10px] uppercase tracking-[0.2em]">Контакты</h4>
-                    <div class="space-y-5 w-full max-w-xs">
-                        <div class="flex flex-col md:flex-row items-center gap-3 md:gap-4 text-center md:text-left">
-                            <div
-                                class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center shrink-0 border border-slate-700">
-                                <svg xmlns="http://www.w3.org" class="h-5 w-5 text-amber-400" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
-                            </div>
-                            <p class="text-slate-200 text-sm font-bold leading-tight">г. Томск, ул. Энергетическая 2</p>
+            <!-- 2. Контакты -->
+            <div class="flex flex-col items-center md:items-start space-y-8">
+                <h4 class="text-[#F59E0B] font-black text-[11px] uppercase tracking-[0.25em] border-b-2 border-[#F59E0B]/30 pb-2">Контакты</h4>
+                <div class="space-y-6 w-full">
+                    <!-- Адрес -->
+                    <div class="flex flex-col md:flex-row items-center gap-4 text-center md:text-left group">
+                        <div class="w-11 h-11 rounded-2xl bg-white/10 flex items-center justify-center shrink-0 border border-white/10 group-hover:bg-[#F59E0B] transition-all duration-300">
+                            <svg class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
                         </div>
-                        <div class="flex flex-col md:flex-row items-center gap-3 md:gap-4 text-center md:text-left">
-                            <div
-                                class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center shrink-0 border border-slate-700">
-                                <svg xmlns="http://www.w3.org" class="h-5 w-5 text-amber-400" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                </svg>
-                            </div>
-                            <div class="flex flex-col space-y-1">
-                                <a href="tel:+73822720036"
-                                    class="text-slate-200 text-sm font-bold hover:text-amber-400 transition">+7 (3822)
-                                    72-00-36</a>
-                                <a href="tel:+73822611192"
-                                    class="text-slate-200 text-sm font-bold hover:text-amber-400 transition">+7 (3822)
-                                    61-11-92</a>
-                            </div>
+                        <p class="text-white text-sm font-bold leading-tight tracking-tight">г. Томск, ул. Энергетическая, д. 2А</p>
+                    </div>
+                    <!-- Телефоны -->
+                    <div class="flex flex-col md:flex-row items-center gap-4 text-center md:text-left group">
+                        <div class="w-11 h-11 rounded-2xl bg-white/10 flex items-center justify-center shrink-0 border border-white/10 group-hover:bg-[#F59E0B] transition-all duration-300">
+                            <svg class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
                         </div>
-                        <div class="flex flex-col md:flex-row items-center gap-3 md:gap-4 text-center md:text-left">
-                            <div
-                                class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center shrink-0 border border-slate-700">
-                                <svg xmlns="http://www.w3.org" class="h-5 w-5 text-amber-400" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                </svg>
-                            </div>
-                            <div class="flex flex-col space-y-1 text-sm font-bold">
-                                <a href="mailto:fot@dpo-energo.ru"
-                                    class="text-slate-200 hover:text-amber-400 transition">fot@dpo-energo.ru</a>
-                                <a href="mailto:ttv@dpo-energo.ru"
-                                    class="text-slate-200 hover:text-amber-400 transition">ttv@dpo-energo.ru</a>
-                            </div>
+                        <div class="flex flex-col space-y-1">
+                            <a href="tel:+73822720036" class="text-white text-sm font-black hover:text-[#F59E0B] transition-colors">+7 (3822) 72-00-36</a>
+                            <a href="tel:+73822611192" class="text-white text-sm font-black hover:text-[#F59E0B] transition-colors">+7 (3822) 61-11-92</a>
                         </div>
                     </div>
-                </div>
-                <div class="flex flex-col items-center md:items-start space-y-6">
-                    <h4 class="text-amber-400 font-black text-[10px] uppercase tracking-[0.2em]">График работы</h4>
-                    <div class="bg-slate-800 p-6 rounded-[2rem] border border-slate-700 w-full max-w-xs space-y-4">
-                        <div class="flex justify-between items-center">
-                            <span class="text-slate-400 text-[10px] font-black uppercase tracking-widest">Пн — Пт</span>
-                            <span
-                                class="text-white text-[10px] font-black uppercase tracking-widest bg-amber-500 px-2 py-1 rounded">08:00
-                                — 17:00</span>
+                    <!-- Почта -->
+                    <div class="flex flex-col md:flex-row items-center gap-4 text-center md:text-left group">
+                        <div class="w-11 h-11 rounded-2xl bg-white/10 flex items-center justify-center shrink-0 border border-white/10 group-hover:bg-[#F59E0B] transition-all duration-300">
+                            <svg class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
                         </div>
-                        <div class="flex justify-between items-center opacity-40">
-                            <span class="text-slate-400 text-[10px] font-black uppercase tracking-widest">Сб — Вс</span>
-                            <span
-                                class="text-slate-400 text-[10px] font-black uppercase tracking-widest">Выходной</span>
+                        <div class="flex flex-col space-y-1">
+                            <a href="mailto:fot@dpo-energo.ru" class="text-white text-sm font-bold hover:text-[#F59E0B] transition-colors">fot@dpo-energo.ru</a>
+                            <a href="mailto:ttv@dpo-energo.ru" class="text-white text-sm font-bold hover:text-[#F59E0B] transition-colors">ttv@dpo-energo.ru</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div
-                class="border-t border-slate-800 pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-center">
-                <p class="text-slate-500 text-[9px] md:text-[10px] font-bold uppercase tracking-widest">
-                    © {% now "Y" %} АНО ДПО «ЭНЕРГЕТИК». ВСЕ ПРАВА ЗАЩИЩЕНЫ
-                </p>
-                <a href="{% static 'main/docs/policy.pdf' %}" target="_blank"
-                    class="text-slate-500 hover:text-white text-[9px] md:text-[10px] font-bold uppercase transition tracking-widest">
-                    Политика в отношении обработки персональных данных
-                </a>
-                <a href="{% url 'cookie_policy' %}" target="_blank"
-                    class="text-slate-500 hover:text-white text-[9px] md:text-[10px] font-bold uppercase transition tracking-widest">
-                    Политика использования файлов cookie
-                </a>
+
+            <!-- 3. Режим работы -->
+            <div class="flex flex-col items-center md:items-start space-y-8">
+                <h4 class="text-[#F59E0B] font-black text-[11px] tracking-[0.25em] uppercase border-b-2 border-[#F59E0B]/30 pb-2">График работы</h4>
+                <div class="bg-white/5 p-8 rounded-[2.5rem] border border-white/10 w-full max-w-xs space-y-6">
+                    <div class="flex justify-between items-center">
+                        <span class="text-white text-[11px] font-black uppercase tracking-widest">Пн-Пт</span>
+                        <span class="text-white text-[11px] font-black uppercase tracking-widest bg-[#4F589D] px-3 py-1.5 rounded-xl shadow-lg border border-white/10">08:00 — 17:00</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-white text-[11px] font-black uppercase tracking-widest">Сб-Вс</span>
+                        <span class="text-white text-[11px] font-black uppercase tracking-widest">Выходной</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
 
-    <!-- Кнопка "Заказать звонок" (Кружок) -->
+        <!-- Нижняя полоса (Copyright) -->
+        <div class="border-t border-white/10 pt-12 flex flex-col lg:flex-row justify-between items-center gap-8 text-center">
+            <p class="text-white text-[10px] font-bold uppercase tracking-widest">
+                © {% now "Y" %} АНО ДПО «ЭНЕРГЕТИК» <span class="mx-2">|</span> ВСЕ ПРАВА ЗАЩИЩЕНЫ
+            </p>
+            <div class="flex flex-wrap justify-center gap-6 md:gap-10">
+                <a href="{% static 'main/docs/policy.pdf' %}" target="_blank" class="text-white hover:text-[#F59E0B] text-[10px] font-bold uppercase transition-colors tracking-widest">Политика в отношении обработки персональных данных</a>
+                <a href="{% url 'cookie_policy' %}" target="_blank" class="text-white hover:text-[#F59E0B] text-[10px] font-bold uppercase transition-colors tracking-widest">Политика использования файлов coockie</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Плавающая кнопка заказа звонка в фирменном стиле -->
     <button onclick="toggleCallbackForm()"
-        class="fixed bottom-8 right-8 w-16 h-16 bg-amber-500 text-slate-900 rounded-full shadow-[0_10px_30px_rgba(245,158,11,0.4)] flex items-center justify-center z-[100] transition-all duration-300 hover:scale-110 hover:bg-amber-400 group">
-        <svg xmlns="http://www.w3.org" class="h-8 w-8 animate-pulse" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
+        class="fixed bottom-8 right-8 w-16 h-16 bg-[#4F589D] text-white rounded-full shadow-[0_10px_30px_rgba(79,88,157,0.4)] flex items-center justify-center z-[100] transition-all duration-300 hover:scale-110 hover:bg-[#3b4382] group ring-2 ring-white">
+        
+        <!-- Иконка трубки теперь белая (text-white) -->
+        <svg xmlns="http://w3.org" class="h-8 w-8 animate-pulse text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
         </svg>
     </button>
 
-    <!-- Модальное окно формы для заказа звонка -->
-    <div id="callbackModal"
-        class="fixed inset-0 z-[110] hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white w-full max-w-md rounded-[2.5rem] shadow-2xl p-10 relative overflow-hidden">
-            <div class="absolute -top-12 -right-12 w-32 h-32 bg-amber-400/20 rounded-full blur-2xl"></div>
-            <div class="relative z-10 mb-8">
-                <h3 class="text-xs font-black text-amber-500 uppercase tracking-[0.2em] mb-2">Обратная связь</h3>
-                <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tighter">Заказать звонок</h2>
+
+<!-- Модальное окно формы (Финальная версия: Исправленный крестик + Фирменная кнопка) -->
+<div id="callbackModal"
+    class="fixed inset-0 z-[150] hidden bg-[#4F589D]/60 backdrop-blur-md flex items-center justify-center p-4">
+    
+    <div class="bg-white w-full max-w-md rounded-[2.5rem] shadow-2xl p-10 relative overflow-hidden border border-white/20">
+        
+        <!-- Декоративный фон (не мешает кликам) -->
+        <div class="absolute -top-12 -right-12 w-32 h-32 bg-[#F59E0B]/10 rounded-full blur-2xl pointer-events-none z-0"></div>
+        
+        <!-- КРЕСТИК ЗАКРЫТИЯ (Исправленный слой и область нажатия) -->
+        <button type="button" 
+                onclick="toggleCallbackForm()"
+                class="absolute top-6 right-6 z-50 p-3 text-slate-300 hover:text-[#4F589D] transition-all duration-300 group outline-none">
+            <svg xmlns="http://w3.org" 
+                 class="h-7 w-7 transition-transform group-hover:rotate-90 active:scale-90" 
+                 fill="none" 
+                 viewBox="0 0 24 24" 
+                 stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <!-- Контент формы -->
+        <div class="relative z-10 mb-8">
+            <h3 class="text-[10px] font-black text-[#F59E0B] uppercase tracking-[0.25em] mb-2">Обратная связь</h3>
+            <h2 class="text-3xl font-black text-[#4F589D] uppercase tracking-tighter">Заказать звонок</h2>
+        </div>
+
+        <form action="#" method="POST" class="space-y-6 relative z-10">
+            {% csrf_token %}
+            
+            <!-- Поле: Имя -->
+            <div>
+                <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-5 mb-2 block">Ваше имя</label>
+                <input type="text" name="name" required placeholder="Александр"
+                    class="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl px-6 py-4 text-slate-900 font-bold placeholder:text-slate-300 focus:border-[#4F589D] focus:outline-none transition-all">
             </div>
-            <form action="#" method="POST" class="space-y-5 relative z-10">
-                {% csrf_token %}
-                <div>
-                    <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-4 mb-2 block">Ваше
-                        имя</label>
-                    <input type="text" name="name" required placeholder="Александр"
-                        class="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl px-6 py-4 text-slate-900 font-bold placeholder:text-slate-300 focus:border-amber-400 focus:outline-none transition">
-                </div>
-                <div>
-                    <label
-                        class="text-[10px] font-black text-slate-500 uppercase tracking-widest ml-4 mb-2 block">Телефон
-                        / Email</label>
-                    <input type="text" name="contact" required placeholder="+7 (___) ___-__-__"
-                        class="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl px-6 py-4 text-slate-900 font-bold placeholder:text-slate-300 focus:border-amber-400 focus:outline-none transition">
-                </div>
-                <div class="hidden" aria-hidden="true">
-                    <input type="text" name="website_url" tabindex="-1" autocomplete="off">
-                </div>
-                <div class="px-4 mb-5">
-                    <p class="text-[9px] leading-relaxed text-slate-500 font-medium">
-                        Нажимая на кнопку, вы даете согласие на обработку персональных данных в соответствии с
-                        <a href="{% static 'main/docs/policy.pdf' %}" target="_blank"
-                            class="text-slate-500 underline decoration-amber-300 underline-offset-2 hover:text-amber-600 transition-colors">
-                            Политикой в отношении обработки персональных данных
-                        </a>
-                        и
-                        <a href="{% url 'cookie_policy' %}" target="_blank"
-                            class="text-slate-500 underline decoration-amber-300 underline-offset-2 hover:text-amber-600 transition-colors">
-                            Политикой использования файлов cookie
-                        </a>
-                    </p>
-                </div>
-                <button type="submit"
-                    class="w-full bg-slate-900 text-white font-black uppercase tracking-widest py-5 rounded-2xl hover:bg-amber-500 hover:text-slate-900 transition-all duration-300 shadow-xl shadow-slate-200">
-                    Перезвоните мне
-                </button>
-            </form>
-            <button onclick="toggleCallbackForm()"
-                class="absolute top-6 right-6 text-slate-300 hover:text-slate-900 transition">
-                <svg xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+
+            <!-- Поле: Контакты -->
+            <div>
+                <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-5 mb-2 block">Телефон / Email</label>
+                <input type="text" name="contact" required placeholder="+7 (___) ___-__-__"
+                    class="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl px-6 py-4 text-slate-900 font-bold placeholder:text-slate-300 focus:border-[#4F589D] focus:outline-none transition-all">
+            </div>
+
+            <!-- Защита от спама -->
+            <div class="hidden" aria-hidden="true">
+                <input type="text" name="website_url" tabindex="-1" autocomplete="off">
+            </div>
+
+            <!-- Юридический блок -->
+            <div class="px-2 mb-2">
+                <p class="text-[10px] leading-relaxed text-slate-400 font-medium">
+                    Нажимая на кнопку, Вы соглашаетесь с 
+                    <a href="{% static 'main/docs/policy.pdf' %}" target="_blank"
+                        class="text-[#4F589D] font-bold underline decoration-[#F59E0B]/40 underline-offset-2 hover:text-[#F59E0B] transition-colors">
+                        Политикой в отношении обработки персональных данных
+                    </a> 
+                    и принимаете нашу 
+                    <a href="{% url 'cookie_policy' %}" target="_blank"
+                        class="text-[#4F589D] font-bold underline decoration-[#F59E0B]/40 underline-offset-2 hover:text-[#F59E0B] transition-colors">
+                        Политику использования файлов coockie</a>.
+                </p>
+            </div>
+
+            <!-- КНОПКА (Стиль "Получить консультацию") -->
+            <button type="submit"
+                class="w-full bg-[#4F589D] hover:bg-[#3b4382] text-white px-10 py-5 rounded-xl text-lg font-black uppercase tracking-widest shadow-2xl border border-white/10 transition-all active:scale-95 group flex items-center justify-center gap-3">
+                <span>Перезвоните мне</span>
+                <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
             </button>
-        </div>
+        </form>
     </div>
+</div>
+
+
 
     {% if messages %}
     {% for message in messages %}
@@ -506,41 +582,47 @@
 
     </script>
 
-    <!-- УВЕДОМЛЕНИЕ О COOKIE (Стиль Энергетик) -->
-    <div id="cookie-banner"
-        class="fixed bottom-8 left-4 right-4 md:left-8 md:right-auto md:max-w-[320px] z-[90] transform translate-y-32 opacity-0 transition-all duration-700 ease-out pointer-events-none">
-        <div
-            class="bg-slate-900/95 backdrop-blur-xl border border-slate-700 p-6 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
-            <div class="flex items-center space-x-3 mb-4">
-                <div
-                    class="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center shrink-0 shadow-lg shadow-amber-500/20">
-                    <svg xmlns="http://www.w3.org" class="h-5 w-5 text-slate-900" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                </div>
-                <h4 class="text-amber-400 font-black text-[10px] uppercase tracking-[0.2em]">Безопасность</h4>
+<!-- Cookie-баннер в стиле скриншота -->
+<div id="cookie-banner"
+    class="fixed bottom-8 left-4 right-4 md:left-8 md:right-auto md:max-w-[350px] z-[100] transform translate-y-32 opacity-0 transition-all duration-700 ease-out pointer-events-none">
+    
+    <!-- Основная синяя подложка с блюром -->
+    <div class="bg-[#4F589D]/95 backdrop-blur-xl border border-white/20 p-6 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+        
+        <!-- Верхняя часть: Иконка и Заголовок как на скриншоте -->
+        <div class="flex items-center gap-4 mb-5">
+            <!-- Белая плашка для иконки -->
+            <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shrink-0 shadow-lg">
+                <!-- Синяя иконка щита #4F589D -->
+                <svg xmlns="http://w3.org" class="h-7 w-7 text-[#4F589D]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
             </div>
+            <!-- Белый жирный текст -->
+            <h4 class="text-white font-bold text-lg leading-tight drop-shadow-sm">
+                Уведомление <br> <span class="text-[10px] uppercase tracking-[0.2em] text-[#F59E0B] font-black">о coockie</span>
+            </h4>
+        </div>
 
-            <p class="text-slate-300 text-[11px] font-bold leading-relaxed mb-6 px-1">
-                Мы используем защитные <span
-                    class="text-white underline decoration-amber-500/50 underline-offset-4">cookie</span> для работы
-                форм. Продолжая работу, вы соглашаетесь с правилами сайта.
-            </p>
+        <p class="text-white/90 text-[12px] font-medium leading-relaxed mb-6 px-1">
+            Мы используем защитные <span class="text-white underline decoration-[#F59E0B] underline-offset-4 font-bold">cookie</span> для корректной работы сайта. Продолжая, вы соглашаетесь с правилами.
+        </p>
 
-            <div class="flex gap-2">
-                <button onclick="acceptCookies()"
-                    class="flex-[2] bg-amber-500 hover:bg-white text-slate-900 px-4 py-3.5 rounded-2xl font-black uppercase tracking-widest text-[9px] transition-all duration-300 active:scale-95 shadow-lg shadow-amber-500/10">
-                    Принять
-                </button>
-                <a href="{% url 'cookie_policy' %}" target="_blank"
-                    class="flex-1 border border-slate-700 hover:border-slate-500 text-slate-500 hover:text-white px-2 py-3.5 rounded-2xl font-black uppercase tracking-widest text-[9px] transition-all text-center flex items-center justify-center leading-none">
-                    Инфо
-                </a>
-            </div>
+        <!-- Кнопки -->
+        <div class="flex gap-3">
+            <button onclick="acceptCookies()"
+                class="flex-[2] bg-[#F59E0B] hover:bg-white text-white hover:text-[#4F589D] px-4 py-3.5 rounded-2xl font-black uppercase tracking-widest text-[10px] transition-all duration-300 active:scale-95 shadow-lg shadow-[#F59E0B]/20">
+                Принять
+            </button>
+            <a href="{% url 'cookie_policy' %}" target="_blank"
+                class="flex-1 border border-white/20 hover:border-white/40 text-white/40 hover:text-white px-2 py-3.5 rounded-2xl font-black uppercase tracking-widest text-[10px] transition-all text-center flex items-center justify-center">
+                Инфо
+            </a>
         </div>
     </div>
+</div>
+
+
 
 
 </body>
