@@ -7,101 +7,112 @@
 
 
 <body class="bg-slate-50">
-        <!-- Секция: График обучения (Оптимизирована для мобилок) -->
-    <section id="schedule" class="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16 border-t border-slate-100">
-        <div class="flex flex-col md:flex-row justify-between items-center mb-8 md:mb-10 gap-6">
-            <div class="text-center md:text-left">
-                <h2 class="text-3xl md:text-4xl font-black text-slate-900 uppercase tracking-tight">График обучения
+    <!-- Основной контейнер с отступами как на других страницах -->
+    <main class="min-h-screen pt-10 pb-20 font-sans">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            
+            <!-- Заголовок секции с оранжевой чертой -->
+            <div class="flex flex-col items-center md:items-start gap-4 mb-16">
+                <h2 class="text-3xl md:text-5xl font-black text-[#4F589D] uppercase tracking-tight">
+                    График обучения
                 </h2>
-                <p class="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] mt-2">
-                    Расписание занятий</p>
+                <div class="h-1.5 w-24 bg-[#F59E0B] rounded-full"></div>
             </div>
-            <div
-                class="flex items-center bg-white p-1.5 md:p-2 rounded-[2rem] shadow-xl shadow-slate-200/50 border border-slate-200">
-                <a href="?month={{ prev_month }}&year={{ prev_year }}#schedule"
-                    class="w-10 h-10 md:w-12 md:h-12 rounded-2xl border border-slate-100 flex items-center justify-center text-slate-400 hover:text-amber-500 transition shadow-sm">
-                    <svg xmlns="http://www.w3.org" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </a>
-                <div class="px-6 md:px-8 flex flex-col items-center min-w-[140px] md:min-w-[180px]">
-                    <span
-                        class="text-[8px] md:text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Период</span>
-                    <span
-                        class="text-slate-900 font-black uppercase tracking-tighter text-xs md:text-sm">{{current_month}}</span>
+
+            <!-- Блок переключения периода -->
+            <div class="flex flex-col md:flex-row justify-between items-center mb-10 gap-6">
+                <div class="text-center md:text-left">
+                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em]">
+                    </p>
                 </div>
-                <a href="?month={{ next_month }}&year={{ next_year }}#schedule"
-                    class="w-10 h-10 md:w-12 md:h-12 rounded-2xl border border-slate-100 flex items-center justify-center text-slate-400 hover:text-amber-500 transition shadow-sm">
-                    <svg xmlns="http://www.w3.org" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
-                    </svg>
-                </a>
+
+                <!-- Переключатель месяцев в фирменном стиле -->
+                <div class="flex items-center bg-white p-2 rounded-[2rem] shadow-xl shadow-[#4F589D]/5 border border-slate-100">
+                    <a href="?month={{ prev_month }}&year={{ prev_year }}#schedule"
+                        class="w-12 h-12 rounded-2xl border border-slate-50 flex items-center justify-center text-slate-400 hover:text-[#F59E0B] transition-all shadow-sm">
+                        <svg xmlns="http://w3.org" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </a>
+                    
+                    <div class="px-8 flex flex-col items-center min-w-[180px]">
+                        <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Период</span>
+                        <span class="text-[#4F589D] font-black uppercase tracking-tight text-sm">
+                            {{ current_month }}
+                        </span>
+                    </div>
+
+                    <a href="?month={{ next_month }}&year={{ next_year }}#schedule"
+                        class="w-12 h-12 rounded-2xl border border-slate-50 flex items-center justify-center text-slate-400 hover:text-[#F59E0B] transition-all shadow-sm">
+                        <svg xmlns="http://w3.org" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="relative p-1.5 md:p-2 bg-white rounded-[2.5rem] shadow-xl border border-slate-200">
-            <div class="overflow-hidden rounded-[2rem]">
-                <table class="w-full text-left border-collapse bg-white">
-                    <thead>
-                        <tr class="bg-slate-900">
-                            <th
-                                class="px-5 md:px-10 py-5 md:py-7 text-[8px] md:text-[10px] font-black text-amber-400 uppercase tracking-[0.2em]">
-                                Программа обучения</th>
-                            <th
-                                class="px-5 md:px-10 py-5 md:py-7 text-[8px] md:text-[10px] font-black text-amber-400 uppercase tracking-[0.2em] text-right">
-                                Сроки обучения</th>
-                        </tr>
-                    </thead>
-                    <tbody id="course-table-body" class="divide-y divide-slate-100">
-                        {% for course in courses %}
-                        <tr
-                            class="course-row group/row hover:bg-amber-50/30 transition-all {% if forloop.counter > 3 %}hidden{% endif %}">
-                            <td class="px-5 md:px-10 py-6 md:py-8 align-top">
-                                <div
-                                    class="text-slate-900 font-bold text-base md:text-xl leading-tight group-hover/row:text-amber-600 transition-colors">
-                                    {{ course.Название }}
-                                </div>
-                                <div class="flex items-center mt-2 space-x-2">
-                                    <span class="w-1 h-1 bg-amber-400 rounded-full"></span>
-                                    <div
-                                        class="text-slate-400 text-[8px] md:text-[10px] font-black uppercase tracking-widest leading-none">
-                                        {% if course.Форма %}{{ course.Форма }}{% else %}Очно-заочная форма{% endif %}
+
+            <!-- Таблица с программами -->
+            <div class="relative p-2 bg-white rounded-[2.5rem] shadow-2xl shadow-[#4F589D]/10 border border-slate-100">
+                <div class="overflow-hidden rounded-[2rem]">
+                    <table class="w-full text-left border-collapse bg-white">
+                        <thead>
+                            <tr class="bg-[#4F589D]">
+                                <th class="px-10 py-7 text-[10px] font-black text-[#F59E0B] uppercase tracking-[0.2em]">
+                                    Программа обучения
+                                </th>
+                                <th class="px-10 py-7 text-[10px] font-black text-[#F59E0B] uppercase tracking-[0.2em] text-right">
+                                    Сроки обучения
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="course-table-body" class="divide-y divide-slate-100">
+                            {% for course in courses %}
+                            <tr class="course-row group/row hover:bg-[#F59E0B]/5 transition-all {% if forloop.counter > 3 %}hidden{% endif %}">
+                                <td class="px-10 py-8 align-top">
+                                    <div class="text-slate-900 font-bold text-xl leading-tight group-hover/row:text-[#4F589D] transition-colors tracking-tight">
+                                        {{ course.Название }}
                                     </div>
-                                </div>
-                            </td>
-                            <td class="px-5 md:px-10 py-6 md:py-8 text-right align-top w-32 md:w-[450px]">
-                                <div
-                                    class="inline-block text-center bg-slate-900 text-white px-6 py-4 rounded-xl md:rounded-[1.5rem] text-[10px] md:text-base font-black leading-tight shadow-xl group-hover/row:bg-amber-500 transition-all min-w-full">
-                                    {{ course.Сроки|linebreaksbr }}
-                                </div>
-                            </td>
-                        </tr>
-                        {% empty %}
-                        <tr>
-                            <td colspan="2"
-                                class="px-10 py-20 text-center text-slate-400 font-black uppercase text-[10px]">
-                                Расписания пока нет</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+                                    <div class="flex items-center mt-3 space-x-3">
+                                        <span class="w-1.5 h-1.5 bg-[#F59E0B] rounded-full animate-pulse"></span>
+                                        <div class="text-slate-400 text-[10px] font-black uppercase tracking-widest leading-none">
+                                            {% if course.Форма %}{{ course.Форма }}{% else %}Очно-заочная форма обучения{% endif %}
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-10 py-8 text-right align-top w-[450px]">
+                                    <div class="inline-block text-center bg-[#4F589D] text-white px-8 py-5 rounded-[1.5rem] text-base font-black leading-tight shadow-xl group-hover/row:bg-[#F59E0B] transition-all min-w-full tracking-tight">
+                                        {{ course.Сроки|linebreaksbr }}
+                                    </div>
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="2" class="px-10 py-24 text-center text-slate-400 font-black uppercase text-xs tracking-[0.2em]">
+                                    Расписания на данный период пока нет
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
             </div>
+
+            <!-- Кнопка "Показать полный список" -->
+            {% if courses|length > 3 %}
+            <div class="text-center mt-12">
+                <button id="toggle-courses-btn" onclick="toggleCourses()"
+                    class="inline-flex items-center space-x-3 bg-white border-2 border-slate-100 px-10 py-5 rounded-2xl text-[#4F589D] font-black uppercase text-[11px] tracking-widest hover:border-[#F59E0B] hover:text-[#F59E0B] transition-all shadow-sm active:scale-95 group">
+                    <span id="btn-text">Показать полный список</span>
+                    <svg id="btn-icon" xmlns="http://w3.org"
+                        class="h-4 w-4 transition-transform duration-300 group-hover:translate-y-1" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+            </div>
+            {% endif %}
         </div>
-        {% if courses|length > 3 %}
-        <div class="text-center mt-8">
-            <button id="toggle-courses-btn" onclick="toggleCourses()"
-                class="inline-flex items-center space-x-2 bg-white border-2 border-slate-200 px-8 py-4 rounded-2xl text-slate-900 font-black uppercase text-[10px] tracking-widest hover:border-amber-400 hover:text-amber-500 transition-all shadow-sm active:scale-95 group">
-                <span id="btn-text">Показать полный список</span>
-                <svg id="btn-icon" xmlns="http://www.w3.org"
-                    class="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" fill="none"
-                    viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
-                </svg>
-            </button>
-        </div>
-        {% endif %}
-    </section>
+    </main>
 </body>
 <script>
     function toggleCourses() {

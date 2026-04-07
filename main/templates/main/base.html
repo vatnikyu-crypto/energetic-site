@@ -48,7 +48,7 @@
                 <span class="font-normal">Заказать звонок</span>
             </button>
 
-            <a href="#" class="group flex items-center gap-2 hover:text-[#F59E0B] transition-colors text-base">
+            <a href="https://max.ru/u/f9LHodD0cOJyJawG7MUgW_cgH3ON96hN9G4HdTU9BvOtuQy5WZ8ClUg8_TM" class="group flex items-center gap-2 hover:text-[#F59E0B] transition-colors text-base">
                 <img src="{% static 'main/img/Логотип_MAX.png' %}" class="w-4 h-4 transition-transform duration-300 group-hover:scale-110" alt="WA">
                 <span class="font-normal">MAX</span>
             </a>
@@ -158,6 +158,11 @@
 <div class="absolute top-full left-0 w-64 pt-0 hidden group-hover:block z-50 shadow-2xl normal-case tracking-normal">
     <div class="bg-white border border-slate-100 p-1 shadow-xl">
         
+        <a href="{% url 'reviews' %}"
+            class="block px-5 py-3 text-[14px] font-normal text-black hover:text-[#F59E0B] hover:bg-slate-50 transition-colors duration-200 border-b border-slate-50">
+            Благодарственные письма
+        </a>
+
         <a href="{% url 'training_schedule' %}"
             class="block px-5 py-3 text-[14px] font-normal text-black hover:text-[#F59E0B] hover:bg-slate-50 transition-colors duration-200 border-b border-slate-50">
             График обучения
@@ -168,10 +173,7 @@
             Новости
         </a>
         
-        <a href="{% url 'reviews' %}"
-            class="block px-5 py-3 text-[14px] font-normal text-black hover:text-[#F59E0B] hover:bg-slate-50 transition-colors duration-200 border-b border-slate-50">
-            Благодарственные письма
-        </a>
+
         
         <a href="{% url 'base_material' %}"
             class="block px-5 py-3 text-[14px] font-normal text-black hover:text-[#F59E0B] hover:bg-slate-50 transition-colors duration-200">

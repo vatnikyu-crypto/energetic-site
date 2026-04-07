@@ -7,10 +7,90 @@
 
 <main class="min-h-screen bg-slate-50/50 pt-10 pb-0">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
-        <!-- Заголовок страницы -->
-        <div class="mb-16">
-            <h1 class="text-4xl md:text-6xl font-black text-slate-900 uppercase tracking-tight mb-12 text-center md:text-left">Обучение</h1>
+        <!-- Заголовок секции -->
+        <div class="flex flex-col items-center md:items-start gap-4 mb-16">
+            <h2 class="text-3xl md:text-5xl font-black text-[#4F589D] uppercase tracking-tight">
+                Обучение
+            </h2>
+            <div class="h-1.5 w-24 bg-[#F59E0B] rounded-full"></div>
         </div>
+
+        <!-- 1. БЛОК: Профессиональное обучение -->
+        <section id="rab-prof" class="mb-24 scroll-mt-32">
+            <div class="flex items-center space-x-4 mb-8">
+                <div class="w-12 h-12 bg-amber-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-amber-500/20 shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M9.972 2.508a.5.5 0 0 0-.16-.556l-.178-.129a5 5 0 0 0-2.076-.783C6.215.862 4.504 1.229 2.84 3.133H1.786a.5.5 0 0 0-.354.147L.146 4.567a.5.5 0 0 0 0 .706l2.571 2.579a.5.5 0 0 0 .708 0l1.286-1.29a.5.5 0 0 0 .146-.353V5.57l8.387 8.873A.5.5 0 0 0 14 14.5l1.5-1.5a.5.5 0 0 0 .017-.689l-9.129-8.63c.747-.456 1.772-.839 3.112-.839a.5.5 0 0 0 .472-.334""")/>>
+                    </svg>
+                </div>
+                <h2 class="text-2xl md:text-4xl font-black text-slate-900 uppercase tracking-tighter">Профессиональное обучение</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="prose prose-slate max-w-none">
+                        <p class="text-lg text-slate-600 leading-relaxed font-medium">
+                            Профессиональное обучение направлено на приобретение <span class="text-slate-900 font-bold">квалификационных разрядов и категорий</span> по самым актуальным профессиям. Программы разработаны согласно ЕТКС и профстандартам.
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-[2rem] p-8 border border-slate-200 shadow-sm">
+                        <h4 class="text-xs font-black text-amber-500 uppercase tracking-[0.2em] mb-6">Основные направления обучения:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex items-center space-x-3 p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                                <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
+                                <span class="text-slate-700 font-bold text-sm">Электроэнергетика</span>
+                            </div>
+                            <div class="flex items-center space-x-3 p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                                <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
+                                <span class="text-slate-700 font-bold text-sm">Теплоэнергетика</span>
+                            </div>
+                            <div class="flex items-center space-x-3 p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                                <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
+                                <span class="text-slate-700 font-bold text-sm">Подъемные механизмы</span>
+                            </div>
+                            <div class="flex items-center space-x-3 p-4 bg-slate-50 rounded-2xl border border-slate-100">
+                                <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
+                                <span class="text-slate-700 font-bold text-sm">Общие отрасли</span>
+                            </div>
+                        </div>
+                    </div>
+                    <details class="group bg-slate-100/50 rounded-2xl border border-slate-200 overflow-hidden">
+                        <summary class="p-5 cursor-pointer flex items-center justify-between list-none">
+                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Правовая база</span>
+                            <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </summary>
+                        <div class="px-5 pb-5 text-[11px] text-slate-500 space-y-2 leading-relaxed">
+                            <p>• Приказ Минпросвещения России от 14.07.2023 N 534 "Об утверждении Перечня профессий рабочих, должностей служащих, по которым осуществляется профессиональное обучение"</p>
+                            <p>• Приказ Минпросвещения России от 26.08.2020 N 438 "Об утверждении Порядка организации и осуществления образовательной деятельности по основным программам профессионального обучения"</p>
+                        </div>
+                    </details>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-slate-900 rounded-[2.5rem] p-8 text-white relative overflow-hidden">
+                        <div class="relative z-10">
+                            <div class="mb-6">
+                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Объем программ</span>
+                                <div class="text-3xl font-black tabular-nums">от 240 часов</div>
+                            </div>
+                            <div class="mb-6">
+                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Формат</span>
+                                <div class="text-xl font-bold leading-tight">Дистанционная / Очная</div>
+                            </div>
+                            <div class="pt-6 border-t border-white/10">
+                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Итоговый документ</span>
+                                <div class="text-sm font-bold opacity-80 mt-1 uppercase tracking-tighter">Свидетельство о повышении квалификации</div>
+                            </div>
+                        </div>
+                        <div class="absolute -right-6 -bottom-6 text-white/5 transform -rotate-12 pointer-events-none">
+                            <svg xmlns="http://www.w3.org" width="160" height="160" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M9.972 2.508a.5.5 0 0 0-.16-.556l-.178-.129a5 5 0 0 0-2.076-.783C6.215.862 4.504 1.229 2.84 3.133H1.786a.5.5 0 0 0-.354.147L.146 4.567a.5.5 0 0 0 0 .706l2.571 2.579a.5.5 0 0 0 .708 0l1.286-1.29a.5.5 0 0 0 .146-.353V5.57l8.387 8.873A.5.5 0 0 0 14 14.5l1.5-1.5a.5.5 0 0 0 .017-.689l-9.129-8.63c.747-.456 1.772-.839 3.112-.839a.5.5 0 0 0 .472-.334""")/>>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- 1. БЛОК: ПРОМЫШЛЕННАЯ БЕЗОПАСНОСТЬ -->
         <section id="prom-bez" class="mb-24 scroll-mt-32">
@@ -320,82 +400,7 @@
             </div>
         </section>
 
-        <!-- 5. БЛОК: РАБОЧИЕ ПРОФЕССИИ -->
-        <section id="rab-prof" class="mb-24 scroll-mt-32">
-            <div class="flex items-center space-x-4 mb-8">
-                <div class="w-12 h-12 bg-amber-500 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-amber-500/20 shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M9.972 2.508a.5.5 0 0 0-.16-.556l-.178-.129a5 5 0 0 0-2.076-.783C6.215.862 4.504 1.229 2.84 3.133H1.786a.5.5 0 0 0-.354.147L.146 4.567a.5.5 0 0 0 0 .706l2.571 2.579a.5.5 0 0 0 .708 0l1.286-1.29a.5.5 0 0 0 .146-.353V5.57l8.387 8.873A.5.5 0 0 0 14 14.5l1.5-1.5a.5.5 0 0 0 .017-.689l-9.129-8.63c.747-.456 1.772-.839 3.112-.839a.5.5 0 0 0 .472-.334""")/>>
-                    </svg>
-                </div>
-                <h2 class="text-2xl md:text-4xl font-black text-slate-900 uppercase tracking-tighter">Рабочие профессии</h2>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-                <div class="lg:col-span-2 space-y-8">
-                    <div class="prose prose-slate max-w-none">
-                        <p class="text-lg text-slate-600 leading-relaxed font-medium">
-                            Профессиональное обучение направлено на приобретение <span class="text-slate-900 font-bold">квалификационных разрядов и категорий</span> по самым актуальным профессиям. Программы разработаны согласно ЕТКС и профстандартам.
-                        </p>
-                    </div>
-                    <div class="bg-white rounded-[2rem] p-8 border border-slate-200 shadow-sm">
-                        <h4 class="text-xs font-black text-amber-500 uppercase tracking-[0.2em] mb-6">Основные направления обучения:</h4>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="flex items-center space-x-3 p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                                <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
-                                <span class="text-slate-700 font-bold text-sm">Электроэнергетика</span>
-                            </div>
-                            <div class="flex items-center space-x-3 p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                                <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
-                                <span class="text-slate-700 font-bold text-sm">Теплоэнергетика</span>
-                            </div>
-                            <div class="flex items-center space-x-3 p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                                <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
-                                <span class="text-slate-700 font-bold text-sm">Подъемные механизмы</span>
-                            </div>
-                            <div class="flex items-center space-x-3 p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                                <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
-                                <span class="text-slate-700 font-bold text-sm">Общие отрасли</span>
-                            </div>
-                        </div>
-                    </div>
-                    <details class="group bg-slate-100/50 rounded-2xl border border-slate-200 overflow-hidden">
-                        <summary class="p-5 cursor-pointer flex items-center justify-between list-none">
-                            <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Правовая база</span>
-                            <svg class="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </summary>
-                        <div class="px-5 pb-5 text-[11px] text-slate-500 space-y-2 leading-relaxed">
-                            <p>• Приказ Минпросвещения России от 14.07.2023 N 534 "Об утверждении Перечня профессий рабочих, должностей служащих, по которым осуществляется профессиональное обучение"</p>
-                            <p>• Приказ Минпросвещения России от 26.08.2020 N 438 "Об утверждении Порядка организации и осуществления образовательной деятельности по основным программам профессионального обучения"</p>
-                        </div>
-                    </details>
-                </div>
-                <div class="space-y-4">
-                    <div class="bg-slate-900 rounded-[2.5rem] p-8 text-white relative overflow-hidden">
-                        <div class="relative z-10">
-                            <div class="mb-6">
-                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Объем программ</span>
-                                <div class="text-3xl font-black tabular-nums">от 240 часов</div>
-                            </div>
-                            <div class="mb-6">
-                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Формат</span>
-                                <div class="text-xl font-bold leading-tight">Дистанционная / Очная</div>
-                            </div>
-                            <div class="pt-6 border-t border-white/10">
-                                <span class="text-[10px] font-black text-amber-400 uppercase tracking-widest">Итоговый документ</span>
-                                <div class="text-sm font-bold opacity-80 mt-1 uppercase tracking-tighter">Свидетельство о повышении квалификации</div>
-                            </div>
-                        </div>
-                        <div class="absolute -right-6 -bottom-6 text-white/5 transform -rotate-12 pointer-events-none">
-                            <svg xmlns="http://www.w3.org" width="160" height="160" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M9.972 2.508a.5.5 0 0 0-.16-.556l-.178-.129a5 5 0 0 0-2.076-.783C6.215.862 4.504 1.229 2.84 3.133H1.786a.5.5 0 0 0-.354.147L.146 4.567a.5.5 0 0 0 0 .706l2.571 2.579a.5.5 0 0 0 .708 0l1.286-1.29a.5.5 0 0 0 .146-.353V5.57l8.387 8.873A.5.5 0 0 0 14 14.5l1.5-1.5a.5.5 0 0 0 .017-.689l-9.129-8.63c.747-.456 1.772-.839 3.112-.839a.5.5 0 0 0 .472-.334""")/>>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
     </div>
 </main>
 {% endblock %}
