@@ -7,412 +7,449 @@
 
 <body class="bg-slate-50">
 
-    <!-- Hero Section (Без библиотек) -->
-<section class="relative h-[600px] w-full overflow-hidden font-sans">
-    
-    <!-- Контейнер для слайдов -->
-    <div id="hero-slider" class="relative h-full w-full">
-        <!-- Слайд 1 (Активный по умолчанию) -->
-        <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out">
-            <img src="{% static 'main/img/slider/slide1.png' %}" class="w-full h-full object-cover" alt="Слайд 1">
-            <div class="absolute inset-0 bg-slate-900/50 backdrop-brightness-75"></div>
+    <!-- Hero Section -->
+    <section class="relative h-[600px] w-full overflow-hidden font-sans">
+
+        <!-- Контейнер для слайдов -->
+        <div id="hero-slider" class="relative h-full w-full">
+            <!-- Слайд 1 (Активный по умолчанию) -->
+            <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out">
+                <img src="{% static 'main/img/slider/slide1.png' %}" class="w-full h-full object-cover" alt="Слайд 1">
+                <div class="absolute inset-0 bg-slate-900/50 backdrop-brightness-75"></div>
+            </div>
+            <!-- Слайд 2 -->
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+                <img src="{% static 'main/img/slider/slide2.jpg' %}" class="w-full h-full object-cover" alt="Слайд 2">
+                <div class="absolute inset-0 bg-slate-900/50 backdrop-brightness-75"></div>
+            </div>
+            <!-- Слайд 3 -->
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+                <img src="{% static 'main/img/slider/slide3.jpg' %}" class="w-full h-full object-cover" alt="Слайд 3">
+                <div class="absolute inset-0 bg-slate-900/50 backdrop-brightness-75"></div>
+            </div>
+            <!-- Слайд 4 -->
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+                <img src="{% static 'main/img/slider/slide4.jpg' %}" class="w-full h-full object-cover" alt="Слайд 4">
+                <div class="absolute inset-0 bg-slate-900/50 backdrop-brightness-75"></div>
+            </div>
+            <!-- Слайд 5 -->
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+                <img src="{% static 'main/img/slider/slide5.jpg' %}" class="w-full h-full object-cover" alt="Слайд 5">
+                <div class="absolute inset-0 bg-slate-900/50 backdrop-brightness-75"></div>
+            </div>
         </div>
-        <!-- Слайд 2 -->
-        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
-            <img src="{% static 'main/img/slider/slide2.jpg' %}" class="w-full h-full object-cover" alt="Слайд 2">
-            <div class="absolute inset-0 bg-slate-900/50 backdrop-brightness-75"></div>
+
+        <div class="absolute inset-0 z-20 flex items-center">
+            <div
+                class="max-w-7xl mx-auto px-6 w-full flex flex-col lg:flex-row items-center lg:items-start justify-between gap-12 text-center lg:text-left">
+
+                <!-- ЛЕВАЯ ЧАСТЬ -->
+                <div class="max-w-2xl animate-fade-in-up">
+                    <p
+                        class="text-white text-base md:text-lg font-normal uppercase tracking-[0.2em] mb-4 opacity-90 leading-relaxed">
+                        Автономная некоммерческая организация<br>дополнительного профессионального образования
+                    </p>
+                    <h1 class="text-white text-5xl md:text-7xl font-black leading-tight mb-10 tracking-tight">
+                        "Энергетик"
+                    </h1>
+                    <button onclick="toggleCallbackForm()"
+                        class="bg-[#4F589D] hover:bg-[#3b4382] text-white px-10 py-5 rounded-xl text-lg font-black uppercase tracking-widest shadow-2xl border border-white/10 transition-all active:scale-95 group flex items-center gap-3">
+                        <span>Получить консультацию</span>
+                        <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- ПРАВАЯ ЧАСТЬ -->
+                <div class="hidden lg:grid grid-cols-2 gap-x-12 gap-y-8 max-w-xl animate-fade-in-right">
+
+                    <!-- 1. Гарантии качества -->
+                    <div class="flex items-center gap-4 group">
+                        <!-- Стеклянная подложка -->
+                        <div
+                            class="w-14 h-14 flex-shrink-0 bg-white shadow-lg rounded-2xl flex items-center justify-center transition-all group-hover:scale-110">
+
+                            <!-- Твоя иконка щита Lucide -->
+                            <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="w-7 h-7 text-[#4F589D] transition-transform duration-300 group-hover:scale-110">
+                                <path
+                                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                                >
+                                <path d="m9 12 2 2 4-4" />>
+                            </svg>
+
+                        </div>
+                        <span class="text-white font-bold text-[15px] leading-tight drop-shadow-md">Гарантии
+                            качества</span>
+                    </div>
+
+                    <!-- 2. Профессионализм -->
+                    <div class="flex items-center gap-4 group">
+                        <!-- Стеклянная подложка (Glassmorphism) -->
+                        <div
+                            class="w-14 h-14 flex-shrink-0 bg-white shadow-lg rounded-2xl flex items-center justify-center transition-all group-hover:scale-110">
+
+                            <!-- Твоя иконка Lucide с нашими классами -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="w-7 h-7 text-[#4F589D] transition-transform duration-300 group-hover:scale-110">
+                                <circle cx="12" cy="12" r="10" />>
+                                <path
+                                    d="M11.051 7.616a1 1 0 0 1 1.909.024l.737 1.452a1 1 0 0 0 .737.535l1.634.256a1 1 0 0 1 .588 1.806l-1.172 1.168a1 1 0 0 0-.282.866l.259 1.613a1 1 0 0 1-1.541 1.134l-1.465-.75a1 1 0 0 0-.912 0l-1.465.75a1 1 0 0 1-1.539-1.133l.258-1.613a1 1 0 0 0-.282-.867l-1.156-1.152a1 1 0 0 1 .572-1.822l1.633-.256a1 1 0 0 0 .737-.535z" />
+                                >
+                            </svg>
+
+                        </div>
+                        <!-- Текст с легкой тенью для читаемости на фото -->
+                        <span
+                            class="text-white font-bold text-[15px] leading-tight drop-shadow-md">Профессионализм</span>
+                    </div>
+
+                    <!-- 3. Компетентность -->
+                    <div class="flex items-center gap-4 group">
+                        <!-- Стеклянная подложка -->
+                        <div
+                            class="w-14 h-14 flex-shrink-0 bg-white shadow-lg rounded-2xl flex items-center justify-center transition-all group-hover:scale-110">
+
+                            <!-- Твоя иконка портфеля Lucide -->
+                            <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="w-7 h-7 text-[#4F589D] transition-transform duration-300 group-hover:scale-110">
+                                <path d="M12 12h.01" />>
+                                <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />>
+                                <path d="M22 13a18.15 18.15 0 0 1-20 0" />>
+                                <rect width="20" height="14" x="2" y="6" rx="2" />>
+                            </svg>
+
+                        </div>
+                        <span
+                            class="text-white font-bold text-[15px] leading-tight drop-shadow-md">Компетентность</span>
+                    </div>
+
+                    <!-- 4. Работа по договору -->
+                    <div class="flex items-center gap-4 group">
+                        <!-- Стеклянная подложка -->
+                        <div
+                            class="w-14 h-14 flex-shrink-0 bg-white shadow-lg rounded-2xl flex items-center justify-center transition-all group-hover:scale-110">
+
+                            <!-- Твоя иконка документа Lucide -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="w-7 h-7 text-[#4F589D] transition-transform duration-300 group-hover:scale-110">
+                                <path
+                                    d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+                                >
+                                <path d="M14 2v5a1 1 0 0 0 1 1h5" />>
+                                <path d="M10 9H8" />>
+                                <path d="M16 13H8" />>
+                                <path d="M16 17H8" />>
+                            </svg>
+
+                        </div>
+                        <span class="text-white font-bold text-[15px] leading-tight drop-shadow-md">Работа по
+                            договору</span>
+                    </div>
+
+                    <!-- 5. Большой опыт работы -->
+                    <div class="flex items-center gap-4 group col-span-2 mt-2">
+                        <!-- Стеклянная подложка -->
+                        <div
+                            class="w-14 h-14 flex-shrink-0 bg-white shadow-lg rounded-2xl flex items-center justify-center transition-all group-hover:scale-110">
+
+                            <!-- Твоя иконка рукопожатия Lucide -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="w-7 h-7 text-[#4F589D] transition-transform duration-300 group-hover:scale-110">
+                                <path d="m11 17 2 2a1 1 0 1 0 3-3" />>
+                                <path
+                                    d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" />
+                                >
+                                <path d="m21 3 1 11h-2" />>
+                                <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" />>
+                                <path d="M3 4h8" />>
+                            </svg>
+
+                        </div>
+                        <span class="text-white font-bold text-[15px] leading-tight drop-shadow-md tracking-wide">
+                            Большой опыт работы
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Слайд 3 -->
-        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
-            <img src="{% static 'main/img/slider/slide3.jpg' %}" class="w-full h-full object-cover" alt="Слайд 3">
-            <div class="absolute inset-0 bg-slate-900/50 backdrop-brightness-75"></div>
+
+        <!-- Индикаторы (Точки) -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex gap-3">
+            <div class="dot w-3 h-3 rounded-full bg-white opacity-100 cursor-pointer transition-all duration-300"></div>
+            <div class="dot w-3 h-3 rounded-full bg-white opacity-40 cursor-pointer transition-all duration-300"></div>
+            <div class="dot w-3 h-3 rounded-full bg-white opacity-40 cursor-pointer transition-all duration-300"></div>
+            <div class="dot w-3 h-3 rounded-full bg-white opacity-40 cursor-pointer transition-all duration-300"></div>
+            <div class="dot w-3 h-3 rounded-full bg-white opacity-40 cursor-pointer transition-all duration-300"></div>
         </div>
-        <!-- Слайд 4 -->
-        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
-            <img src="{% static 'main/img/slider/slide4.jpg' %}" class="w-full h-full object-cover" alt="Слайд 4">
-            <div class="absolute inset-0 bg-slate-900/50 backdrop-brightness-75"></div>
+    </section>
+
+    <!-- Секция: Направления обучения -->
+    <section class="max-w-7xl mx-auto px-6 py-24 font-sans">
+        <div class="flex flex-col items-center md:items-start gap-4 mb-16 text-center md:text-left">
+            <h2 class="text-3xl md:text-4xl font-black text-[#4F589D] uppercase tracking-tight">
+                Направления обучения
+            </h2>
+            <div class="h-1.5 w-24 bg-[#F59E0B] rounded-full"></div>
         </div>
-        <!-- Слайд 5 -->
-        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
-            <img src="{% static 'main/img/slider/slide5.jpg' %}" class="w-full h-full object-cover" alt="Слайд 5">
-            <div class="absolute inset-0 bg-slate-900/50 backdrop-brightness-75"></div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <!-- Карточка 1: Профессиональное обучение -->
+            <a href="{% url 'education' %}#prof"
+                class="group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                <img src="{% static 'main/img/napravlenie/photo1.jpg' %}"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    alt="Профессиональное обучение">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity">
+                </div>
+                <div class="absolute bottom-8 left-8 right-8">
+                    <h3 class="text-white text-lg font-black uppercase leading-tight tracking-tight">Профессиональное
+                        обучение</h3>
+                </div>
+            </a>
+
+            <!-- Карточка 2: Повышение квалификации -->
+            <a href="{% url 'education' %}#pk"
+                class="group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                <img src="{% static 'main/img/napravlenie/photo2.jpg' %}"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    alt="Повышение квалификации">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity">
+                </div>
+                <div class="absolute bottom-8 left-8 right-8">
+                    <h3 class="text-white text-lg font-black uppercase leading-tight tracking-tight">Повышение
+                        квалификации</h3>
+                </div>
+            </a>
+
+            <!-- Карточка 3: Пожарная безопасность -->
+            <a href="{% url 'education' %}#fire-safety"
+                class="group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                <img src="{% static 'main/img/napravlenie/photo3.jpg' %}"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    alt="Пожарная безопасность">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity">
+                </div>
+                <div class="absolute bottom-8 left-8 right-8">
+                    <h3 class="text-white text-lg font-black uppercase leading-tight tracking-tight">Пожарная
+                        безопасность</h3>
+                </div>
+            </a>
+
+            <!-- Карточка 4: Промышленная безопасность -->
+            <a href="{% url 'education' %}#prom-bez"
+                class="group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                <img src="{% static 'main/img/napravlenie/photo4.png' %}"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    alt="Промышленная безопасность">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity">
+                </div>
+                <div class="absolute bottom-8 left-8 right-8">
+                    <h3 class="text-white text-lg font-black uppercase leading-tight tracking-tight">Промышленная
+                        безопасность</h3>
+                </div>
+            </a>
+
+            <!-- Карточка 5: Энергетическая безопасность -->
+            <a href="{% url 'education' %}#energo-bez"
+                class="group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                <img src="{% static 'main/img/napravlenie/photo5.jpg' %}"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    alt="Энергетическая безопасность">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity">
+                </div>
+                <div class="absolute bottom-8 left-8 right-8">
+                    <h3 class="text-white text-lg font-black uppercase leading-tight tracking-tight">Энергетическая
+                        безопасность</h3>
+                </div>
+            </a>
+
+            <!-- Карточка 6: Охрана труда -->
+            <a href="{% url 'education' %}#ohrana-truda"
+                class="group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                <img src="{% static 'main/img/napravlenie/photo6.jpg' %}"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    alt="Охрана труда">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity">
+                </div>
+                <div class="absolute bottom-8 left-8 right-8">
+                    <h3 class="text-white text-lg font-black uppercase leading-tight tracking-tight">Охрана труда</h3>
+                </div>
+            </a>
+
+            <!-- Карточка 7: Экологическая безопасность -->
+            <a href="{% url 'education' %}#eco-bez"
+                class="group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                <img src="{% static 'main/img/napravlenie/photo7.jpg' %}"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    alt="Экологическая безопасность">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity">
+                </div>
+                <div class="absolute bottom-8 left-8 right-8">
+                    <h3 class="text-white text-lg font-black uppercase leading-tight tracking-tight">Экологическая
+                        безопасность</h3>
+                </div>
+            </a>
+
+            <!-- Карточка 8: Психология -->
+            <a href="{% url 'education' %}#psychology"
+                class="group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                <img src="{% static 'main/img/napravlenie/photo8.jpg' %}"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    alt="Психология">
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity">
+                </div>
+                <div class="absolute bottom-8 left-8 right-8">
+                    <h3 class="text-white text-lg font-black uppercase leading-tight tracking-tight">Психология</h3>
+                </div>
+            </a>
         </div>
-    </div>
+    </section>
 
-    <div class="absolute inset-0 z-20 flex items-center">
-        <!-- max-w-7xl — твоя ширина. justify-between растолкает контент по краям -->
-        <div class="max-w-7xl mx-auto px-6 w-full flex flex-col lg:flex-row items-center justify-between gap-12">
-            
-            <!-- ЛЕВАЯ ЧАСТЬ (Твой текст) -->
-            <div class="max-w-2xl animate-fade-in-up">
-                <p class="text-white text-base md:text-lg font-normal uppercase tracking-[0.2em] mb-4 opacity-90 leading-relaxed">
-                    Автономная некоммерческая организация<br>дополнительного профессионального образования
-                </p>
-                <h1 class="text-white text-5xl md:text-7xl font-black leading-tight mb-10 tracking-tight">
-                    "Энергетик"
-                </h1>
-                <!-- Кнопка в твоем фирменном цвете -->
-                <button onclick="toggleCallbackForm()" class="bg-[#4F589D] hover:bg-[#3b4382] text-white px-10 py-5 rounded-xl text-lg font-black uppercase tracking-widest shadow-2xl border border-white/10 transition-all active:scale-95 group flex items-center gap-3">
-                    <span>Получить консультацию</span>
-                    <!-- Добавил маленькую стрелочку для динамики -->
-                    <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- ПРАВАЯ ЧАСТЬ (Тот самый новый код с иконками) -->
-            <div class="hidden lg:grid grid-cols-2 gap-x-12 gap-y-8 max-w-xl animate-fade-in-right">
-                
-                <!-- 1. Гарантии качества (Обновленная иконка Lucide) -->
-<div class="flex items-center gap-4 group">
-    <!-- Стеклянная подложка -->
-<div class="w-14 h-14 flex-shrink-0 bg-white shadow-lg rounded-2xl flex items-center justify-center transition-all group-hover:scale-110">
-        
-        <!-- Твоя иконка щита Lucide -->
-        <svg xmlns="http://w3.org" 
-             viewBox="0 0 24 24" 
-             fill="none" 
-             stroke="currentColor" 
-             stroke-width="2" 
-             stroke-linecap="round" 
-             stroke-linejoin="round" 
-             class="w-7 h-7 text-[#4F589D] transition-transform duration-300 group-hover:scale-110">
-            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z""")/>>
-            <path d="m9 12 2 2 4-4""")/>>
-        </svg>
-
-    </div>
-    <span class="text-white font-bold text-[15px] leading-tight drop-shadow-md">Гарантии качества</span>
-</div>
-
-
-                <!-- 2. Профессионализм (Обновленная иконка Lucide) -->
-<div class="flex items-center gap-4 group">
-    <!-- Стеклянная подложка (Glassmorphism) -->
-<div class="w-14 h-14 flex-shrink-0 bg-white shadow-lg rounded-2xl flex items-center justify-center transition-all group-hover:scale-110">
-        
-        <!-- Твоя иконка Lucide с нашими классами -->
-        <svg xmlns="http://www.w3.org/2000/svg" 
-             viewBox="0 0 24 24" 
-             fill="none" 
-             stroke="currentColor" 
-             stroke-width="2" 
-             stroke-linecap="round" 
-             stroke-linejoin="round" 
-             class="w-7 h-7 text-[#4F589D] transition-transform duration-300 group-hover:scale-110">
-            <circle cx="12" cy="12" r="10""")/>>
-            <path d="M11.051 7.616a1 1 0 0 1 1.909.024l.737 1.452a1 1 0 0 0 .737.535l1.634.256a1 1 0 0 1 .588 1.806l-1.172 1.168a1 1 0 0 0-.282.866l.259 1.613a1 1 0 0 1-1.541 1.134l-1.465-.75a1 1 0 0 0-.912 0l-1.465.75a1 1 0 0 1-1.539-1.133l.258-1.613a1 1 0 0 0-.282-.867l-1.156-1.152a1 1 0 0 1 .572-1.822l1.633-.256a1 1 0 0 0 .737-.535z""")/>>
-        </svg>
-
-    </div>
-    <!-- Текст с легкой тенью для читаемости на фото -->
-    <span class="text-white font-bold text-[15px] leading-tight drop-shadow-md">Профессионализм</span>
-</div>
-
-                <!-- 3. Компетентность (Обновленная иконка Lucide) -->
-<div class="flex items-center gap-4 group">
-    <!-- Стеклянная подложка -->
-<div class="w-14 h-14 flex-shrink-0 bg-white shadow-lg rounded-2xl flex items-center justify-center transition-all group-hover:scale-110">
-        
-        <!-- Твоя иконка портфеля Lucide -->
-        <svg xmlns="http://w3.org" 
-             viewBox="0 0 24 24" 
-             fill="none" 
-             stroke="currentColor" 
-             stroke-width="2" 
-             stroke-linecap="round" 
-             stroke-linejoin="round" 
-             class="w-7 h-7 text-[#4F589D] transition-transform duration-300 group-hover:scale-110">
-            <path d="M12 12h.01""")/>>
-            <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2""")/>>
-            <path d="M22 13a18.15 18.15 0 0 1-20 0""")/>>
-            <rect width="20" height="14" x="2" y="6" rx="2""")/>>
-        </svg>
-
-    </div>
-    <span class="text-white font-bold text-[15px] leading-tight drop-shadow-md">Компетентность</span>
-</div>
-
-
-                <!-- 4. Работа по договору (Обновленная иконка Lucide) -->
-<div class="flex items-center gap-4 group">
-    <!-- Стеклянная подложка -->
-<div class="w-14 h-14 flex-shrink-0 bg-white shadow-lg rounded-2xl flex items-center justify-center transition-all group-hover:scale-110">
-        
-        <!-- Твоя иконка документа Lucide -->
-        <svg xmlns="http://www.w3.org/2000/svg" 
-             viewBox="0 0 24 24" 
-             fill="none" 
-             stroke="currentColor" 
-             stroke-width="2" 
-             stroke-linecap="round" 
-             stroke-linejoin="round" 
-             class="w-7 h-7 text-[#4F589D] transition-transform duration-300 group-hover:scale-110">
-            <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z""")/>>
-            <path d="M14 2v5a1 1 0 0 0 1 1h5""")/>>
-            <path d="M10 9H8""")/>>
-            <path d="M16 13H8""")/>>
-            <path d="M16 17H8""")/>>
-        </svg>
-
-    </div>
-    <span class="text-white font-bold text-[15px] leading-tight drop-shadow-md">Работа по договору</span>
-</div>
-
-
-                <!-- 5. Большой опыт работы (Обновленная иконка Lucide) -->
-<div class="flex items-center gap-4 group col-span-2 mt-2">
-    <!-- Стеклянная подложка -->
-<div class="w-14 h-14 flex-shrink-0 bg-white shadow-lg rounded-2xl flex items-center justify-center transition-all group-hover:scale-110">
-        
-        <!-- Твоя иконка рукопожатия Lucide -->
-        <svg xmlns="http://www.w3.org/2000/svg" 
-             viewBox="0 0 24 24" 
-             fill="none" 
-             stroke="currentColor" 
-             stroke-width="2" 
-             stroke-linecap="round" 
-             stroke-linejoin="round" 
-             class="w-7 h-7 text-[#4F589D] transition-transform duration-300 group-hover:scale-110">
-            <path d="m11 17 2 2a1 1 0 1 0 3-3""")/>>
-            <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4""")/>>
-            <path d="m21 3 1 11h-2""")/>>
-            <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3""")/>>
-            <path d="M3 4h8""")/>>
-        </svg>
-
-    </div>
-    <span class="text-white font-bold text-[15px] leading-tight drop-shadow-md tracking-wide">
-        Большой опыт работы
-    </span>
-</div>
-
-            
-</div>
-            
-        </div>
-    </div>
-
-    
-
-    <!-- Индикаторы (Точки) -->
-    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex gap-3">
-        <div class="dot w-3 h-3 rounded-full bg-white opacity-100 cursor-pointer transition-all duration-300"></div>
-        <div class="dot w-3 h-3 rounded-full bg-white opacity-40 cursor-pointer transition-all duration-300"></div>
-        <div class="dot w-3 h-3 rounded-full bg-white opacity-40 cursor-pointer transition-all duration-300"></div>
-        <div class="dot w-3 h-3 rounded-full bg-white opacity-40 cursor-pointer transition-all duration-300"></div>
-        <div class="dot w-3 h-3 rounded-full bg-white opacity-40 cursor-pointer transition-all duration-300"></div>
-    </div>
-</section>
-
-<!-- Мини-скрипт (Всего 15 строк) -->
-<script>
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('.dot');
-    let currentSlide = 0;
-
-    function showSlide(index) {
-        slides.forEach(s => s.classList.replace('opacity-100', 'opacity-0'));
-        dots.forEach(d => { d.classList.replace('opacity-100', 'opacity-40'); d.classList.remove('w-8'); });
-        
-        slides[index].classList.replace('opacity-0', 'opacity-100');
-        dots[index].classList.replace('opacity-40', 'opacity-100');
-        dots[index].classList.add('w-8'); // Делаем активную точку длиннее
-    }
-
-    setInterval(() => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }, 5000); // 5 секунд на слайд
-</script>
-
-<!-- Секция: Направления обучения (Карточки с фото) -->
-<section class="max-w-7xl mx-auto px-6 py-24 font-sans">
-    
-    <!-- Заголовок секции -->
-    <div class="flex flex-col items-center md:items-start gap-4 mb-16">
-        <h2 class="text-3xl md:text-4xl font-black text-[#4F589D] uppercase tracking-tight">
-            Направления обучения
-        </h2>
-        <div class="h-1.5 w-24 bg-[#F59E0B] rounded-full"></div>
-    </div>
-
-    <!-- Сетка 4x2 -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <!-- Карточка 1: Профессиональное обучение -->
-        <a href="{% url 'education' %}#prof" class="group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-            <img src="{% static 'main/img/napravlenie/photo1.jpg' %}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Профессиональное обучение">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-            <div class="absolute bottom-8 left-8 right-8">
-                <h3 class="text-white text-lg font-black uppercase leading-tight tracking-tight">Профессиональное обучение</h3>
-            </div>
-        </a>
-
-        <!-- Карточка 2: Повышение квалификации -->
-        <a href="{% url 'education' %}#pk" class="group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-            <img src="{% static 'main/img/napravlenie/photo2.jpg' %}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Повышение квалификации">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-            <div class="absolute bottom-8 left-8 right-8">
-                <h3 class="text-white text-lg font-black uppercase leading-tight tracking-tight">Повышение квалификации</h3>
-            </div>
-        </a>
-
-        <!-- Карточка 3: Пожарная безопасность -->
-        <a href="{% url 'education' %}#fire-safety" class="group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-            <img src="{% static 'main/img/napravlenie/photo3.jpg' %}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Пожарная безопасность">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-            <div class="absolute bottom-8 left-8 right-8">
-                <h3 class="text-white text-lg font-black uppercase leading-tight tracking-tight">Пожарная безопасность</h3>
-            </div>
-        </a>
-
-        <!-- Карточка 4: Промышленная безопасность -->
-        <a href="{% url 'education' %}#prom-bez" class="group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-            <img src="{% static 'main/img/napravlenie/photo4.png' %}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Промышленная безопасность">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-            <div class="absolute bottom-8 left-8 right-8">
-                <h3 class="text-white text-lg font-black uppercase leading-tight tracking-tight">Промышленная безопасность</h3>
-            </div>
-        </a>
-
-        <!-- Карточка 5: Энергетическая безопасность -->
-        <a href="{% url 'education' %}#energo-bez" class="group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-            <img src="{% static 'main/img/napravlenie/photo5.jpg' %}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Энергетическая безопасность">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-            <div class="absolute bottom-8 left-8 right-8">
-                <h3 class="text-white text-lg font-black uppercase leading-tight tracking-tight">Энергетическая безопасность</h3>
-            </div>
-        </a>
-
-        <!-- Карточка 6: Охрана труда -->
-        <a href="{% url 'education' %}#ohrana-truda" class="group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-            <img src="{% static 'main/img/napravlenie/photo6.jpg' %}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Охрана труда">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-            <div class="absolute bottom-8 left-8 right-8">
-                <h3 class="text-white text-lg font-black uppercase leading-tight tracking-tight">Охрана труда</h3>
-            </div>
-        </a>
-
-        <!-- Карточка 7: Экологическая безопасность -->
-        <a href="{% url 'education' %}#eco-bez" class="group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-            <img src="{% static 'main/img/napravlenie/photo7.jpg' %}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Экологическая безопасность">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-            <div class="absolute bottom-8 left-8 right-8">
-                <h3 class="text-white text-lg font-black uppercase leading-tight tracking-tight">Экологическая безопасность</h3>
-            </div>
-        </a>
-
-        <!-- Карточка 8: Психология -->
-        <a href="{% url 'education' %}#psychology" class="group relative h-[300px] rounded-[2.5rem] overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-            <img src="{% static 'main/img/napravlenie/photo8.jpg' %}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Психология">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-            <div class="absolute bottom-8 left-8 right-8">
-                <h3 class="text-white text-lg font-black uppercase leading-tight tracking-tight">Психология</h3>
-            </div>
-        </a>
-
-    </div>
-</section>
-
+    <!-- Секция: Лицензии -->
     <section class="max-w-7xl mx-auto px-6 py-12 md:py-20 border-t border-slate-100">
-        <div class="flex flex-col items-center md:items-start gap-4 mb-16">
-                <h2
-                    class="text-3xl md:text-4xl font-black text-[#4F589D] uppercase tracking-tight">
-                    Лицензии и аккредитации
-                </h2>
-                <div class="h-1.5 w-24 bg-[#F59E0B] rounded-full"></div>
+        <div class="flex flex-col items-center md:items-start gap-4 mb-16 text-center md:text-left">
+            <h2 class="text-3xl md:text-4xl font-black text-[#4F589D] uppercase tracking-tight">
+                Лицензии и аккредитации
+            </h2>
+            <div class="h-1.5 w-24 bg-[#F59E0B] rounded-full"></div>
         </div>
         <!-- Основной контент: Текст + Документы -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        
-        <!-- ЛЕВАЯ ЧАСТЬ: Текстовая информация -->
-        <div class="space-y-8 animate-fade-in-left">
-            <p class="text-slate-900 text-lg md:text-xl font-black leading-tight tracking-tight">
-                АНО ДПО «Энергетик» осуществляет образовательную деятельность на основании:
-            </p>
-            
-            <div class="space-y-6">
-                <!-- Пункт 1 -->
-                <div class="flex gap-5 group">
-                    <div class="w-12 h-12 rounded-2xl bg-[#4F589D]/5 flex items-center justify-center shrink-0 border border-[#4F589D]/10 group-hover:bg-[#4F589D] transition-colors duration-300">
-                        <svg class="w-6 h-6 text-[#4F589D] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+            <!-- ЛЕВАЯ ЧАСТЬ: Текстовая информация -->
+            <div class="space-y-8 animate-fade-in-left">
+                <p class="text-slate-900 text-lg md:text-xl font-black leading-tight tracking-tight">
+                    АНО ДПО «Энергетик» осуществляет образовательную деятельность на основании:
+                </p>
+
+                <div class="space-y-6">
+                    <!-- Пункт 1 -->
+                    <div class="flex gap-5 group">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-[#4F589D]/5 flex items-center justify-center shrink-0 border border-[#4F589D]/10 group-hover:bg-[#4F589D] transition-colors duration-300">
+                            <svg class="w-6 h-6 text-[#4F589D] group-hover:text-white" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+                            <b class="text-slate-900 font-bold">Лицензия от 23 ноября 2011 года серия А №0000591,
+                                регистрационный номер № ЛО35-01263-70/00275750</b>, выдана Департаментом образования
+                            Томской области с установлением бессрочного действия.
+                        </p>
                     </div>
-                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-                        <b class="text-slate-900 font-bold">Лицензия от 23 ноября 2011 года серия А №0000591, регистрационный номер № ЛО35-01263-70/00275750</b>, выдана Департаментом образования Томской области с установлением бессрочного действия.
-                    </p>
+
+                    <!-- Пункт 2 -->
+                    <div class="flex gap-5 group">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-[#4F589D]/5 flex items-center justify-center shrink-0 border border-[#4F589D]/10 group-hover:bg-[#4F589D] transition-colors duration-300">
+                            <svg class="w-6 h-6 text-[#4F589D] group-hover:text-white" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+                            Уведомление о внесении в реестр аккредитованных организаций, оказывающих услуги в области
+                            охраны труда, <b class="text-slate-900 font-bold">от 27.12.2011 г. № 2153, письмо Минтруда
+                                России от 10.01.2023 № 15-4/В-35.</b>
+                        </p>
+                    </div>
                 </div>
 
-                <!-- Пункт 2 -->
-                <div class="flex gap-5 group">
-                    <div class="w-12 h-12 rounded-2xl bg-[#4F589D]/5 flex items-center justify-center shrink-0 border border-[#4F589D]/10 group-hover:bg-[#4F589D] transition-colors duration-300">
-                        <svg class="w-6 h-6 text-[#4F589D] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    </div>
-                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-                        Уведомление о внесении в реестр аккредитованных организаций, оказывающих услуги в области охраны труда, <b class="text-slate-900 font-bold">от 27.12.2011 г. № 2153, письмо Минтруда России от 10.01.2023 № 15-4/В-35.</b>
-                    </p>
+                <!-- Кнопка "Смотреть все документы" (Опционально) -->
+                <div class="pt-4">
+                    <a href="{% url 'about' %}"
+                        class="inline-flex items-center gap-3 text-[#4F589D] font-black uppercase text-[11px] tracking-widest hover:text-[#F59E0B] transition-colors group">
+                        Сведения об образовательной организации
+                        <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </a>
                 </div>
             </div>
 
-            <!-- Кнопка "Смотреть все документы" (Опционально) -->
-            <div class="pt-4">
-                <a href="{% url 'about' %}" class="inline-flex items-center gap-3 text-[#4F589D] font-black uppercase text-[11px] tracking-widest hover:text-[#F59E0B] transition-colors group">
-                    Сведения об образовательной организации
-                    <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            <!-- ПРАВАЯ ЧАСТЬ: Документы с открытием PDF -->
+            <div class="grid grid-cols-2 gap-4 md:gap-8 animate-fade-in-right">
+
+                <!-- Лицензия 1 -->
+                <a href="{% static 'main/docs/licenzia.pdf' %}" target="_blank" class="group block">
+                    <div
+                        class="relative bg-white p-2 md:p-4 rounded-[1.5rem] md:rounded-[2.5rem] shadow-sm border border-slate-200 overflow-hidden transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2 h-full flex flex-col">
+                        <div
+                            class="aspect-[3/4] rounded-[1.2rem] md:rounded-[2rem] overflow-hidden bg-slate-50 relative shrink-0 border border-slate-200">
+                            <img src="{% static 'main/img/licenzia/licenzia_1.png' %}" alt="Лицензия"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-[#4F589D]/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+                                <span
+                                    class="text-white font-black text-[10px] uppercase tracking-widest border-2 border-white px-4 py-2 rounded-full">Открыть
+                                    PDF</span>
+                            </div>
+                        </div>
+                        <div class="pt-4 px-1 md:px-2 pb-2">
+                            <h4
+                                class="font-black text-slate-900 uppercase text-[10px] md:text-[12px] tracking-tight leading-tight group-hover:text-[#F59E0B] transition-colors">
+                                Лицензия на образовательную деятельность</h4>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Лицензия 2 -->
+                <a href="{% static 'main/docs/Уведомление об аккредитации по ОТ по ПП 2334.pdf' %}" target="_blank"
+                    class="group block">
+                    <div
+                        class="relative bg-white p-2 md:p-4 rounded-[1.5rem] md:rounded-[2.5rem] shadow-sm border border-slate-200 overflow-hidden transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2 h-full flex flex-col">
+                        <div
+                            class="aspect-[3/4] rounded-[1.2rem] md:rounded-[2rem] overflow-hidden bg-slate-50 relative shrink-0 border border-slate-200">
+                            <img src="{% static 'main/img/licenzia/licenzia_2.png' %}" alt="Уведомление"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-[#4F589D]/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+                                <span
+                                    class="text-white font-black text-[10px] uppercase tracking-widest border-2 border-white px-4 py-2 rounded-full">Открыть
+                                    PDF</span>
+                            </div>
+                        </div>
+                        <div class="pt-4 px-1 md:px-2 pb-2">
+                            <h4
+                                class="font-black text-slate-900 uppercase text-[10px] md:text-[12px] tracking-tight leading-tight group-hover:text-[#F59E0B] transition-colors">
+                                Уведомление об аккредитации в области охраны труда</h4>
+                        </div>
+                    </div>
                 </a>
             </div>
         </div>
-
-        <!-- ПРАВАЯ ЧАСТЬ: Документы с открытием PDF -->
-        <div class="grid grid-cols-2 gap-4 md:gap-8 animate-fade-in-right">
-            
-            <!-- Лицензия 1 -->
-            <a href="{% static 'main/docs/licenzia.pdf' %}" target="_blank" class="group block">
-                <div class="relative bg-white p-2 md:p-4 rounded-[1.5rem] md:rounded-[2.5rem] shadow-sm border border-slate-200 overflow-hidden transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2 h-full flex flex-col">
-                    <div class="aspect-[3/4] rounded-[1.2rem] md:rounded-[2rem] overflow-hidden bg-slate-50 relative shrink-0 border border-slate-200">
-                        <img src="{% static 'main/img/licenzia/licenzia_1.png' %}" alt="Лицензия"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-[#4F589D]/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
-                            <span class="text-white font-black text-[10px] uppercase tracking-widest border-2 border-white px-4 py-2 rounded-full">Открыть PDF</span>
-                        </div>
-                    </div>
-                    <div class="pt-4 px-1 md:px-2 pb-2">
-                        <h4 class="font-black text-slate-900 uppercase text-[10px] md:text-[12px] tracking-tight leading-tight group-hover:text-[#F59E0B] transition-colors">
-                            Лицензия на образовательную деятельность</h4>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Лицензия 2 -->
-            <a href="{% static 'main/docs/Уведомление об аккредитации по ОТ по ПП 2334.pdf' %}" target="_blank" class="group block">
-                <div class="relative bg-white p-2 md:p-4 rounded-[1.5rem] md:rounded-[2.5rem] shadow-sm border border-slate-200 overflow-hidden transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2 h-full flex flex-col">
-                    <div class="aspect-[3/4] rounded-[1.2rem] md:rounded-[2rem] overflow-hidden bg-slate-50 relative shrink-0 border border-slate-200">
-                        <img src="{% static 'main/img/licenzia/licenzia_2.png' %}" alt="Уведомление"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-[#4F589D]/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
-                            <span class="text-white font-black text-[10px] uppercase tracking-widest border-2 border-white px-4 py-2 rounded-full">Открыть PDF</span>
-                        </div>
-                    </div>
-                    <div class="pt-4 px-1 md:px-2 pb-2">
-                        <h4 class="font-black text-slate-900 uppercase text-[10px] md:text-[12px] tracking-tight leading-tight group-hover:text-[#F59E0B] transition-colors">
-                            Уведомление об аккредитации в области охраны труда</h4>
-                    </div>
-                </div>
-            </a>
-
-        </div>
-    </div>
     </section>
 
-    <!-- Секция: Награды и достижения -->
+    <!-- Секция: Награды -->
     <section class="max-w-7xl mx-auto px-6 py-12 md:py-20 border-t border-slate-100">
-        <div class="flex flex-col items-center md:items-start gap-4 mb-16">
-                <h2
-                    class="text-3xl md:text-4xl font-black text-[#4F589D] uppercase tracking-tight">
-                    Наши награды
-                </h2>
-                <div class="h-1.5 w-24 bg-[#F59E0B] rounded-full"></div>
+        <div class="flex flex-col items-center md:items-start gap-4 mb-16 text-center md:text-left">
+            <h2 class="text-3xl md:text-4xl font-black text-[#4F589D] uppercase tracking-tight">
+                Наши награды
+            </h2>
+            <div class="h-1.5 w-24 bg-[#F59E0B] rounded-full"></div>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-10">
             <!-- Награда 1 -->
@@ -485,33 +522,35 @@
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Модальное окно для наград -->
-    <div id="rewardModal"
-        class="fixed inset-0 z-[100] hidden bg-slate-900/90 backdrop-blur-sm flex items-center justify-center p-4 cursor-zoom-out">
-        <div class="relative max-w-4xl w-full flex justify-center">
-            <button onclick="closeModal()"
-                class="absolute -top-12 right-0 text-white hover:text-amber-400 transition transform hover:scale-110">
-                <svg xmlns="http://www.w3.org" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-            <img id="modalImage" src="" alt="Увеличенное изображение"
-                class="max-h-[85vh] rounded-2xl shadow-2xl border-4 border-white/10 object-contain bg-white">
+        <!-- Модальное окно для наград -->
+        <div id="rewardModal"
+            class="fixed inset-0 z-[100] hidden bg-slate-900/90 backdrop-blur-sm flex items-center justify-center p-4 cursor-zoom-out">
+            <div class="relative max-w-4xl w-full flex justify-center">
+                <button onclick="closeModal()"
+                    class="absolute -top-12 right-0 text-white hover:text-amber-400 transition transform hover:scale-110">
+                    <svg xmlns="http://www.w3.org" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                <img id="modalImage" src="" alt="Увеличенное изображение"
+                    class="max-h-[85vh] rounded-2xl shadow-2xl border-4 border-white/10 object-contain bg-white">
+            </div>
         </div>
-    </div>
+    </section>
 
     <!-- Лента партнеров -->
     <section class="max-w-7xl mx-auto px-6 py-12 md:py-20 border-t border-slate-100">
-        <div class="flex flex-col items-center md:items-start gap-4 mb-16">
-            <h2
-                class="text-3xl md:text-4xl font-black text-[#4F589D] uppercase tracking-tight">
+        <div class="flex flex-col items-center md:items-start gap-4 mb-16 text-center md:text-left">
+            <h2 class="text-3xl md:text-4xl font-black text-[#4F589D] uppercase tracking-tight">
                 Наши партнеры
             </h2>
             <div class="h-1.5 w-24 bg-[#F59E0B] rounded-full"></div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+
             <!-- Карточка 1 -->
             <div
                 class="flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
@@ -524,6 +563,7 @@
                         «Россети <br> Томск»</p>
                 </div>
             </div>
+
             <!-- Карточка 2 -->
             <div
                 class="flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
@@ -536,6 +576,7 @@
                         «Томская <br> Генерация»</p>
                 </div>
             </div>
+
             <!-- Карточка 3 -->
             <div
                 class="flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
@@ -548,6 +589,7 @@
                         «Газпром <br> Газораспределение Сибирь»</p>
                 </div>
             </div>
+
             <!-- Карточка 4 -->
             <div
                 class="flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
@@ -563,122 +605,134 @@
         </div>
     </section>
 
-<!-- Секция: Отзывы (Горизонтальные сканы 1000x800) -->
-<section class="max-w-7xl mx-auto px-6 py-20 font-sans overflow-hidden">
-    
-    <!-- Заголовок -->
-    <div class="flex flex-col items-center md:items-start gap-4 mb-12">
-        <h2 class="text-3xl md:text-4xl font-black text-[#4F589D] uppercase tracking-tight">
-            Отзывы наших слушателей
-        </h2>
-        <div class="h-1.5 w-24 bg-[#F59E0B] rounded-full"></div>
-    </div>
-
-    <!-- Карусель -->
-    <div class="relative px-4 md:px-12 group">
-        <!-- Кнопки листания -->
-        <button onclick="scrollReviews(-1)" class="absolute left-0 top-1/2 -translate-y-1/2 z-30 w-12 h-12 bg-white rounded-2xl shadow-xl flex items-center justify-center text-[#4F589D] hover:bg-[#4F589D] hover:text-white transition-all opacity-0 group-hover:opacity-100 hidden lg:flex border border-slate-100">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7" /></svg>
-        </button>
-        
-        <button onclick="scrollReviews(1)" class="absolute right-0 top-1/2 -translate-y-1/2 z-30 w-12 h-12 bg-white rounded-2xl shadow-xl flex items-center justify-center text-[#4F589D] hover:bg-[#4F589D] hover:text-white transition-all opacity-0 group-hover:opacity-100 hidden lg:flex border border-slate-100">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" /></svg>
-        </button>
-
-        <div id="reviews-viewport" class="overflow-x-auto lg:overflow-hidden scroll-smooth -m-10 p-10">
-            <div id="reviews-track" class="flex gap-8">
-                
-                <!-- ЦИКЛ DJANGO -->
-                {% for i in reviews_range %}
-                <div class="min-w-[350px] md:min-w-[450px] group/item cursor-pointer" onclick="openModal(this)">
-                    <div class="relative bg-white p-3 rounded-[2.5rem] border border-slate-100 shadow-xl transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2">
-                        
-                        <!-- ИЗМЕНЕНО: aspect-[5/4] идеально под 1000x800 -->
-                        <div class="aspect-[5/4] rounded-[2rem] overflow-hidden bg-slate-50 relative">
-                            <img src="{% static 'main/img/review_user/review' %}{{ i }}.jpg" 
-                                 class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110" 
-                                 alt="Отзыв {{ i }}">
-                            
-                            <!-- Наложение при наведении -->
-                            <div class="absolute inset-0 bg-[#4F589D]/60 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center">
-                                <div class="bg-white/20 backdrop-blur-md border border-white/30 rounded-full px-8 py-3 text-white font-black text-xs uppercase tracking-[0.2em] shadow-lg">
-                                    Увеличить
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Секция: Блог / Новости -->
-<section class="max-w-7xl mx-auto px-6 py-20 font-sans">
-    
-    <!-- Заголовок и ссылка "Все новости" -->
-    <div class="flex flex-col md:flex-row justify-between items-center md:items-end gap-6 mb-16">
-        <div class="flex flex-col items-center md:items-start gap-4">
+    <!-- Секция: Отзывы -->
+    <section class="max-w-7xl mx-auto px-6 py-20 font-sans overflow-hidden">
+        <div class="flex flex-col items-center md:items-start gap-4 mb-12 text-center md:text-left">
             <h2 class="text-3xl md:text-4xl font-black text-[#4F589D] uppercase tracking-tight">
-                Новости
+                Отзывы наших слушателей
             </h2>
             <div class="h-1.5 w-24 bg-[#F59E0B] rounded-full"></div>
         </div>
 
-        <a href="{% url 'news_list' %}" class="group flex items-center gap-3 text-[#4F589D] font-black uppercase text-[11px] tracking-widest hover:text-[#F59E0B] transition-colors border-b-2 border-[#4F589D]/10 pb-1 hover:border-[#F59E0B]/30">
-            Читать все новости
-            <svg class="w-4 h-4 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-        </a>
-    </div>
+        <!-- Карусель -->
+        <div class="relative px-4 md:px-12 group">
+            <!-- Кнопки листания -->
+            <button onclick="scrollReviews(-1)"
+                class="absolute left-0 top-1/2 -translate-y-1/2 z-30 w-12 h-12 bg-white rounded-2xl shadow-xl flex items-center justify-center text-[#4F589D] hover:bg-[#4F589D] hover:text-white transition-all opacity-0 group-hover:opacity-100 hidden lg:flex border border-slate-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
 
-    <!-- Сетка из 3-х карточек -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {% for item in latest_news_list %}
-        <a href="{% url 'news_detail' item.slug %}" class="group bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 flex flex-col h-full hover:-translate-y-2">
-            
-            <!-- Изображение -->
-            <div class="aspect-video overflow-hidden bg-slate-200 relative">
-                {% if item.image_path %}
-                    <img src="{% static item.image_path %}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                {% else %}
-                    <img src="{% static 'main/img/news/default-news.png' %}" class="w-full h-full object-cover opacity-50">
-                {% endif %}
-            </div>
+            <button onclick="scrollReviews(1)"
+                class="absolute right-0 top-1/2 -translate-y-1/2 z-30 w-12 h-12 bg-white rounded-2xl shadow-xl flex items-center justify-center text-[#4F589D] hover:bg-[#4F589D] hover:text-white transition-all opacity-0 group-hover:opacity-100 hidden lg:flex border border-slate-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
 
-            <!-- Контент карточки -->
-            <div class="p-8 flex-grow flex flex-col">                
-                <h3 class="text-xl font-black text-slate-900 leading-tight group-hover:text-[#4F589D] transition-colors uppercase line-clamp-3">
-                    {{ item.title }}
-                </h3>
+            <div id="reviews-viewport" class="overflow-x-auto lg:overflow-hidden scroll-smooth -m-10 p-10">
+                <div id="reviews-track" class="flex gap-8">
 
-                <div class="mt-auto pt-6 flex items-center justify-between">
-                    <span class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Подробнее</span>
-                    <div class="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-[#4F589D] group-hover:bg-[#4F589D] group-hover:text-white transition-all">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
-                        </svg>
+                    <!-- ЦИКЛ DJANGO -->
+                    {% for i in reviews_range %}
+                    <div class="min-w-[350px] md:min-w-[450px] group/item cursor-pointer" onclick="openModal(this)">
+                        <div
+                            class="relative bg-white p-3 rounded-[2.5rem] border border-slate-100 shadow-xl transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2">
+
+                            <!-- ИЗМЕНЕНО: aspect-[5/4] идеально под 1000x800 -->
+                            <div class="aspect-[5/4] rounded-[2rem] overflow-hidden bg-slate-50 relative">
+                                <img src="{% static 'main/img/review_user/review' %}{{ i }}.jpg"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-110"
+                                    alt="Отзыв {{ i }}">
+
+                                <!-- Наложение при наведении -->
+                                <div
+                                    class="absolute inset-0 bg-[#4F589D]/60 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center">
+                                    <div
+                                        class="bg-white/20 backdrop-blur-md border border-white/30 rounded-full px-8 py-3 text-white font-black text-xs uppercase tracking-[0.2em] shadow-lg">
+                                        Увеличить
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    {% endfor %}
+
                 </div>
             </div>
-        </a>
-        {% empty %}
-        <div class="col-span-full py-20 text-center bg-slate-50 rounded-[2.5rem] border-2 border-dashed border-slate-200">
-            <p class="text-slate-400 font-bold uppercase tracking-widest text-sm">Новостей пока нет...</p>
         </div>
-        {% endfor %}
-    </div>
-</section>
+    </section>
 
+    <!-- Секция: Новости -->
+    <section class="max-w-7xl mx-auto px-6 py-20 font-sans">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center md:items-end gap-6 mb-16 text-center md:text-left">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <h2 class="text-3xl md:text-4xl font-black text-[#4F589D] uppercase tracking-tight">
+                    Новости
+                </h2>
+                <div class="h-1.5 w-24 bg-[#F59E0B] rounded-full"></div>
+            </div>
 
+            <a href="{% url 'news_list' %}"
+                class="group flex items-center gap-3 text-[#4F589D] font-black uppercase text-[11px] tracking-widest hover:text-[#F59E0B] transition-colors border-b-2 border-[#4F589D]/10 pb-1 hover:border-[#F59E0B]/30">
+                Читать все новости
+                <svg class="w-4 h-4 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                        d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- Сетка из 3-х карточек -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for item in latest_news_list %}
+            <a href="{% url 'news_detail' item.slug %}"
+                class="group bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 flex flex-col h-full hover:-translate-y-2">
+
+                <!-- Изображение -->
+                <div class="aspect-video overflow-hidden bg-slate-200 relative">
+                    {% if item.image_path %}
+                    <img src="{% static item.image_path %}"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    {% else %}
+                    <img src="{% static 'main/img/news/default-news.png' %}"
+                        class="w-full h-full object-cover opacity-50">
+                    {% endif %}
+                </div>
+
+                <!-- Контент карточки -->
+                <div class="p-8 flex-grow flex flex-col">
+                    <h3
+                        class="text-xl font-black text-slate-900 leading-tight group-hover:text-[#4F589D] transition-colors uppercase line-clamp-3">
+                        {{ item.title }}
+                    </h3>
+
+                    <div class="mt-auto pt-6 flex items-center justify-between">
+                        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Подробнее</span>
+                        <div
+                            class="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-[#4F589D] group-hover:bg-[#4F589D] group-hover:text-white transition-all">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            {% empty %}
+            <div
+                class="col-span-full py-20 text-center bg-slate-50 rounded-[2.5rem] border-2 border-dashed border-slate-200">
+                <p class="text-slate-400 font-bold uppercase tracking-widest text-sm">Новостей пока нет...</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
 </body>
 
 <script>
-    
-
     const modal = document.getElementById('rewardModal');
     const modalImg = document.getElementById('modalImage');
 
@@ -706,10 +760,28 @@
         if (e.key === 'Escape') closeModal();
     });
 
-        function scrollReviews(direction) {
+    function scrollReviews(direction) {
         const viewport = document.getElementById('reviews-viewport');
-        const scrollAmount = 482; 
+        const scrollAmount = 482;
         viewport.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
     }
+
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach(s => s.classList.replace('opacity-100', 'opacity-0'));
+        dots.forEach(d => { d.classList.replace('opacity-100', 'opacity-40'); d.classList.remove('w-8'); });
+
+        slides[index].classList.replace('opacity-0', 'opacity-100');
+        dots[index].classList.replace('opacity-40', 'opacity-100');
+        dots[index].classList.add('w-8');
+    }
+
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }, 5000); // 5 секунд на слайд
 </script>
 {% endblock %}

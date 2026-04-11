@@ -7,24 +7,23 @@
 <main class="min-h-screen bg-slate-50/50 pt-10">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
 
-        <!-- Заголовок (оставляем лаконичным) -->
-        <div class="flex flex-col items-center md:items-start gap-4 mb-16">
-                <h2 class="text-3xl md:text-5xl font-black text-[#4F589D] uppercase tracking-tight">
-                    Учебная база
-                </h2>
-                <div class="h-1.5 w-24 bg-[#F59E0B] rounded-full"></div>
-            </div>
+        <div class="flex flex-col items-center md:items-start gap-4 mb-16 text-center md:text-left">
+            <h2 class="text-3xl md:text-5xl font-black text-[#4F589D] uppercase tracking-tight">
+                Учебная база
+            </h2>
+            <div class="h-1.5 w-24 bg-[#F59E0B] rounded-full"></div>
+        </div>
 
         <!-- СПИСОК КАБИНЕТОВ -->
         <section class="max-w-7xl mx-auto px-6 pb-0">
             <div class="space-y-12">
 
-                <!-- КАРТОЧКА КАБИНЕТА (Прямоугольная) -->
+                <!-- Лаборатория подстанционного оборудования и "Альпинист" -->
                 <div
-                    class="group bg-white rounded-[2.5rem] border border-slate-300 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
-                    <div class="flex flex-col md:flex-row">
+                    class="group bg-white rounded-[2.5rem] border border-slate-300 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden font-sans">
+                    <div class="flex flex-col lg:flex-row">
 
-                        <!-- ТЕКСТОВАЯ ЧАСТЬ (Слева) -->
+                        <!-- ТЕКСТОВАЯ ЧАСТЬ -->
                         <div class="flex-grow p-8 md:p-12 lg:w-2/3">
                             <div class="flex items-center gap-4 mb-6">
                                 <span class="text-xs font-black text-amber-500 uppercase tracking-widest">№ 01</span>
@@ -36,72 +35,134 @@
                                 Лаборатория подстанционного оборудования
                             </h2>
 
-                            <div class="grid md:grid-cols-2 gap-8">
-                                <div>
-                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">
-                                        Назначение</h4>
-                                    <p class="text-slate-600 text-sm font-bold leading-relaxed">
-                                        Предназначена для подготовки специалистов и рабочих методам диагностики
-                                        выключателей
-                                        различных типов и другого коммутационного оборудования
+                            <p
+                                class="text-slate-600 text-base font-bold leading-relaxed mb-10 max-w-2xl border-l-4 border-amber-500 pl-5">
+                                Современная лаборатория подготовки мастеров энергетики, где теория превращается в
+                                уверенные
+                                практические навыки. Мы формируем элиту отрасли.
+                            </p>
+
+                            <!-- СЕТКА БЛОКОВ (ЛАБОРАТОРИЯ) -->
+                            <div class="grid md:grid-cols-2 gap-x-10 gap-y-8 mb-12">
+                                <div class="relative pl-6 border-l border-slate-100">
+                                    <h4 class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-2">
+                                        Оборудование</h4>
+                                    <p class="text-xs font-bold text-slate-700 leading-snug">
+                                        Подлинные образцы: от вакуумных выключателей ВВЭ-10 до ячеек КРУ и приводов
+                                        ПП-67. Изучение конструкции в деталях.
                                     </p>
                                 </div>
-                                <div>
-                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">
-                                        Оснащение</h4>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Вакуумные
-                                            выключатели</span>
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Масляные
-                                            выключатели</span>
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Элегазовые
-                                            выключатели</span>
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Трансформаторы
-                                            напряжения</span>
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Ячейки
-                                            различных типов</span>
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Учебно-тренировочный
-                                            полигон «Альпинист 02-0»</span>
+                                <div class="relative pl-6 border-l border-slate-100">
+                                    <h4 class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-2">
+                                        Интерактив</h4>
+                                    <p class="text-xs font-bold text-slate-700 leading-snug">
+                                        18 демонстрационных стендов: ОПН, разрядники и средства защиты для глубокого
+                                        погружения в программу.
+                                    </p>
+                                </div>
+                                <div class="relative pl-6 border-l border-slate-100">
+                                    <h4 class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-2">
+                                        Практика</h4>
+                                    <p class="text-xs font-bold text-slate-700 leading-snug">
+                                        Спецучастки для работ под напряжением до 1000 В. Отработка реальных сценариев на
+                                        «живом» железе.
+                                    </p>
+                                </div>
+                                <div class="relative pl-6 border-l border-slate-100">
+                                    <h4 class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-2">
+                                        Безопасность</h4>
+                                    <p class="text-xs font-bold text-slate-700 leading-snug">
+                                        Полные комплекты защиты и наборы инструментов, соответствующие строжайшим
+                                        стандартам.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- СПЕЦ-БЛОК "АЛЬПИНИСТ" -->
+                            <div class="bg-slate-900 rounded-3xl p-8 text-white relative overflow-hidden">
+
+                                <div
+                                    class="absolute right-0 bottom-0 opacity-10 group-hover:opacity-25 transition-all duration-700 pointer-events-none transform group-hover:scale-110">
+                                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="220" height="220"
+                                        viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet"
+                                        class="fill-current text-white">
+                                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)">
+                                            <path
+                                                d="M3040 4454 c0 -657 0 -665 -20 -659 -30 9 -34 -24 -35 -275 0 -369 50 -600 188 -872 62 -122 63 -123 100 -126 30 -3 37 0 37 15 0 10 -16 121 -34 248 l-33 229 39 -44 c99 -114 220 -315 308 -512 73 -164 129 -212 245 -212 96 0 163 44 204 134 40 88 29 135 -90 376 -111 226 -241 421 -395 595 -75 84 -233 231 -318 295 l-66 49 0 713 0 712 -65 0 -65 0 0 -666z"""
+                                                ) />>
+                                            <path
+                                                d="M2302 5029 c-218 -27 -413 -181 -478 -379 -16 -51 -21 -139 -12 -245 l3 -29 -95 -18 c-81 -15 -99 -22 -122 -48 -35 -38 -35 -70 -2 -109 30 -36 51 -38 162 -17 54 10 74 11 77 2 55 -163 86 -215 179 -303 47 -45 93 -77 144 -100 71 -33 73 -35 57 -53 -9 -10 -21 -36 -25 -57 -15 -66 21 -453 42 -453 5 0 34 11 66 24 165 69 371 116 510 116 l62 0 0 173 c0 150 9 264 26 318 3 11 -8 21 -37 32 l-42 17 26 32 c52 64 98 157 118 239 18 69 20 97 14 164 -4 44 -7 97 -7 118 1 22 -8 58 -22 85 -12 26 -31 76 -40 112 -71 259 -317 414 -604 379z"""
+                                                ) />>
+                                            <path
+                                                d="M2042 3441 c-86 -147 -221 -315 -344 -426 -130 -119 -243 -176 -395 -198 -111 -16 -171 -49 -208 -111 -55 -95 -42 -200 35 -277 63 -63 119 -76 244 -60 242 33 489 165 695 372 l79 79 5 -32 c4 -18 20 -134 38 -258 17 -124 33 -226 34 -228 4 -4 208 59 217 67 4 3 -11 34 -32 68 -167 262 -294 650 -317 966 -3 48 -9 89 -12 91 -3 2 -21 -22 -39 -53z"""
+                                                ) />>
+                                            <path
+                                                d="M2685 3269 c-122 -17 -259 -58 -398 -118 -37 -16 -47 -25 -43 -38 3 -10 12 -45 21 -78 14 -52 32 -105 67 -203 7 -22 8 -22 45 -6 151 65 332 112 466 120 53 4 97 8 97 10 0 2 -9 41 -19 86 -10 46 -22 106 -25 133 -15 112 -9 105 -84 104 -37 -1 -94 -5 -127 -10z"""
+                                                ) />>
+                                            <path
+                                                d="M2759 2845 c-124 -20 -389 -108 -389 -130 0 -27 165 -314 185 -321 7 -3 63 9 126 25 155 41 248 60 347 70 46 5 85 11 88 13 2 3 -14 36 -36 74 -22 38 -57 116 -79 174 l-40 105 -58 2 c-32 1 -96 -5 -144 -12z"""
+                                                ) />>
+                                            <path
+                                                d="M3160 2393 c-187 -12 -418 -59 -689 -140 -102 -30 -194 -58 -203 -60 -36 -10 -17 -30 44 -47 91 -25 231 -101 295 -160 31 -28 73 -77 93 -109 l37 -59 39 41 c22 22 59 63 84 92 87 100 234 170 418 200 l74 12 -6 31 c-3 17 -10 68 -17 112 -11 80 -12 82 -41 88 -17 3 -42 5 -57 4 -14 -1 -46 -33 -96 -71z"""
+                                                ) />>
+                                            <path
+                                                d="M2085 1999 c-107 -83 -217 -189 -245 -234 -66 -107 -95 -273 -94 -540 1 -320 37 -471 127 -538 76 -57 141 -74 223 -57 81 17 142 64 183 141 32 62 33 67 27 144 -3 44 -10 105 -15 135 -13 78 -13 276 0 362 l11 73 76 60 c42 33 118 90 170 127 52 37 97 70 100 72 2 3 -7 25 -22 50 -58 99 -216 208 -370 255 -37 12 -71 21 -75 21 -3 -1 -46 -33 -96 -71z"""
+                                                ) />>
+                                            <path
+                                                d="M3254 2025 c-97 -17 -136 -31 -225 -77 -81 -41 -169 -121 -190 -170 -10 -24 -3 -89 45 -411 71 -486 90 -625 125 -928 30 -250 37 -278 86 -344 30 -41 113 -85 173 -92 135 -16 269 86 295 225 12 61 -59 628 -165 1327 -33 220 -60 419 -60 443 0 23 -3 42 -6 41 -4 0 -39 -7 -78 -14z"""
+                                                ) />>
+                                        </g>
+                                    </svg>
+                                </div>
+
+                                <h3 class="text-xl font-black uppercase mb-6 flex items-center gap-3">
+                                    <span class="w-8 h-px bg-amber-500"></span>
+                                    Полигон «Альпинист»
+                                </h3>
+
+                                <div class="grid sm:grid-cols-2 gap-6 relative z-10">
+                                    <div>
+                                        <p class="text-[10px] font-black text-amber-500 uppercase mb-2">Высота и ОЗП</p>
+                                        <p class="text-xs text-slate-300 font-bold leading-normal">
+                                            Имитация высотных операций и работа в замкнутых пространствах: колодцы,
+                                            резервуары, туннели.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[10px] font-black text-amber-500 uppercase mb-2">Спасение</p>
+                                        <p class="text-xs text-slate-300 font-bold leading-normal">
+                                            Реалистичная эвакуация пострадавших с манекеном «Спасатель» и альпинистским
+                                            снаряжением.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- ФОТОГРАФИЯ (Справа) -->
-                        <div class="custom-slider md:w-1/3 min-h-[300px] relative overflow-hidden bg-slate-200">
-                            <img src="{% static 'main/img/base/kab1_1.JPG' %}" alt="Лаборатория ПО"
+                        <div class="custom-slider lg:w-1/3 min-h-[400px] relative overflow-hidden bg-slate-200">
+                            <!-- Твои картинки без изменений -->
+                            <img src="{% static 'main/img/base/kab1_1.JPG' %}" alt="Лаборатория"
                                 class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100">
-
-                                                            <img src="{% static 'main/img/base/kab1_2.jpg' %}" alt="Лаборатория ПО"
+                            <img src="{% static 'main/img/base/kab1_2.jpg' %}" alt="Лаборатория"
                                 class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
-
-                                                            <img src="{% static 'main/img/base/kab1_3.jpg' %}" alt="Лаборатория ПО"
+                            <img src="{% static 'main/img/base/kab1_3.jpg' %}" alt="Лаборатория"
                                 class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
-
-                                                            <img src="{% static 'main/img/base/kab1_4.jpg' %}" alt="Лаборатория ПО"
+                            <img src="{% static 'main/img/base/kab1_4.jpg' %}" alt="Лаборатория"
                                 class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
-
-                                                            <img src="{% static 'main/img/base/kab1_5.jpg' %}" alt="Лаборатория ПО"
+                            <img src="{% static 'main/img/base/kab1_5.jpg' %}" alt="Лаборатория"
                                 class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
                         </div>
-                        
 
                     </div>
                 </div>
-                <!-- КОНЕЦ КАРТОЧКИ -->
 
-                <!-- КАРТОЧКА КАБИНЕТА (Прямоугольная) -->
+                <!-- Лаборатория линий электропередач -->
                 <div
                     class="group bg-white rounded-[2.5rem] border border-slate-300 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
-                    <div class="flex flex-col md:flex-row">
+                    <div class="flex flex-col lg:flex-row">
 
-                        <!-- ТЕКСТОВАЯ ЧАСТЬ (Слева) -->
+                        <!-- ТЕКСТОВАЯ ЧАСТЬ -->
                         <div class="flex-grow p-8 md:p-12 lg:w-2/3">
                             <div class="flex items-center gap-4 mb-6">
                                 <span class="text-xs font-black text-amber-500 uppercase tracking-widest">№ 02</span>
@@ -113,64 +174,97 @@
                                 Лаборатория линий электропередач
                             </h2>
 
-                            <div class="grid md:grid-cols-2 gap-8">
-                                <div>
-                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">
-                                        Назначение</h4>
-                                    <p class="text-slate-600 text-sm font-bold leading-relaxed">
-                                        Предназначена для для практического обучения, отработки навыков обслуживания
-                                        воздушных линий и изучения современного высоковольтного оборудования
-                                    </p>
-                                </div>
-                                <div>
-                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">
-                                        Оснащение</h4>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Тренажер
-                                            для выполнения вязки проводов</span>
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Инструменты,
-                                            СИЗ, СКЗ</span>
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Технологические
-                                            карты</span>
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Макет
-                                            110кВ</span>
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Наглядные
-                                            пособия и стенды</span>
+                            <p
+                                class="text-slate-600 text-base font-bold leading-relaxed mb-10 max-w-2xl border-l-4 border-amber-500 pl-5">
+                                Кабинет для рождения экспертов, где знания о монтаже КЛ, эксплуатации счетчиков и
+                                работе под напряжением превращаются в навыки безопасности энергосистем.
+                            </p>
+
+                            <!-- ОСНОВНЫЕ БЛОКИ ДАННЫХ (ЕДИНЫЙ СТИЛЬ) -->
+                            <div class="grid md:grid-cols-2 gap-x-12 gap-y-10">
+
+                                <!-- ЛЕВАЯ КОЛОНКА -->
+                                <div class="space-y-10">
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-3">
+                                            Наглядные материалы</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                            <p class="text-xs font-bold text-slate-700 leading-relaxed">
+                                                Интерактивные стенды СИП 2/3, макет ВЛ-110 кВ и натуральные образцы
+                                                арматуры для КЛ.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-3">
+                                            Оборудование и монтаж</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                            <p class="text-xs font-bold text-slate-700 leading-relaxed">
+                                                Разъединители РЛНДз-10, разрядники РВС 35 кВ, муфты СС-100-110 и
+                                                сварочные автоматы.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <!-- ПРАВАЯ КОЛОНКА (ТЕПЕРЬ В ТОМ ЖЕ СТИЛЕ) -->
+                                <div class="space-y-10">
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-3">
+                                            Точность и диагностика</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                            <span
+                                                class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Волна
+                                                & Поиск-1 / Прибор ПД-1</span>
+                                            <p class="text-[11px] font-bold text-slate-500 leading-tight">
+                                                Профессиональные измерители, клещи Ц-90 и мегаомметры.</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-3">
+                                            Безопасность превыше всего</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                            <span
+                                                class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Средства
+                                                СИЗ и СКЗ</span>
+                                            <p class="text-[11px] font-bold text-slate-500 leading-tight">Когти монтёра,
+                                                изолированный инструмент, пояса и защитные каски.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
                         <!-- ФОТОГРАФИЯ (Справа) -->
-                        <div class="custom-slider md:w-1/3 min-h-[300px] relative overflow-hidden bg-slate-200">
-                          <img src="{% static 'main/img/base/kab2_1.jpg' %}" alt="Лаборатория ПО"
+                        <div class="custom-slider lg:w-1/3 min-h-[450px] relative overflow-hidden bg-slate-200">
+                            <img src="{% static 'main/img/base/kab2_1.JPG' %}" alt="Лаборатория ЛЭП"
                                 class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100">
-
-                                                            <img src="{% static 'main/img/base/kab2_2.jpg' %}" alt="Лаборатория ПО"
-                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" >
-
-                                                            <img src="{% static 'main/img/base/kab2_3.jpg' %}" alt="Лаборатория ПО"
+                            <img src="{% static 'main/img/base/kab2_2.jpg' %}" alt="Лаборатория ЛЭП"
                                 class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
-
-                                                            <img src="{% static 'main/img/base/kab2_4.jpg' %}" alt="Лаборатория ПО"
+                            <img src="{% static 'main/img/base/kab2_3.jpg' %}" alt="Лаборатория ЛЭП"
+                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                            <img src="{% static 'main/img/base/kab2_4.jpg' %}" alt="Лаборатория ЛЭП"
                                 class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
                         </div>
 
                     </div>
                 </div>
-                <!-- КОНЕЦ КАРТОЧКИ -->
 
-                <!-- КАРТОЧКА КАБИНЕТА (Прямоугольная) -->
+                <!-- Лаборатория релейной защиты и автоматики -->
                 <div
                     class="group bg-white rounded-[2.5rem] border border-slate-300 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
-                    <div class="flex flex-col md:flex-row">
+                    <div class="flex flex-col lg:flex-row">
 
-                        <!-- ТЕКСТОВАЯ ЧАСТЬ (Слева) -->
+                        <!-- ТЕКСТОВАЯ ЧАСТЬ -->
                         <div class="flex-grow p-8 md:p-12 lg:w-2/3">
                             <div class="flex items-center gap-4 mb-6">
                                 <span class="text-xs font-black text-amber-500 uppercase tracking-widest">№ 03</span>
@@ -179,57 +273,81 @@
 
                             <h2
                                 class="text-xl md:text-3xl font-black text-slate-900 uppercase tracking-tight mb-6 group-hover:text-[#F59E0B] transition-colors">
-                                Кабинет релейной защиты и автоматики
+                                Лаборатория релейной защиты и автоматики
                             </h2>
 
-                            <div class="grid md:grid-cols-2 gap-8">
-                                <div>
-                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">
-                                        Назначение</h4>
-                                    <p class="text-slate-600 text-sm font-bold leading-relaxed">
-                                        Предназначен для для подготовки персонала служб релейной защиты и автоматики
-                                    </p>
+                            <p
+                                class="text-slate-600 text-base font-bold leading-relaxed mb-10 max-w-2xl border-l-4 border-amber-500 pl-5">
+                                Высокотехнологичный хаб для симуляции защит через ПК и настройки систем. Здесь
+                                специалисты моделируют аварии и тестируют отклики сети на разнообразных типах реле.
+                            </p>
+
+                            <!-- ОСНОВНЫЕ БЛОКИ -->
+                            <div class="grid md:grid-cols-2 gap-x-12 gap-y-10">
+
+                                <!-- ЛЕВАЯ КОЛОНКА -->
+                                <div class="space-y-10">
+                                    <div
+                                        class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                        <span
+                                            class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Установка
+                                            У-5052</span>
+                                        <p class="text-[11px] font-bold text-slate-500 leading-tight">Комплексные тесты
+                                            реле и автоматики.</p>
+                                    </div>
+                                    <div
+                                        class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                        <span
+                                            class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Установка
+                                            У-5053</span>
+                                        <p class="text-[11px] font-bold text-slate-500 leading-tight">Точная настройка
+                                            параметров защиты.</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">
-                                        Оснащение</h4>
-                                    <div class="flex flex-wrap gap-2">
+
+                                <!-- ПРАВАЯ КОЛОНКА -->
+                                <div class="space-y-10">
+                                    <div
+                                        class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
                                         <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Панели
-                                            ДФЗ-504 44, ЭПЗ-1636, ПЗ-4, ШДЭ-2801</span>
+                                            class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">ДФЗ-504У4
+                                            / ЭПЗ-1636</span>
+                                        <p class="text-[11px] font-bold text-slate-500 leading-tight">Дистанционная,
+                                            токовая и земельная защита ЛЭП.</p>
+                                    </div>
+                                    <div
+                                        class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
                                         <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Установки
-                                            для наладки и настройки сложных и простых элементов РЗиА</span>
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Демонстрационные
-                                            стенды по защите оборудования</span>
+                                            class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Панель
+                                            ШДЭ-2801</span>
+                                        <p class="text-[11px] font-bold text-slate-500 leading-tight">Шиносоединительная
+                                            защита подстанций.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- ФОТОГРАФИЯ (Справа) -->
-                        <div class="custom-slider md:w-1/3 min-h-[300px] relative overflow-hidden bg-slate-200">
-                          <img src="{% static 'main/img/base/kab3_1.jpg' %}" alt="Лаборатория ПО"
+                        <div class="custom-slider lg:w-1/3 min-h-[450px] relative overflow-hidden bg-slate-200">
+                            <img src="{% static 'main/img/base/kab3_1.JPG' %}" alt="Лаборатория РЗА"
                                 class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100">
-
-                                                            <img src="{% static 'main/img/base/kab3_2.jpg' %}" alt="Лаборатория ПО"
-                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" >
+                            <img src="{% static 'main/img/base/kab3_2.JPG' %}" alt="Лаборатория РЗА"
+                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
                         </div>
 
                     </div>
                 </div>
-                <!-- КОНЕЦ КАРТОЧКИ -->
 
-                <!-- КАРТОЧКА КАБИНЕТА (Прямоугольная) -->
+                <!-- Кабинет подготовки оперативного персонала -->
                 <div
                     class="group bg-white rounded-[2.5rem] border border-slate-300 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
-                    <div class="flex flex-col md:flex-row">
+                    <div class="flex flex-col lg:flex-row">
 
-                        <!-- ТЕКСТОВАЯ ЧАСТЬ (Слева) -->
+                        <!-- ТЕКСТОВАЯ ЧАСТЬ -->
                         <div class="flex-grow p-8 md:p-12 lg:w-2/3">
                             <div class="flex items-center gap-4 mb-6">
-                                <span class="text-xs font-black text-amber-500 uppercase tracking-widest">№ 04</span>
+                                <span class="text-xs font-black text-amber-500 uppercase tracking-widest">№
+                                    04</span>
                                 <div class="h-px flex-grow bg-slate-100"></div>
                             </div>
 
@@ -238,58 +356,105 @@
                                 Кабинет подготовки оперативного персонала
                             </h2>
 
-                            <div class="grid md:grid-cols-2 gap-8">
-                                <div>
-                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">
-                                        Назначение</h4>
-                                    <p class="text-slate-600 text-sm font-bold leading-relaxed">
-                                        Предназначен для подготовки оперативно-диспетчерского персонала предприятий
-                                        электрических сетей и электрических станций
-                                    </p>
-                                </div>
-                                <div>
-                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">
-                                        Оснащение</h4>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Тренажер
-                                            ТЭ-2М</span>
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Моделирующие
-                                            плановые переключения и решения аварийных ситуаций на станциях, подстанциях
-                                            и в
-                                            сетях напряжения от 6кВ до 220кВ</span>
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Тренажер
-                                            «Гоша» для отработки практических навыков по оказанию неотложной доврачебной
-                                            помощи в чрезвычайных ситуациях</span>
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Демонстрационные
-                                            стенды по электробезопасности</span>
+                            <p
+                                class="text-slate-600 text-base font-bold leading-relaxed mb-10 max-w-2xl border-l-4 border-amber-500 pl-5">
+                                Стратегический центр, где оперативный персонал обретает мастерство теоретической базы и
+                                молниеносных переключений для надёжной работы энергосистем.
+                            </p>
+
+                            <!-- ОСНОВНЫЕ БЛОКИ ДАННЫХ (ЕДИНЫЙ СТИЛЬ) -->
+                            <div class="grid md:grid-cols-2 gap-x-12 gap-y-10">
+
+                                <!-- ЛЕВАЯ КОЛОНКА -->
+                                <div class="space-y-10">
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-3">
+                                            Оборудование и ПО</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                            <span
+                                                class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Тренажёр
+                                                ТЭ-2М</span>
+                                            <p class="text-[11px] font-bold text-slate-500 leading-tight">
+                                                Пошаговая отработка манёвров в кризисных ситуациях и имитация реальных
+                                                сценариев переключений.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-3">
+                                            Визуализация</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                            <span
+                                                class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Интерактивная
+                                                среда</span>
+                                            <p class="text-[11px] font-bold text-slate-500 leading-tight">
+                                                Проекционные системы и маркерные доски для динамичного усвоения знаний в
+                                                ходе лекций.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <!-- ПРАВАЯ КОЛОНКА -->
+                                <div class="space-y-10">
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-3">
+                                            Демонстрационные модули</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                            <span
+                                                class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Основы
+                                                экспертизы</span>
+                                            <p class="text-[11px] font-bold text-slate-500 leading-tight">
+                                                Классификация схем подстанций, основы электротехники и заземление.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-3">
+                                            Безопасность</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                            <span
+                                                class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Электробезопасность</span>
+                                            <p class="text-[11px] font-bold text-slate-500 leading-tight">
+                                                Фундаментальные модули по защите персонала и предотвращению аварий в
+                                                сердце энергосистемы.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
                         <!-- ФОТОГРАФИЯ (Справа) -->
-                        <div class="custom-slider md:w-1/3 min-h-[300px] relative overflow-hidden bg-slate-200">
-                          <img src="{% static 'main/img/base/kab4_1.jpg' %}" alt="Лаборатория ПО"
+                        <div class="custom-slider lg:w-1/3 min-h-[450px] relative overflow-hidden bg-slate-200">
+                            <img src="{% static 'main/img/base/kab4_1.jpg' %}" alt="Кабинет подготовки"
                                 class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100">
-
-                                                            <img src="{% static 'main/img/base/kab4_2.jpg' %}" alt="Лаборатория ПО"
-                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" >
+                            <img src="{% static 'main/img/base/kab4_2.jpg' %}" alt="Кабинет подготовки"
+                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                            <img src="{% static 'main/img/base/kab4_3.jpg' %}" alt="Кабинет подготовки"
+                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                            <img src="{% static 'main/img/base/kab4_4.jpg' %}" alt="Кабинет подготовки"
+                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
                         </div>
 
                     </div>
                 </div>
-                <!-- КОНЕЦ КАРТОЧКИ -->
 
-                <!-- КАРТОЧКА КАБИНЕТА (Прямоугольная) -->
+                <!-- Кабинет подъемных сооружений, ПБ и ОТ -->
                 <div
                     class="group bg-white rounded-[2.5rem] border border-slate-300 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
-                    <div class="flex flex-col md:flex-row">
+                    <div class="flex flex-col lg:flex-row">
 
-                        <!-- ТЕКСТОВАЯ ЧАСТЬ (Слева) -->
+                        <!-- ТЕКСТОВАЯ ЧАСТЬ -->
                         <div class="flex-grow p-8 md:p-12 lg:w-2/3">
                             <div class="flex items-center gap-4 mb-6">
                                 <span class="text-xs font-black text-amber-500 uppercase tracking-widest">№ 05</span>
@@ -301,58 +466,102 @@
                                 Кабинет подъемных сооружений, ПБ и ОТ
                             </h2>
 
-                            <div class="grid md:grid-cols-2 gap-8">
-                                <div>
-                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">
-                                        Назначение</h4>
-                                    <p class="text-slate-600 text-sm font-bold leading-relaxed">
-                                        Кабинет предназначен для подготовки персонала по промышленной безопасности, энергетической безопасности и охране труда.
-                                    </p>
-                                    <p class="text-slate-600 text-sm font-bold leading-relaxed mb-4">
-                                    <p class="text-slate-600 text-sm font-bold leading-relaxed">
-Кабинет оснащен натуральными образцами средств индивидуальной и коллективной защиты, наглядными пособиями и плакатами в области обслуживания грузоподъемных машин и механизмов, электроустановок.                                    </p>
-                                </div>
-                                <div>
-                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">
-                                        Оснащение</h4>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Макет башенного крана</span>
+                            <p
+                                class="text-slate-600 text-base font-bold leading-relaxed mb-10 max-w-2xl border-l-4 border-amber-500 pl-5">
+                                Кузница профессионалов нового поколения, где теоретическая база сплавляется с практикой
+                                для безупречной эксплуатации оборудования в энергетике.
+                            </p>
 
-                                             <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Образцы кранового оборудования</span>
-                                             <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Стенды по оборудованию БКМ и АГП</span>
+                            <!-- ОСНОВНЫЕ БЛОКИ ДАННЫХ (ЕДИНЫЙ СТИЛЬ) -->
+                            <div class="grid md:grid-cols-2 gap-x-12 gap-y-10">
+
+                                <!-- ЛЕВАЯ КОЛОНКА -->
+                                <div class="space-y-10">
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-3">
+                                            Грузоподъемные операции</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
                                             <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Образцы и приспособления для вязки узлов позволяют учащимся освоить практические навыки в области обслуживания грузоподъемных машин и механизмов</span>
+                                                class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Макеты
+                                                и оборудование</span>
+                                            <p class="text-[11px] font-bold text-slate-500 leading-tight">
+                                                Башенные краны, стенды БКМ и АГП. Отработка вязки узлов и управления
+                                                механизмами на реальных образцах.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-3">
+                                            Инстинкты безопасности</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
                                             <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Компьютерные имитационные 3D-тренажеры Корпорации Диполь необходимы учащимся для отработки практических навыков при работах на энергообъектах</span>
+                                                class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Средства
+                                                защиты (СИЗ)</span>
+                                            <p class="text-[11px] font-bold text-slate-500 leading-tight">
+                                                Применение индивидуальной и коллективной защиты в реальных сценариях до
+                                                уровня автоматизма.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <!-- ПРАВАЯ КОЛОНКА -->
+                                <div class="space-y-10">
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-3">
+                                            Цифровая подготовка</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                            <span
+                                                class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">3D-тренажёры
+                                                «Диполь»</span>
+                                            <p class="text-[11px] font-bold text-slate-500 leading-tight">
+                                                Безопасная отработка навыков на энергообъектах: от экстремальных
+                                                подъёмов до критических манёвров.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-3">
+                                            Результат</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                            <p class="text-[11px] font-bold text-slate-700 leading-tight">
+                                                Подготовка специалистов, готовых к любым вызовам современной
+                                                промышленной безопасности.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
                         <!-- ФОТОГРАФИЯ (Справа) -->
-                        <div class="custom-slider md:w-1/3 min-h-[300px] relative overflow-hidden bg-slate-200">
-                          <img src="{% static 'main/img/base/kab5_1.jpg' %}" alt="Лаборатория ПО"
+                        <div class="custom-slider lg:w-1/3 min-h-[450px] relative overflow-hidden bg-slate-200">
+                            <img src="{% static 'main/img/base/kab5_1.JPG' %}" alt="Кабинет ПБ и ОТ"
                                 class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100">
-
-                                                            <img src="{% static 'main/img/base/kab5_2.jpg' %}" alt="Лаборатория ПО"
-                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" >
-                                 <img src="{% static 'main/img/base/kab5_3.jpg' %}" alt="Лаборатория ПО"
-                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" >
+                            <img src="{% static 'main/img/base/kab5_2.JPG' %}" alt="Кабинет ПБ и ОТ"
+                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                            <img src="{% static 'main/img/base/kab5_3.jpg' %}" alt="Кабинет ПБ и ОТ"
+                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
                         </div>
 
                     </div>
                 </div>
-                <!-- КОНЕЦ КАРТОЧКИ -->
 
-                <!-- КАРТОЧКА КАБИНЕТА (Прямоугольная) -->
+                <!-- Кабинет охраны труда и первой помощи -->
                 <div
                     class="group bg-white rounded-[2.5rem] border border-slate-300 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
-                    <div class="flex flex-col md:flex-row">
+                    <div class="flex flex-col lg:flex-row">
 
-                        <!-- ТЕКСТОВАЯ ЧАСТЬ (Слева) -->
+                        <!-- ТЕКСТОВАЯ ЧАСТЬ -->
                         <div class="flex-grow p-8 md:p-12 lg:w-2/3">
                             <div class="flex items-center gap-4 mb-6">
                                 <span class="text-xs font-black text-amber-500 uppercase tracking-widest">№ 06</span>
@@ -361,51 +570,106 @@
 
                             <h2
                                 class="text-xl md:text-3xl font-black text-slate-900 uppercase tracking-tight mb-6 group-hover:text-[#F59E0B] transition-colors">
-                                Кабинеты тренажерной подготовки
+                                Кабинет охраны труда и первой помощи
                             </h2>
 
-                            <div class="grid md:grid-cols-2 gap-8">
-                                <div>
-                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">
-                                        Назначение</h4>
-                                    <p class="text-slate-600 text-sm font-bold leading-relaxed">
-                                        Предназначены для предаттестационной(предэкзаменационной) подготовки персонала
-                                        по
-                                        промышленной, энергетической и экологической безопасности, а также по охране
-                                        труда;
-                                        тренажерной подготовки по рабочим профессиям согласно лицензии
-                                    </p>
+                            <p
+                                class="text-slate-600 text-base font-bold leading-relaxed mb-10 max-w-2xl border-l-4 border-amber-500 pl-5">
+                                Интеллектуальный оазис безопасности и спасательный аванпост. Здесь нормы охраны труда
+                                оживают через интерактив, а навыки экстренной помощи оттачиваются до инстинктов, где
+                                секунды решают всё.
+                            </p>
+
+                            <!-- ОСНОВНЫЕ БЛОКИ ДАННЫХ -->
+                            <div class="grid md:grid-cols-2 gap-x-12 gap-y-10 mb-10">
+
+                                <!-- ЛЕВАЯ КОЛОНКА: ОХРАНА ТРУДА -->
+                                <div class="space-y-8">
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-3">
+                                            Культура безопасности</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                            <span
+                                                class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Мультимедийный
+                                                центр</span>
+                                            <p class="text-[11px] font-bold text-slate-500 leading-tight">
+                                                Два проектора и интерактивные стенды для обучения, проверки нормативов и
+                                                пропаганды снижения травматизма.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-3">
+                                            Тренажеры реанимации</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                            <span
+                                                class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Роботы
+                                                «Гоша» и «Анна»</span>
+                                            <p class="text-[11px] font-bold text-slate-500 leading-tight">
+                                                Отработка СЛР на манекенах последнего поколения и манекене «Алексей-01»
+                                                (режимы взpослый/ребенок).
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">
-                                        Оснащение</h4>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Кабинеты
-                                            оснащены 23 современными персональными компьютерами</span>
+
+                                <!-- ПРАВАЯ КОЛОНКА: ПЕРВАЯ ПОМОЩЬ -->
+                                <div class="space-y-8">
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-3">
+                                            Экстренная помощь</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                            <span
+                                                class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Арсенал
+                                                спасения</span>
+                                            <p class="text-[11px] font-bold text-slate-500 leading-tight">
+                                                Жгуты, шины, шейные корсеты, маски ИВЛ, противоожоговые покрытия и
+                                                аптечки «ГАЛО» для практики в ЧС.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-3">
+                                            Протоколы действий</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                            <span
+                                                class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Практические
+                                                навыки</span>
+                                            <p class="text-[11px] font-bold text-slate-500 leading-tight text-justify">
+                                                Остановка кровотечений, иммобилизация, СЛР и помощь при травматическом
+                                                шоке или переохлаждении.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- ФОТОГРАФИЯ (Справа) -->
-                        <div class="custom-slider md:w-1/3 min-h-[300px] relative overflow-hidden bg-slate-200">
-                          <img src="{% static 'main/img/base/kab6_1.jpg' %}" alt="Лаборатория ПО"
+                        <!-- ФОТОГРАФИЯ -->
+                        <div class="custom-slider lg:w-1/3 min-h-[500px] relative overflow-hidden bg-slate-200">
+                            <img src="{% static 'main/img/base/kab9_1.jpg' %}" alt="Центр ОТ и ПП"
                                 class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100">
-
-                                                            <img src="{% static 'main/img/base/kab6_2.jpg' %}" alt="Лаборатория ПО"
-                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" >
+                            <img src="{% static 'main/img/base/kab9_2.jpg' %}" alt="Центр ОТ и ПП"
+                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
                         </div>
+
                     </div>
                 </div>
-                <!-- КОНЕЦ КАРТОЧКИ -->
 
-                <!-- КАРТОЧКА КАБИНЕТА (Прямоугольная) -->
+                <!-- Кабинеты тренажерной подготовки -->
                 <div
                     class="group bg-white rounded-[2.5rem] border border-slate-300 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
-                    <div class="flex flex-col md:flex-row">
+                    <div class="flex flex-col lg:flex-row">
 
-                        <!-- ТЕКСТОВАЯ ЧАСТЬ (Слева) -->
+                        <!-- ТЕКСТОВАЯ ЧАСТЬ -->
                         <div class="flex-grow p-8 md:p-12 lg:w-2/3">
                             <div class="flex items-center gap-4 mb-6">
                                 <span class="text-xs font-black text-amber-500 uppercase tracking-widest">№ 07</span>
@@ -413,59 +677,78 @@
                             </div>
 
                             <h2
-                                class="text-base sm:text-xl md:text-3xl font-black text-slate-900 uppercase tracking-tight mb-6 group-hover:text-[#F59E0B] transition-colors">
-                                Лаборатория психо&shy;физио&shy;логического обеспечения (ЛПФО)
+                                class="text-xl md:text-3xl font-black text-slate-900 uppercase tracking-tight mb-6 group-hover:text-[#F59E0B] transition-colors">
+                                Кабинеты тренажерной подготовки
                             </h2>
 
-                            <div class="grid md:grid-cols-2 gap-8">
-                                <div>
-                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">
-                                        Назначение</h4>
-                                    <p class="text-slate-600 text-sm font-bold leading-relaxed">
-                                        Главной задачей ЛПФО является организация и проведение мероприятий, направленных
-                                        на
-                                        оценку состояния психологического здоровья и профессионального долголетия
-                                        персонала,
-                                        обеспечение его работоспособности
-                                    </p>
-                                </div>
-                                <div>
-                                    <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">
-                                        Оснащение</h4>
-                                    <div class="flex flex-wrap gap-2">
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Зал
-                                            психологической разгрузки</span>
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Кабинет
-                                            релаксационного массажа</span>
-                                        <span
-                                            class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">Кабинет
-                                            компьютерной диагностики и тренажерной подготовки</span>
+                            <p
+                                class="text-slate-600 text-base font-bold leading-relaxed mb-10 max-w-2xl border-l-4 border-amber-500 pl-5">
+                                Цифровой полигон совершенства, где теоретические знания закаляются в практических
+                                навыках через интенсивные тренировки и точный контроль в СДО и ОЛИМП:ОКС.
+                            </p>
+
+                            <!-- ОСНОВНЫЕ БЛОКИ ДАННЫХ (ЕДИНЫЙ СТИЛЬ) -->
+                            <div class="grid md:grid-cols-2 gap-x-12 gap-y-10">
+
+                                <!-- ЛЕВАЯ КОЛОНКА: СИСТЕМА ОЛИМП:ОКС -->
+                                <div class="space-y-8">
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-4">
+                                            Инфраструктура ОЛИМП:ОКС</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                            <span
+                                                class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Масштабируемая
+                                                среда</span>
+                                            <p class="text-[11px] font-bold text-slate-500 leading-tight">
+                                                23 рабочих места с удаленным доступом для 100 пользователей. Полный
+                                                охват электро- и теплоэнергетики.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <!-- ПРАВАЯ КОЛОНКА: ПРОГРАММНЫЕ ПЛАТФОРМЫ -->
+                                <div class="space-y-8">
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-4">
+                                            Программные платформы</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                            <span
+                                                class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">MOODLE
+                                                & СДО «Платформа»</span>
+                                            <p class="text-[11px] font-bold text-slate-500 leading-tight">
+                                                Гибкое обучение: симуляции, тесты и глубокий анализ ошибок.
+                                                Неоднократные тренировки гарантируют уверенное освоение программы с
+                                                моментальной обратной связью.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
                         <!-- ФОТОГРАФИЯ (Справа) -->
-                        <div class="custom-slider md:w-1/3 min-h-[300px] relative overflow-hidden bg-slate-200">
-                          <img src="{% static 'main/img/base/kab7_1.jpg' %}" alt="Лаборатория ПО"
+                        <div class="custom-slider lg:w-1/3 min-h-[450px] relative overflow-hidden bg-slate-200">
+                            <img src="{% static 'main/img/base/kab6_1.jpg' %}" alt="Кабинеты тренажерной подготовки"
                                 class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100">
-
-                                                            <img src="{% static 'main/img/base/kab7_2.jpg' %}" alt="Лаборатория ПО"
-                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" >
+                            <img src="{% static 'main/img/base/kab6_2.jpg' %}" alt="Кабинеты тренажерной подготовки"
+                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
                         </div>
 
                     </div>
                 </div>
-                <!-- КОНЕЦ КАРТОЧКИ -->
 
-                <!-- КАРТОЧКА КАБИНЕТА (Прямоугольная) -->
+                <!-- Лаборатория психофизиологического обеспечения (ЛПФО) -->
                 <div
                     class="group bg-white rounded-[2.5rem] border border-slate-300 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
-                    <div class="flex flex-col md:flex-row">
+                    <div class="flex flex-col lg:flex-row">
 
-                        <!-- ТЕКСТОВАЯ ЧАСТЬ (Слева) -->
+                        <!-- ТЕКСТОВАЯ ЧАСТЬ -->
                         <div class="flex-grow p-8 md:p-12 lg:w-2/3">
                             <div class="flex items-center gap-4 mb-6">
                                 <span class="text-xs font-black text-amber-500 uppercase tracking-widest">№ 08</span>
@@ -474,66 +757,250 @@
 
                             <h2
                                 class="text-xl md:text-3xl font-black text-slate-900 uppercase tracking-tight mb-6 group-hover:text-[#F59E0B] transition-colors">
-                                Гостиница
+                                Лаборатория психо&shy;физио&shy;логического обеспечения
                             </h2>
 
-                            <div class="grid md:grid-cols-2 gap-8">
-    <!-- Левая колонка: Заголовок и описание -->
-    <div>
-        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">
-            Гостиница при учебном центре
-        </h4>
-        <p class="text-slate-600 text-sm font-bold leading-relaxed mb-4">
-            Учитесь и отдыхайте без забот: просто поднимитесь на третий этаж и отдохните в комфортных условиях.
-        </p>
-        <p class="text-slate-600 text-sm font-bold leading-relaxed mb-4">
-            Светлые и просторные номера с необходимой мебелью, техникой, спутниковым ТВ и бесплатным Wi-Fi.
-        </p>
-    </div>
+                            <p
+                                class="text-slate-600 text-base font-bold leading-relaxed mb-10 max-w-2xl border-l-4 border-amber-500 pl-5">
+                                Повышаем надежность персонала через глубокую диагностику и тренировку профессионально
+                                важных качеств. Мы обеспечиваем психологическое здоровье и долголетие специалистов.
+                            </p>
 
-    <!-- Правая колонка: Преимущества в виде тегов -->
-    <div>
-        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">
-            Почему выбирают нас
-        </h4>
-        <div class="flex flex-wrap gap-2">
-            <span class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">
-                Прямо в учебном центре
-            </span>
-            <span class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">
-                Спутниковое ТВ и Wi-Fi
-            </span>
-            <span class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">
-                Уют как дома
-            </span>
-            <span class="text-[10px] px-2 py-1 bg-slate-100 text-slate-500 rounded font-bold">
-                Чистота и забота
-            </span>
-        </div>
-    </div>
-</div>
+                            <!-- ОСНОВНЫЕ БЛОКИ ДАННЫХ (ЕДИНЫЙ СТИЛЬ) -->
+                            <div class="grid md:grid-cols-2 gap-x-12 gap-y-10 mb-12">
+
+                                <!-- ЛЕВАЯ КОЛОНКА -->
+                                <div class="space-y-10">
+                                    <div
+                                        class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                        <span
+                                            class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Обследование
+                                            и профилактика</span>
+                                        <p class="text-[11px] font-bold text-slate-500 leading-tight">
+                                            Оценка профпригодности к опасным видам работ и компьютерные тренировки в
+                                            условиях дефицита времени.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- ПРАВАЯ КОЛОНКА -->
+                                <div class="space-y-10">
+                                    <div
+                                        class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                        <span
+                                            class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Коррекция
+                                            и релаксация</span>
+                                        <p class="text-[11px] font-bold text-slate-500 leading-tight">
+                                            Восстановление здоровья «группы риска» и снятие утомления в
+                                            специализированных залах разгрузки.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- БЛОК КОНТАКТОВ (АДАПТИРОВАН) -->
+                            <div
+                                class="p-6 bg-slate-50 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-6 border border-slate-100 group-hover:border-amber-100 transition-colors">
+                                <div>
+                                    <h4
+                                        class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1 italic">
+                                        Главный психолог</h4>
+                                    <p class="text-sm font-black text-slate-900">Зуева Анастасия Геннадьевна</p>
+                                </div>
+                                <div class="flex flex-wrap gap-x-8 gap-y-4">
+                                    <a href="tel:+79131101906" class="hover:text-amber-600 transition-colors">
+                                        <span
+                                            class="block text-[10px] font-black text-slate-400 uppercase mb-1">Телефон</span>
+                                        <span class="text-sm font-bold text-slate-700">+7-913-110-19-06</span>
+                                    </a>
+                                    <a href="mailto:Lpfo-tomsk@mail.ru" class="hover:text-amber-600 transition-colors">
+                                        <span
+                                            class="block text-[10px] font-black text-slate-400 uppercase mb-1">Email</span>
+                                        <span class="text-sm font-bold text-slate-700">Lpfo-tomsk@mail.ru</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
 
-                        <!-- ФОТОГРАФИЯ (Справа) -->
-                        <div class="custom-slider md:w-1/3 min-h-[300px] relative overflow-hidden bg-slate-200">
-                          <img src="{% static 'main/img/base/kab8_1.jpg' %}" alt="Лаборатория ПО"
+                        <!-- ФОТОГРАФИЯ -->
+                        <div class="custom-slider lg:w-1/3 min-h-[450px] relative overflow-hidden bg-slate-200">
+                            <img src="{% static 'main/img/base/kab7_1.JPG' %}" alt="ЛПФО"
                                 class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100">
-
-                                                            <img src="{% static 'main/img/base/kab8_2.jpg' %}" alt="Лаборатория ПО"
-                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" >
+                            <img src="{% static 'main/img/base/kab7_2.png' %}" alt="ЛПФО"
+                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                            <img src="{% static 'main/img/base/kab7_3.png' %}" alt="ЛПФО"
+                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                            <img src="{% static 'main/img/base/kab7_4.png' %}" alt="ЛПФО"
+                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                            <img src="{% static 'main/img/base/kab7_5.png' %}" alt="ЛПФО"
+                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
                         </div>
 
                     </div>
                 </div>
-                <!-- КОНЕЦ КАРТОЧКИ -->
 
+                <!-- Полигон для практического обучения -->
+                <div
+                    class="group bg-white rounded-[2.5rem] border border-slate-300 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                    <div class="flex flex-col lg:flex-row">
+
+                        <!-- ТЕКСТОВАЯ ЧАСТЬ -->
+                        <div class="flex-grow p-8 md:p-12 lg:w-2/3">
+                            <div class="flex items-center gap-4 mb-6">
+                                <span class="text-xs font-black text-amber-500 uppercase tracking-widest">№ 09</span>
+                                <div class="h-px flex-grow bg-slate-100"></div>
+                            </div>
+
+                            <h2
+                                class="text-xl md:text-3xl font-black text-slate-900 uppercase tracking-tight mb-6 group-hover:text-[#F59E0B] transition-colors">
+                                Полигон для практического обучения
+                            </h2>
+
+                            <p
+                                class="text-slate-600 text-base font-bold leading-relaxed mb-10 max-w-2xl border-l-4 border-amber-500 pl-5">
+                                Масштабная тренировочная арена, где навыки работы с электрооборудованием и подъёмными
+                                сооружениями оттачиваются в условиях, максимально приближенных к реальным
+                                производственным вызовам.
+                            </p>
+
+                            <!-- ОСНОВНЫЕ БЛОКИ ДАННЫХ (ЕДИНЫЙ СТИЛЬ) -->
+                            <div class="grid md:grid-cols-2 gap-x-12 gap-y-10">
+
+                                <!-- ЛЕВАЯ КОЛОНКА -->
+                                <div class="space-y-10">
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-4">
+                                            ЛЭП и Подстанции</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                            <span
+                                                class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Макеты
+                                                0.4 – 220 кВ</span>
+                                            <p class="text-[11px] font-bold text-slate-500 leading-tight">
+                                                Воздушные выключатели, КТП, барабаны кабеля и опоры для реалистичной
+                                                практики монтажа и обслуживания.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ПРАВАЯ КОЛОНКА -->
+                                <div class="space-y-10">
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-4">
+                                            Подъемные сооружения</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                            <span
+                                                class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Имитация
+                                                операций</span>
+                                            <p class="text-[11px] font-bold text-slate-500 leading-tight">
+                                                Работа со штабелями плит, блоками и грузами. Отработка сценариев подъема
+                                                и фиксации на натуральных образцах.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- ФОТОГРАФИЯ -->
+                        <div class="custom-slider lg:w-1/3 min-h-[450px] relative overflow-hidden bg-slate-200">
+                            <img src="{% static 'main/img/base/no_photo.png' %}" alt="Заглушка"
+                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Гостиница -->
+                <div
+                    class="group bg-white rounded-[2.5rem] border border-slate-300 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                    <div class="flex flex-col lg:flex-row">
+
+                        <!-- ТЕКСТОВАЯ ЧАСТЬ -->
+                        <div class="flex-grow p-8 md:p-12 lg:w-2/3">
+                            <div class="flex items-center gap-4 mb-6">
+                                <span class="text-xs font-black text-amber-500 uppercase tracking-widest">№ 10</span>
+                                <div class="h-px flex-grow bg-slate-100"></div>
+                            </div>
+
+                            <h2
+                                class="text-2xl md:text-4xl font-black text-slate-900 uppercase tracking-tight mb-8 leading-[0.9] group-hover:text-amber-500 transition-colors">
+                                Гостиница
+                            </h2>
+
+                            <p
+                                class="text-slate-600 text-base font-bold leading-relaxed mb-10 max-w-2xl border-l-4 border-amber-500 pl-5">
+                                Комфортное пространство для отдыха прямо в здании учебного центра. Мы создали все
+                                условия, чтобы вы могли полностью сосредоточиться на обучении, не отвлекаясь на бытовые
+                                вопросы.
+                            </p>
+
+                            <!-- ОСНОВНЫЕ БЛОКИ ДАННЫХ (ЕДИНЫЙ СТИЛЬ) -->
+                            <div class="grid md:grid-cols-2 gap-x-12 gap-y-10">
+
+                                <!-- ЛЕВАЯ КОЛОНКА: ПРОЖИВАНИЕ -->
+                                <div class="space-y-10">
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-3">
+                                            Ваш уют на 3-м этаже</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                            <span
+                                                class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Формат
+                                                «Учись и отдыхай»</span>
+                                            <p class="text-[11px] font-bold text-slate-500 leading-tight">
+                                                Светлые и просторные номера с необходимой мебелью и техникой. Никаких
+                                                поездок по городу — учебные классы в паре минут ходьбы.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ПРАВАЯ КОЛОНКА: СЕРВИС -->
+                                <div class="space-y-10">
+                                    <div>
+                                        <h4
+                                            class="text-[11px] font-black text-amber-500 uppercase tracking-[0.2em] mb-3">
+                                            Цифровой сервис и быт</h4>
+                                        <div
+                                            class="border-l-2 border-slate-100 pl-4 group-hover:border-amber-500 transition-colors duration-500">
+                                            <span
+                                                class="text-[10px] font-black text-slate-900 uppercase italic block mb-1">Спутниковое
+                                                ТВ & Wi-Fi</span>
+                                            <p class="text-[11px] font-bold text-slate-500 leading-tight">
+                                                Бесплатный беспроводной интернет и цифровое телевидение в каждом номере
+                                                для вашего досуга и связи с близкими.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- ФОТОГРАФИЯ (Справа) -->
+                        <div class="custom-slider lg:w-1/3 min-h-[450px] relative overflow-hidden bg-slate-200">
+                            <img src="{% static 'main/img/base/kab8_1.JPG' %}" alt="Гостиница"
+                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100">
+                            <img src="{% static 'main/img/base/kab8_2.jpg' %}" alt="Гостиница"
+                                class="slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </section>
     </div>
 </main>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         // Находим все блоки с классом custom-slider
         const sliders = document.querySelectorAll('.custom-slider');
 
@@ -554,6 +1021,4 @@
         });
     });
 </script>
-
-
 {% endblock %}
