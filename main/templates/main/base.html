@@ -26,22 +26,32 @@
     <div class="bg-[#f8fafc] text-black py-2 md:py-3 border-b border-slate-200 font-sans">
         <div class="max-w-7xl mx-auto px-4 md:px-6 flex justify-between items-center text-[13px] font-bold">
 
-            <button
+            <a href="#"
                 class="flex items-center gap-2.5 hover:text-[#F59E0B] transition-colors group text-base outline-none focus:ring-2 focus:ring-amber-500 rounded-md px-1">
                 <div class="relative">
                     <svg class="w-5 h-5 text-[#4F589D] transition-transform duration-300 group-hover:scale-110"
-                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        viewBox="0 0 100 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)">
+                            <path d="M177 803 c-18 -21 -177 -361 -177 -379 0 -8 8 -18 19 -23 12 -7 20
+                -26 24 -62 12 -102 84 -166 197 -176 91 -9 163 24 197 90 8 17 18 65 22 107
+                l6 75 35 0 35 0 6 -75 c4 -42 14 -90 22 -107 34 -66 106 -99 197 -90 112 10
+                183 72 197 172 4 31 13 55 25 63 10 7 18 19 18 26 0 18 -159 358 -177 379 -30
+                32 -62 17 -93 -42 -9 -18 -9 -26 0 -35 9 -8 17 -4 34 17 12 15 25 27 30 27 7
+                0 60 -109 121 -246 l23 -51 -142 1 c-77 0 -166 0 -196 -1 -70 -3 -130 -3 -200
+                0 -30 1 -119 2 -196 1 l-141 -1 22 52 c61 136 114 245 121 245 5 0 18 -12 30
+                -27 17 -21 25 -25 34 -17 20 20 -28 94 -60 94 -9 0 -24 -8 -33 -17z m226 -378
+                c38 -15 16 -143 -33 -190 -26 -24 -40 -30 -93 -33 -108 -6 -180 46 -196 143
+                -4 28 -10 57 -12 65 -3 10 8 17 36 22 48 8 273 3 298 -7z m487 6 c32 -5 44
+                -11 41 -21 -2 -8 -8 -37 -12 -65 -11 -63 -33 -94 -90 -123 -35 -19 -56 -23
+                -106 -20 -53 3 -67 9 -93 33 -34 32 -50 79 -50 142 0 45 0 45 70 56 43 7 193
+                6 240 -2z"/>>
+                        </g>
                     </svg>
                 </div>
-                <!-- Скрываем текст на мобилках, показываем на ПК -->
                 <span
                     class="hidden sm:inline font-medium text-slate-700 group-hover:text-amber-500 transition-colors">Версия
                     для слабовидящих</span>
-            </button>
+            </a>
 
             <!-- Право: Контакты -->
             <div class="flex items-center gap-4 md:gap-8">
@@ -78,7 +88,7 @@
     </div>
 
     <!-- Main Header -->
-    <header class="bg-white py-3 md:py-4 font-sans border-b border-slate-100">
+    <header class="sticky top-0 z-50 bg-white py-3 md:relative md:py-4 font-sans border-b-4 border-[#F59E0B] md:border-b-0">
         <div class="max-w-7xl mx-auto px-4 md:px-6 flex justify-between items-center gap-2">
 
             <!-- 1. Логотип -->
@@ -163,7 +173,7 @@
     </header>
 
     <!-- Навигационная панель -->
-    <nav class="sticky top-0 z-50 bg-[#4F589D] text-white shadow-md font-sans border-b-4 border-[#F59E0B]">
+    <nav class="hidden md:block sticky top-0 z-50 bg-[#4F589D] text-white shadow-md font-sans border-b-4 border-[#F59E0B]">
         <div class="max-w-7xl mx-auto px-6">
             <div class="hidden xl:flex items-center justify-between uppercase tracking-widest text-[13px] font-medium">
 
@@ -238,7 +248,7 @@
 
     <!-- МОБИЛЬНОЕ МЕНЮ -->
     <div id="mobile-menu"
-        class="fixed inset-0 z-[100] hidden bg-[#4F589D] flex flex-col items-center justify-center space-y-6 transition-all duration-500 overflow-y-auto border-t-8 border-[#F59E0B]">
+        class="fixed inset-0 z-[100] hidden bg-[#4F589D] flex flex-col items-center justify-center space-y-6 transition-all duration-500 overflow-y-auto">
 
         <!-- Кнопка закрытия -->
         <button onclick="toggleMobileMenu()"
@@ -250,6 +260,10 @@
 
         <!-- Контент меню -->
         <div class="w-full flex flex-col items-center space-y-6 pt-10">
+
+            <!-- ГЛАВНАЯ -->
+            <a href="{% url 'index' %}"
+            class="text-white text-xl font-black uppercase tracking-[0.2em] hover:text-[#F59E0B] transition-colors">Главная</a>
 
             <!-- О НАС (Выпадающий список) -->
             <div class="w-full flex flex-col items-center">
@@ -284,7 +298,7 @@
             <a href="{% url 'about' %}" class="flex flex-col items-center text-center px-10 group transition-all">
                 <span
                     class="text-white text-xl font-black uppercase tracking-[0.15em] leading-tight group-hover:text-[#F59E0B]">Сведения
-                    об</span>
+                    об образовательной</span>
                 <span
                     class="text-white text-xl font-black uppercase tracking-[0.15em] leading-tight group-hover:text-[#F59E0B]">организации</span>
             </a>
@@ -465,7 +479,7 @@
                 <h2 class="text-3xl font-black text-[#4F589D] uppercase tracking-tighter">Заказать звонок</h2>
             </div>
 
-            <form action="#" method="POST" class="space-y-6 relative z-10">
+            <form action="{% url 'callback_url' %}" method="POST" class="space-y-6 relative z-10">
                 {% csrf_token %}
 
                 <!-- Поле: Имя -->
@@ -485,6 +499,9 @@
                     <input type="text" id="contact_field" name="contact" required placeholder="+7 (___) ___-__-__"
                         class="w-full bg-slate-50 border-2 border-slate-100 rounded-2xl px-6 py-4 text-slate-900 font-bold placeholder:text-slate-300 focus:border-[#4F589D] focus:outline-none transition-all">
                 </div>
+
+                <input type="hidden" id="selected_course_field" name="course_name" value="Общая заявка">
+
 
                 <!-- Защита от спама -->
                 <div class="hidden" aria-hidden="true">
@@ -550,32 +567,32 @@
             if (e.target === this) toggleCallbackForm();
         });
 
-function toggleMobileMenu() {
-    const menu = document.getElementById('mobile-menu');
-    const path = document.getElementById('burger-path');
-    const floatingBtn = document.getElementById('floating-call-btn');
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const path = document.getElementById('burger-path');
+            const floatingBtn = document.getElementById('floating-call-btn');
 
-    if (menu.classList.contains('hidden')) {
-        menu.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-        path.setAttribute('d', 'M6 18L18 6M6 6l12 12');
-        
-        // Используем классы Tailwind для надежности
-        if(floatingBtn) {
-            floatingBtn.classList.add('opacity-0', 'invisible', 'scale-0');
-            floatingBtn.classList.remove('opacity-100', 'visible', 'scale-100');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                path.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+
+                // Используем классы Tailwind для надежности
+                if (floatingBtn) {
+                    floatingBtn.classList.add('opacity-0', 'invisible', 'scale-0');
+                    floatingBtn.classList.remove('opacity-100', 'visible', 'scale-100');
+                }
+            } else {
+                menu.classList.add('hidden');
+                document.body.style.overflow = '';
+                path.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+
+                if (floatingBtn) {
+                    floatingBtn.classList.remove('opacity-0', 'invisible', 'scale-0');
+                    floatingBtn.classList.add('opacity-100', 'visible', 'scale-100');
+                }
+            }
         }
-    } else {
-        menu.classList.add('hidden');
-        document.body.style.overflow = '';
-        path.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
-        
-        if(floatingBtn) {
-            floatingBtn.classList.remove('opacity-0', 'invisible', 'scale-0');
-            floatingBtn.classList.add('opacity-100', 'visible', 'scale-100');
-        }
-    }
-}
 
 
         // 2. Раскрытие подменю "О нас" в мобилке

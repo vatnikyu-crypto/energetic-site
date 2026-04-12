@@ -26,7 +26,7 @@
                 </div>
 
                 <!-- Переключатель месяцев в фирменном стиле -->
-                <div class="flex items-center bg-white p-2 rounded-[2rem] shadow-xl shadow-[#4F589D]/5 border border-slate-100">
+                <div class="flex items-center bg-white p-2 rounded-[2rem] shadow-xl shadow-[#4F589D]/5 border border-slate-200">
                     <a href="?month={{ prev_month }}&year={{ prev_year }}#schedule"
                         class="w-12 h-12 rounded-2xl border border-slate-50 flex items-center justify-center text-slate-400 hover:text-[#F59E0B] transition-all shadow-sm">
                         <svg xmlns="http://w3.org" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -51,7 +51,7 @@
             </div>
 
             <!-- Таблица с программами -->
-            <div class="relative p-2 bg-white rounded-[2.5rem] shadow-2xl shadow-[#4F589D]/10 border border-slate-100">
+            <div class="relative p-2 bg-white rounded-[2.5rem] shadow-2xl shadow-[#4F589D]/10 border border-slate-200">
                 <div class="overflow-hidden rounded-[2rem]">
                     <table class="w-full text-left border-collapse bg-white">
                         <thead>
@@ -66,24 +66,29 @@
                         </thead>
                         <tbody id="course-table-body" class="divide-y divide-slate-100">
                             {% for course in courses %}
-                            <tr class="course-row group/row hover:bg-[#F59E0B]/5 transition-all {% if forloop.counter > 3 %}hidden{% endif %}">
-                                <td class="px-10 py-8 align-top">
-                                    <div class="text-slate-900 font-bold text-xl leading-tight group-hover/row:text-[#4F589D] transition-colors tracking-tight">
-                                        {{ course.Название }}
-                                    </div>
-                                    <div class="flex items-center mt-3 space-x-3">
-                                        <span class="w-1.5 h-1.5 bg-[#F59E0B] rounded-full animate-pulse"></span>
-                                        <div class="text-slate-400 text-[10px] font-black uppercase tracking-widest leading-none">
-                                            {% if course.Форма %}{{ course.Форма }}{% else %}Очно-заочная форма обучения{% endif %}
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="px-10 py-8 text-right align-top w-[450px]">
-                                    <div class="inline-block text-center bg-[#4F589D] text-white px-8 py-5 rounded-[1.5rem] text-base font-black leading-tight shadow-xl group-hover/row:bg-[#F59E0B] transition-all min-w-full tracking-tight">
-                                        {{ course.Сроки|linebreaksbr }}
-                                    </div>
-                                </td>
-                            </tr>
+                            <tr onclick="openCourseModal('{{ course.Название|escapejs }}')" 
+    class="course-row group/row cursor-pointer hover:bg-[#F59E0B]/5 transition-all {% if forloop.counter > 3 %}hidden{% endif %}">
+    
+    <!-- Колонка 1: Название (уменьшили отступы на мобилке px-4, на десктопе оставили px-10) -->
+    <td class="px-4 md:px-10 py-6 md:py-8 align-top">
+        <div class="text-slate-900 font-bold text-base md:text-xl leading-tight group-hover/row:text-[#4F589D] transition-colors tracking-tight">
+            {{ course.Название }}
+        </div>
+        <div class="flex items-center mt-2 md:mt-3 space-x-2">
+            <span class="w-1 h-1 bg-[#F59E0B] rounded-full animate-pulse"></span>
+            <div class="text-slate-400 text-[9px] md:text-[10px] font-black tracking-widest leading-none">
+                {{ course.Форма|default:"Очно-заочная" }}
+            </div>
+        </div>
+    </td>
+
+    <!-- Колонка 2: Сроки (убрали фикс. ширину на мобилке, уменьшили кнопку) -->
+    <td class="px-4 md:px-10 py-6 md:py-8 text-right align-top md:w-[450px]">
+        <div class="inline-block text-center bg-[#4F589D] text-white px-3 py-3 md:px-8 md:py-5 rounded-xl md:rounded-[1.5rem] text-[11px] md:text-base font-black leading-tight shadow-lg md:shadow-xl group-hover/row:bg-[#F59E0B] transition-all w-full max-w-[140px] md:max-w-none tracking-tight">
+            {{ course.Сроки|linebreaksbr }}
+        </div>
+    </td>
+</tr>
                             {% empty %}
                             <tr>
                                 <td colspan="2" class="px-10 py-24 text-center text-slate-400 font-black uppercase text-xs tracking-[0.2em]">
@@ -100,7 +105,7 @@
             {% if courses|length > 3 %}
             <div class="text-center mt-12">
                 <button id="toggle-courses-btn" onclick="toggleCourses()"
-                    class="inline-flex items-center space-x-3 bg-white border-2 border-slate-100 px-10 py-5 rounded-2xl text-[#4F589D] font-black uppercase text-[11px] tracking-widest hover:border-[#F59E0B] hover:text-[#F59E0B] transition-all shadow-sm active:scale-95 group">
+                    class="inline-flex items-center space-x-3 bg-white border-2 border-slate-200 px-10 py-5 rounded-2xl text-[#4F589D] font-black uppercase text-[11px] tracking-widest hover:border-[#F59E0B] hover:text-[#F59E0B] transition-all shadow-sm active:scale-95 group">
                     <span id="btn-text">Показать полный список</span>
                     <svg id="btn-icon" xmlns="http://w3.org"
                         class="h-4 w-4 transition-transform duration-300 group-hover:translate-y-1" fill="none"
@@ -143,5 +148,14 @@
             document.getElementById('schedule').scrollIntoView({ behavior: 'smooth' });
         }
     }
+
+    function openCourseModal(courseName) {
+    const courseInput = document.getElementById('selected_course_field');
+    if (courseInput) {
+        courseInput.value = courseName;
+    }
+
+    toggleCallbackForm();
+}
 </script>
 {% endblock %}

@@ -38,6 +38,7 @@ urlpatterns = [
     path('base-material/', views.base_material, name='base_material'),
     path('cookie_policy/', views.cookie_policy, name='cookie_policy'),
     path('training_schedule/', views.training_schedule, name='training_schedule'),
+    path('send-callback/', views.universal_callback, name='callback_url'),
 ]
 
 if not settings.DEBUG:

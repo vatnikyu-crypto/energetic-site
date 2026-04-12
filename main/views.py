@@ -1,18 +1,29 @@
 import pandas as pd
 import os
 from datetime import datetime, date
-from dateutil.relativedelta import relativedelta # Нужно установить: pip install python-dateutil
+from dateutil.relativedelta import relativedelta
 from django.shortcuts import render
 from django.conf import settings
 from django.core.mail import send_mail
 from django.conf import settings
-from django.contrib import messages # Для уведомлений
-from django.shortcuts import render, redirect # Добавь redirect в импорт
-from bs4 import BeautifulSoup # Не забудь импортировать!
+from django.contrib import messages
+from django.shortcuts import render, redirect
+from bs4 import BeautifulSoup
 from django.core.paginator import Paginator
 
 def education(request):
-    return render(request, 'main/education.html')
+    excel_path = os.path.join(settings.BASE_DIR, 'main', 'data', 'prices.xlsx')
+    courses_data = {}
+    
+    try:
+        if os.path.exists(excel_path):
+            df = pd.read_excel(excel_path)
+            for category, group in df.groupby('Категория'):
+                courses_data[category] = group.to_dict('records')
+    except Exception as e:
+        print(f"Excel error: {e}")
+
+    return render(request, 'main/education.html', {'courses_data': courses_data})
 
 def custom_page_not_found(request, exception):
     return render(request, 'main/404.html', status=404)
@@ -126,25 +137,7 @@ def news_detail(request, slug):
     return render(request, f'main/news/items/{slug}.html')
 
 def index(request):
-    if request.method == 'POST':
-        honeypot = request.POST.get('website_url')
-        if honeypot:
-            return redirect('index')
-        
-        name = request.POST.get('name')
-        contact = request.POST.get('contact')
-        
-        subject = f'Новая заявка на звонок: {name}'
-        message = f'Имя клиента: {name}\nКонтактные данные: {contact}'
-        
-        try:
-            send_mail(subject, message, settings.EMAIL_HOST_USER, [settings.EMAIL_HOST_USER])
-            messages.success(request, 'Заявка успешно отправлена!')
-            return redirect('index') 
-        except Exception as e:
-            messages.error(request, 'Ошибка при отправке.')
-            return redirect('index') # И тут тоже, чтобы не было дублей
-        
+       
     news_dir = os.path.join(settings.BASE_DIR, 'main', 'templates', 'main', 'news', 'items')
     img_dir = os.path.join(settings.BASE_DIR, 'main', 'static', 'main', 'img', 'news')
     
@@ -240,3 +233,25 @@ def training_schedule(request):
         'next_month': next_date.month,
         'next_year': next_date.year,
     })
+
+def universal_callback(request):
+    if request.method == 'POST':
+        if request.POST.get('website_url'):
+            return redirect(request.META.get('HTTP_REFERER', 'index'))
+        
+        name = request.POST.get('name')
+        contact = request.POST.get('contact')
+        course = request.POST.get('course_name', 'Общая консультация')
+        
+        subject = f'Заявка: {course}'
+        message = f'Имя: {name}\nКонтакт: {contact}\nИсточник: {course}'
+        
+        try:
+            send_mail(subject, message, settings.EMAIL_HOST_USER, [settings.EMAIL_HOST_USER])
+            messages.success(request, 'Заявка успешно отправлена!')
+        except Exception as e:
+            messages.error(request, 'Ошибка при отправке.')
+        
+        return redirect(request.META.get('HTTP_REFERER', 'index'))
+    
+    return redirect('index')
