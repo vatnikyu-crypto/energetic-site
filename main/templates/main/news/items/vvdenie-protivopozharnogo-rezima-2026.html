@@ -1,0 +1,59 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- СКРЫТЫЕ ДАННЫЕ ДЛЯ СПИСКА -->
+<div id="news-meta" style="display: none;">
+    <h1 id="meta-title">В Томской области введен особый противопожарный режим</h1>
+    <span id="meta-date">17.04.2026</span>
+</div>
+<article class="max-w-4xl mx-auto px-6 py-24">
+    <!-- Кнопка назад -->
+    <a href="{% url 'news_list' %}"
+        class="inline-flex items-center text-slate-400 hover:text-amber-500 font-bold text-xs uppercase tracking-widest mb-12 transition-colors group">
+        <svg class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7" />
+        </svg>
+        Назад к новостям
+    </a>
+
+    <header class="mb-12">
+        <span class="text-amber-500 font-black uppercase text-[10px] tracking-[0.3em]">Безопасность</span>
+        <h1 class="text-3xl md:text-5xl font-black text-slate-900 uppercase leading-none tracking-tight mt-4">
+            В Томской области введен особый противопожарный режим
+        </h1>
+        <p class="text-slate-400 mt-6 font-medium">Дата публикации: 17 апреля 2026</p>
+    </header>
+
+    <div class="prose prose-slate max-w-none">
+
+        <div class="mb-8 overflow-hidden rounded-xl shadow-lg">
+            <img src="{% static 'main/img/news/vvdenie-protivopozharnogo-rezima-2026.jpg' %}" alt="Противопожарный режим в Томской области 2026"
+                class="w-full h-auto object-cover max-h-[400px]" />
+        </div>
+
+        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+            С сегодняшнего дня, <strong>17 апреля 2026 года</strong>, распоряжением губернатора на всей территории региона устанавливается особый противопожарный режим. Решение принято в связи с установлением теплой погоды и началом активного таяния снега, что повышает риск возникновения природных пожаров.
+        </p>
+
+        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+            На период действия режима вводятся жесткие ограничения. Категорически <strong>запрещается</strong> разводить костры, сжигать сухую траву и мусор, а также использовать мангалы для приготовления пищи на открытом огне вблизи лесных массивов. За нарушение правил пожарной безопасности в этот период предусмотрены повышенные штрафы:
+        </p>
+
+        <ul class="text-lg text-slate-600 leading-relaxed mb-6 list-disc pl-5">
+            <li>Для граждан: от 10 000 до 20 000 рублей;</li>
+            <li>Для должностных лиц: от 30 000 до 60 000 рублей;</li>
+            <li>Для юридических лиц: от 400 000 до 800 000 рублей.</li>
+        </ul>
+
+        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+            Лесопожарные службы региона переведены в режим повышенной готовности. В мониторинге обстановки задействовано 179 единиц техники и более 300 специалистов лесоохраны.
+        </p>
+
+        <p class="text-lg font-semibold text-slate-700">
+            Берегите лес и соблюдайте правила безопасности!
+        </p>
+    </div>
+</article>
+{% endblock %}

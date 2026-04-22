@@ -15,27 +15,27 @@
             <!-- Слайд 1 (Активный по умолчанию) -->
             <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out">
                 <img src="{% static 'main/img/slider/slide1.png' %}" class="w-full h-full object-cover" alt="Слайд 1">
-                <div class="absolute inset-0 bg-slate-900/50 backdrop-brightness-75"></div>
+                <div class="absolute inset-0 bg-slate-900/35 backdrop-brightness-100"></div>
             </div>
             <!-- Слайд 2 -->
             <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
                 <img src="{% static 'main/img/slider/slide2.jpg' %}" class="w-full h-full object-cover" alt="Слайд 2">
-                <div class="absolute inset-0 bg-slate-900/50 backdrop-brightness-75"></div>
+                <div class="absolute inset-0 bg-slate-900/35 backdrop-brightness-100"></div>
             </div>
             <!-- Слайд 3 -->
             <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
                 <img src="{% static 'main/img/slider/slide3.jpg' %}" class="w-full h-full object-cover" alt="Слайд 3">
-                <div class="absolute inset-0 bg-slate-900/50 backdrop-brightness-75"></div>
+                <div class="absolute inset-0 bg-slate-900/35 backdrop-brightness-100"></div>
             </div>
             <!-- Слайд 4 -->
             <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
                 <img src="{% static 'main/img/slider/slide4.jpg' %}" class="w-full h-full object-cover" alt="Слайд 4">
-                <div class="absolute inset-0 bg-slate-900/50 backdrop-brightness-75"></div>
+                <div class="absolute inset-0 bg-slate-900/35 backdrop-brightness-100"></div>
             </div>
             <!-- Слайд 5 -->
             <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
                 <img src="{% static 'main/img/slider/slide5.jpg' %}" class="w-full h-full object-cover" alt="Слайд 5">
-                <div class="absolute inset-0 bg-slate-900/50 backdrop-brightness-75"></div>
+                <div class="absolute inset-0 bg-slate-900/35 backdrop-brightness-100"></div>
             </div>
         </div>
 
@@ -451,7 +451,7 @@
             </h2>
             <div class="h-1.5 w-24 bg-[#F59E0B] rounded-full"></div>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-10">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-10">
             <!-- Награда 1 -->
             <div class="group cursor-pointer" onclick="openModal(this)">
                 <div
@@ -466,7 +466,7 @@
                                 class="text-white font-black text-[10px] uppercase tracking-widest border-2 border-white px-4 py-2 rounded-full">Увеличить</span>
                         </div>
                     </div>
-                    <div class="pt-4 md:pt-6 px-1 md:px-4 pb-2 flex-grow">
+                    <div class="pt-4 md:pt-6 px-1 md:px-4 pb-2 flex-grow text-center md:text-left">
                         <h4
                             class="font-black text-slate-900 uppercase text-[10px] md:text-sm tracking-tight leading-tight">
                             За вклад в развитие культуры безопасного труда на территории Томской области 2024</h4>
@@ -489,7 +489,7 @@
                                 class="text-white font-black text-[10px] uppercase tracking-widest border-2 border-white px-4 py-2 rounded-full">Увеличить</span>
                         </div>
                     </div>
-                    <div class="pt-4 md:pt-6 px-1 md:px-4 pb-2 flex-grow">
+                    <div class="pt-4 md:pt-6 px-1 md:px-4 pb-2 flex-grow text-center md:text-left">
                         <h4
                             class="font-black text-slate-900 uppercase text-[10px] md:text-sm tracking-tight leading-tight">
                             Лучшее предприятие России 2025</h4>
@@ -512,11 +512,34 @@
                                 class="text-white font-black text-[10px] uppercase tracking-widest border-2 border-white px-4 py-2 rounded-full">Увеличить</span>
                         </div>
                     </div>
-                    <div class="pt-4 md:pt-6 px-1 md:px-4 pb-2 flex-grow">
+                    <div class="pt-4 md:pt-6 px-1 md:px-4 pb-2 flex-grow text-center md:text-left">
                         <h4
                             class="font-black text-slate-900 uppercase text-[10px] md:text-sm tracking-tight leading-tight">
                             Лучшие организации ДПО РФ - 2021</h4>
                         <p class="hidden md:block text-[10px] text-slate-400 font-bold uppercase mt-2">Диплом лауреата
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Награда 4 -->
+            <div class="group cursor-pointer" onclick="openModal(this)">
+                <div
+                    class="relative bg-white p-2 md:p-4 rounded-[1.5rem] md:rounded-[2.5rem] shadow-sm border border-slate-200 overflow-hidden transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2 h-full flex flex-col">
+                    <div
+                        class="aspect-[3/4] rounded-[1.2rem] md:rounded-[2rem] overflow-hidden bg-slate-100 relative shrink-0">
+                        <img src="{% static 'main/img/award_4.png' %}" alt="Награда 4"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity hidden md:flex items-center justify-center">
+                            <span
+                                class="text-white font-black text-[10px] uppercase tracking-widest border-2 border-white px-4 py-2 rounded-full">Увеличить</span>
+                        </div>
+                    </div>
+                    <div class="pt-4 md:pt-6 px-1 md:px-4 pb-2 flex-grow text-center md:text-left">
+                        <h4
+                            class="font-black text-slate-900 uppercase text-[10px] md:text-sm tracking-tight leading-tight">
+                           Система менеджмента качества применительно к ДПО - 2024</h4>
+                        <p class="hidden md:block text-[10px] text-slate-400 font-bold uppercase mt-2">Сертификат соответствия
                         </p>
                     </div>
                 </div>
@@ -542,18 +565,18 @@
     </section>
 
     <!-- Лента партнеров -->
-    <section class="max-w-7xl mx-auto px-6 py-12 md:py-20 border-t border-slate-100">
+    <section class="max-w-7xl mx-auto px-6 py-12 md:py-20 border-t border-slate-100 overflow-hidden">
         <div class="flex flex-col items-center md:items-start gap-4 mb-16 text-center md:text-left">
             <h2 class="text-3xl md:text-4xl font-black text-[#4F589D] uppercase tracking-tight">
                 Наши партнеры
             </h2>
             <div class="h-1.5 w-24 bg-[#F59E0B] rounded-full"></div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+        <div id="carousel-track" class="flex gap-6 will-change-transform">
 
             <!-- Карточка 1 -->
-            <div
-                class="flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
+            <div 
+                class="carousel-item flex-none w-[calc(100%-1.5rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(25%-1.125rem)] carousel-item flex-none w-[calc(100%-1.5rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(25%-1.125rem)] flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
                 <div class="h-16 flex items-center justify-center">
                     <img src="{% static 'main/img/logo_rosseti.jpg' %}" alt="Россети"
                         class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform">
@@ -566,7 +589,7 @@
 
             <!-- Карточка 2 -->
             <div
-                class="flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
+                class="carousel-item flex-none w-[calc(100%-1.5rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(25%-1.125rem)] flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
                 <div class="h-16 flex items-center justify-center">
                     <img src="{% static 'main/img/logo_gen.png' %}" alt="Томская Генерация"
                         class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform">
@@ -579,7 +602,7 @@
 
             <!-- Карточка 3 -->
             <div
-                class="flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
+                class="carousel-item flex-none w-[calc(100%-1.5rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(25%-1.125rem)] flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
                 <div class="h-16 flex items-center justify-center">
                     <img src="{% static 'main/img/logo_gazprom.svg' %}" alt="Газпром"
                         class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform">
@@ -592,7 +615,7 @@
 
             <!-- Карточка 4 -->
             <div
-                class="flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
+                class="carousel-item flex-none w-[calc(100%-1.5rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(25%-1.125rem)] flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
                 <div class="h-16 flex items-center justify-center">
                     <img src="{% static 'main/img/logo_gen.png' %}" alt="ТомскРТС"
                         class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform">
@@ -602,8 +625,41 @@
                         «ТомскРТС»</p>
                 </div>
             </div>
+
+            <!-- Карточка 5 -->
+            <div
+                class="carousel-item flex-none w-[calc(100%-1.5rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(25%-1.125rem)] flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
+                <div class="h-16 flex items-center justify-center">
+                    <img src="{% static 'main/img/SUEK_Logo.png' %}" alt="АО СУЭК-КУЗБАСС"
+                        class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform">
+                </div>
+                <div class="mt-6 text-center">
+                    <p class="text-[10px] font-black text-slate-900 uppercase tracking-tighter leading-tight">
+                        АО "СУЭК-КУЗБАСС"</p>
+                </div>
+            </div>
+
+            <!-- Карточка 6 -->
+            <div
+                class="carousel-item flex-none w-[calc(100%-1.5rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(25%-1.125rem)] flex flex-col items-center justify-between bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm opacity-60 grayscale hover:opacity-100 hover:grayscale-0 hover:shadow-xl hover:border-amber-200 transition-all duration-500 group cursor-default">
+                <div class="h-16 flex items-center justify-center">
+                    <img src="{% static 'main/img/tokb_logo.jpg' %}" alt="ТОКБ"
+                        class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform">
+                </div>
+                <div class="mt-6 text-center">
+                    <p class="text-[10px] font-black text-slate-900 uppercase tracking-tighter leading-tight">
+                        Томская Областная Клиническая больница</p>
+                </div>
+            </div>
         </div>
     </section>
+
+    <style>
+    /* Плавность движения через JS */
+    #carousel-track.smooth {
+        transition: transform 0.7s ease-in-out;
+    }
+</style>
 
     <!-- Секция: Отзывы -->
     <section class="max-w-7xl mx-auto px-6 py-20 font-sans overflow-hidden">
@@ -690,7 +746,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {% for item in latest_news_list %}
             <a href="{% url 'news_detail' item.slug %}"
-                class="group bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 flex flex-col h-full hover:-translate-y-2">
+                class="group bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-200 flex flex-col h-full hover:-translate-y-2">
 
                 <!-- Изображение -->
                 <div class="aspect-video overflow-hidden bg-slate-200 relative">
@@ -705,6 +761,13 @@
 
                 <!-- Контент карточки -->
                 <div class="p-8 flex-grow flex flex-col">
+
+                        <div class="mb-3">
+        <span class="text-[12px] font-black text-[#F59E0B] uppercase tracking-[0.2em]">
+            {{ item.date }}
+        </span>
+    </div>
+
                     <h3
                         class="text-xl font-black text-slate-900 leading-tight group-hover:text-[#4F589D] transition-colors uppercase line-clamp-3">
                         {{ item.title }}
@@ -783,5 +846,44 @@
         currentSlide = (currentSlide + 1) % slides.length;
         showSlide(currentSlide);
     }, 5000); // 5 секунд на слайд
+
+
+    const track = document.getElementById('carousel-track');
+    const items = Array.from(track.children);
+    const gap = 24; // gap-6
+    let index = 0;
+
+    // 1. Клонируем первые 4 карточки в конец для бесшовности
+    items.slice(0, 4).forEach(item => {
+        const clone = item.cloneNode(true);
+        track.appendChild(clone);
+    });
+
+    function getStep() {
+        // Считаем ширину одной карточки с учетом зазора
+        return items[0].offsetWidth + gap;
+    }
+
+    function move() {
+        index++;
+        track.classList.add('smooth');
+        track.style.transform = `translateX(-${index * getStep()}px)`;
+
+        // 2. Когда дошли до конца оригинального списка
+        if (index >= items.length) {
+            setTimeout(() => {
+                track.classList.remove('smooth'); // Выключаем анимацию
+                index = 0; // Сбрасываем индекс
+                track.style.transform = `translateX(0)`; // Мгновенно прыгаем в начало
+            }, 700); // 700ms — это время transition в CSS
+        }
+    }
+
+    let timer = setInterval(move, 3000);
+
+    // Пауза при наведении
+    track.addEventListener('mouseenter', () => clearInterval(timer));
+    track.addEventListener('mouseleave', () => timer = setInterval(move, 3000));
+
 </script>
 {% endblock %}
