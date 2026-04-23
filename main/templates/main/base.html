@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Энергетик — Учебный центр{% endblock %}</title>
     <link rel="icon" type="image/png" href="{% static 'main/img/logo.png' %}">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{% static 'main/css/output.css' %}">
     <style>
         body {
             font-family: sans-serif;
@@ -416,14 +416,48 @@
     flex-wrap: wrap !important;
 }
 
-/* Чтобы в темной теме панель оставалась читаемой */
+/* 1. Настройка самой панели в темном режиме */
 .is-acc-mode.theme-black #acc-panel {
-    background-color: #222 !important;
-    color: #fff !important;
-    border-bottom-color: #fff !important;
+    background-color: #222222 !important; /* Делаем панель темно-серой */
+    color: #ffffff !important;
+    border-bottom: 2px solid #ffffff !important;
 }
-.is-acc-mode.theme-black #acc-panel span { color: #fff !important; }
-.is-acc-mode.theme-black #acc-panel button { border-color: #fff !important; background: #000; color: #fff; }
+
+/* 2. Текст "Шрифт:", "Цвет:" и т.д. */
+.is-acc-mode.theme-black #acc-panel span {
+    color: #ffffff !important;
+}
+
+/* 3. ОЧЕНЬ ВАЖНО: Разрешаем кнопкам ВНУТРИ панели использовать их собственные цвета */
+/* Мы отменяем глобальное перекрашивание для элементов управления */
+.is-acc-mode.theme-black #acc-panel button {
+    background-color: white; /* По умолчанию кнопки в панели белые */
+    color: black;
+    border-color: black;
+}
+
+/* 4. Специфичные цвета для кнопок-индикаторов */
+/* Синим по голубому */
+.is-acc-mode.theme-black #acc-panel button[onclick*="theme-blue"] {
+    background-color: #99ccff !important;
+    color: #063462 !important;
+    border-color: #063462 !important;
+}
+
+/* Белым по черному (сама кнопка переключения на черную тему) */
+.is-acc-mode.theme-black #acc-panel button[onclick*="theme-black"] {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+/* 5. Кнопка ВЫХОД (сохраняем красный стиль) */
+.is-acc-mode.theme-black #acc-panel button[onclick*="toggleAcc"] {
+    background-color: #ffffff !important;
+    color: #dc2626 !important; /* Красный цвет */
+    border-color: #dc2626 !important;
+}
+
 
 
 /* Специальный фикс для длинных заголовков в спецрежиме */
