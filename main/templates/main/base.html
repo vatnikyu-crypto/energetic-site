@@ -660,7 +660,7 @@
             <div class="flex items-center gap-4 md:gap-8">
                 <!-- Заказать звонок -->
                 <button onclick="toggleCallbackForm()"
-                    class="group flex items-center gap-2 hover:text-[#F59E0B] transition-colors">
+                    class="cursor-pointer group flex items-center gap-2 hover:text-[#F59E0B] transition-colors">
                     <svg class="w-4 h-4 text-[#4F589D] transition-transform duration-300 group-hover:scale-110"
                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1079,7 +1079,7 @@
             <!-- Контент формы -->
             <div class="relative z-10 mb-8">
                 <h3 class="text-[10px] font-black text-[#F59E0B] uppercase tracking-[0.25em] mb-2">Обратная связь</h3>
-                <h2 class="text-3xl font-black text-[#4F589D] uppercase tracking-tighter">Заказать звонок</h2>
+                <h2 class="text-3xl font-black text-[#4F589D] uppercase tracking-tight">Заказать звонок</h2>
             </div>
 
             <form action="{% url 'callback_url' %}" method="POST" class="space-y-6 relative z-10">
