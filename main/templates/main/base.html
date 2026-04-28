@@ -554,6 +554,9 @@
 
 <body class="bg-slate-50">
 
+
+
+
 <div id="acc-panel" class="hidden md:sticky top-0 z-[100] bg-[#f0f0f0] border-b-4 border-black py-2 shadow-xl text-black font-sans">
     <div class="container mx-auto px-2 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
         
@@ -594,6 +597,33 @@
 </div>
 
 
+        <div id="browser-warning" style="display: none; background: #fff3cd; color: #856404; text-align: center; padding: 16px 20px; position: fixed; top: 0; left: 0; width: 100%; z-index: 999999; border-bottom: 2px solid #ffeeba; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; box-shadow: 0 4px 6px rgba(0,0,0,0.1); align-items: center; justify-content: center;">
+    <span style="margin-right: 15px;">⚠️ <strong>Ваш браузер устарел.</strong> Сайт может отображаться некорректно. Рекомендуем обновить систему или браузер.</span>
+    
+    <button onclick="document.getElementById('browser-warning').style.display='none'" 
+            onmouseover="this.style.backgroundColor='#856404'; this.style.color='#fff'" 
+            onmouseout="this.style.backgroundColor='transparent'; this.style.color='#856404'"
+            style="background: transparent; border: 2px solid #856404; color: #856404; padding: 6px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; outline: none; font-size: 14px;">
+        Понятно
+    </button>
+</div>
+
+
+<script>
+    function checkBrowser() {
+        // 1. Проверяем поддержку CSS-переменных (база для Tailwind)
+        var supportsVars = window.CSS && CSS.supports('color', 'var(--test)');
+        
+        // 2. Проверяем поддержку CSS Grid (сетка, которую Tailwind использует для разметки)
+        var supportsGrid = window.CSS && CSS.supports('display', 'grid');
+
+        if (!supportsVars || !supportsGrid) {
+            document.getElementById('browser-warning').style.display = 'block';
+        }
+    }
+    
+    checkBrowser();
+</script>
 
     <!-- Top Bar -->
     <div class="bg-[#f8fafc] text-black py-2 md:py-3 border-b border-slate-200 font-sans">
@@ -1098,7 +1128,7 @@
 
                 <!-- КНОПКА (Стиль "Получить консультацию") -->
                 <button type="submit"
-                    class="w-full bg-[#4F589D] hover:bg-[#3b4382] text-white px-10 py-5 rounded-xl text-lg font-black uppercase tracking-widest shadow-2xl border border-white/10 transition-all active:scale-95 group flex items-center justify-center gap-3">
+                    class="mt-6 w-full bg-[#4F589D] hover:bg-[#3b4382] text-white px-10 py-5 rounded-xl text-lg font-black uppercase tracking-widest shadow-2xl border border-white/10 transition-all active:scale-95 group flex items-center justify-center gap-3">
                     <span>Перезвоните мне</span>
                     <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
@@ -1298,7 +1328,7 @@
                     class="flex-[2] bg-[#F59E0B] hover:bg-white text-white hover:text-[#4F589D] px-4 py-3.5 rounded-2xl font-black uppercase tracking-widest text-[10px] transition-all duration-300 active:scale-95 shadow-lg shadow-[#F59E0B]/20">
                     Хорошо
                 </button>
-                <a href="{% url 'cookie_policy' %}" target="_blank"
+                <a href="{% url 'cookie_policy' %}"
                     class="flex-1 border border-white/20 hover:border-white/40 text-white/40 hover:text-white px-2 py-3.5 rounded-2xl font-black uppercase tracking-widest text-[10px] transition-all text-center flex items-center justify-center">
                     Подробнее
                 </a>
