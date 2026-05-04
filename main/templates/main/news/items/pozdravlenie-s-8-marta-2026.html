@@ -1,14 +1,14 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
+{% block title %}Поздравление с 8 Марта - Энергетик{% endblock %}
+
 {% block content %}
-<!-- СКРЫТЫЕ ДАННЫЕ ДЛЯ СПИСКА -->
 <div id="news-meta" style="display: none;">
     <h1 id="meta-title">Поздравление с международным женским днем!</h1>
     <span id="meta-date">08.03.2026</span>
 </div>
 <article class="max-w-4xl mx-auto px-6 py-24">
-    <!-- Кнопка назад -->
     <a href="{% url 'news_list' %}"
         class="inline-flex items-center text-slate-400 hover:text-amber-500 font-bold text-xs uppercase tracking-widest mb-12 transition-colors group">
         <svg class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none"

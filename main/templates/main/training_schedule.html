@@ -5,37 +5,36 @@
 
 {% block content %}
 
-
 <body class="bg-slate-50">
-    <!-- Основной контейнер с отступами как на других страницах -->
     <main class="min-h-screen pt-10 pb-20 font-sans">
         <div class="max-w-7xl mx-auto px-4 md:px-8">
-            
-<div class="flex flex-col items-center md:items-start gap-4 mb-16 text-center md:text-left">
-    <h2 class="text-3xl md:text-5xl font-black text-[#4F589D] uppercase tracking-tight">
-        График обучения
-    </h2>
-    <div class="h-1.5 w-24 bg-[#F59E0B] rounded-full"></div>
-</div>
 
-            <!-- Блок переключения периода -->
+            <div class="flex flex-col items-center md:items-start gap-4 mb-16 text-center md:text-left">
+                <h2 class="text-3xl md:text-5xl font-black text-[#4F589D] uppercase tracking-tight">
+                    График обучения
+                </h2>
+                <div class="h-1.5 w-24 bg-[#F59E0B] rounded-full"></div>
+            </div>
+
             <div class="flex flex-col md:flex-row justify-between items-center mb-10 gap-6">
                 <div class="text-center md:text-left">
                     <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em]">
                     </p>
                 </div>
 
-                <!-- Переключатель месяцев в фирменном стиле -->
-                <div class="flex items-center bg-white p-2 rounded-[2rem] shadow-xl shadow-[#4F589D]/5 border border-slate-200">
+                <div
+                    class="flex items-center bg-white p-2 rounded-[2rem] shadow-xl shadow-[#4F589D]/5 border border-slate-200">
                     <a href="?month={{ prev_month }}&year={{ prev_year }}#schedule"
                         class="w-12 h-12 rounded-2xl border border-slate-50 flex items-center justify-center text-slate-400 hover:text-[#F59E0B] transition-all shadow-sm">
-                        <svg xmlns="http://w3.org" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://w3.org" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7" />
                         </svg>
                     </a>
-                    
+
                     <div class="px-8 flex flex-col items-center min-w-[180px]">
-                        <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Период</span>
+                        <span
+                            class="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Период</span>
                         <span class="text-[#4F589D] font-black uppercase tracking-tight text-sm">
                             {{ current_month }}
                         </span>
@@ -43,14 +42,14 @@
 
                     <a href="?month={{ next_month }}&year={{ next_year }}#schedule"
                         class="w-12 h-12 rounded-2xl border border-slate-50 flex items-center justify-center text-slate-400 hover:text-[#F59E0B] transition-all shadow-sm">
-                        <svg xmlns="http://w3.org" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://w3.org" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
                         </svg>
                     </a>
                 </div>
             </div>
 
-            <!-- Таблица с программами -->
             <div class="relative p-2 bg-white rounded-[2.5rem] shadow-2xl shadow-[#4F589D]/10 border border-slate-200">
                 <div class="overflow-hidden rounded-[2rem]">
                     <table class="w-full text-left border-collapse bg-white">
@@ -59,39 +58,42 @@
                                 <th class="px-10 py-7 text-[10px] font-black text-white uppercase tracking-[0.2em]">
                                     Программа обучения
                                 </th>
-                                <th class="px-10 py-7 text-[10px] font-black text-white uppercase tracking-[0.2em] text-right">
+                                <th
+                                    class="px-10 py-7 text-[10px] font-black text-white uppercase tracking-[0.2em] text-right">
                                     Сроки обучения
                                 </th>
                             </tr>
                         </thead>
                         <tbody id="course-table-body" class="divide-y divide-slate-100">
                             {% for course in courses %}
-                            <tr onclick="openCourseModal('{{ course.Название|escapejs }}')" 
-    class="course-row group/row cursor-pointer hover:bg-[#F59E0B]/5 transition-all {% if forloop.counter > 3 %}hidden{% endif %}">
-    
-    <!-- Колонка 1: Название (уменьшили отступы на мобилке px-4, на десктопе оставили px-10) -->
-    <td class="px-4 md:px-10 py-6 md:py-8 align-top">
-        <div class="text-slate-900 font-bold text-base md:text-xl leading-tight group-hover/row:text-[#4F589D] transition-colors tracking-tight">
-            {{ course.Название }}
-        </div>
-        <div class="flex items-center mt-2 md:mt-3 space-x-2">
-            <span class="w-1 h-1 bg-[#F59E0B] rounded-full animate-pulse"></span>
-            <div class="text-slate-400 text-[9px] md:text-[10px] font-black tracking-widest leading-none">
-                {{ course.Форма|default:"Очно-заочная" }}
-            </div>
-        </div>
-    </td>
+                            <tr onclick="openCourseModal('{{ course.Название|escapejs }}')"
+                                class="course-row group/row cursor-pointer hover:bg-[#F59E0B]/5 transition-all {% if forloop.counter > 3 %}hidden{% endif %}">
 
-    <!-- Колонка 2: Сроки (убрали фикс. ширину на мобилке, уменьшили кнопку) -->
-    <td class="px-4 md:px-10 py-6 md:py-8 text-right align-top md:w-[450px]">
-        <div class="inline-block text-center bg-[#4F589D] text-white px-3 py-3 md:px-8 md:py-5 rounded-xl md:rounded-[1.5rem] text-[11px] md:text-base font-black leading-tight shadow-lg md:shadow-xl group-hover/row:bg-[#F59E0B] transition-all w-full max-w-[140px] md:max-w-none tracking-tight">
-            {{ course.Сроки|linebreaksbr }}
-        </div>
-    </td>
-</tr>
+                                <td class="px-4 md:px-10 py-6 md:py-8 align-top">
+                                    <div
+                                        class="text-slate-900 font-bold text-base md:text-xl leading-tight group-hover/row:text-[#4F589D] transition-colors tracking-tight">
+                                        {{ course.Название }}
+                                    </div>
+                                    <div class="flex items-center mt-2 md:mt-3 space-x-2">
+                                        <span class="w-1 h-1 bg-[#F59E0B] rounded-full animate-pulse"></span>
+                                        <div
+                                            class="text-slate-400 text-[9px] md:text-[10px] font-black tracking-widest leading-none">
+                                            {{ course.Форма|default:"Очно-заочная" }}
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td class="px-4 md:px-10 py-6 md:py-8 text-right align-top md:w-[450px]">
+                                    <div
+                                        class="inline-block text-center bg-[#4F589D] text-white px-3 py-3 md:px-8 md:py-5 rounded-xl md:rounded-[1.5rem] text-[11px] md:text-base font-black leading-tight shadow-lg md:shadow-xl group-hover/row:bg-[#F59E0B] transition-all w-full max-w-[140px] md:max-w-none tracking-tight">
+                                        {{ course.Сроки|linebreaksbr }}
+                                    </div>
+                                </td>
+                            </tr>
                             {% empty %}
                             <tr>
-                                <td colspan="2" class="px-10 py-24 text-center text-slate-400 font-black uppercase text-xs tracking-[0.2em]">
+                                <td colspan="2"
+                                    class="px-10 py-24 text-center text-slate-400 font-black uppercase text-xs tracking-[0.2em]">
                                     Расписания на данный период пока нет
                                 </td>
                             </tr>
@@ -101,7 +103,6 @@
                 </div>
             </div>
 
-            <!-- Кнопка "Показать полный список" -->
             {% if courses|length > 3 %}
             <div class="text-center mt-12">
                 <button id="toggle-courses-btn" onclick="toggleCourses()"
@@ -118,6 +119,7 @@
         </div>
     </main>
 </body>
+
 <script>
     function toggleCourses() {
         const rows = document.querySelectorAll('.course-row');
@@ -130,7 +132,6 @@
             if (index >= 3) {
                 if (isHidden) {
                     row.classList.remove('hidden');
-                    // Добавим легкую анимацию появления, если нужно
                     row.classList.add('animate-fade-in');
                 } else {
                     row.classList.add('hidden');
@@ -150,12 +151,12 @@
     }
 
     function openCourseModal(courseName) {
-    const courseInput = document.getElementById('selected_course_field');
-    if (courseInput) {
-        courseInput.value = courseName;
-    }
+        const courseInput = document.getElementById('selected_course_field');
+        if (courseInput) {
+            courseInput.value = courseName;
+        }
 
-    toggleCallbackForm();
-}
+        toggleCallbackForm();
+    }
 </script>
 {% endblock %}

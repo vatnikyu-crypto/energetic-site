@@ -1,0 +1,68 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Поздравление с 9 Мая - Энергетик{% endblock %}
+
+{% block content %}
+<div id="news-meta" style="display: none;">
+    <h1 id="meta-title">С Днем Великой Победы!</h1>
+    <span id="meta-date">07.05.2026</span>
+</div>
+<article class="max-w-4xl mx-auto px-6 py-24">
+    <a href="{% url 'news_list' %}"
+        class="inline-flex items-center text-slate-400 hover:text-amber-500 font-bold text-xs uppercase tracking-widest mb-12 transition-colors group">
+        <svg class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7" />
+        </svg>
+        Назад к новостям
+    </a>
+
+    <header class="mb-12">
+        <span class="text-amber-500 font-black uppercase text-[10px] tracking-[0.3em]">Праздники</span>
+        <h1 class="text-3xl md:text-5xl font-black text-slate-900 uppercase leading-none tracking-tight mt-4">
+            С Днем Великой Победы!
+        </h1>
+        <p class="text-slate-400 mt-6 font-medium">Дата публикации: 7 мая 2026</p>
+    </header>
+
+    <div class="prose prose-slate max-w-none">
+
+        <div class="mb-12">
+            <div class="overflow-hidden rounded-xl shadow-lg border border-slate-200">
+                <img src="{% static 'main/img/news/pozdravlenie-s-9-maya-2026.jpg' %}" alt="С Днем Победы, Томск"
+                    class="w-full h-auto object-cover max-h-[400px]" />
+            </div>
+            <p class="text-slate-400 text-sm mt-3 italic text-center">Митинг томичей на площади Революции (ныне — Новособорная) 22 июня 1941 г.</p>
+        </div>
+
+        <p class="text-xl text-slate-800 font-bold leading-relaxed mb-8">
+            Поздравляем всех томичей, наших слушателей и партнеров с праздником 9 Мая.
+        </p>
+
+        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+            В этот день хочется вспомнить, какой вклад внёс наш город в общую победу. Мало кто знает, что в годы войны Томск принял и разместил <strong>более 30 эвакуированных заводов</strong>. Но самым важным было другое: наш город стал <strong>«госпитальной базой» страны</strong>. Здесь было развернуто более 20 госпиталей, где врачи и медсёстры вернули в строй тысячи раненых.
+        </p>
+
+        <p class="text-xl text-slate-700 leading-relaxed mb-6 py-4 border-l-4 border-amber-500 pl-6 bg-slate-50 italic">
+            Всего за годы войны <strong>130 тысяч томичей</strong> ушли на фронт, и почти каждый второй (<strong>около 60 тысяч погибших</strong>) не вернулся с кровавых полей Великой Отечественной.
+        </p>
+
+        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+            Мы уважаем эту историю и благодарим ветеранов и тружеников тыла за их стойкость.
+        </p>
+
+        <p class="text-lg text-slate-600 leading-relaxed mb-4">
+            Желаем вам спокойствия, крепкого здоровья и мирного неба над головой. Пусть эти праздничные дни пройдут в доброй атмосфере, а весна принесёт только позитивные перемены.
+        </p>
+
+        <p class="text-xl font-black text-slate-900 uppercase tracking-tight mt-8">
+            Мира и благополучия вам и вашим близким!
+        </p>
+        
+        <p class="text-slate-400 mt-4 font-bold text-sm uppercase">
+            Коллектив АНО ДПО «Энергетик»
+        </p>
+    </div>
+</article>
+{% endblock %}

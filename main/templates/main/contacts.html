@@ -25,7 +25,7 @@
         <section class="max-w-7xl mx-auto px-6 pb-24 font-sans">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-                <!-- Карточка 1: Наш офис -->
+                <!-- Карточка 1: Наш адрес -->
                 <div
                     class="bg-white py-7 px-6 rounded-[2.5rem] shadow-lg shadow-[#4F589D]/5 border border-slate-200 flex flex-col items-center text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
                     <div
@@ -97,7 +97,6 @@
                         </a>
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -105,44 +104,38 @@
         <section class="max-w-7xl mx-auto px-6 pb-24 font-sans">
             <div
                 class="bg-[#3b4382] rounded-[2.5rem] p-8 md:p-16 text-white relative overflow-hidden border border-white/10 shadow-2xl">
-
                 <div class="absolute -right-20 -top-20 w-80 h-80 bg-[#F59E0B] rounded-full blur-[120px] opacity-10">
                 </div>
+                <div class="flex flex-col md:flex-row md:items-start justify-between mb-12 relative z-20">
+                    <div class="text-center md:text-left mb-8 md:mb-0">
+                        <h3 class="text-[#F59E0B] font-black text-[11px] uppercase tracking-[0.3em] mb-3">
+                            Банковские реквизиты
+                        </h3>
+                        <p class="text-white/80 text-[10px] font-bold tracking-[0.2em] uppercase">
+                            нажмите на значение, чтобы скопировать
+                        </p>
+                    </div>
 
-<div class="flex flex-col md:flex-row md:items-start justify-between mb-12 relative z-20">
-    
-    <!-- Левая часть: Заголовок -->
-    <div class="text-center md:text-left mb-8 md:mb-0">
-        <h3 class="text-[#F59E0B] font-black text-[11px] uppercase tracking-[0.3em] mb-3">
-            Банковские реквизиты
-        </h3>
-        <p class="text-white/80 text-[10px] font-bold tracking-[0.2em] uppercase">
-            нажмите на значение, чтобы скопировать
-        </p>
-    </div>
-
-    <!-- Правая часть: Кнопка -->
-    <div class="flex justify-center md:justify-end">
-        <a href="{% static 'main/docs/Карточка предприятия.docx' %}"
-           class="flex items-center space-x-3 bg-white/10 hover:bg-[#F59E0B] text-white hover:text-[#3b4382] px-6 py-3 rounded-2xl border border-white/20 transition-all duration-300 group shadow-lg backdrop-blur-sm w-fit">
-            <span class="text-[10px] md:text-[11px] font-black uppercase tracking-widest leading-none">
-                Скачать карточку предприятия
-            </span>
-            <svg xmlns="http://w3.org" class="w-5 h-5 transition-transform group-hover:translate-y-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v13m0 0l-4-4m4 4l4-4" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 20h16" />
-            </svg>
-        </a>
-    </div>
-</div>
+                    <div class="flex justify-center md:justify-end">
+                        <a href="{% static 'main/docs/Карточка предприятия.docx' %}"
+                            class="flex items-center space-x-3 bg-white/10 hover:bg-[#F59E0B] text-white hover:text-[#3b4382] px-6 py-3 rounded-2xl border border-white/20 transition-all duration-300 group shadow-lg backdrop-blur-sm w-fit">
+                            <span class="text-[10px] md:text-[11px] font-black uppercase tracking-widest leading-none">
+                                Скачать карточку предприятия
+                            </span>
+                            <svg xmlns="http://w3.org"
+                                class="w-5 h-5 transition-transform group-hover:translate-y-0.5 flex-shrink-0"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v13m0 0l-4-4m4 4l4-4" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 20h16" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
 
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 relative z-10">
-
-                    <!-- Левая колонка: ИНН, КПП, Р/Счет -->
                     <div class="space-y-10">
                         <div class="grid grid-cols-2 gap-8">
-                            <!-- ИНН -->
                             <div onclick="copyToClipboard('7017999506', this)"
                                 class="flex flex-col space-y-1.5 cursor-pointer group/item relative pb-4">
                                 <span
@@ -153,7 +146,6 @@
                                     class="copy-status absolute -bottom-2 left-0 opacity-0 text-[9px] font-black uppercase tracking-widest text-[#F59E0B] transition-all duration-300">✅
                                     Скопировано</span>
                             </div>
-                            <!-- КПП -->
                             <div onclick="copyToClipboard('701701001', this)"
                                 class="flex flex-col space-y-1.5 cursor-pointer group/item relative pb-4">
                                 <span
@@ -165,7 +157,6 @@
                                     Скопировано</span>
                             </div>
                         </div>
-                        <!-- Расчетный счет -->
                         <div onclick="copyToClipboard('40703810064000000195', this)"
                             class="flex flex-col space-y-1.5 cursor-pointer group/item relative pb-4 border-t border-white/5 pt-6">
                             <span class="text-[#F59E0B] text-[10px] font-black uppercase tracking-[0.2em]">Расчетный
@@ -178,7 +169,6 @@
                         </div>
                     </div>
 
-                    <!-- Правая колонка: Банк, К/Счет, БИК -->
                     <div class="space-y-10">
                         <div onclick="copyToClipboard('Отделение №8616 Сбербанка России г.Томск', this)"
                             class="flex flex-col space-y-1.5 mb-8 cursor-pointer group/item relative pb-4">
@@ -196,7 +186,6 @@
                             </span>
                         </div>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
-                            <!-- Корр. счет -->
                             <div onclick="copyToClipboard('30101810800000000606', this)"
                                 class="flex flex-col space-y-1.5 cursor-pointer group/item relative pb-4 border-t border-white/5 pt-6">
                                 <span class="text-[#F59E0B] text-[10px] font-black uppercase tracking-[0.2em]">Корр.
@@ -225,7 +214,7 @@
             </div>
         </section>
 
-        <!-- Секция: Карта (Адаптированная под фирменный стиль) -->
+        <!-- Секция: Карта -->
         <section class="max-w-7xl mx-auto px-0 md:px-6 mb-24 font-sans">
             <div
                 class="mx-auto max-w-[340px] md:max-w-full group relative overflow-hidden md:rounded-[3.5rem] bg-white p-0 md:p-4 shadow-2xl shadow-[#4F589D]/10 transition-all border border-slate-100">
@@ -272,20 +261,17 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
     </div>
 </main>
 
-<!-- Скрипт для копирования реквзитов -->
 <script>
     function copyToClipboard(text, element) {
         navigator.clipboard.writeText(text).then(() => {
             const status = element.querySelector('.copy-status');
 
-            // Показываем статус (плавно всплывает снизу)
             status.classList.remove('opacity-0', 'translate-y-2');
             status.classList.add('opacity-100', '-translate-y-1');
 

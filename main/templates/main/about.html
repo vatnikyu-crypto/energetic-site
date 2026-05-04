@@ -7,12 +7,12 @@
 
 <main class="min-h-screen bg-slate-50/50 pt-10 pb-0">
     <div class="max-w-7xl mx-auto px-6">
-<div class="flex flex-col items-center md:items-start gap-4 mb-16 text-center md:text-left">
-    <h2 class="text-2xl md:text-5xl font-black text-[#4F589D] uppercase tracking-tight">
-        Сведения об образовательной организации
-    </h2>
-    <div class="h-1.5 w-24 bg-[#F59E0B] rounded-full"></div>
-</div>
+        <div class="flex flex-col items-center md:items-start gap-4 mb-16 text-center md:text-left">
+            <h2 class="text-2xl md:text-5xl font-black text-[#4F589D] uppercase tracking-tight">
+                Сведения об образовательной организации
+            </h2>
+            <div class="h-1.5 w-24 bg-[#F59E0B] rounded-full"></div>
+        </div>
 
         <!-- Секция с Аккордеонами -->
         <section class="max-w-4xl mx-auto px-6 pb-10">
@@ -22,8 +22,9 @@
                 <div
                     class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
-                        class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
-                        <span class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg">
+                        class="cursor-pointer w-full px-8 py-7 flex justify-between items-center text-left gap-4">
+                        <span
+                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg transition-colors duration-300 group-hover:text-[#F59E0B]">
                             Основные сведения
                         </span>
                         <span
@@ -67,8 +68,9 @@
                 <div
                     class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
-                        class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
-                        <span class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg">Структура
+                        class="cursor-pointer w-full px-8 py-7 flex justify-between items-center text-left gap-4">
+                        <span
+                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg transition-colors duration-300 group-hover:text-[#F59E0B]">Структура
                             и органы управления образовательной организацией</span>
                         <span
                             class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
@@ -128,9 +130,9 @@
                 <div
                     class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
-                        class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
+                        class="cursor-pointer w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span
-                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg">Документы</span>
+                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg transition-colors duration-300 group-hover:text-[#F59E0B]">Документы</span>
                         <span
                             class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
                             <svg xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -142,10 +144,9 @@
                     </button>
                     <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/50">
                         <div class="px-8 pb-8 pt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <!-- Внутренний аккордеон 1 -->
                             <div class="col-span-full border-b border-slate-200 last:border-0">
                                 <button onclick="toggleAccordion(this)"
-                                    class="w-full py-4 flex justify-between items-center text-left group/sub">
+                                    class="cursor-pointer w-full py-4 flex justify-between items-center text-left group/sub">
                                     <span
                                         class="text-slate-700 font-bold uppercase tracking-widest text-xs group-hover/sub:text-amber-500 transition">ЛНА
                                         по вопросам осуществления образовательной деятельности</span>
@@ -255,9 +256,9 @@
                 <div
                     class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
-                        class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
+                        class="cursor-pointer w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span
-                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg">Образование</span>
+                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg transition-colors duration-300 group-hover:text-[#F59E0B]">Образование</span>
                         <span
                             class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
                             <svg xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -272,7 +273,7 @@
                             <!-- Внутренний аккордеон 1 -->
                             <div class="col-span-full border-b border-slate-200 last:border-0">
                                 <button onclick="toggleAccordion(this)"
-                                    class="w-full py-4 flex justify-between items-center text-left group/sub">
+                                    class="cursor-pointer w-full py-4 flex justify-between items-center text-left group/sub">
                                     <span
                                         class="text-slate-700 font-bold uppercase tracking-widest text-xs group-hover/sub:text-amber-500 transition">А)
                                         О реализуемых образовательных программах</span>
@@ -287,7 +288,6 @@
                                 </button>
                                 <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
                                     <div class="py-4 grid grid-cols-1 md:grid-cols-2 gap-3">
-                                        <!-- Твои файлы PDF -->
                                         <a href="{% static 'main/docs/Информация о реализуемых уровнях образования.pdf' %}"
                                             target="_blank"
                                             class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 hover:border-amber-400 transition">
@@ -312,7 +312,7 @@
                             <!-- Внутренний аккордеон 2 -->
                             <div class="col-span-full border-b border-slate-200 last:border-0">
                                 <button onclick="toggleAccordion(this)"
-                                    class="w-full py-4 flex justify-between items-center text-left group/sub">
+                                    class="cursor-pointer w-full py-4 flex justify-between items-center text-left group/sub">
                                     <span
                                         class="text-slate-700 font-bold uppercase tracking-widest text-xs group-hover/sub:text-amber-500 transition">Б),
                                         В), Г) О численности обучающихся по реализуемым образовательным
@@ -328,7 +328,6 @@
                                 </button>
                                 <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
                                     <div class="py-4 grid grid-cols-1 md:grid-cols-2 gap-3">
-                                        <!-- Твои файлы PDF -->
                                         <a href="{% static 'main/docs/О численности обучающихся по реализуемым ОП.pdf' %}"
                                             target="_blank"
                                             class="flex items-center space-x-3 p-3 bg-white rounded-xl border border-slate-200 hover:border-amber-400 transition">
@@ -344,9 +343,9 @@
                             <!-- Внутренний аккордеон 3 -->
                             <div class="col-span-full border-b border-slate-200 last:border-0">
                                 <button onclick="toggleAccordion(this)"
-                                    class="w-full py-4 flex justify-between items-center text-left group/sub">
+                                    class="cursor-pointer w-full py-4 flex justify-between items-center text-left group/sub">
                                     <span
-                                        class="text-slate-700 font-bold uppercase tracking-widest text-xs group-hover/sub:text-amber-500 transition">Основные
+                                        class="cursor-pointer text-slate-700 font-bold uppercase tracking-widest text-xs group-hover/sub:text-amber-500 transition">Основные
                                         реализуемые образовательные программы</span>
                                     <span
                                         class="accordion-chevron transform transition-transform duration-300 text-slate-300">
@@ -362,7 +361,7 @@
                                         <!-- Электротеплоэнергетика (Уровень 2) -->
                                         <div class="col-span-full border-b border-slate-100 last:border-0">
                                             <button onclick="toggleAccordion(this)"
-                                                class="w-full py-3 flex justify-between items-center text-left group/inner">
+                                                class="cursor-pointer w-full py-3 flex justify-between items-center text-left group/inner">
                                                 <div class="flex items-center">
                                                     <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
                                                         viewBox="0 0 20 20">
@@ -385,13 +384,13 @@
 
                                             <div
                                                 class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/50 rounded-lg">
-                                                <!-- Контент внутри Электротеплоэнергетики (Уровень 3) -->
+                                                <!-- Электротеплоэнергетики (Уровень 3) -->
                                                 <div class="p-2 ml-4 space-y-1">
 
                                                     <!-- Папка 1: Электроэнергетика -->
                                                     <div class="border-l-2 border-slate-200">
                                                         <button onclick="toggleAccordion(this)"
-                                                            class="w-full py-2 px-3 flex justify-between items-center text-left group/sub-inner">
+                                                            class="cursor-pointer w-full py-2 px-3 flex justify-between items-center text-left group/sub-inner">
                                                             <div class="flex items-center">
                                                                 <svg class="w-4 h-4 mr-2 text-amber-400"
                                                                     fill="currentColor" viewBox="0 0 20 20">
@@ -563,7 +562,7 @@
                                                     <!-- Папка 2: Теплоэнергетика -->
                                                     <div class="border-l-2 border-slate-200">
                                                         <button onclick="toggleAccordion(this)"
-                                                            class="w-full py-2 px-3 flex justify-between items-center text-left group/sub-inner">
+                                                            class="cursor-pointer w-full py-2 px-3 flex justify-between items-center text-left group/sub-inner">
                                                             <div class="flex items-center">
                                                                 <svg class="w-4 h-4 mr-2 text-amber-400"
                                                                     fill="currentColor" viewBox="0 0 20 20">
@@ -685,11 +684,10 @@
                                             </div>
                                         </div>
 
-
                                         <!-- Охрана труда -->
                                         <div class="col-span-full border-b border-slate-100 last:border-0">
                                             <button onclick="toggleAccordion(this)"
-                                                class="w-full py-3 flex justify-between items-center text-left group/inner">
+                                                class="cursor-pointer w-full py-3 flex justify-between items-center text-left group/inner">
                                                 <div class="flex items-center">
                                                     <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
                                                         viewBox="0 0 20 20">
@@ -714,7 +712,7 @@
                                                 class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/50 rounded-lg">
                                                 <div class="col-span-full border-b border-slate-100 last:border-0">
                                                     <button onclick="toggleAccordion(this)"
-                                                        class="w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
+                                                        class="cursor-pointer w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
                                                         <div class="flex items-center">
                                                             <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
                                                                 viewBox="0 0 20 20">
@@ -760,7 +758,7 @@
                                                 </div>
                                                 <div class="col-span-full border-b border-slate-100 last:border-0">
                                                     <button onclick="toggleAccordion(this)"
-                                                        class="w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
+                                                        class="cursor-pointer w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
                                                         <div class="flex items-center">
                                                             <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
                                                                 viewBox="0 0 20 20">
@@ -808,7 +806,7 @@
                                                 </div>
                                                 <div class="col-span-full border-b border-slate-100 last:border-0">
                                                     <button onclick="toggleAccordion(this)"
-                                                        class="w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
+                                                        class="cursor-pointer w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
                                                         <div class="flex items-center">
                                                             <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
                                                                 viewBox="0 0 20 20">
@@ -856,7 +854,7 @@
                                                 </div>
                                                 <div class="col-span-full border-b border-slate-100 last:border-0">
                                                     <button onclick="toggleAccordion(this)"
-                                                        class="w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
+                                                        class="cursor-pointer w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
                                                         <div class="flex items-center">
                                                             <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
                                                                 viewBox="0 0 20 20">
@@ -902,7 +900,7 @@
                                                 </div>
                                                 <div class="col-span-full border-b border-slate-100 last:border-0">
                                                     <button onclick="toggleAccordion(this)"
-                                                        class="w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
+                                                        class="cursor-pointer w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
                                                         <div class="flex items-center">
                                                             <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
                                                                 viewBox="0 0 20 20">
@@ -947,7 +945,7 @@
                                                 </div>
                                                 <div class="col-span-full border-b border-slate-100 last:border-0">
                                                     <button onclick="toggleAccordion(this)"
-                                                        class="w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
+                                                        class="cursor-pointer w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
                                                         <div class="flex items-center">
                                                             <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
                                                                 viewBox="0 0 20 20">
@@ -993,7 +991,7 @@
                                                 </div>
                                                 <div class="col-span-full border-b border-slate-100 last:border-0">
                                                     <button onclick="toggleAccordion(this)"
-                                                        class="w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
+                                                        class="cursor-pointer w-full py-3 pl-8 flex justify-between items-center text-left group/inner">
                                                         <div class="flex items-center">
                                                             <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
                                                                 viewBox="0 0 20 20">
@@ -1043,7 +1041,7 @@
                                         <!-- Пожарная безопасность -->
                                         <div class="col-span-full border-b border-slate-100 last:border-0">
                                             <button onclick="toggleAccordion(this)"
-                                                class="w-full py-3 flex justify-between items-center text-left group/inner">
+                                                class="cursor-pointer w-full py-3 flex justify-between items-center text-left group/inner">
                                                 <div class="flex items-center">
                                                     <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
                                                         viewBox="0 0 20 20">
@@ -1121,14 +1119,13 @@
                                             </div>
                                         </div>
 
-
                                         <!-- Промышленная и энергетическая безопасность -->
                                         <div class="col-span-full border-b border-slate-100 last:border-0">
                                             <button onclick="toggleAccordion(this)"
-                                                class="w-full py-3 flex justify-between items-center text-left group/inner">
+                                                class="cursor-pointer w-full py-3 flex justify-between items-center text-left group/inner">
                                                 <div class="flex items-center">
-                                                    <svg class="w-5 h-5 mr-3 text-amber-500 flex-shrink-0" fill="currentColor"
-                                                        viewBox="0 0 20 20">
+                                                    <svg class="w-5 h-5 mr-3 text-amber-500 flex-shrink-0"
+                                                        fill="currentColor" viewBox="0 0 20 20">
                                                         <path
                                                             d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z">
                                                         </path>
@@ -1201,7 +1198,7 @@
                                         <!-- Другие -->
                                         <div class="col-span-full border-b border-slate-100 last:border-0">
                                             <button onclick="toggleAccordion(this)"
-                                                class="w-full py-3 flex justify-between items-center text-left group/inner">
+                                                class="cursor-pointer w-full py-3 flex justify-between items-center text-left group/inner">
                                                 <div class="flex items-center">
                                                     <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor"
                                                         viewBox="0 0 20 20">
@@ -1224,7 +1221,6 @@
                                             <div
                                                 class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/30">
                                                 <div class="p-4 space-y-3 border-t border-slate-100/50">
-
                                                     <!-- Карточка 1 -->
                                                     <a href="{% static 'main/docs/allprograms/Машинист автовышки и автогидроподъемника.pdf' %}"
                                                         target="_blank"
@@ -1372,7 +1368,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -1384,9 +1379,9 @@
                 <div
                     class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
-                        class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
+                        class="cursor-pointer w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span
-                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg">Руководство</span>
+                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg transition-colors duration-300 group-hover:text-[#F59E0B]">Руководство</span>
                         <span
                             class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
                             <svg xmlns="http://www.w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -1413,9 +1408,9 @@
                 <div
                     class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
-                        class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
+                        class="cursor-pointer w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span
-                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg">Педагогический
+                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg transition-colors duration-300 group-hover:text-[#F59E0B]">Педагогический
                             состав</span>
                         <span
                             class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
@@ -1443,9 +1438,9 @@
                 <div
                     class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
-                        class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
+                        class="cursor-pointer w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span
-                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg leading-tight">Материально-техническое
+                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg leading-tight transition-colors duration-300 group-hover:text-[#F59E0B]">Материально-техническое
                             обеспечение и оснащенность образовательного процесса. Доступная среда</span>
                         <span
                             class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
@@ -1475,8 +1470,9 @@
                 <div
                     class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
-                        class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
-                        <span class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg">Платные
+                        class="cursor-pointer w-full px-8 py-7 flex justify-between items-center text-left gap-4">
+                        <span
+                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg transition-colors duration-300 group-hover:text-[#F59E0B]">Платные
                             образовательные услуги</span>
                         <span
                             class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
@@ -1522,9 +1518,9 @@
                 <div
                     class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
-                        class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
+                        class="cursor-pointer w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span
-                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg">Финансово-хозяйственная
+                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg transition-colors duration-300 group-hover:text-[#F59E0B]">Финансово-хозяйственная
                             деятельность</span>
                         <span
                             class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
@@ -1554,9 +1550,9 @@
                 <div
                     class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
-                        class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
+                        class="cursor-pointer w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span
-                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg leading-tight">Вакантные
+                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg leading-tight transition-colors duration-300 group-hover:text-[#F59E0B]">Вакантные
                             места для приема (перевода) обучающихся</span>
                         <span
                             class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
@@ -1571,14 +1567,19 @@
                         <div class="px-8 pb-10 pt-4 space-y-6">
                             <div class="text-slate-600 text-sm md:text-base leading-relaxed space-y-4">
                                 <p>
-                                    В АНО ДПО «Энергетик» ежегодно в январе-месяце по заявкам основных крупных организаций-заказчиков формируется календарный План-график
-                                    образовательных мероприятий на весь текущий год с разбивкой по месяцам. Ежемесячные планы образовательных мероприятий выкладываются на сайт
-                                    организации.  Наиболее востребованные образовательные программы  повторяется ежеквартально. При возникновении у заказчиков потребности в организации
-                                    каких-то новых образовательных мероприятий время проведения этих мероприятий согласовывается с заказчиком в индивидуальном порядке.
+                                    В АНО ДПО «Энергетик» ежегодно в январе-месяце по заявкам основных крупных
+                                    организаций-заказчиков формируется календарный План-график
+                                    образовательных мероприятий на весь текущий год с разбивкой по месяцам. Ежемесячные
+                                    планы образовательных мероприятий выкладываются на сайт
+                                    организации. Наиболее востребованные образовательные программы повторяется
+                                    ежеквартально. При возникновении у заказчиков потребности в организации
+                                    каких-то новых образовательных мероприятий время проведения этих мероприятий
+                                    согласовывается с заказчиком в индивидуальном порядке.
                                 </p>
                                 <div class="p-6 bg-white rounded-2xl border-l-4 border-amber-400 shadow-sm">
                                     <p class="font-bold text-slate-800 italic">
-                                        Исходя из этого обстоятельства, в АНО ДПО «Энергетик» всегда предусматриваются вакантные места для приема (перевода) по каждой образовательной программе,
+                                        Исходя из этого обстоятельства, в АНО ДПО «Энергетик» всегда предусматриваются
+                                        вакантные места для приема (перевода) по каждой образовательной программе,
                                         специальности, направлению подготовки.
                                     </p>
                                 </div>
@@ -1591,9 +1592,9 @@
                 <div
                     class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
-                        class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
+                        class="cursor-pointer w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span
-                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg leading-tight">Стипендии
+                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg leading-tight transition-colors duration-300 group-hover:text-[#F59E0B]">Стипендии
                             и меры поддержки обучающихся</span>
                         <span
                             class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
@@ -1622,9 +1623,9 @@
                 <div
                     class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
-                        class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
+                        class="cursor-pointer w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span
-                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg leading-tight">Международное
+                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg leading-tight transition-colors duration-300 group-hover:text-[#F59E0B]">Международное
                             сотрудничество</span>
                         <span
                             class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
@@ -1652,9 +1653,9 @@
                 <div
                     class="group border border-slate-200 bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md transition-all">
                     <button onclick="toggleAccordion(this)"
-                        class="w-full px-8 py-7 flex justify-between items-center text-left gap-4">
+                        class="cursor-pointer w-full px-8 py-7 flex justify-between items-center text-left gap-4">
                         <span
-                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg leading-tight">Организация
+                            class="text-slate-900 font-black uppercase tracking-tight text-base md:text-lg leading-tight transition-colors duration-300 group-hover:text-[#F59E0B]">Организация
                             питания в образовательной организации</span>
                         <span
                             class="accordion-chevron transform transition-transform duration-300 text-amber-500 shrink-0">
@@ -1686,7 +1687,6 @@
 <script>
     function toggleAccordion(btn) {
         const content = btn.nextElementSibling;
-        // Заменили поиск по тегу на поиск по классу .accordion-chevron
         const icon = btn.querySelector('.accordion-chevron');
 
         if (content.style.maxHeight) {

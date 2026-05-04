@@ -18,619 +18,597 @@
             scroll-margin-top: 100px;
         }
 
-         /* Спец-версия (ГОСТ) */
-    .is-acc-mode {
-        line-height: 1.6 !important;
-        letter-spacing: 0.05em !important;
-    }
-
-    /* Темы (перебиваем Tailwind через !important) */
-    .is-acc-mode.theme-white { background-color: #fff !important; color: #000 !important; }
-    .is-acc-mode.theme-black { background-color: #000 !important; color: #fff !important; }
-    .is-acc-mode.theme-blue  { background-color: #99ccff !important; color: #063462 !important; }
-
-    /* Обращаемся ко всем текстовым элементам внутри .is-acc-mode */
-.is-acc-mode h1, 
-.is-acc-mode h2, 
-.is-acc-mode h3, 
-.is-acc-mode h4, 
-.is-acc-mode p,
-.is-acc-mode span, 
-.is-acc-mode a, 
-.is-acc-mode li, 
-.is-acc-mode div {
-    /* fontSize берется из body, а здесь мы задаем множители для иерархии */
-    font-size: 1em !important;
-}
-
-.is-acc-mode p, 
-.is-acc-mode b, 
-.is-acc-mode span {
-    line-height: 1.6 !important; /* Увеличиваем высоту строки */
-    display: inline-block;       /* Помогает браузеру правильно считать высоту */
-    margin-bottom: 10px !important;
-}
-
-/* Разлепляем строки во всех текстовых элементах карточек */
-.is-acc-mode h4, 
-.is-acc-mode p {
-    line-height: 1.6 !important; /* Даем буквам место */
-    height: auto !important;
-    min-height: 0 !important;
-    display: block !important;
-    margin-bottom: 1rem !important;
-}
-
-/* Убираем фиксированные пропорции и высоту у контейнеров картинок */
-.is-acc-mode .aspect-\[3\/4\],
-.is-acc-mode .aspect-square,
-.is-acc-mode [class*="aspect-"] {
-    aspect-ratio: auto !important; /* Убираем жесткие рамки 3/4 */
-    height: auto !important;
-}
-
-/* Разносим ссылки на телефоны */
-.is-acc-mode a[href^="tel:"] {
-    display: block !important;    /* Каждый номер с новой строки */
-    padding: 10px 0 !important;   /* Зона клика больше */
-    line-height: 1.2 !important;  /* Высота внутри строки */
-    margin-bottom: 15px !important; /* Расстояние между двумя номерами */
-    height: auto !important;
-}
-
-/* Убираем ограничения контейнера, который сжимает номера */
-.is-acc-mode .space-y-1 > :not([hidden]) ~ :not([hidden]) {
-    margin-top: 20px !important; /* Увеличиваем отступ между ссылками */
-}
-
-/* Если иконка телефона мешает — сдвигаем её */
-.is-acc-mode .flex-col.md\:flex-row {
-    flex-direction: column !important; 
-    align-items: flex-start !important;
-}
-
-/* Убираем жесткие рамки у карточек направлений */
-.is-acc-mode a.group.relative {
-    height: auto !important;          /* Убираем h-[300px] */
-    min-height: 250px !important;     /* Минимальная высота, чтобы не схлопывалась */
-    display: flex !important;         /* Превращаем в гибкий контейнер */
-    flex-direction: column !important;
-    overflow: visible !important;     /* Проявляем текст, если он вылезает */
-    position: relative !important;
-}
-
-/* Настраиваем позиционирование текста внутри */
-.is-acc-mode a.group.relative .absolute.bottom-8 {
-    position: relative !important;    /* Вынимаем текст из "абсолютного" дна */
-    inset: auto !important;           /* Сбрасываем left/right/bottom */
-    padding: 20px !important;         /* Даем внутренние отступы */
-    background: transparent !important;
-}
-
-/* Исправляем заголовок: разрешаем перенос слов и убираем слипание */
-.is-acc-mode a.group.relative h3 {
-    white-space: normal !important;   /* Разрешаем перенос на новую строку */
-    word-break: break-word !important; /* Разрываем очень длинные слова */
-    line-height: 1.4 !important;      /* Увеличиваем межстрочный интервал */
-    font-size: 1.2em !important;      /* Относительный размер */
-    color: inherit !important;        /* Чтобы слушался цвета темы (черный/белый/синий) */
-}
-
-/* Чтобы картинка не перекрывала текст в резиновой карточке */
-.is-acc-mode a.group.relative img {
-    position: relative !important;    /* Картинка теперь сверху, а текст под ней */
-    height: 200px !important;         /* Ограничиваем высоту фото */
-    width: 100% !important;
-    object-fit: cover !important;
-}
-
-/* Убираем градиент-затемнение, он мешает контрастности текста */
-.is-acc-mode a.group.relative div[class*="bg-gradient-to-t"] {
-    display: none !important;
-}
-
-/* Делаем навигацию вертикальной */
-.is-acc-mode nav {
-    height: auto !important;
-    position: static !important; /* Убираем sticky, чтобы меню не перекрывало пол-экрана */
-}
-
-.is-acc-mode nav .max-w-7xl > div {
-    display: flex !important;
-    flex-direction: column !important; /* Пункты друг под другом */
-    align-items: flex-start !important;
-    height: auto !important;
-    padding: 20px 0 !important;
-}
-
-/* Настраиваем ссылки меню */
-.is-acc-mode nav a, 
-.is-acc-mode nav button {
-    width: 100% !important;
-    padding: 15px 0 !important;
-    border-bottom: 1px solid currentColor !important; /* Разделитель для четкости */
-    text-align: left !important;
-    font-size: 1em !important; /* Берет размер из выбранного А/А+/А++ */
-    white-space: normal !important; /* Разрешаем перенос текста внутри кнопок */
-    height: auto !important;
-}
-
-/* Убираем лишние отступы и фиксированную ширину у выпадающих списков */
-.is-acc-mode .absolute.top-full {
-    position: static !important; /* Выпадающее меню теперь просто часть списка */
-    display: block !important;   /* Всегда открыто в спецрежиме (по ГОСТу так проще) */
-    width: 100% !important;
-    box-shadow: none !important;
-    padding-left: 20px !important; /* Сдвигаем вложенные пункты вправо */
-}
-
-.is-acc-mode .absolute.top-full .bg-white {
-    background-color: transparent !important;
-    border: none !important;
-}
-
-/* Убираем сжатие букв и включаем нормальные переносы */
-.is-acc-mode h4 {
-    letter-spacing: 1px !important; /* Даем буквам "воздух" */
-    line-height: 1.4 !important;
-    text-transform: none !important; /* ОТКЛЮЧАЕМ ВЕРХНИЙ РЕГИСТР (читается в разы лучше) */
-    overflow-wrap: break-word !important;
-    word-wrap: break-word !important;
-    white-space: normal !important;
-    height: auto !important;
-}
-
-.is-acc-mode *:focus {
-    outline: 5px solid #F59E0B !important; /* Яркая рамка при навигации табом */
-    outline-offset: 2px;
-}
-
-/* Принудительно расширяем карточки документов */
-.is-acc-mode a.group.block,
-.is-acc-mode a.group.block > div {
-    height: auto !important;
-    min-height: min-content !important;
-    overflow: visible !important;
-}
-
-.is-acc-mode a {
-    text-decoration: underline !important;
-}
-
-.is-acc-mode h4 {letter-spacing: 10px !important;}
-
-/* Настраиваем иерархию через em, чтобы заголовки оставались крупнее обычного текста */
-.is-acc-mode h1 { font-size: 1.8em !important; font-weight: bold !important; }
-.is-acc-mode h2 { font-size: 1.5em !important; font-weight: bold !important; }
-.is-acc-mode h3 { font-size: 1.3em !important; font-weight: bold !important; }
-
-/* Сами размеры в пикселях для body (они станут базой для 1em выше) */
-.is-acc-mode.font-s { font-size: 18px !important; }
-.is-acc-mode.font-m { font-size: 24px !important; }
-.is-acc-mode.font-l { font-size: 30px !important; }
-
-    /* Убираем лишний декор по ГОСТу */
-    .is-acc-mode img { filter: grayscale(100%); }
-    .is-acc-mode button, .is-acc-mode a { 
-        border: 2px solid currentColor !important; 
-        padding: 4px 8px !important;
-    }
-
-/* Фикс шапки для слабовидящих на мобильных устройствах */
-@media (max-width: 768px) {
-    /* Делаем контейнер вертикальным */
-    .is-acc-mode .max-w-7xl.flex.justify-between {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 20px !important;
-        padding: 15px !important;
-    }
-
-    /* Убираем скрытие текста (Tailwind hidden sm:inline) */
-    .is-acc-mode .max-w-7xl span.hidden {
-        display: inline !important; /* Показываем текст "Версия для..." даже на мобилке */
-        font-size: 1.1em !important;
-    }
-
-    /* Кнопки и ссылки делаем на всю ширину */
-    .is-acc-mode .max-w-7xl a, 
-    .is-acc-mode .max-w-7xl button {
-        width: 100% !important;
-        justify-content: flex-start !important;
-        padding: 10px 0 !important;
-        border-bottom: 1px solid currentColor !important;
-    }
-
-    /* Исправляем блок с контактами и соцсетями */
-    .is-acc-mode .flex.items-center.gap-4 {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        width: 100% !important;
-        border: none !important;
-        padding: 0 !important;
-    }
-
-    /* Убираем разделительную линию между соцсетями, которая мешает */
-    .is-acc-mode .border-l.border-slate-200 {
-        border-left: none !important;
-        padding-left: 0 !important;
-        margin-top: 10px !important;
-    }
-}
-
-/* Общий фикс: если текст слишком длинный, разрешаем перенос в шапке */
-.is-acc-mode .max-w-7xl * {
-    white-space: normal !important;
-    height: auto !important;
-}
-
-.is-acc-mode .uppercase, 
-.is-acc-mode div[class*="opacity-"] {
-    line-height: 1.6 !important;   /* Раздвигаем слипшиеся строки */
-    letter-spacing: 2px !important; /* Даем буквам "дышать" */
-    height: auto !important;       /* Разрешаем блоку расти вниз */
-    margin-top: 15px !important;   /* Увеличиваем отступ сверху */
-    margin-bottom: 15px !important;
-    display: block !important;
-}
-
-    /* Прячем картинки */
-.is-acc-mode.images-off img {
-    display: none !important;
-}
-
-/* Когда картинки выключены */
-.is-acc-mode.images-off img {
-    /* Скрываем само изображение, но оставляем элемент в потоке */
-    content: attr(alt); 
-    
-    /* Стилизуем появившийся текст */
-    display: block;
-    padding: 10px;
-    border: 1px dashed currentColor;
-    font-style: italic;
-    font-size: 16px;
-    background: transparent !important;
-    
-    /* Регулируем высоту, чтобы пустые блоки не занимали пол-экрана */
-    height: auto !important;
-    min-height: 20px;
-}
-
-.is-acc-mode.theme-white {
-    background-color: #ffffff !important;
-    color: #000000 !important;
-}
-
-/* Принудительно красим ВСЕ элементы внутри этой темы */
-.is-acc-mode.theme-white *:not(#acc-panel, #acc-panel *) {
-    background-color: #ffffff !important; 
-    color: #000000 !important;
-    border-color: #000000 !important; /* Чтобы границы кнопок и инпутов стали видны */
-    box-shadow: none !important; /* Убираем тени, которые создают грязь */
-    text-shadow: none !important;
-}
-
-/* Выделяем ссылки, чтобы они не потерялись (по ГОСТу должно быть подчеркивание) */
-.is-acc-mode.theme-white a {
-    text-decoration: underline !important;
-    font-weight: bold !important;
-}
-
-/* Оставляем панель управления читаемой (она не должна становиться чисто белой) */
-#acc-panel {
-    background-color: #f3f4f6 !important;
-    color: #000 !important;
-}
-
-/* Базовый фон и цвет для body */
-.is-acc-mode.theme-black {
-    background-color: #000000 !important;
-    color: #ffffff !important;
-}
-
-/* Принудительная инверсия для ВСЕХ элементов, кроме панели управления */
-.is-acc-mode.theme-black *:not(#acc-panel, #acc-panel *) {
-    background-color: #000000 !important;
-    color: #ffffff !important;
-    border-color: #ffffff !important; /* Белые рамки для кнопок и полей */
-    box-shadow: none !important;
-}
-
-/* Ссылки в темной теме лучше делать ярко-желтыми — это классика доступности */
-.is-acc-mode.theme-black a {
-    color: #ffff00 !important;
-    text-decoration: underline !important;
-    font-weight: bold !important;
-}
-
-/* Кнопки в темной теме должны иметь четкую белую рамку */
-.is-acc-mode.theme-black button:not(#acc-panel *) {
-    border: 2px solid #ffffff !important;
-    background-color: transparent !important;
-}
-
-/* Выделение при наведении Tab (фокус) */
-.is-acc-mode.theme-black *:focus {
-    outline: 3px solid #ffff00 !important;
-}
-
-/* Базовый фон и цвет для всей страницы */
-.is-acc-mode.theme-blue {
-    background-color: #99ccff !important; /* Светло-голубой фон */
-    color: #063462 !important;             /* Темно-синий текст */
-}
-
-/* Принудительная окраска всех элементов */
-.is-acc-mode.theme-blue *:not(#acc-panel, #acc-panel *) {
-    background-color: #99ccff !important;
-    color: #063462 !important;
-    border-color: #063462 !important; /* Темно-синие рамки */
-    box-shadow: none !important;
-}
-
-/* Ссылки в синей теме */
-.is-acc-mode.theme-blue a {
-    text-decoration: underline !important;
-    font-weight: bold !important;
-    color: #000080 !important; /* Насыщенный темно-синий */
-}
-
-/* Кнопки и интерактив */
-.is-acc-mode.theme-blue button:not(#acc-panel *) {
-    border: 2px solid #063462 !important;
-    background-color: transparent !important;
-}
-
-/* Фокус при навигации Tab */
-.is-acc-mode.theme-blue *:focus {
-    outline: 3px solid #063462 !important;
-}
-
-/* Специальные стили для панели настроек, чтобы её не раздувало */
-#acc-panel * {
-    /* Панель не должна слушаться общего увеличения шрифта, иначе она перекроет сайт */
-    font-size: 14px !important; 
-    line-height: 1 !important;
-    text-transform: uppercase !important;
-    letter-spacing: normal !important;
-}
-
-#acc-panel button {
-    box-shadow: 2px 2px 0px rgba(0,0,0,0.1) !important; /* Легкая тень для объема */
-    border-radius: 2px !important;
-}
-
-#acc-panel button:hover {
-    border-width: 2px !important; /* Утолщаем рамку при наведении */
-    transform: scale(1.05);
-}
-
-/* Фикс для кнопки "Белым по черному" на светлом фоне панели */
-#acc-panel button[onclick*="theme-black"] {
-    border: 2px solid #000 !important; /* Жирная черная рамка вокруг черной кнопки */
-}
-
-/* Фикс наложения кнопок А/А+/А++ */
-#acc-panel .flex-wrap {
-    flex-wrap: wrap !important;
-}
-
-/* 1. Настройка самой панели в темном режиме */
-.is-acc-mode.theme-black #acc-panel {
-    background-color: #222222 !important; /* Делаем панель темно-серой */
-    color: #ffffff !important;
-    border-bottom: 2px solid #ffffff !important;
-}
-
-/* 2. Текст "Шрифт:", "Цвет:" и т.д. */
-.is-acc-mode.theme-black #acc-panel span {
-    color: #ffffff !important;
-}
-
-/* 3. ОЧЕНЬ ВАЖНО: Разрешаем кнопкам ВНУТРИ панели использовать их собственные цвета */
-/* Мы отменяем глобальное перекрашивание для элементов управления */
-.is-acc-mode.theme-black #acc-panel button {
-    background-color: white; /* По умолчанию кнопки в панели белые */
-    color: black;
-    border-color: black;
-}
-
-/* 4. Специфичные цвета для кнопок-индикаторов */
-/* Синим по голубому */
-.is-acc-mode.theme-black #acc-panel button[onclick*="theme-blue"] {
-    background-color: #99ccff !important;
-    color: #063462 !important;
-    border-color: #063462 !important;
-}
-
-/* Белым по черному (сама кнопка переключения на черную тему) */
-.is-acc-mode.theme-black #acc-panel button[onclick*="theme-black"] {
-    background-color: #000000 !important;
-    color: #ffffff !important;
-    border-color: #ffffff !important;
-}
-
-/* 5. Кнопка ВЫХОД (сохраняем красный стиль) */
-.is-acc-mode.theme-black #acc-panel button[onclick*="toggleAcc"] {
-    background-color: #ffffff !important;
-    color: #dc2626 !important; /* Красный цвет */
-    border-color: #dc2626 !important;
-}
-
-
-
-/* Специальный фикс для длинных заголовков в спецрежиме */
-.is-acc-mode h1, 
-.is-acc-mode h2, 
-.is-acc-mode h3 {
-    /* 1. Разрешаем перенос слов по слогам */
-    hyphens: auto !important;
-    -webkit-hyphens: auto !important;
-    -ms-hyphens: auto !important;
-
-    /* 2. Если слово всё равно не лезет (очень длинное), разрываем его */
-    overflow-wrap: break-word !important;
-    word-wrap: break-word !important;
-
-    /* 3. Убираем "сжатие" букв из Tailwind */
-    letter-spacing: normal !important; 
-    
-    /* 4. Отключаем капс, чтобы слова занимали меньше места */
-    text-transform: none !important; 
-    
-    /* 5. Увеличиваем межстрочный интервал */
-    line-height: 1.3 !important;
-}
-
-/* Фикс для мобилок: еще немного уменьшаем базовый размер h2 на А++ */
-@media (max-width: 768px) {
-    .is-acc-mode.font-l h2 {
-        font-size: 1.4em !important;
-    }
-}
-
-/* Специальный фикс для шапки в режиме доступности на мобилках */
-@media (max-width: 1024px) {
-    /* 1. Отключаем липкую шапку — в спецрежиме она не должна мешать скроллу */
-    .is-acc-mode header.sticky {
-        position: static !important;
-        height: auto !important;
-        padding: 10px 0 !important;
-    }
-
-    /* 2. Превращаем горизонтальный ряд в вертикальный список */
-    .is-acc-mode header .max-w-7xl {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 15px !important;
-    }
-
-    /* 3. Делаем логотип компактнее, чтобы не занимал пол-экрана */
-    .is-acc-mode header a.group {
-        border-bottom: 2px solid currentColor !important;
-        width: 100% !important;
-        padding-bottom: 10px !important;
-        flex-direction: row !important; /* Оставляем в ряд, но разрешаем перенос */
-    }
-
-    /* 4. Телефоны — делаем их крупными кнопками на всю ширину */
-    .is-acc-mode header .flex-col.items-end {
-        align-items: flex-start !important;
-        width: 100% !important;
-        gap: 10px !important;
-    }
-
-    .is-acc-mode header a[href^="tel:"] {
-        display: block !important;
-        width: 100% !important;
-        border: 1px solid currentColor !important;
-        padding: 12px !important;
-        text-align: center !important;
-        font-size: 1.1em !important;
-        background: transparent !important;
-    }
-
-    /* 5. Прячем иконки и лишние декоративные элементы */
-    .is-acc-mode header .rounded-full,
-    .is-acc-mode header .border-l {
-        display: none !important;
-    }
-}
-
-/* Фикс для заголовка внутри карточек и секций (твой запрос по h2) */
-.is-acc-mode h2 {
-    font-size: 1.4em !important; /* Умеренный размер для мобилки */
-    line-height: 1.3 !important;
-    text-transform: none !important; /* Убираем КРИЧАЩИЙ КАПС для читаемости */
-    letter-spacing: normal !important;
-    margin-bottom: 1rem !important;
-    height: auto !important;
-}
-
-
+        .is-acc-mode {
+            line-height: 1.6 !important;
+            letter-spacing: 0.05em !important;
+        }
+
+        .is-acc-mode.theme-white {
+            background-color: #fff !important;
+            color: #000 !important;
+        }
+
+        .is-acc-mode.theme-black {
+            background-color: #000 !important;
+            color: #fff !important;
+        }
+
+        .is-acc-mode.theme-blue {
+            background-color: #99ccff !important;
+            color: #063462 !important;
+        }
+
+        .is-acc-mode h1,
+        .is-acc-mode h2,
+        .is-acc-mode h3,
+        .is-acc-mode h4,
+        .is-acc-mode p,
+        .is-acc-mode span,
+        .is-acc-mode a,
+        .is-acc-mode li,
+        .is-acc-mode div {
+            font-size: 1em !important;
+        }
+
+        .is-acc-mode p,
+        .is-acc-mode b,
+        .is-acc-mode span {
+            line-height: 1.6 !important;
+            display: inline-block;
+            margin-bottom: 10px !important;
+        }
+
+        .is-acc-mode h4,
+        .is-acc-mode p {
+            line-height: 1.6 !important;
+            height: auto !important;
+            min-height: 0 !important;
+            display: block !important;
+            margin-bottom: 1rem !important;
+        }
+
+        .is-acc-mode .aspect-\[3\/4\],
+        .is-acc-mode .aspect-square,
+        .is-acc-mode [class*="aspect-"] {
+            aspect-ratio: auto !important;
+            height: auto !important;
+        }
+
+        .is-acc-mode a[href^="tel:"] {
+            display: block !important;
+            padding: 10px 0 !important;
+            line-height: 1.2 !important;
+            margin-bottom: 15px !important;
+            height: auto !important;
+        }
+
+        .is-acc-mode .space-y-1> :not([hidden])~ :not([hidden]) {
+            margin-top: 20px !important;
+        }
+
+        .is-acc-mode .flex-col.md\:flex-row {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+        }
+
+        .is-acc-mode a.group.relative {
+            height: auto !important;
+            min-height: 250px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            overflow: visible !important;
+            position: relative !important;
+        }
+
+        .is-acc-mode a.group.relative .absolute.bottom-8 {
+            position: relative !important;
+            inset: auto !important;
+            padding: 20px !important;
+            background: transparent !important;
+        }
+
+        .is-acc-mode a.group.relative h3 {
+            white-space: normal !important;
+            word-break: break-word !important;
+            line-height: 1.4 !important;
+            font-size: 1.2em !important;
+            color: inherit !important;
+        }
+
+        .is-acc-mode a.group.relative img {
+            position: relative !important;
+            height: 200px !important;
+            width: 100% !important;
+            object-fit: cover !important;
+        }
+
+        .is-acc-mode a.group.relative div[class*="bg-gradient-to-t"] {
+            display: none !important;
+        }
+
+        .is-acc-mode nav {
+            height: auto !important;
+            position: static !important;
+        }
+
+        .is-acc-mode nav .max-w-7xl>div {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            height: auto !important;
+            padding: 20px 0 !important;
+        }
+
+        .is-acc-mode nav a,
+        .is-acc-mode nav button {
+            width: 100% !important;
+            padding: 15px 0 !important;
+            border-bottom: 1px solid currentColor !important;
+            text-align: left !important;
+            font-size: 1em !important;
+            white-space: normal !important;
+            height: auto !important;
+        }
+
+        .is-acc-mode .absolute.top-full {
+            position: static !important;
+            display: block !important;
+            width: 100% !important;
+            box-shadow: none !important;
+            padding-left: 20px !important;
+        }
+
+        .is-acc-mode .absolute.top-full .bg-white {
+            background-color: transparent !important;
+            border: none !important;
+        }
+
+        .is-acc-mode h4 {
+            letter-spacing: 1px !important;
+            line-height: 1.4 !important;
+            text-transform: none !important;
+            overflow-wrap: break-word !important;
+            word-wrap: break-word !important;
+            white-space: normal !important;
+            height: auto !important;
+        }
+
+        .is-acc-mode *:focus {
+            outline: 5px solid #F59E0B !important;
+            outline-offset: 2px;
+        }
+
+        .is-acc-mode a.group.block,
+        .is-acc-mode a.group.block>div {
+            height: auto !important;
+            min-height: min-content !important;
+            overflow: visible !important;
+        }
+
+        .is-acc-mode a {
+            text-decoration: underline !important;
+        }
+
+        .is-acc-mode h4 {
+            letter-spacing: 10px !important;
+        }
+
+        .is-acc-mode h1 {
+            font-size: 1.8em !important;
+            font-weight: bold !important;
+        }
+
+        .is-acc-mode h2 {
+            font-size: 1.5em !important;
+            font-weight: bold !important;
+        }
+
+        .is-acc-mode h3 {
+            font-size: 1.3em !important;
+            font-weight: bold !important;
+        }
+
+        .is-acc-mode.font-s {
+            font-size: 18px !important;
+        }
+
+        .is-acc-mode.font-m {
+            font-size: 24px !important;
+        }
+
+        .is-acc-mode.font-l {
+            font-size: 30px !important;
+        }
+
+        .is-acc-mode img {
+            filter: grayscale(100%);
+        }
+
+        .is-acc-mode button,
+        .is-acc-mode a {
+            border: 2px solid currentColor !important;
+            padding: 4px 8px !important;
+        }
+
+        @media (max-width: 768px) {
+
+            .is-acc-mode .max-w-7xl.flex.justify-between {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 20px !important;
+                padding: 15px !important;
+            }
+
+            .is-acc-mode .max-w-7xl span.hidden {
+                display: inline !important;
+                font-size: 1.1em !important;
+            }
+
+            .is-acc-mode .max-w-7xl a,
+            .is-acc-mode .max-w-7xl button {
+                width: 100% !important;
+                justify-content: flex-start !important;
+                padding: 10px 0 !important;
+                border-bottom: 1px solid currentColor !important;
+            }
+
+            .is-acc-mode .flex.items-center.gap-4 {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                width: 100% !important;
+                border: none !important;
+                padding: 0 !important;
+            }
+
+            .is-acc-mode .border-l.border-slate-200 {
+                border-left: none !important;
+                padding-left: 0 !important;
+                margin-top: 10px !important;
+            }
+        }
+
+        .is-acc-mode .max-w-7xl * {
+            white-space: normal !important;
+            height: auto !important;
+        }
+
+        .is-acc-mode .uppercase,
+        .is-acc-mode div[class*="opacity-"] {
+            line-height: 1.6 !important;
+            letter-spacing: 2px !important;
+            height: auto !important;
+            margin-top: 15px !important;
+            margin-bottom: 15px !important;
+            display: block !important;
+        }
+
+        .is-acc-mode.images-off img {
+            display: none !important;
+        }
+
+        .is-acc-mode.images-off img {
+            content: attr(alt);
+            display: block;
+            padding: 10px;
+            border: 1px dashed currentColor;
+            font-style: italic;
+            font-size: 16px;
+            background: transparent !important;
+            height: auto !important;
+            min-height: 20px;
+        }
+
+        .is-acc-mode.theme-white {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+        }
+
+        .is-acc-mode.theme-white *:not(#acc-panel, #acc-panel *) {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+            border-color: #000000 !important;
+            box-shadow: none !important;
+            text-shadow: none !important;
+        }
+
+        .is-acc-mode.theme-white a {
+            text-decoration: underline !important;
+            font-weight: bold !important;
+        }
+
+        #acc-panel {
+            background-color: #f3f4f6 !important;
+            color: #000 !important;
+        }
+
+        .is-acc-mode.theme-black {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+        }
+
+        .is-acc-mode.theme-black *:not(#acc-panel, #acc-panel *) {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+            border-color: #ffffff !important;
+            box-shadow: none !important;
+        }
+
+        .is-acc-mode.theme-black a {
+            color: #ffff00 !important;
+            text-decoration: underline !important;
+            font-weight: bold !important;
+        }
+
+        .is-acc-mode.theme-black button:not(#acc-panel *) {
+            border: 2px solid #ffffff !important;
+            background-color: transparent !important;
+        }
+
+        .is-acc-mode.theme-black *:focus {
+            outline: 3px solid #ffff00 !important;
+        }
+
+        .is-acc-mode.theme-blue {
+            background-color: #99ccff !important;
+            color: #063462 !important;
+        }
+
+        .is-acc-mode.theme-blue *:not(#acc-panel, #acc-panel *) {
+            background-color: #99ccff !important;
+            color: #063462 !important;
+            border-color: #063462 !important;
+            box-shadow: none !important;
+        }
+
+        .is-acc-mode.theme-blue a {
+            text-decoration: underline !important;
+            font-weight: bold !important;
+            color: #000080 !important;
+        }
+
+        .is-acc-mode.theme-blue button:not(#acc-panel *) {
+            border: 2px solid #063462 !important;
+            background-color: transparent !important;
+        }
+
+        .is-acc-mode.theme-blue *:focus {
+            outline: 3px solid #063462 !important;
+        }
+
+        #acc-panel * {
+            font-size: 14px !important;
+            line-height: 1 !important;
+            text-transform: uppercase !important;
+            letter-spacing: normal !important;
+        }
+
+        #acc-panel button {
+            box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1) !important;
+            border-radius: 2px !important;
+        }
+
+        #acc-panel button:hover {
+            border-width: 2px !important;
+            transform: scale(1.05);
+        }
+
+        #acc-panel button[onclick*="theme-black"] {
+            border: 2px solid #000 !important;
+        }
+
+        #acc-panel .flex-wrap {
+            flex-wrap: wrap !important;
+        }
+
+        .is-acc-mode.theme-black #acc-panel {
+            background-color: #222222 !important;
+            color: #ffffff !important;
+            border-bottom: 2px solid #ffffff !important;
+        }
+
+        .is-acc-mode.theme-black #acc-panel span {
+            color: #ffffff !important;
+        }
+
+        .is-acc-mode.theme-black #acc-panel button {
+            background-color: white;
+            color: black;
+            border-color: black;
+        }
+
+        .is-acc-mode.theme-black #acc-panel button[onclick*="theme-blue"] {
+            background-color: #99ccff !important;
+            color: #063462 !important;
+            border-color: #063462 !important;
+        }
+
+        .is-acc-mode.theme-black #acc-panel button[onclick*="theme-black"] {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+            border-color: #ffffff !important;
+        }
+
+        .is-acc-mode.theme-black #acc-panel button[onclick*="toggleAcc"] {
+            background-color: #ffffff !important;
+            color: #dc2626 !important;
+            border-color: #dc2626 !important;
+        }
+
+        .is-acc-mode h1,
+        .is-acc-mode h2,
+        .is-acc-mode h3 {
+            hyphens: auto !important;
+            -webkit-hyphens: auto !important;
+            -ms-hyphens: auto !important;
+            overflow-wrap: break-word !important;
+            word-wrap: break-word !important;
+            letter-spacing: normal !important;
+            text-transform: none !important;
+            line-height: 1.3 !important;
+        }
+
+        @media (max-width: 768px) {
+            .is-acc-mode.font-l h2 {
+                font-size: 1.4em !important;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .is-acc-mode header.sticky {
+                position: static !important;
+                height: auto !important;
+                padding: 10px 0 !important;
+            }
+
+            .is-acc-mode header .max-w-7xl {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 15px !important;
+            }
+
+            .is-acc-mode header a.group {
+                border-bottom: 2px solid currentColor !important;
+                width: 100% !important;
+                padding-bottom: 10px !important;
+                flex-direction: row !important;
+            }
+
+            .is-acc-mode header .flex-col.items-end {
+                align-items: flex-start !important;
+                width: 100% !important;
+                gap: 10px !important;
+            }
+
+            .is-acc-mode header a[href^="tel:"] {
+                display: block !important;
+                width: 100% !important;
+                border: 1px solid currentColor !important;
+                padding: 12px !important;
+                text-align: center !important;
+                font-size: 1.1em !important;
+                background: transparent !important;
+            }
+
+            .is-acc-mode header .rounded-full,
+            .is-acc-mode header .border-l {
+                display: none !important;
+            }
+        }
+
+        .is-acc-mode h2 {
+            font-size: 1.4em !important;
+            line-height: 1.3 !important;
+            text-transform: none !important;
+            letter-spacing: normal !important;
+            margin-bottom: 1rem !important;
+            height: auto !important;
+        }
     </style>
 </head>
 
 <body class="bg-slate-50">
-
-
-
-
-<div id="acc-panel" class="hidden md:sticky top-0 z-[100] bg-[#f0f0f0] border-b-4 border-black py-2 shadow-xl text-black font-sans">
-    <div class="container mx-auto px-2 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-        
-        <!-- Шрифты -->
-        <div class="flex items-center gap-2">
-            <span class="text-[10px] font-bold uppercase">Шрифт:</span>
-            <div class="flex items-center">
-                <button onclick="updateAcc('font', 'font-s')" title="Обычный шрифт" class="w-8 h-8 border border-black flex items-center justify-center text-sm font-bold mx-0.5 bg-white">А</button>
-                <button onclick="updateAcc('font', 'font-m')" title="Большой шрифт" class="w-9 h-9 border border-black flex items-center justify-center text-base font-bold mx-0.5 bg-white">А+</button>
-                <button onclick="updateAcc('font', 'font-l')" title="Очень большой шрифт" class="w-10 h-10 border border-black flex items-center justify-center text-xl font-bold mx-0.5 bg-white">А++</button>
+    <div id="acc-panel"
+        class="hidden md:sticky top-0 z-[100] bg-[#f0f0f0] border-b-4 border-black py-2 shadow-xl text-black font-sans">
+        <div class="container mx-auto px-2 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            <div class="flex items-center gap-2">
+                <span class="text-[10px] font-bold uppercase">Шрифт:</span>
+                <div class="flex items-center">
+                    <button onclick="updateAcc('font', 'font-s')" title="Обычный шрифт"
+                        class="w-8 h-8 border border-black flex items-center justify-center text-sm font-bold mx-0.5 bg-white">А</button>
+                    <button onclick="updateAcc('font', 'font-m')" title="Большой шрифт"
+                        class="w-9 h-9 border border-black flex items-center justify-center text-base font-bold mx-0.5 bg-white">А+</button>
+                    <button onclick="updateAcc('font', 'font-l')" title="Очень большой шрифт"
+                        class="w-10 h-10 border border-black flex items-center justify-center text-xl font-bold mx-0.5 bg-white">А++</button>
+                </div>
             </div>
-        </div>
 
-        <!-- Цвета -->
-        <div class="flex items-center gap-2 border-l border-gray-400 pl-4">
-            <span class="text-[10px] font-bold uppercase">Цвет:</span>
-            <div class="flex">
-                <!-- Черным по белому -->
-                <button onclick="updateAcc('theme', 'theme-white')" title="Черным по белому" class="w-8 h-8 border border-black bg-white text-black font-bold mx-0.5">Ц</button>
-                <!-- Белым по черному (исправили рамку, чтобы была видна) -->
-                <button onclick="updateAcc('theme', 'theme-black')" title="Белым по черному" class="w-8 h-8 border border-black bg-black text-white font-bold mx-0.5">Ц</button>
-                <!-- Синим по голубому -->
-                <button onclick="updateAcc('theme', 'theme-blue')" title="Синим по голубому" class="w-8 h-8 border border-[#063462] bg-[#99ccff] text-[#063462] font-bold mx-0.5">Ц</button>
+            <!-- Цвета -->
+            <div class="flex items-center gap-2 border-l border-gray-400 pl-4">
+                <span class="text-[10px] font-bold uppercase">Цвет:</span>
+                <div class="flex">
+                    <!-- Черным по белому -->
+                    <button onclick="updateAcc('theme', 'theme-white')" title="Черным по белому"
+                        class="w-8 h-8 border border-black bg-white text-black font-bold mx-0.5">Ц</button>
+                    <!-- Белым по черному -->
+                    <button onclick="updateAcc('theme', 'theme-black')" title="Белым по черному"
+                        class="w-8 h-8 border border-black bg-black text-white font-bold mx-0.5">Ц</button>
+                    <!-- Синим по голубому -->
+                    <button onclick="updateAcc('theme', 'theme-blue')" title="Синим по голубому"
+                        class="w-8 h-8 border border-[#063462] bg-[#99ccff] text-[#063462] font-bold mx-0.5">Ц</button>
+                </div>
             </div>
-        </div>
 
-        <!-- Картинки -->
-        <div class="flex items-center gap-2 border-l border-gray-400 pl-4">
-            <span class="text-[10px] font-bold uppercase">Изображения:</span>
-            <button onclick="updateAcc('images', 'toggle')" id="img-toggle-btn" title="Включить/Выключить изображения" class="h-8 px-2 border border-black text-[10px] font-bold uppercase bg-white">ВЫКЛ</button>
-        </div>
+            <!-- Картинки -->
+            <div class="flex items-center gap-2 border-l border-gray-400 pl-4">
+                <span class="text-[10px] font-bold uppercase">Изображения:</span>
+                <button onclick="updateAcc('images', 'toggle')" id="img-toggle-btn"
+                    title="Включить/Выключить изображения"
+                    class="h-8 px-2 border border-black text-[10px] font-bold uppercase bg-white">ВЫКЛ</button>
+            </div>
 
-        <!-- Выход -->
-        <button onclick="toggleAcc(false)" title="Вернуться к обычной версии" class="ml-auto border-2 border-red-600 text-red-600 px-3 py-1 text-[10px] font-bold uppercase bg-white hover:bg-red-50 transition-colors">
-            ВЫХОД ×
+            <!-- Выход -->
+            <button onclick="toggleAcc(false)" title="Вернуться к обычной версии"
+                class="ml-auto border-2 border-red-600 text-red-600 px-3 py-1 text-[10px] font-bold uppercase bg-white hover:bg-red-50 transition-colors">
+                ВЫХОД ×
+            </button>
+        </div>
+    </div>
+
+    <div id="browser-warning" class="transition-all duration-500 transform translate-y-0 opacity-100"
+        style="display: none; background: #fff3cd; color: #856404; text-align: center; padding: 16px 20px; position: fixed; top: 0; left: 0; width: 100%; z-index: 999999; border-bottom: 2px solid #ffeeba; font-family: sans-serif; align-items: center; justify-content: center; box-sizing: border-box;">
+
+        <span style="margin-right: 15px;">⚠️ <strong>Ваш браузер устарел.</strong> Сайт может работать некорректно на
+            Windows 7/8.</span>
+
+        <button onclick="acceptBrowserWarning()"
+            style="background: #856404; border: none; color: #fff; padding: 8px 20px; border-radius: 6px; cursor: pointer; font-weight: bold;">
+            Понятно
         </button>
     </div>
-</div>
 
+    <script>
+        function checkBrowserWarning() {
+            if (localStorage.getItem('browser-warning-accepted-energo') === 'true') {
+                return;
+            }
 
-        <div id="browser-warning" style="display: none; background: #fff3cd; color: #856404; text-align: center; padding: 16px 20px; position: fixed; top: 0; left: 0; width: 100%; z-index: 999999; border-bottom: 2px solid #ffeeba; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; box-shadow: 0 4px 6px rgba(0,0,0,0.1); align-items: center; justify-content: center;">
-    <span style="margin-right: 15px;">⚠️ <strong>Ваш браузер устарел.</strong> Сайт может отображаться некорректно. Рекомендуем обновить систему или браузер.</span>
-    
-    <button onclick="document.getElementById('browser-warning').style.display='none'" 
-            onmouseover="this.style.backgroundColor='#856404'; this.style.color='#fff'" 
-            onmouseout="this.style.backgroundColor='transparent'; this.style.color='#856404'"
-            style="background: transparent; border: 2px solid #856404; color: #856404; padding: 6px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; outline: none; font-size: 14px;">
-        Понятно
-    </button>
-</div>
+            var ua = window.navigator.userAgent;
+            var isOldWin = /Windows NT 6.1|Windows NT 6.2|Windows NT 6.3/.test(ua);
+            var chromeMatch = ua.match(/Chrom(?:e|ium)\/([0-9]+)\./);
+            var isOldChrome = chromeMatch ? parseInt(chromeMatch, 10) < 110 : false;
+            var noVars = !(window.CSS && CSS.supports('color', 'var(--test)'));
 
-
-<script>
-    function checkBrowser() {
-        // 1. Проверяем поддержку CSS-переменных (база для Tailwind)
-        var supportsVars = window.CSS && CSS.supports('color', 'var(--test)');
-        
-        // 2. Проверяем поддержку CSS Grid (сетка, которую Tailwind использует для разметки)
-        var supportsGrid = window.CSS && CSS.supports('display', 'grid');
-
-        if (!supportsVars || !supportsGrid) {
-            document.getElementById('browser-warning').style.display = 'block';
+            if (isOldWin || isOldChrome || noVars) {
+                var banner = document.getElementById('browser-warning');
+                if (banner) {
+                    banner.style.display = 'flex';
+                }
+            }
         }
-    }
-    
-    checkBrowser();
-</script>
+
+        function acceptBrowserWarning() {
+            const banner = document.getElementById('browser-warning');
+
+            localStorage.setItem('browser-warning-accepted-energo', 'true');
+
+            banner.classList.remove('translate-y-0', 'opacity-100');
+            banner.classList.add('translate-y-full', 'opacity-0');
+
+            setTimeout(function () {
+                banner.style.display = 'none';
+            }, 500);
+        }
+
+        checkBrowserWarning();
+
+    </script>
 
     <!-- Top Bar -->
     <div class="bg-[#f8fafc] text-black py-2 md:py-3 border-b border-slate-200 font-sans">
         <div class="max-w-7xl mx-auto px-4 md:px-6 flex justify-between items-center text-[13px] font-bold">
 
-            <a href="#"
-                onclick="toggleAcc(true)" class="flex items-center gap-2.5 hover:text-[#F59E0B] transition-colors group text-base outline-none focus:ring-2 focus:ring-amber-500 rounded-md px-1">
+            <a href="#" onclick="toggleAcc(true)"
+                class="flex items-center gap-2.5 hover:text-[#F59E0B] transition-colors group text-base outline-none focus:ring-2 focus:ring-amber-500 rounded-md px-1">
                 <div class="relative">
                     <svg class="w-5 h-5 text-[#4F589D] transition-transform duration-300 group-hover:scale-110"
                         viewBox="0 0 100 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -647,7 +625,7 @@
                 -4 28 -10 57 -12 65 -3 10 8 17 36 22 48 8 273 3 298 -7z m487 6 c32 -5 44
                 -11 41 -21 -2 -8 -8 -37 -12 -65 -11 -63 -33 -94 -90 -123 -35 -19 -56 -23
                 -106 -20 -53 3 -67 9 -93 33 -34 32 -50 79 -50 142 0 45 0 45 70 56 43 7 193
-                6 240 -2z"/>>
+                6 240 -2z" />>
                         </g>
                     </svg>
                 </div>
@@ -691,7 +669,8 @@
     </div>
 
     <!-- Main Header -->
-    <header class="sticky top-0 z-50 bg-white py-3 md:relative md:py-4 font-sans border-b-4 border-[#F59E0B] md:border-b-0">
+    <header
+        class="sticky top-0 z-50 bg-white py-3 md:relative md:py-4 font-sans border-b-4 border-[#F59E0B] md:border-b-0">
         <div class="max-w-7xl mx-auto px-4 md:px-6 flex justify-between items-center gap-2">
 
             <!-- 1. Логотип -->
@@ -776,7 +755,8 @@
     </header>
 
     <!-- Навигационная панель -->
-    <nav class="hidden md:block sticky top-0 z-50 bg-[#4F589D] text-white shadow-md font-sans border-b-4 border-[#F59E0B]">
+    <nav
+        class="hidden md:block sticky top-0 z-50 bg-[#4F589D] text-white shadow-md font-sans border-b-4 border-[#F59E0B]">
         <div class="max-w-7xl mx-auto px-6">
             <div class="hidden xl:flex items-center justify-between uppercase tracking-widest text-[13px] font-medium">
 
@@ -819,7 +799,6 @@
                                 class="block px-5 py-3 text-[14px] font-normal text-black hover:text-[#F59E0B] hover:bg-slate-50 transition-colors duration-200">
                                 Учебная база
                             </a>
-
                         </div>
                     </div>
                 </div>
@@ -866,7 +845,7 @@
 
             <!-- ГЛАВНАЯ -->
             <a href="{% url 'index' %}"
-            class="text-white text-xl font-black uppercase tracking-[0.2em] hover:text-[#F59E0B] transition-colors">Главная</a>
+                class="text-white text-xl font-black uppercase tracking-[0.2em] hover:text-[#F59E0B] transition-colors">Главная</a>
 
             <!-- О НАС (Выпадающий список) -->
             <div class="w-full flex flex-col items-center">
@@ -926,7 +905,7 @@
     {% block content %}
     {% endblock %}
 
-    <!-- ПОДВАЛ (FOOTER) в фирменном стиле #4F589D -->
+    <!-- ПОДВАЛ (FOOTER) -->
     <footer class="bg-[#3b4382] text-white pt-20 pb-32 md:pb-12 mt-20 font-sans border-t-4 border-[#F59E0B]">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20 mb-20">
@@ -952,6 +931,7 @@
                         class="text-[#F59E0B] font-black text-[11px] uppercase tracking-[0.25em] border-b-2 border-[#F59E0B]/30 pb-2">
                         Контакты</h4>
                     <div class="space-y-6 w-full">
+
                         <!-- Адрес -->
                         <div class="flex flex-col md:flex-row items-center gap-4 text-center md:text-left group">
                             <div
@@ -966,6 +946,7 @@
                             <p class="text-white text-sm font-bold leading-tight tracking-tight">г. Томск, ул.
                                 Энергетическая, д. 2А</p>
                         </div>
+
                         <!-- Телефоны -->
                         <div class="flex flex-col md:flex-row items-center gap-4 text-center md:text-left group">
                             <div
@@ -984,6 +965,7 @@
                                     (3822) 61-11-92</a>
                             </div>
                         </div>
+
                         <!-- Почта -->
                         <div class="flex flex-col md:flex-row items-center gap-4 text-center md:text-left group">
                             <div
@@ -1041,12 +1023,10 @@
         </div>
     </footer>
 
-
-    <!-- Плавающая кнопка заказа звонка в фирменном стиле -->
+    <!-- Плавающая кнопка заказа звонка -->
     <button id="floating-call-btn" onclick="toggleCallbackForm()"
         class="cursor-pointer fixed bottom-8 right-8 w-16 h-16 bg-[#4F589D] z-40 text-white rounded-full shadow-[0_10px_30px_rgba(79,88,157,0.4)] flex items-center justify-center z-[100] transition-all duration-300 hover:scale-110 hover:bg-[#3b4382] group ring-2 ring-white">
 
-        <!-- Иконка трубки теперь белая (text-white) -->
         <svg xmlns="http://w3.org" class="h-8 w-8 animate-pulse text-white" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1055,21 +1035,19 @@
     </button>
 
 
-    <!-- Модальное окно формы (Финальная версия: Исправленный крестик + Фирменная кнопка) -->
+    <!-- Модальное окно формы -->
     <div id="callbackModal"
         class="fixed inset-0 z-[150] hidden bg-[#4F589D]/60 backdrop-blur-md flex items-center justify-center p-4">
 
         <div
             class="bg-white w-full max-w-md rounded-[2.5rem] shadow-2xl p-10 relative overflow-hidden border border-white/20">
 
-            <!-- Декоративный фон (не мешает кликам) -->
             <div
                 class="absolute -top-12 -right-12 w-32 h-32 bg-[#F59E0B]/10 rounded-full blur-2xl pointer-events-none z-0">
             </div>
 
-            <!-- КРЕСТИК ЗАКРЫТИЯ (Исправленный слой и область нажатия) -->
             <button type="button" onclick="toggleCallbackForm()"
-                class="absolute top-6 right-6 z-50 p-3 text-slate-300 hover:text-[#4F589D] transition-all duration-300 group outline-none">
+                class="cursor-pointer absolute top-6 right-6 z-50 p-3 text-slate-300 hover:text-[#4F589D] transition-all duration-300 group outline-none">
                 <svg xmlns="http://w3.org" class="h-7 w-7 transition-transform group-hover:rotate-90 active:scale-90"
                     fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
@@ -1105,8 +1083,6 @@
 
                 <input type="hidden" id="selected_course_field" name="course_name" value="Общая заявка">
 
-
-                <!-- Защита от спама -->
                 <div class="hidden" aria-hidden="true">
                     <input type="text" name="website_url" tabindex="-1" autocomplete="off">
                 </div>
@@ -1126,9 +1102,9 @@
                     </p>
                 </div>
 
-                <!-- КНОПКА (Стиль "Получить консультацию") -->
+                <!-- КНОПКА -->
                 <button type="submit"
-                    class="mt-6 w-full bg-[#4F589D] hover:bg-[#3b4382] text-white px-10 py-5 rounded-xl text-lg font-black uppercase tracking-widest shadow-2xl border border-white/10 transition-all active:scale-95 group flex items-center justify-center gap-3">
+                    class="cursor-pointer mt-6 w-full bg-[#4F589D] hover:bg-[#3b4382] text-white px-10 py-5 rounded-xl text-lg font-black uppercase tracking-widest shadow-2xl border border-white/10 transition-all active:scale-95 group flex items-center justify-center gap-3">
                     <span>Перезвоните мне</span>
                     <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24">
@@ -1140,8 +1116,6 @@
         </div>
     </div>
 
-
-
     {% if messages %}
     {% for message in messages %}
     <div id="toast-message"
@@ -1151,13 +1125,11 @@
     {% endfor %}
     {% endif %}
 
-    <!-- ВСЕ ОБЩИЕ СКРИПТЫ -->
     <script>
         function toggleCallbackForm() {
             const modal = document.getElementById('callbackModal');
             modal.classList.toggle('hidden');
 
-            // Блокировка прокрутки страницы при открытой форме
             if (!modal.classList.contains('hidden')) {
                 document.body.style.overflow = 'hidden';
             } else {
@@ -1165,7 +1137,6 @@
             }
         }
 
-        // Закрытие формы при клике на темный фон
         document.getElementById('callbackModal').addEventListener('click', function (e) {
             if (e.target === this) toggleCallbackForm();
         });
@@ -1180,7 +1151,6 @@
                 document.body.style.overflow = 'hidden';
                 path.setAttribute('d', 'M6 18L18 6M6 6l12 12');
 
-                // Используем классы Tailwind для надежности
                 if (floatingBtn) {
                     floatingBtn.classList.add('opacity-0', 'invisible', 'scale-0');
                     floatingBtn.classList.remove('opacity-100', 'visible', 'scale-100');
@@ -1197,8 +1167,6 @@
             }
         }
 
-
-        // 2. Раскрытие подменю "О нас" в мобилке
         function toggleMobileSubmenu(button) {
             const submenu = button.nextElementSibling;
             const icon = button.querySelector('svg');
@@ -1212,7 +1180,6 @@
             }
         }
 
-        // Плавный скролл
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
@@ -1236,7 +1203,6 @@
             });
         });
 
-        //Сообщение об отправке
         document.addEventListener('DOMContentLoaded', function () {
             const toast = document.getElementById('toast-message');
             if (toast) {
@@ -1255,7 +1221,7 @@
 
         function handleCookieBanner() {
             const banner = document.getElementById('cookie-banner');
-            const callbackBtn = document.querySelector('button[onclick="toggleCallbackForm()"].fixed'); // Находим кнопку-трубку
+            const callbackBtn = document.querySelector('button[onclick="toggleCallbackForm()"].fixed');
             const isAccepted = localStorage.getItem('cookies-accepted-energo');
 
             if (!isAccepted) {
@@ -1263,10 +1229,9 @@
                     banner.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
                     banner.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
 
-                    // Поднимаем кнопку звонка выше на мобилках (только если экран узкий)
                     if (window.innerWidth < 768 && callbackBtn) {
                         callbackBtn.style.transition = 'transform 0.7s ease-out';
-                        callbackBtn.style.transform = 'translateY(-220px)'; // Поднимаем над плашкой
+                        callbackBtn.style.transform = 'translateY(-220px)';
                     }
                 }, 1500);
             }
@@ -1280,7 +1245,6 @@
             banner.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
             banner.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
 
-            // Возвращаем кнопку звонка на место
             if (callbackBtn) {
                 callbackBtn.style.transform = 'translateY(0)';
             }
@@ -1290,26 +1254,21 @@
 
     </script>
 
-    <!-- Cookie-баннер в стиле скриншота -->
+    <!-- Cookie-баннер -->
     <div id="cookie-banner"
         class="fixed bottom-8 left-4 right-4 md:left-8 md:right-auto md:max-w-[350px] z-[100] transform translate-y-32 opacity-0 transition-all duration-700 ease-out pointer-events-none">
 
-        <!-- Основная синяя подложка с блюром -->
         <div
             class="bg-[#4F589D]/95 backdrop-blur-xl border border-white/20 p-6 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
 
-            <!-- Верхняя часть: Иконка и Заголовок как на скриншоте -->
             <div class="flex items-center gap-4 mb-5">
-                <!-- Белая плашка для иконки -->
                 <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shrink-0 shadow-lg">
-                    <!-- Синяя иконка щита #4F589D -->
                     <svg xmlns="http://w3.org" class="h-7 w-7 text-[#4F589D]" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                 </div>
-                <!-- Белый жирный текст -->
                 <h4 class="text-white font-bold text-lg leading-tight drop-shadow-sm">
                     Уведомление <br> <span class="text-[10px] uppercase tracking-[0.2em] text-[#F59E0B] font-black">о
                         coockie</span>
@@ -1318,14 +1277,14 @@
 
             <p class="text-white/90 text-[12px] font-medium leading-relaxed mb-6 px-1">
                 Сайт использует файлы <span
-                    class="text-white underline decoration-[#F59E0B] underline-offset-4 font-bold">cookie</span>. Продолжая
+                    class="text-white underline decoration-[#F59E0B] underline-offset-4 font-bold">cookie</span>.
+                Продолжая
                 пользоваться сайтом, Вы соглашаетесь с политикой использования файлов coockie.
             </p>
 
-            <!-- Кнопки -->
             <div class="flex gap-3">
                 <button onclick="acceptCookies()"
-                    class="flex-[2] bg-[#F59E0B] hover:bg-white text-white hover:text-[#4F589D] px-4 py-3.5 rounded-2xl font-black uppercase tracking-widest text-[10px] transition-all duration-300 active:scale-95 shadow-lg shadow-[#F59E0B]/20">
+                    class="cursor-pointer flex-[2] bg-[#F59E0B] hover:bg-white text-white hover:text-[#4F589D] px-4 py-3.5 rounded-2xl font-black uppercase tracking-widest text-[10px] transition-all duration-300 active:scale-95 shadow-lg shadow-[#F59E0B]/20">
                     Хорошо
                 </button>
                 <a href="{% url 'cookie_policy' %}"
@@ -1336,84 +1295,73 @@
         </div>
     </div>
 
-
     <script>
-    const body = document.body;
-    const panel = document.getElementById('acc-panel');
-    
-    // Загрузка настроек
-let accConfig = JSON.parse(localStorage.getItem('accConfig')) || { 
-    active: false, 
-    theme: 'theme-white', 
-    font: 'font-s',
-    images: 'on' // Новое поле
-};
-    function applyAcc() {
-    if (accConfig.active) {
-        body.classList.add('is-acc-mode', accConfig.theme, accConfig.font);
-        // Проверяем состояние картинок
-        if (accConfig.images === 'off') body.classList.add('images-off');
-        
-        panel.classList.remove('hidden');
-        updateImgBtnText();
-    } else {
-        body.className = ''; // Очистка всех классов при выключении
-        panel.classList.add('hidden');
-    }
-}
+        const body = document.body;
+        const panel = document.getElementById('acc-panel');
 
-function updateAcc(type, value) {
-    if (type === 'images' && value === 'toggle') {
-        accConfig.images = accConfig.images === 'on' ? 'off' : 'on';
-        body.classList.toggle('images-off');
+        let accConfig = JSON.parse(localStorage.getItem('accConfig')) || {
+            active: false,
+            theme: 'theme-white',
+            font: 'font-s',
+            images: 'on'
+        };
+        function applyAcc() {
+            if (accConfig.active) {
+                body.classList.add('is-acc-mode', accConfig.theme, accConfig.font);
+                if (accConfig.images === 'off') body.classList.add('images-off');
 
-        // Логика текстовых подписей вместо картинок
-        document.querySelectorAll('img').forEach(img => {
-            // Удаляем старую подпись, если она есть, чтобы не дублировать
-            const oldAlt = img.parentNode.querySelector('.temp-alt-text');
-            if (oldAlt) oldAlt.remove();
-
-            if (accConfig.images === 'off') {
-                // Создаем красивую подпись
-                const span = document.createElement('span');
-                span.className = 'temp-alt-text';
-                // Берем текст из alt или пишем "Изображение без описания"
-                const description = img.alt.trim() || "изображение без описания";
-                span.innerText = `[Изображение: ${description}]`;
-                
-                // Вставляем после картинки
-                img.after(span);
+                panel.classList.remove('hidden');
+                updateImgBtnText();
+            } else {
+                body.className = ''; // Очистка всех классов при выключении
+                panel.classList.add('hidden');
             }
-        });
-    } else {
-        if (type === 'theme') body.classList.remove('theme-white', 'theme-black', 'theme-blue');
-        if (type === 'font') body.classList.remove('font-s', 'font-m', 'font-l');
-        accConfig[type] = value;
-        body.classList.add(value);
-    }
-    
-    localStorage.setItem('accConfig', JSON.stringify(accConfig));
-    updateImgBtnText();
-}
+        }
+
+        function updateAcc(type, value) {
+            if (type === 'images' && value === 'toggle') {
+                accConfig.images = accConfig.images === 'on' ? 'off' : 'on';
+                body.classList.toggle('images-off');
+
+                document.querySelectorAll('img').forEach(img => {
+                    const oldAlt = img.parentNode.querySelector('.temp-alt-text');
+                    if (oldAlt) oldAlt.remove();
+
+                    if (accConfig.images === 'off') {
+                        const span = document.createElement('span');
+                        span.className = 'temp-alt-text';
+                        const description = img.alt.trim() || "изображение без описания";
+                        span.innerText = `[Изображение: ${description}]`;
+
+                        img.after(span);
+                    }
+                });
+            } else {
+                if (type === 'theme') body.classList.remove('theme-white', 'theme-black', 'theme-blue');
+                if (type === 'font') body.classList.remove('font-s', 'font-m', 'font-l');
+                accConfig[type] = value;
+                body.classList.add(value);
+            }
+
+            localStorage.setItem('accConfig', JSON.stringify(accConfig));
+            updateImgBtnText();
+        }
 
 
-function updateImgBtnText() {
-    const btn = document.getElementById('img-toggle-btn');
-    if (btn) btn.innerText = accConfig.images === 'on' ? 'ВКЛ' : 'ВЫКЛ';
-}
+        function updateImgBtnText() {
+            const btn = document.getElementById('img-toggle-btn');
+            if (btn) btn.innerText = accConfig.images === 'on' ? 'ВКЛ' : 'ВЫКЛ';
+        }
 
-    function toggleAcc(state) {
-        accConfig.active = state;
-        localStorage.setItem('accConfig', JSON.stringify(accConfig));
-        location.reload(); // Перезагрузка гарантирует чистое применение стилей поверх Tailwind
-    }
+        function toggleAcc(state) {
+            accConfig.active = state;
+            localStorage.setItem('accConfig', JSON.stringify(accConfig));
+            location.reload();
+        }
 
-    applyAcc();
-</script>
-
-
-
-
+        applyAcc();
+        
+    </script>
 </body>
 
 </html>

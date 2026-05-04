@@ -31,7 +31,6 @@ urlpatterns = [
     path('contacts/', views.contacts, name='contacts'),
     path('news/', views.news_list, name='news_list'),
     path('news/<str:slug>/', views.news_detail, name='news_detail'),
-    path('prices/', views.prices, name='prices'),
     path('education/', views.education, name='education'),
     path('test404/', TemplateView.as_view(template_name='404.html')),
     path('reviews/', views.reviews_view, name='reviews'),

@@ -54,30 +54,6 @@ def reviews_view(request):
     ]
     return render(request, 'main/reviews.html', {'reviews': reviews_list})
 
-def prices(request):
-    excel_path = os.path.join(settings.BASE_DIR, 'main', 'data', 'prices.xlsx')
-    categories = {}
-    
-    try:
-        if os.path.exists(excel_path):
-            df = pd.read_excel(excel_path)
-            for category, group in df.groupby('Категория'):
-                items = group.to_dict('records')
-                
-                for item in items:
-                    try:
-                        val = int(item['Стоимость'])
-                        item['Стоимость'] = f"{val:,}".replace(',', ' ')
-                    except:
-                        pass
-                # --------------------------------
-                
-                categories[category] = items
-    except Exception as e:
-        print(f"Ошибка чтения цен: {e}")
-
-    return render(request, 'main/prices.html', {'categories': categories})
-
 def contacts(request):
     return render(request, 'main/contacts.html')
 
@@ -95,7 +71,6 @@ def news_list(request):
         files.sort(key=lambda x: os.path.getmtime(os.path.join(news_dir, x)), reverse=True)
 
         for filename in files:
-            # --- ВОЗВРАЩАЕМ ОПРЕДЕЛЕНИЕ ПЕРЕМЕННЫХ ---
             slug = filename.replace('.html', '')
             file_path = os.path.join(news_dir, filename)
             
@@ -114,7 +89,6 @@ def news_list(request):
                     found_img = f"main/img/news/{slug}{ext}"
                     break
             
-            # --- ТЕПЕРЬ ФИЛЬТРАЦИЯ БУДЕТ ВИДЕТЬ ПЕРЕМЕННЫЕ ---
             if not query or query.lower() in title.lower():
                 all_news_items.append({
                     'slug': slug,
@@ -122,6 +96,11 @@ def news_list(request):
                     'date': date,
                     'image_path': found_img
                 })
+
+    try:
+        all_news_items.sort(key=lambda x: datetime.strptime(x['date'], '%d.%m.%Y'), reverse=True)
+    except Exception:
+        pass
 
     # 3. Пагинация по отфильтрованному списку
     paginator = Paginator(all_news_items, 9)
@@ -187,8 +166,6 @@ def index(request):
             latest_news_list = temp_news_list[:3]
 
         reviews_range = range(1, 13)
-
-    
 
     return render(request, 'main/index.html', {'latest_news': latest_news,'latest_news_list': latest_news_list,'reviews_range': reviews_range,})
 

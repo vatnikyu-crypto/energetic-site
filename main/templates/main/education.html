@@ -66,12 +66,12 @@
 
                     <!-- Кнопка-переключатель списка курсов -->
                     <button onclick="toggleCourses('prof_edu_list', this)"
-                        class="w-full mt-6 flex items-center justify-between px-8 py-5 bg-slate-50 hover:bg-slate-100 rounded-2xl border border-slate-300 transition-all group">
+                        class="cursor-pointer w-full mt-6 flex items-center justify-between px-8 py-5 bg-slate-50 hover:bg-slate-100 rounded-2xl border border-slate-300 transition-all group">
                         <div class="flex items-center gap-3">
                             <div class="w-8 h-8 rounded-lg bg-[#4F589D] flex items-center justify-center shadow-sm shrink-0"">
-                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                <svg class=" w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                                 </svg>
                             </div>
                             <span class="text-xs font-black text-[#4F589D] uppercase tracking-[0.2em]">Посмотреть полный
@@ -95,14 +95,15 @@
                                 {% for course in items %}
                                 <tr class="hover:bg-slate-50/50 transition-colors">
                                     <td class="px-4 md:px-8 py-5">
-                                        <div class="font-bold text-slate-900 text-sm md:text-base mb-1">{{course.Название }}</div>
+                                        <div class="font-bold text-slate-900 text-sm md:text-base mb-1">
+                                            {{course.Название }}</div>
                                         <div class="text-[10px] font-black text-slate-400 uppercase tracking-widest">
                                             {{ course.Часы }} ч. • {{ course.Форма|default:"Очно-заочная" }}
                                         </div>
                                     </td>
                                     <td class="px-4 md:px-8 py-5 text-right w-px whitespace-nowrap">
                                         <button onclick="openCourseModal('{{ course.Название|escapejs }}')"
-                                            class="bg-[#4F589D] text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-wider hover:bg-[#F59E0B] transition-all">
+                                            class="cursor-pointer bg-[#4F589D] text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-wider hover:bg-[#F59E0B] transition-all">
                                             Записаться
                                         </button>
                                     </td>
@@ -179,14 +180,15 @@
                             d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .254.543 5.5 5.5 0 0 0 9.452 0 .5.5 0 0 0 .254-.543l-.5-1.7a.5.5 0 0 0-.656-.327 4.5 4.5 0 0 1-7.318 0z" />
                     </svg>
                 </div>
-                <h2 class="text-2xl md:text-4xl font-black text-slate-900 uppercase tracking-tight">Профессиональная переподготовка и повышение квалификации</h2>
+                <h2 class="text-2xl md:text-4xl font-black text-slate-900 uppercase tracking-tight">Профессиональная
+                    переподготовка и повышение квалификации</h2>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
                 <div class="lg:col-span-2 space-y-8">
                     <div class="prose prose-slate max-w-none">
                         <p class="text-lg text-slate-600 leading-relaxed font-medium">
-                            Наши программы профессиональной переподготовки и повышения квалификации ориентированы на <span
-                                class="text-slate-900 font-bold">актуализацию профессиональных компетенций</span> и
+                            Наши программы профессиональной переподготовки и повышения квалификации ориентированы на
+                            <span class="text-slate-900 font-bold">актуализацию профессиональных компетенций</span> и
                             совершенствование навыков специалистов в соответствии с последними изменениями в
                             законодательстве и техническом регулировании. Обучение проводится с учетом требований
                             профстандартов и ЕТКС.
@@ -240,12 +242,13 @@
 
                     <!-- Кнопка-переключатель списка курсов -->
                     <button onclick="toggleCourses('pk_edu_list', this)"
-                        class="w-full mt-6 flex items-center justify-between px-8 py-5 bg-slate-50 hover:bg-slate-100 rounded-2xl border border-slate-300 transition-all group">
+                        class="cursor-pointer w-full mt-6 flex items-center justify-between px-8 py-5 bg-slate-50 hover:bg-slate-100 rounded-2xl border border-slate-300 transition-all group">
                         <div class="flex items-center gap-3">
                             <div class="w-8 h-8 rounded-lg bg-[#4F589D] flex items-center justify-center shadow-sm shrink-0"">
-                                <svg class="w-4 h-4 text-white shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                <svg class=" w-4 h-4 text-white shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                                 </svg>
                             </div>
                             <span class="text-xs font-black text-[#4F589D] uppercase tracking-[0.2em]">Посмотреть полный
@@ -263,20 +266,20 @@
                         class="hidden mt-4 overflow-hidden border-2 border-slate-300 rounded-[2rem] shadow-sm pb-4">
                         <table class="w-full text-left border-collapse">
                             <tbody class="divide-y divide-slate-50">
-
                                 {% for category, items in courses_data.items %}
                                 {% if category == "Повышение квалификации" %}
                                 {% for course in items %}
                                 <tr class="hover:bg-slate-50/50 transition-colors">
                                     <td class="px-4 md:px-8 py-5">
-                                        <div class="font-bold text-slate-900 text-sm md:text-base mb-1">{{course.Название }}</div>
+                                        <div class="font-bold text-slate-900 text-sm md:text-base mb-1">
+                                            {{course.Название }}</div>
                                         <div class="text-[10px] font-black text-slate-400 uppercase tracking-widest">
                                             {{ course.Часы }} ч. • {{ course.Форма|default:"Очно-заочная" }}
                                         </div>
                                     </td>
                                     <td class="px-4 md:px-8 py-5 text-right w-px whitespace-nowrap">
                                         <button onclick="openCourseModal('{{ course.Название|escapejs }}')"
-                                            class="bg-[#4F589D] text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-wider hover:bg-[#F59E0B] transition-all">
+                                            class="cursor-pointer bg-[#4F589D] text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-wider hover:bg-[#F59E0B] transition-all">
                                             Записаться
                                         </button>
                                     </td>
@@ -284,7 +287,6 @@
                                 {% endfor %}
                                 {% endif %}
                                 {% endfor %}
-
                             </tbody>
                         </table>
                     </div>
@@ -306,64 +308,71 @@
                         </div>
                     </details>
                 </div>
-<div class="space-y-4">
-    <div class="bg-[#3b4382] rounded-[2.8rem] p-10 text-white relative overflow-hidden shadow-2xl border border-white/5">
-        <div class="relative z-10 space-y-8">
-            
-            <!-- Блок: Часы -->
-            <div class="grid grid-cols-2 gap-4">
-                <div>
-                    <span class="text-[10px] font-black text-[#F59E0B] uppercase tracking-widest block mb-1">Повышение квалификации</span>
-                    <div class="text-2xl md:text-3xl font-black tabular-nums">от 16 часов</div>
-                </div>
-                <div>
-                    <span class="text-[10px] font-black text-[#F59E0B] uppercase tracking-widest block mb-1">Профессиональная переподготовка</span>
-                    <div class="text-2xl md:text-3xl font-black tabular-nums">от 250 часов</div>
-                </div>
-            </div>
+                <div class="space-y-4">
+                    <div
+                        class="bg-[#3b4382] rounded-[2.8rem] p-10 text-white relative overflow-hidden shadow-2xl border border-white/5">
+                        <div class="relative z-10 space-y-8">
 
-            <!-- Блок: Формат -->
-            <div>
-                <span class="text-[10px] font-black text-[#F59E0B] uppercase tracking-widest">Формат обучения</span>
-                <div class="text-xl font-bold leading-tight mt-1">Дистанционный / Очный</div>
-            </div>
+                            <!-- Блок: Часы -->
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <span
+                                        class="text-[10px] font-black text-[#F59E0B] uppercase tracking-widest block mb-1">Повышение
+                                        квалификации</span>
+                                    <div class="text-2xl md:text-3xl font-black tabular-nums">от 16 часов</div>
+                                </div>
+                                <div>
+                                    <span
+                                        class="text-[10px] font-black text-[#F59E0B] uppercase tracking-widest block mb-1">Профессиональная
+                                        переподготовка</span>
+                                    <div class="text-2xl md:text-3xl font-black tabular-nums">от 250 часов</div>
+                                </div>
+                            </div>
 
-            <!-- Блок: Документы -->
-            <div class="pt-6 border-t border-white/10 space-y-6">
-                <div>
-                    <span class="text-[10px] font-black text-[#F59E0B] uppercase tracking-widest">Итоговые документы</span>
-                    <div class="mt-3 space-y-4">
-                        <!-- Документ 1 -->
-                        <div class="flex items-start space-x-3">
-                            <div class="w-1.5 h-1.5 rounded-full bg-[#F59E0B] mt-1.5 flex-shrink-0"></div>
-                            <div class="text-sm font-bold opacity-80 uppercase leading-snug">
-                                Удостоверение о повышении квалификации
+                            <!-- Блок: Формат -->
+                            <div>
+                                <span class="text-[10px] font-black text-[#F59E0B] uppercase tracking-widest">Формат
+                                    обучения</span>
+                                <div class="text-xl font-bold leading-tight mt-1">Дистанционный / Очный</div>
+                            </div>
+
+                            <!-- Блок: Документы -->
+                            <div class="pt-6 border-t border-white/10 space-y-6">
+                                <div>
+                                    <span
+                                        class="text-[10px] font-black text-[#F59E0B] uppercase tracking-widest">Итоговые
+                                        документы</span>
+                                    <div class="mt-3 space-y-4">
+                                        <!-- Документ 1 -->
+                                        <div class="flex items-start space-x-3">
+                                            <div class="w-1.5 h-1.5 rounded-full bg-[#F59E0B] mt-1.5 flex-shrink-0">
+                                            </div>
+                                            <div class="text-sm font-bold opacity-80 uppercase leading-snug">
+                                                Удостоверение о повышении квалификации
+                                            </div>
+                                        </div>
+                                        <!-- Документ 2 -->
+                                        <div class="flex items-start space-x-3">
+                                            <div class="w-1.5 h-1.5 rounded-full bg-[#F59E0B] mt-1.5 flex-shrink-0">
+                                            </div>
+                                            <div class="text-sm font-bold opacity-80 uppercase leading-snug">
+                                                Диплом о профессиональной переподготовке
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <!-- Документ 2 -->
-                        <div class="flex items-start space-x-3">
-                            <div class="w-1.5 h-1.5 rounded-full bg-[#F59E0B] mt-1.5 flex-shrink-0"></div>
-                            <div class="text-sm font-bold opacity-80 uppercase leading-snug">
-                                Диплом о профессиональной переподготовке
-                            </div>
+                        <div class="absolute -right-6 -bottom-6 text-white/5 transform pointer-events-none">
+                            <svg xmlns="http://w3.org" width="160" height="160" fill="currentColor" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z" />
+                                <path
+                                    d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .254.543 5.5 5.5 0 0 0 9.452 0 .5.5 0 0 0 .254-.543l-.5-1.7a.5.5 0 0 0-.656-.327 4.5 4.5 0 0 1-7.318 0z" />
+                            </svg>
                         </div>
                     </div>
                 </div>
-            </div>
-
-        </div>
-
-        <!-- Декоративная иконка (исправленная) -->
-        <div class="absolute -right-6 -bottom-6 text-white/5 transform pointer-events-none">
-            <svg xmlns="http://w3.org" width="160" height="160" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z" />
-                <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .254.543 5.5 5.5 0 0 0 9.452 0 .5.5 0 0 0 .254-.543l-.5-1.7a.5.5 0 0 0-.656-.327 4.5 4.5 0 0 1-7.318 0z" />
-            </svg>
-        </div>
-    </div>
-</div>
-
-
             </div>
         </section>
 
@@ -418,11 +427,9 @@
                                     d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
-
                         <div class="flex flex-col space-y-1">
                             <span class="text-[#F59E0B] text-[10px] font-black uppercase tracking-[0.2em]">Важная
                                 информация</span>
-
                             <p class="text-[#4F589D] text-base font-bold leading-relaxed">
                                 Понятие «Пожарно-технический минимум» (ПТМ) упразднено. Обучение теперь
                                 заканчивается получением <span
@@ -436,12 +443,13 @@
 
                     <!-- Кнопка-переключатель списка курсов -->
                     <button onclick="toggleCourses('fire-safety_edu_list', this)"
-                        class="w-full mt-6 flex items-center justify-between px-8 py-5 bg-slate-50 hover:bg-slate-100 rounded-2xl border border-slate-300 transition-all group">
+                        class="cursor-pointer w-full mt-6 flex items-center justify-between px-8 py-5 bg-slate-50 hover:bg-slate-100 rounded-2xl border border-slate-300 transition-all group">
                         <div class="flex items-center gap-3">
                             <div class="w-8 h-8 rounded-lg bg-[#4F589D] flex items-center justify-center shadow-sm shrink-0"">
-                                <svg class="w-4 h-4 text-white shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                <svg class=" w-4 h-4 text-white shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                                 </svg>
                             </div>
                             <span class="text-xs font-black text-[#4F589D] uppercase tracking-[0.2em]">Посмотреть полный
@@ -459,20 +467,20 @@
                         class="hidden mt-4 overflow-hidden border-2 border-slate-300 rounded-[2rem] shadow-sm pb-4">
                         <table class="w-full text-left border-collapse">
                             <tbody class="divide-y divide-slate-50">
-
                                 {% for category, items in courses_data.items %}
                                 {% if category == "Пожарная безопасность" %}
                                 {% for course in items %}
                                 <tr class="hover:bg-slate-50/50 transition-colors">
                                     <td class="px-4 md:px-8 py-5">
-                                        <div class="font-bold text-slate-900 text-sm md:text-base mb-1">{{course.Название }}</div>
+                                        <div class="font-bold text-slate-900 text-sm md:text-base mb-1">
+                                            {{course.Название }}</div>
                                         <div class="text-[10px] font-black text-slate-400 uppercase tracking-widest">
                                             {{ course.Часы }} ч. • {{ course.Форма|default:"Очно-заочная" }}
                                         </div>
                                     </td>
                                     <td class="px-4 md:px-8 py-5 text-right w-px whitespace-nowrap">
                                         <button onclick="openCourseModal('{{ course.Название|escapejs }}')"
-                                            class="bg-[#4F589D] text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-wider hover:bg-[#F59E0B] transition-all">
+                                            class="cursor-pointer bg-[#4F589D] text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-wider hover:bg-[#F59E0B] transition-all">
                                             Записаться
                                         </button>
                                     </td>
@@ -480,7 +488,6 @@
                                 {% endfor %}
                                 {% endif %}
                                 {% endfor %}
-
                             </tbody>
                         </table>
                     </div>
@@ -559,12 +566,14 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
                 <div class="lg:col-span-2 space-y-6">
                     <p class="text-lg text-slate-600 leading-relaxed font-medium">
-                        Работники опасных производственных объектов (ОПО) обязаны <span class="text-slate-900 font-bold">не
+                        Работники опасных производственных объектов (ОПО) обязаны <span
+                            class="text-slate-900 font-bold">не
                             реже 1 раза в 5 лет</span>
                         получать дополнительное профессиональное образование и проходить аттестацию на портале ЕПТ.
                     </p>
                     <div class="bg-white rounded-[2rem] p-8 border border-slate-200 shadow-sm">
-                        <h4 class="text-xs font-black text-[#4F589D] uppercase tracking-[0.2em] mb-6">Обязательной аттестации подлежат:</h4>
+                        <h4 class="text-xs font-black text-[#4F589D] uppercase tracking-[0.2em] mb-6">Обязательной
+                            аттестации подлежат:</h4>
                         <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <li class="flex items-start space-x-3 text-slate-700 text-sm font-bold">
                                 <svg class="w-5 h-5 text-amber-500 mt-0.5 shrink-0" fill="currentColor"
@@ -573,7 +582,8 @@
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                         clip-rule="evenodd""" ) />>
                                 </svg>
-                                <span>Руководители организаций и ИП, осуществляющие деятельность на ОПО I–III классов опасности</span>
+                                <span>Руководители организаций и ИП, осуществляющие деятельность на ОПО I–III классов
+                                    опасности</span>
                             </li>
                             <li class="flex items-start space-x-3 text-slate-700 text-sm font-bold">
                                 <svg class="w-5 h-5 text-amber-500 mt-0.5 shrink-0" fill="currentColor"
@@ -591,7 +601,8 @@
                                         d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                         clip-rule="evenodd""" ) />>
                                 </svg>
-                                <span>Инженерно-технические специалисты, отвечающие за организацию и контроль технологических процессов на ОПО</span>
+                                <span>Инженерно-технические специалисты, отвечающие за организацию и контроль
+                                    технологических процессов на ОПО</span>
                             </li>
                             <li class="flex items-start space-x-3 text-slate-700 text-sm font-bold">
                                 <svg class="w-5 h-5 text-amber-500 mt-0.5 shrink-0" fill="currentColor"
@@ -607,12 +618,13 @@
 
                     <!-- Кнопка-переключатель списка курсов -->
                     <button onclick="toggleCourses('prom-bez_edu_list', this)"
-                        class="w-full mt-6 flex items-center justify-between px-8 py-5 bg-slate-50 hover:bg-slate-100 rounded-2xl border border-slate-300 transition-all group">
+                        class="cursor-pointer w-full mt-6 flex items-center justify-between px-8 py-5 bg-slate-50 hover:bg-slate-100 rounded-2xl border border-slate-300 transition-all group">
                         <div class="flex items-center gap-3">
                             <div class="w-8 h-8 rounded-lg bg-[#4F589D] flex items-center justify-center shadow-sm shrink-0"">
-                                <svg class="w-4 h-4 text-white shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                <svg class=" w-4 h-4 text-white shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                                 </svg>
                             </div>
                             <span class="text-xs font-black text-[#4F589D] uppercase tracking-[0.2em]">Посмотреть полный
@@ -630,20 +642,21 @@
                         class="hidden mt-4 overflow-hidden border-2 border-slate-300 rounded-[2rem] shadow-sm pb-4">
                         <table class="w-full text-left border-collapse">
                             <tbody class="divide-y divide-slate-50">
-
                                 {% for category, items in courses_data.items %}
                                 {% if category == "Промышленная безопасность" %}
                                 {% for course in items %}
                                 <tr class="hover:bg-slate-50/50 transition-colors">
                                     <td class="px-4 md:px-8 py-5">
-                                        <div class="font-bold text-slate-900 text-sm md:text-base mb-1 leading-tight max-w-[150px] sm:max-w-none pr-4">{{course.Название }}</div>
+                                        <div
+                                            class="font-bold text-slate-900 text-sm md:text-base mb-1 leading-tight max-w-[150px] sm:max-w-none pr-4">
+                                            {{course.Название }}</div>
                                         <div class="text-[10px] font-black text-slate-400 uppercase tracking-widest">
                                             {{ course.Часы }} ч. • {{ course.Форма|default:"Очно-заочная" }}
                                         </div>
                                     </td>
                                     <td class="px-4 md:px-8 py-5 text-right w-px whitespace-nowrap">
                                         <button onclick="openCourseModal('{{ course.Название|escapejs }}')"
-                                            class="bg-[#4F589D] text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-wider hover:bg-[#F59E0B] transition-all">
+                                            class="cursor-pointer bg-[#4F589D] text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-wider hover:bg-[#F59E0B] transition-all">
                                             Записаться
                                         </button>
                                     </td>
@@ -736,7 +749,7 @@
                     <!-- Сетка периодичности обучения -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                        <!-- Карточка 1: Электротехнический (Светлая) -->
+                        <!-- Карточка 1: Электротехнический -->
                         <div
                             class="bg-white p-7 rounded-[2.5rem] border border-slate-200 shadow-xl shadow-[#4F589D]/5 group hover:-translate-y-1 transition-all duration-500">
                             <span
@@ -748,12 +761,10 @@
                             </p>
                         </div>
 
-                        <!-- Карточка 2: Админ-технический (Темная, в стиле Sidebar) -->
+                        <!-- Карточка 2: Админ-технический -->
                         <div
                             class="bg-[#3b4382] p-7 rounded-[2.5rem] text-white shadow-2xl relative overflow-hidden group hover:-translate-y-1 transition-all duration-500">
-                            <!-- Декоративный блик -->
                             <div class="absolute -right-5 -top-5 w-24 h-24 bg-[#F59E0B]/10 rounded-full blur-2xl"></div>
-
                             <span
                                 class="text-[#F59E0B] text-[10px] font-black uppercase tracking-[0.2em] mb-2 block relative z-10">Админинстративно
                                 технический
@@ -782,27 +793,27 @@
                                     fill="currentColor" viewBox="0 0 100 100">
                                     <g transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)">
                                         <path d="M5 988 c-3 -7 -4 -195 -3 -418 l3 -405 168 -3 c162 -2 167 -2 167 18
-0 19 -6 20 -150 20 l-150 0 0 380 0 380 460 0 460 0 0 -380 0 -380 -150 0
-c-144 0 -150 -1 -150 -20 0 -20 5 -20 168 -18 l167 3 0 415 0 415 -493 3
-c-389 2 -494 0 -497 -10z" />
+                                            0 19 -6 20 -150 20 l-150 0 0 380 0 380 460 0 460 0 0 -380 0 -380 -150 0
+                                            c-144 0 -150 -1 -150 -20 0 -20 5 -20 168 -18 l167 3 0 415 0 415 -493 3
+                                            c-389 2 -494 0 -497 -10z" />
                                         <path d="M200 800 c0 -20 7 -20 300 -20 293 0 300 0 300 20 0 20 -7 20 -300
-20 -293 0 -300 0 -300 -20z" />
+                                            20 -293 0 -300 0 -300 -20z" />
                                         <path d="M200 700 c0 -20 7 -20 300 -20 293 0 300 0 300 20 0 20 -7 20 -300
-20 -293 0 -300 0 -300 -20z" />
+                                            20 -293 0 -300 0 -300 -20z" />
                                         <path d="M200 600 c0 -20 7 -20 300 -20 293 0 300 0 300 20 0 20 -7 20 -300
-20 -293 0 -300 0 -300 -20z" />
+                                            20 -293 0 -300 0 -300 -20z" />
                                         <path d="M460 505 c-7 -8 -16 -12 -22 -9 -14 9 -56 -23 -64 -48 -4 -13 -13
--28 -21 -33 -18 -13 -8 -129 13 -150 10 -10 14 -46 14 -134 0 -69 4 -122 10
--126 5 -3 32 6 60 22 l50 28 50 -28 c28 -16 55 -25 60 -22 6 4 10 60 10 135 0
-75 4 131 10 135 6 3 10 16 10 27 0 12 5 36 12 55 11 29 10 35 -10 56 -12 13
--22 30 -22 39 0 19 -20 36 -46 41 -10 2 -29 8 -41 15 -29 16 -58 15 -73 -3z
-m60 -40 c6 -8 22 -13 33 -12 16 1 23 -4 25 -21 2 -12 12 -27 23 -32 23 -13 25
--36 3 -44 -11 -4 -14 -14 -9 -35 5 -24 3 -29 -18 -35 -14 -3 -27 -14 -29 -24
--8 -28 -93 -23 -114 6 -8 12 -22 22 -30 22 -10 0 -15 8 -13 23 2 12 -1 33 -5
-46 -6 18 -4 28 7 36 8 6 17 22 19 35 2 20 9 25 32 25 16 1 31 6 34 13 5 16 27
-15 42 -3z m57 -402 c-3 -2 -21 6 -41 18 l-36 21 -36 -21 c-19 -12 -37 -21 -40
--21 -2 0 -4 33 -4 73 l0 73 66 -2 c42 -1 69 3 77 11 9 10 13 -5 15 -67 2 -44
-1 -82 -1 -85z" />
+                                            -28 -21 -33 -18 -13 -8 -129 13 -150 10 -10 14 -46 14 -134 0 -69 4 -122 10
+                                            -126 5 -3 32 6 60 22 l50 28 50 -28 c28 -16 55 -25 60 -22 6 4 10 60 10 135 0
+                                            75 4 131 10 135 6 3 10 16 10 27 0 12 5 36 12 55 11 29 10 35 -10 56 -12 13
+                                            -22 30 -22 39 0 19 -20 36 -46 41 -10 2 -29 8 -41 15 -29 16 -58 15 -73 -3z
+                                            m60 -40 c6 -8 22 -13 33 -12 16 1 23 -4 25 -21 2 -12 12 -27 23 -32 23 -13 25
+                                            -36 3 -44 -11 -4 -14 -14 -9 -35 5 -24 3 -29 -18 -35 -14 -3 -27 -14 -29 -24
+                                            -8 -28 -93 -23 -114 6 -8 12 -22 22 -30 22 -10 0 -15 8 -13 23 2 12 -1 33 -5
+                                            46 -6 18 -4 28 7 36 8 6 17 22 19 35 2 20 9 25 32 25 16 1 31 6 34 13 5 16 27
+                                            15 42 -3z m57 -402 c-3 -2 -21 6 -41 18 l-36 21 -36 -21 c-19 -12 -37 -21 -40
+                                            -21 -2 0 -4 33 -4 73 l0 73 66 -2 c42 -1 69 3 77 11 9 10 13 -5 15 -67 2 -44
+                                            1 -82 -1 -85z" />
                                     </g>
                                 </svg>
                             </div>
@@ -811,7 +822,6 @@ m60 -40 c6 -8 22 -13 33 -12 16 1 23 -4 25 -21 2 -12 12 -27 23 -32 23 -13 25
                             </p>
                         </div>
 
-                        <!-- Важное примечание с акцентной линией -->
                         <div class="mt-10 border-l-4 border-[#F59E0B]/30 pl-6 py-1">
                             <p class="text-[11px] text-slate-400 leading-relaxed italic uppercase tracking-wider">
                                 Аттестация проводится на портале ЕПТ. Для подачи заявления в Ростехнадзор <span
@@ -823,12 +833,13 @@ m60 -40 c6 -8 22 -13 33 -12 16 1 23 -4 25 -21 2 -12 12 -27 23 -32 23 -13 25
 
                     <!-- Кнопка-переключатель списка курсов -->
                     <button onclick="toggleCourses('energo-bez_list', this)"
-                        class="w-full mt-6 flex items-center justify-between px-8 py-5 bg-slate-50 hover:bg-slate-100 rounded-2xl border border-slate-300 transition-all group">
+                        class="cursor-pointer w-full mt-6 flex items-center justify-between px-8 py-5 bg-slate-50 hover:bg-slate-100 rounded-2xl border border-slate-300 transition-all group">
                         <div class="flex items-center gap-3">
                             <div class="w-8 h-8 rounded-lg bg-[#4F589D] flex items-center justify-center shadow-sm shrink-0"">
-                                <svg class="w-4 h-4 text-white shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                <svg class=" w-4 h-4 text-white shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                                 </svg>
                             </div>
                             <span class="text-xs font-black text-[#4F589D] uppercase tracking-[0.2em]">Посмотреть полный
@@ -846,20 +857,20 @@ m60 -40 c6 -8 22 -13 33 -12 16 1 23 -4 25 -21 2 -12 12 -27 23 -32 23 -13 25
                         class="hidden mt-4 overflow-hidden border-2 border-slate-300 rounded-[2rem] shadow-sm pb-4">
                         <table class="w-full text-left border-collapse">
                             <tbody class="divide-y divide-slate-50">
-
                                 {% for category, items in courses_data.items %}
                                 {% if category == "Энергетическая безопасность" %}
                                 {% for course in items %}
                                 <tr class="hover:bg-slate-50/50 transition-colors">
                                     <td class="px-4 md:px-8 py-5">
-                                        <div class="font-bold text-slate-900 text-sm md:text-base mb-1">{{course.Название }}</div>
+                                        <div class="font-bold text-slate-900 text-sm md:text-base mb-1">
+                                            {{course.Название }}</div>
                                         <div class="text-[10px] font-black text-slate-400 uppercase tracking-widest">
                                             {{ course.Часы }} ч. • {{ course.Форма|default:"Очно-заочная" }}
                                         </div>
                                     </td>
                                     <td class="px-4 md:px-8 py-5 text-right w-px whitespace-nowrap">
                                         <button onclick="openCourseModal('{{ course.Название|escapejs }}')"
-                                            class="bg-[#4F589D] text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-wider hover:bg-[#F59E0B] transition-all">
+                                            class="cursor-pointer bg-[#4F589D] text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-wider hover:bg-[#F59E0B] transition-all">
                                             Записаться
                                         </button>
                                     </td>
@@ -936,12 +947,9 @@ m60 -40 c6 -8 22 -13 33 -12 16 1 23 -4 25 -21 2 -12 12 -27 23 -32 23 -13 25
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
                 <div class="lg:col-span-2 space-y-8">
-                    <!-- Ссылка на документ в общем стиле #4F589D -->
                     <a href="{% static 'main/docs/Уведомление об аккредитации по ОТ по ПП 2334.pdf' %}" target="_blank"
                         class="group flex items-center justify-between bg-white p-6 rounded-[2.5rem] border border-slate-100 hover:border-[#4F589D] transition-all duration-500 shadow-xl shadow-[#4F589D]/5 hover:shadow-2xl hover:shadow-[#4F589D]/10 hover:-translate-y-1">
-
                         <div class="flex items-center space-x-6">
-                            <!-- Иконка документа с эффектом инверсии -->
                             <div
                                 class="w-16 h-16 bg-[#4F589D] border-2 border-[#4F589D] rounded-2xl flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-white shadow-lg shadow-[#4F589D]/20">
                                 <svg class="w-8 h-8 text-white transition-colors duration-300 group-hover:text-[#4F589D]"
@@ -952,12 +960,10 @@ m60 -40 c6 -8 22 -13 33 -12 16 1 23 -4 25 -21 2 -12 12 -27 23 -32 23 -13 25
                             </div>
 
                             <div>
-                                <!-- Заголовок: жирный, синий акцент при наведении -->
                                 <h4
                                     class="text-slate-900 font-bold text-lg uppercase leading-tight tracking-tight group-hover:text-[#4F589D] transition-colors">
                                     Уведомление об аккредитации по охране труда
                                 </h4>
-                                <!-- Подпись с оранжевым буллитом -->
                                 <div class="flex items-center gap-2 mt-2">
                                     <span
                                         class="w-1.5 h-1.5 rounded-full bg-[#F59E0B] shadow-[0_0_8px_rgba(245,158,11,0.5)]"></span>
@@ -967,7 +973,6 @@ m60 -40 c6 -8 22 -13 33 -12 16 1 23 -4 25 -21 2 -12 12 -27 23 -32 23 -13 25
                             </div>
                         </div>
 
-                        <!-- Правая стрелочка в кружке -->
                         <div class="hidden md:block pr-4">
                             <div
                                 class="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300">
@@ -986,13 +991,12 @@ m60 -40 c6 -8 22 -13 33 -12 16 1 23 -4 25 -21 2 -12 12 -27 23 -32 23 -13 25
                         </p>
                         <div class="grid grid-cols-1 gap-3">
                             <div class="grid grid-cols-1 gap-3">
-                                <!-- Сетка категорий слушателей в общем стиле #4F589D -->
+                                <!-- Сетка категорий слушателей -->
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8">
 
                                     <!-- Категория 1: Руководители -->
                                     <div
                                         class="flex items-center space-x-5 p-5 bg-white rounded-3xl border border-slate-100 shadow-lg shadow-[#4F589D]/5 group hover:border-[#4F589D]/30 transition-all duration-300">
-                                        <!-- Контейнер иконки с инверсией -->
                                         <div
                                             class="w-14 h-14 bg-[#4F589D] border-2 border-[#4F589D] rounded-2xl flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-white shadow-md">
                                             <svg class="w-7 h-7 text-white transition-colors duration-300 group-hover:text-[#4F589D]"
@@ -1026,7 +1030,8 @@ m60 -40 c6 -8 22 -13 33 -12 16 1 23 -4 25 -21 2 -12 12 -27 23 -32 23 -13 25
                                                 class="text-slate-900 font-bold text-[15px] uppercase tracking-tight group-hover:text-[#4F589D] transition-colors">
                                                 Главы подразделений</div>
                                             <div class="text-slate-500 text-xs font-medium leading-tight mt-1">
-                                                Руководители подразделений, структурных отделов и их заместители ответственные за ОТ</div>
+                                                Руководители подразделений, структурных отделов и их заместители
+                                                ответственные за ОТ</div>
                                         </div>
                                     </div>
 
@@ -1045,7 +1050,8 @@ m60 -40 c6 -8 22 -13 33 -12 16 1 23 -4 25 -21 2 -12 12 -27 23 -32 23 -13 25
                                             <div
                                                 class="text-slate-900 font-bold text-[15px] uppercase tracking-tight group-hover:text-[#4F589D] transition-colors">
                                                 Специалисты по ОТ</div>
-                                            <div class="text-slate-500 text-xs font-medium leading-tight mt-1">Члены комитетов
+                                            <div class="text-slate-500 text-xs font-medium leading-tight mt-1">Члены
+                                                комитетов
                                                 (комиссий) и уполномоченные (доверенные) лица по ОТ</div>
                                         </div>
                                     </div>
@@ -1065,24 +1071,25 @@ m60 -40 c6 -8 22 -13 33 -12 16 1 23 -4 25 -21 2 -12 12 -27 23 -32 23 -13 25
                                             <div
                                                 class="text-slate-900 font-bold text-[15px] uppercase tracking-tight group-hover:text-[#4F589D] transition-colors">
                                                 Рабочие профессии</div>
-                                            <div class="text-slate-500 text-xs font-medium leading-tight mt-1">Работники и лица ответственные, непосредственно выполняющие работы повышенной опасности</div>
+                                            <div class="text-slate-500 text-xs font-medium leading-tight mt-1">Работники
+                                                и лица ответственные, непосредственно выполняющие работы повышенной
+                                                опасности</div>
                                         </div>
                                     </div>
-
                                 </div>
-
                             </div>
                         </div>
                     </div>
 
                     <!-- Кнопка-переключатель списка курсов -->
                     <button onclick="toggleCourses('ohrana-truda_list', this)"
-                        class="w-full mt-6 flex items-center justify-between px-8 py-5 bg-slate-50 hover:bg-slate-100 rounded-2xl border border-slate-300 transition-all group">
+                        class="cursor-pointer w-full mt-6 flex items-center justify-between px-8 py-5 bg-slate-50 hover:bg-slate-100 rounded-2xl border border-slate-300 transition-all group">
                         <div class="flex items-center gap-3">
                             <div class="w-8 h-8 rounded-lg bg-[#4F589D] flex items-center justify-center shadow-sm shrink-0"">
-                                <svg class="w-4 h-4 text-white shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                <svg class=" w-4 h-4 text-white shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                                 </svg>
                             </div>
                             <span class="text-xs font-black text-[#4F589D] uppercase tracking-[0.2em]">Посмотреть полный
@@ -1100,20 +1107,20 @@ m60 -40 c6 -8 22 -13 33 -12 16 1 23 -4 25 -21 2 -12 12 -27 23 -32 23 -13 25
                         class="hidden mt-4 overflow-hidden border-2 border-slate-300 rounded-[2rem] shadow-sm pb-4">
                         <table class="w-full text-left border-collapse">
                             <tbody class="divide-y divide-slate-50">
-
                                 {% for category, items in courses_data.items %}
                                 {% if category == "Охрана труда" %}
                                 {% for course in items %}
                                 <tr class="hover:bg-slate-50/50 transition-colors">
                                     <td class="px-4 md:px-8 py-5">
-                                        <div class="font-bold text-slate-900 text-sm md:text-base mb-1">{{course.Название }}</div>
+                                        <div class="font-bold text-slate-900 text-sm md:text-base mb-1">
+                                            {{course.Название }}</div>
                                         <div class="text-[10px] font-black text-slate-400 uppercase tracking-widest">
                                             {{ course.Часы }} ч. • {{ course.Форма|default:"Очно-заочная" }}
                                         </div>
                                     </td>
                                     <td class="px-4 md:px-8 py-5 text-right w-px whitespace-nowrap">
                                         <button onclick="openCourseModal('{{ course.Название|escapejs }}')"
-                                            class="bg-[#4F589D] text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-wider hover:bg-[#F59E0B] transition-all">
+                                            class="cursor-pointerbg-[#4F589D] text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-wider hover:bg-[#F59E0B] transition-all">
                                             Записаться
                                         </button>
                                     </td>
@@ -1245,12 +1252,13 @@ m60 -40 c6 -8 22 -13 33 -12 16 1 23 -4 25 -21 2 -12 12 -27 23 -32 23 -13 25
 
                     <!-- Кнопка-переключатель списка курсов -->
                     <button onclick="toggleCourses('eco-bez_list', this)"
-                        class="w-full mt-6 flex items-center justify-between px-8 py-5 bg-slate-50 hover:bg-slate-100 rounded-2xl border border-slate-300 transition-all group">
+                        class="cursor-pointer w-full mt-6 flex items-center justify-between px-8 py-5 bg-slate-50 hover:bg-slate-100 rounded-2xl border border-slate-300 transition-all group">
                         <div class="flex items-center gap-3">
                             <div class="w-8 h-8 rounded-lg bg-[#4F589D] flex items-center justify-center shadow-sm shrink-0"">
-                                <svg class="w-4 h-4 text-white shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                <svg class=" w-4 h-4 text-white shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                                 </svg>
                             </div>
                             <span class="text-xs font-black text-[#4F589D] uppercase tracking-[0.2em]">Посмотреть полный
@@ -1268,20 +1276,20 @@ m60 -40 c6 -8 22 -13 33 -12 16 1 23 -4 25 -21 2 -12 12 -27 23 -32 23 -13 25
                         class="hidden mt-4 overflow-hidden border-2 border-slate-300 rounded-[2rem] shadow-sm pb-4">
                         <table class="w-full text-left border-collapse">
                             <tbody class="divide-y divide-slate-50">
-
                                 {% for category, items in courses_data.items %}
                                 {% if category == "Экологическая безопасность" %}
                                 {% for course in items %}
                                 <tr class="hover:bg-slate-50/50 transition-colors">
                                     <td class="px-4 md:px-8 py-5">
-                                        <div class="font-bold text-slate-900 text-sm md:text-base mb-1">{{course.Название }}</div>
+                                        <div class="font-bold text-slate-900 text-sm md:text-base mb-1">
+                                            {{course.Название }}</div>
                                         <div class="text-[10px] font-black text-slate-400 uppercase tracking-widest">
                                             {{ course.Часы }} ч. • {{ course.Форма|default:"Очно-заочная" }}
                                         </div>
                                     </td>
                                     <td class="px-4 md:px-8 py-5 text-right w-px whitespace-nowrap">
                                         <button onclick="openCourseModal('{{ course.Название|escapejs }}')"
-                                            class="bg-[#4F589D] text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-wider hover:bg-[#F59E0B] transition-all">
+                                            class="cursor-pointer bg-[#4F589D] text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-wider hover:bg-[#F59E0B] transition-all">
                                             Записаться
                                         </button>
                                     </td>
@@ -1411,12 +1419,13 @@ m60 -40 c6 -8 22 -13 33 -12 16 1 23 -4 25 -21 2 -12 12 -27 23 -32 23 -13 25
 
                     <!-- Кнопка-переключатель списка курсов -->
                     <button onclick="toggleCourses('psychology_list', this)"
-                        class="w-full mt-6 flex items-center justify-between px-8 py-5 bg-slate-50 hover:bg-slate-100 rounded-2xl border border-slate-300 transition-all group">
+                        class="cursor-pointer w-full mt-6 flex items-center justify-between px-8 py-5 bg-slate-50 hover:bg-slate-100 rounded-2xl border border-slate-300 transition-all group">
                         <div class="flex items-center gap-3">
                             <div class="w-8 h-8 rounded-lg bg-[#4F589D] flex items-center justify-center shadow-sm shrink-0"">
-                                <svg class="w-4 h-4 text-white shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                <svg class=" w-4 h-4 text-white shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                                 </svg>
                             </div>
                             <span class="text-xs font-black text-[#4F589D] uppercase tracking-[0.2em]">Посмотреть полный
@@ -1440,14 +1449,15 @@ m60 -40 c6 -8 22 -13 33 -12 16 1 23 -4 25 -21 2 -12 12 -27 23 -32 23 -13 25
                                 {% for course in items %}
                                 <tr class="hover:bg-slate-50/50 transition-colors">
                                     <td class="px-4 md:px-8 py-5">
-                                        <div class="font-bold text-slate-900 text-sm md:text-base mb-1">{{course.Название }}</div>
+                                        <div class="font-bold text-slate-900 text-sm md:text-base mb-1">
+                                            {{course.Название }}</div>
                                         <div class="text-[10px] font-black text-slate-400 uppercase tracking-widest">
                                             {{ course.Часы }} ч. • {{ course.Форма|default:"Очно-заочная" }}
                                         </div>
                                     </td>
                                     <td class="px-4 md:px-8 py-5 text-right w-px whitespace-nowrap">
                                         <button onclick="openCourseModal('{{ course.Название|escapejs }}')"
-                                            class="bg-[#4F589D] text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-wider hover:bg-[#F59E0B] transition-all">
+                                            class="cursor-pointer bg-[#4F589D] text-white px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-wider hover:bg-[#F59E0B] transition-all">
                                             Записаться
                                         </button>
                                     </td>
@@ -1470,8 +1480,14 @@ m60 -40 c6 -8 22 -13 33 -12 16 1 23 -4 25 -21 2 -12 12 -27 23 -32 23 -13 25
                             </svg>
                         </summary>
                         <div class="px-5 pb-5 text-[11px] text-slate-500 space-y-2 leading-relaxed">
-                            <p>• Временным положением по психофизиологическому обеспечению надежности профессиональной деятельности и сохранению здоровья персонала энергетических предприятий (РД 153-34.0-03.503-00); утверждено председателем Правления РАО "ЕЭС России" А.Б. Чубайсом; первым заместителем министра здравоохранения РФ Г.Г. Онищенко</p>
-                            <p>• Методическим руководством по организации и проведению психофизиологических обследований персонала энергетических предприятий (РД 153-34.0-03.504-00); утверждено первым заместителем председателя Правления РАО «ЕЭС России» О.В. Бритвиным; первым заместителем Министра здравоохранения Российской Федерации Г.Г. Онищенко</p>
+                            <p>• Временным положением по психофизиологическому обеспечению надежности профессиональной
+                                деятельности и сохранению здоровья персонала энергетических предприятий (РД
+                                153-34.0-03.503-00); утверждено председателем Правления РАО "ЕЭС России" А.Б. Чубайсом;
+                                первым заместителем министра здравоохранения РФ Г.Г. Онищенко</p>
+                            <p>• Методическим руководством по организации и проведению психофизиологических обследований
+                                персонала энергетических предприятий (РД 153-34.0-03.504-00); утверждено первым
+                                заместителем председателя Правления РАО «ЕЭС России» О.В. Бритвиным; первым заместителем
+                                Министра здравоохранения Российской Федерации Г.Г. Онищенко</p>
                         </div>
                     </details>
                 </div>
