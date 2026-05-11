@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Энергетик — Учебный центр{% endblock %}</title>
     <link rel="icon" type="image/png" href="{% static 'main/img/logo.png' %}">
-    <link rel="stylesheet" href="{% static 'main/css/output.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/output.css' %}?v=1.1">
     <style>
         body {
             font-family: sans-serif;
@@ -514,11 +514,11 @@
                 <span class="text-[10px] font-bold uppercase">Шрифт:</span>
                 <div class="flex items-center">
                     <button onclick="updateAcc('font', 'font-s')" title="Обычный шрифт"
-                        class="w-8 h-8 border border-black flex items-center justify-center text-sm font-bold mx-0.5 bg-white">А</button>
+                        class="w-8 h-8 border border-black flex items-center justify-center text-sm font-bold mx-0.5 bg-white cursor-pointer">А</button>
                     <button onclick="updateAcc('font', 'font-m')" title="Большой шрифт"
-                        class="w-9 h-9 border border-black flex items-center justify-center text-base font-bold mx-0.5 bg-white">А+</button>
+                        class="w-9 h-9 border border-black flex items-center justify-center text-base font-bold mx-0.5 bg-white cursor-pointer">А+</button>
                     <button onclick="updateAcc('font', 'font-l')" title="Очень большой шрифт"
-                        class="w-10 h-10 border border-black flex items-center justify-center text-xl font-bold mx-0.5 bg-white">А++</button>
+                        class="w-10 h-10 border border-black flex items-center justify-center text-xl font-bold mx-0.5 bg-white cursor-pointer">А++</button>
                 </div>
             </div>
 
@@ -528,13 +528,13 @@
                 <div class="flex">
                     <!-- Черным по белому -->
                     <button onclick="updateAcc('theme', 'theme-white')" title="Черным по белому"
-                        class="w-8 h-8 border border-black bg-white text-black font-bold mx-0.5">Ц</button>
+                        class="w-8 h-8 border border-black bg-white text-black font-bold mx-0.5 cursor-pointer">Ц</button>
                     <!-- Белым по черному -->
                     <button onclick="updateAcc('theme', 'theme-black')" title="Белым по черному"
-                        class="w-8 h-8 border border-black bg-black text-white font-bold mx-0.5">Ц</button>
+                        class="w-8 h-8 border border-black bg-black text-white font-bold mx-0.5 cursor-pointer">Ц</button>
                     <!-- Синим по голубому -->
                     <button onclick="updateAcc('theme', 'theme-blue')" title="Синим по голубому"
-                        class="w-8 h-8 border border-[#063462] bg-[#99ccff] text-[#063462] font-bold mx-0.5">Ц</button>
+                        class="w-8 h-8 border border-[#063462] bg-[#99ccff] text-[#063462] font-bold mx-0.5 cursor-pointer">Ц</button>
                 </div>
             </div>
 
@@ -543,19 +543,21 @@
                 <span class="text-[10px] font-bold uppercase">Изображения:</span>
                 <button onclick="updateAcc('images', 'toggle')" id="img-toggle-btn"
                     title="Включить/Выключить изображения"
-                    class="h-8 px-2 border border-black text-[10px] font-bold uppercase bg-white">ВЫКЛ</button>
+                    class="h-8 px-2 border border-black text-[10px] font-bold uppercase bg-white cursor-pointer">ВЫКЛ</button>
             </div>
 
             <!-- Выход -->
             <button onclick="toggleAcc(false)" title="Вернуться к обычной версии"
-                class="ml-auto border-2 border-red-600 text-red-600 px-3 py-1 text-[10px] font-bold uppercase bg-white hover:bg-red-50 transition-colors">
+                class="ml-auto border-2 border-red-600 text-red-600 px-3 py-1 text-[10px] font-bold uppercase bg-white hover:bg-red-50 transition-colors cursor-pointer">
                 ВЫХОД ×
             </button>
         </div>
     </div>
 
-    <div id="browser-warning" class="transition-all duration-500 transform translate-y-0 opacity-100"
-        style="display: none; background: #fff3cd; color: #856404; text-align: center; padding: 16px 20px; position: fixed; top: 0; left: 0; width: 100%; z-index: 999999; border-bottom: 2px solid #ffeeba; font-family: sans-serif; align-items: center; justify-content: center; box-sizing: border-box;">
+    <div id="browser-warning" class="transition-all duration-500 transform opacity-0" style="display: none; background: #fff3cd; color: #856404; text-align: center; padding: 16px 20px; 
+           width: 100%; border-bottom: 2px solid #ffeeba; font-family: sans-serif; 
+           align-items: center; justify-content: center; box-sizing: border-box;
+           margin-top: -100px;">
 
         <span style="margin-right: 15px;">⚠️ <strong>Ваш браузер устарел.</strong> Сайт может работать некорректно на
             Windows 7/8.</span>
@@ -568,9 +570,7 @@
 
     <script>
         function checkBrowserWarning() {
-            if (localStorage.getItem('browser-warning-accepted-energo') === 'true') {
-                return;
-            }
+            if (localStorage.getItem('browser-warning-accepted-energo') === 'true') return;
 
             var ua = window.navigator.userAgent;
             var isOldWin = /Windows NT 6.1|Windows NT 6.2|Windows NT 6.3/.test(ua);
@@ -582,17 +582,25 @@
                 var banner = document.getElementById('browser-warning');
                 if (banner) {
                     banner.style.display = 'flex';
+
+                    setTimeout(function () {
+                        banner.style.marginTop = '0px';
+                        banner.classList.add('opacity-100');
+                        banner.classList.remove('opacity-0');
+                    }, 10);
                 }
             }
         }
 
         function acceptBrowserWarning() {
-            const banner = document.getElementById('browser-warning');
+            var banner = document.getElementById('browser-warning');
+            if (!banner) return;
 
             localStorage.setItem('browser-warning-accepted-energo', 'true');
 
-            banner.classList.remove('translate-y-0', 'opacity-100');
-            banner.classList.add('translate-y-full', 'opacity-0');
+            banner.style.marginTop = '-' + banner.offsetHeight + 'px';
+            banner.classList.remove('opacity-100');
+            banner.classList.add('opacity-0');
 
             setTimeout(function () {
                 banner.style.display = 'none';
@@ -600,7 +608,6 @@
         }
 
         checkBrowserWarning();
-
     </script>
 
     <!-- Top Bar -->
@@ -921,7 +928,7 @@
                         </div>
                     </div>
                     <p class="text-white text-sm font-medium leading-relaxed max-w-xs">
-                        Ваш надежный партнер в сфере дополнительного профессионального образования с 2011 года.
+                        Ваш надёжный партнёр в сфере дополнительного профессионального образования с 2011 года!
                     </p>
                 </div>
 
@@ -1093,13 +1100,16 @@
                     <div class="flex items-start gap-3">
                         <input type="checkbox" id="policy_agreement" required
                             class="mt-1 w-5 h-5 cursor-pointer accent-[#4F589D] shrink-0">
-                        <label for="policy_agreement" class="text-[11px] leading-snug text-slate-500 cursor-pointer select-none">
-                            Я ознакомлен с 
-                            <a href="{% static 'main/docs/policy.pdf' %}" target="_blank" class="text-[#4F589D] font-bold hover:text-[#F59E0B] transition-colors underline decoration-[#F59E0B]/30">
+                        <label for="policy_agreement"
+                            class="text-[11px] leading-snug text-slate-500 cursor-pointer select-none">
+                            Я ознакомлен с
+                            <a href="{% static 'main/docs/policy.pdf' %}" target="_blank"
+                                class="text-[#4F589D] font-bold hover:text-[#F59E0B] transition-colors underline decoration-[#F59E0B]/30">
                                 Политикой в отношении обработки персональных данных
                             </a>
-                            и 
-                            <a href="{% url 'cookie_policy' %}" target="_blank" class="text-[#4F589D] font-bold hover:text-[#F59E0B] transition-colors underline decoration-[#F59E0B]/30">
+                            и
+                            <a href="{% url 'cookie_policy' %}" target="_blank"
+                                class="text-[#4F589D] font-bold hover:text-[#F59E0B] transition-colors underline decoration-[#F59E0B]/30">
                                 Политикой использования файлов cookie
                             </a>
                         </label>
@@ -1109,8 +1119,13 @@
                     <div class="flex items-start gap-3">
                         <input type="checkbox" id="consent_agreement" required
                             class="mt-1 w-5 h-5 cursor-pointer accent-[#4F589D] shrink-0">
-                        <label for="consent_agreement" class="text-[11px] leading-snug text-slate-500 cursor-pointer select-none">
-                            Я даю <a href="{% static 'main/docs/Согласие субъекта на обработку персональных данных.pdf' %}" target="_blank" class="text-[#4F589D] font-bold hover:text-[#F59E0B] transition-colors underline decoration-[#F59E0B]/30">Согласие на обработку моих персональных данных</a>
+                        <label for="consent_agreement"
+                            class="text-[11px] leading-snug text-slate-500 cursor-pointer select-none">
+                            Я даю <a
+                                href="{% static 'main/docs/Согласие субъекта на обработку персональных данных.pdf' %}"
+                                target="_blank"
+                                class="text-[#4F589D] font-bold hover:text-[#F59E0B] transition-colors underline decoration-[#F59E0B]/30">Согласие
+                                на обработку моих персональных данных</a>
                         </label>
                     </div>
                 </div>
@@ -1373,7 +1388,7 @@
         }
 
         applyAcc();
-        
+
     </script>
 </body>
 
