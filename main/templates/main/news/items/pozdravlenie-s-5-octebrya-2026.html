@@ -1,0 +1,57 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}С Днем учителя! - Энергетик{% endblock %}
+
+{% block content %}
+<div id="news-meta" style="display: none;">
+    <h1 id="meta-title">Поздравляем с Днем учителя!</h1>
+    <span id="meta-date">05.10.2026</span>
+</div>
+<article class="max-w-4xl mx-auto px-6 py-24">
+    <a href="{% url 'news_list' %}"
+        class="inline-flex items-center text-slate-400 hover:text-amber-500 font-bold text-xs uppercase tracking-widest mb-12 transition-colors group">
+        <svg class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7" />
+        </svg>
+        Назад к новостям
+    </a>
+
+    <header class="mb-12">
+        <span class="text-amber-500 font-black uppercase text-[10px] tracking-[0.3em]">Поздравление</span>
+        <h1 class="text-3xl md:text-5xl font-black text-slate-900 uppercase leading-none tracking-tight mt-4">
+            С Днем учителя!
+        </h1>
+        <p class="text-slate-400 mt-6 font-medium">Дата публикации: 05 октября 2026</p>
+    </header>
+
+    <div class="prose prose-slate max-w-none">
+
+        <div class="mb-8 overflow-hidden rounded-xl shadow-lg border border-slate-200">
+            <img src="{% static 'main/img/news/pozdravlenie-s-5-octebrya-2026.jpg' %}" alt="Поздравление с Днем учителя"
+                class="w-full h-auto object-cover max-h-[400px]" />
+        </div>
+
+        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+            Дорогие преподаватели, эксперты и коллеги! Коллектив учебного центра <strong>АНО ДПО «Энергетик»</strong> от всей души поздравляет вас с <strong>Днём учителя</strong>!
+        </p>
+
+        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+            Обучать взрослых профессионалов, которые и сами отлично знают своё дело — задача непростая. Она требует не только глубоких знаний, но и умения находить общий язык, делиться реальным опытом и держать руку на пульсе всех изменений в сфере производства и безопасности. 
+        </p>
+
+        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+            Спасибо вам за выдержку, за интересные лекции и за то, что наши слушатели успешно сдают экзамены и возвращаются к безопасной работе на предприятиях.
+        </p>
+
+        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+            Желаем вам крепкого здоровья, лёгких учебных групп, поменьше бумажной рутины и побольше поводов для хорошего настроения. Пусть работа приносит удовольствие и ценится по достоинству!
+        </p>
+
+        <p class="text-lg text-slate-600 leading-relaxed mb-6 font-bold text-slate-900">
+            С праздником!
+        </p>
+    </div>
+</article>
+{% endblock %}
