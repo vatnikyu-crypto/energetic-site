@@ -503,6 +503,173 @@
             margin-bottom: 1rem !important;
             height: auto !important;
         }
+
+        /* Новогодний снег по бокам */
+        #snow-container {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 30;
+            /* Ниже хедера (z-50) и плавающей кнопки (z-40) */
+            overflow: hidden;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -30px;
+            color: #4F589D;
+            /* Фирменный синий оттенок, чтобы было видно на светлом фоне */
+            user-select: none;
+            will-change: transform;
+            animation: snowfall linear infinite;
+        }
+
+        @keyframes snowfall {
+            0% {
+                transform: translateY(-30px) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(105vh) rotate(360deg);
+            }
+        }
+
+        /* Отключаем снег на экранах, где нет свободных полей вокруг max-w-7xl (1280px) */
+        @media (max-width: 1380px) {
+            #snow-container {
+                display: none !important;
+            }
+        }
+
+        /* Отключаем в версии для слабовидящих */
+        .is-acc-mode #snow-container {
+            display: none !important;
+        }
+
+        /* Отключаем, если пользователь отключил анимации в ОС */
+        @media (prefers-reduced-motion: reduce) {
+            #snow-container {
+                display: none !important;
+            }
+        }
+
+        /* 1. Новогодняя шапочка на логотип */
+        .logo-ny-wrapper {
+            position: relative;
+            display: inline-flex;
+        }
+
+        .ny-santa-hat {
+            position: absolute;
+            top: -18px;
+            left: 5px;
+            width: 35px;
+            height: 35px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        @media (min-width: 768px) {
+            .ny-santa-hat {
+                top: -20px;
+                left: 9px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        /* 4. Тонкая гирлянда под синим меню */
+        .ny-garland {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 16px;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 40;
+            display: flex;
+            justify-content: space-around;
+            padding: 0 10px;
+        }
+
+        @media (min-width: 768px) {
+            .ny-garland {
+                top: calc(100% + 64px);
+                /* Опускаем под синюю панель меню на ПК */
+            }
+        }
+
+        .ny-bulb {
+            position: relative;
+            width: 7px;
+            height: 10px;
+            border-radius: 50% 50% 50% 50% / 35% 35% 65% 65%;
+            margin-top: 3px;
+            animation: ny-twinkle 2.4s infinite ease-in-out alternate;
+        }
+
+        /* Цоколь лампочки */
+        .ny-bulb::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: 2px;
+            width: 3px;
+            height: 3px;
+            background: #334155;
+            border-radius: 1px;
+        }
+
+        /* Фирменные цвета огоньков: золотой, голубой, белый, теплый красный */
+        .ny-bulb:nth-child(4n+1) {
+            background: #F59E0B;
+            box-shadow: 0 2px 8px #F59E0B;
+            animation-delay: 0s;
+        }
+
+        .ny-bulb:nth-child(4n+2) {
+            background: #60A5FA;
+            box-shadow: 0 2px 8px #60A5FA;
+            animation-delay: 0.6s;
+        }
+
+        .ny-bulb:nth-child(4n+3) {
+            background: #FFFFFF;
+            box-shadow: 0 2px 8px #FFFFFF;
+            animation-delay: 1.2s;
+        }
+
+        .ny-bulb:nth-child(4n+4) {
+            background: #F87171;
+            box-shadow: 0 2px 8px #F87171;
+            animation-delay: 1.8s;
+        }
+
+        @keyframes ny-twinkle {
+            0% {
+                opacity: 0.35;
+                transform: scale(0.9);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+        }
+
+        /* Отключаем украшения в версии для слабовидящих и при отключенной анимации */
+        .is-acc-mode .ny-santa-hat,
+        .is-acc-mode .ny-garland {
+            display: none !important;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .ny-bulb {
+                animation: none;
+                opacity: 0.85;
+            }
+        }
     </style>
 </head>
 
@@ -682,8 +849,19 @@
 
             <!-- 1. Логотип -->
             <a href="{% url 'index' %}" alt="Логотип" class="flex items-center gap-2 md:gap-5 group shrink-0">
-                <img src="{% static 'main/img/logo.png' %}" alt="Энергетик"
-                    class="h-9 md:h-12 w-auto transition-transform duration-700 ease-in-out group-hover:rotate-[360deg]">
+                <div class="logo-ny-wrapper transition-transform duration-700 ease-in-out group-hover:rotate-[360deg]">
+                    <svg class="ny-santa-hat" viewBox="0 0 64 64" fill="none" xmlns="http://w3.org" aria-hidden="true">
+                        <!-- Красный колпак -->
+                        <path d="M12 44C14 24 28 12 46 14C52 15 56 20 55 26C48 22 40 24 38 30C36 36 42 42 42 44H12Z"
+                            fill="#DC2626" />
+                        <!-- Помпон с тонким контуром -->
+                        <circle cx="54" cy="26" r="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+                        <!-- Опушка с тонким контуром -->
+                        <rect x="8" y="41" width="38" height="9" rx="4.5" fill="#FFFFFF" stroke="#CBD5E1"
+                            stroke-width="1.5" />
+                    </svg>
+                    <img src="{% static 'main/img/logo.png' %}" alt="Энергетик" class="h-9 md:h-12 w-auto">
+                </div>
                 <div class="flex flex-col items-center text-center border-l border-slate-200 pl-2 md:pl-5">
                     <p
                         class="text-[9px] md:text-[12px] text-[#4F589D] font-black uppercase tracking-wider leading-none mb-0.5">
@@ -758,6 +936,7 @@
                 </svg>
             </button>
         </div>
+        <div id="ny-garland" class="ny-garland" aria-hidden="true"></div>
     </header>
 
     <!-- Навигационная панель -->
@@ -1463,6 +1642,68 @@
         applyAcc();
 
     </script>
+    <!-- Контейнер для снежинок -->
+    <div id="snow-container" aria-hidden="true"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.getElementById('snow-container');
+            if (!container || document.body.classList.contains('is-acc-mode')) return;
+
+            // Вычисляем ширину свободного поля с каждой стороны от max-w-7xl (1280px)
+            const contentWidth = 1280;
+            const sideMargin = (window.innerWidth - contentWidth) / 2;
+
+            // Если места по бокам мало (меньше 50px), снег не запускаем
+            if (sideMargin < 50) return;
+
+            const flakesCount = 24; // Количество снежинок (по 12 на каждую сторону)
+            const symbols = ['❄', '❅', '❆'];
+
+            for (let i = 0; i < flakesCount; i++) {
+                const flake = document.createElement('div');
+                flake.className = 'snowflake';
+                flake.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+
+                // Четные летят слева, нечетные — справа
+                const isLeft = i % 2 === 0;
+                const offset = Math.random() * (sideMargin - 30) + 10;
+
+                if (isLeft) {
+                    flake.style.left = offset + 'px';
+                } else {
+                    flake.style.right = offset + 'px';
+                }
+
+                // Случайный размер, прозрачность и скорость падения
+                const size = Math.random() * 12 + 10; // от 10px до 22px
+                const duration = Math.random() * 10 + 10; // от 10 до 20 секунд
+                const delay = Math.random() * -20; // отрицательная задержка, чтобы снег шел сразу при загрузке
+
+                flake.style.fontSize = size + 'px';
+                flake.style.opacity = (Math.random() * 0.35 + 0.15).toFixed(2); // мягкая прозрачность 0.15 - 0.50
+                flake.style.animationDuration = duration + 's';
+                flake.style.animationDelay = delay + 's';
+
+                container.appendChild(flake);
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const garland = document.getElementById('ny-garland');
+            if (!garland || document.body.classList.contains('is-acc-mode')) return;
+
+            // Создаем по одной лампочке каждые 45px ширины экрана
+            const bulbCount = Math.floor(window.innerWidth / 45);
+            for (let i = 0; i < bulbCount; i++) {
+                const bulb = document.createElement('span');
+                bulb.className = 'ny-bulb';
+                garland.appendChild(bulb);
+            }
+        });
+    </script>
+
 </body>
 
 </html>
